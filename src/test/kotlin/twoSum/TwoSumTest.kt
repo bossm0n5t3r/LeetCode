@@ -41,7 +41,8 @@ class TwoSumTest {
             TwoSumTestData(intArrayOf(0, 4, 3, 0), 0, intArrayOf(0, 3)),
         )
         tests.forEach { test ->
-            assertTrue(solution.twoSum(test.nums, test.target).contentEquals(test.result))
+            assertTrue(solution.twoSumBruteForce(test.nums, test.target).contentEquals(test.result))
+            assertTrue(solution.twoSumHashTable(test.nums, test.target).contentEquals(test.result))
         }
     }
 }
