@@ -1,6 +1,6 @@
 package reverseString
 
-class Solution {
+class ReverseString {
     private var tmpChar: Char = '\u0000'
 
     fun reverseString(s: CharArray): CharArray {

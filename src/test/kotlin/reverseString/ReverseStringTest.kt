@@ -1,9 +1,10 @@
 package reverseString
 
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
-class SolutionTest {
-    private val solution = Solution()
+class ReverseStringTest {
+    private val solution = ReverseString()
 
     @Test
     fun reverseString() {
@@ -18,7 +19,7 @@ class SolutionTest {
             "amanaP :lanac a ,nalp a ,nam A".toCharArray()
         )
         input.forEachIndexed { index, s ->
-            println(solution.reverseString(s).contentEquals(result[index]))
+            assertTrue(solution.reverseString(s).contentEquals(result[index]))
         }
     }
 }
