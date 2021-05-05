@@ -1,5 +1,7 @@
 package deleteNodeInALinkedList
 
+import utils.ListNode
+
 class DeleteNodeInALinkedList(
     val head: ListNode
 ) {
@@ -7,8 +9,4 @@ class DeleteNodeInALinkedList(
         node?.`val` = node?.next?.`val`!!
         node.next = node.next?.next
     }
-}
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
 }
