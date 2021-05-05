@@ -1,5 +1,6 @@
 package maximumDepthOfBinaryTree
 
+import utils.TreeNode
 import java.util.LinkedList
 import java.util.Queue
 
@@ -26,9 +27,4 @@ class MaximumDepthOfBinaryTree {
         }
         return height
     }
-}
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
