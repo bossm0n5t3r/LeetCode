@@ -37,4 +37,52 @@ class TreeNodeUtil {
         }
         return result
     }
+
+    fun printTreeNode(treeNode: TreeNode) {
+        val q: Queue<TreeNode?> = LinkedList()
+        q.add(treeNode)
+        while (q.isNotEmpty()) {
+            val size = q.size
+            for (i in 0 until size) {
+                val cur = q.poll()
+                print("| ${cur?.`val`} |")
+                if (cur != null) {
+                    q.add(cur.left)
+                    q.add(cur.right)
+                }
+            }
+            println()
+        }
+    }
+
+    fun isEqual(first: TreeNode, second: TreeNode): Boolean {
+        if (first.`val` != second.`val`) return false
+        val firstQ: Queue<TreeNode> = LinkedList()
+        val secondQ: Queue<TreeNode> = LinkedList()
+        firstQ.add(first)
+        secondQ.add(second)
+        while (true) {
+            val firstQSize = firstQ.size
+            val secondQSize = secondQ.size
+            if (firstQSize != secondQSize) return false
+            if (firstQSize == 0) return true
+            for (i in 0 until firstQSize) {
+                val firstCur = firstQ.poll()
+                val secondCur = secondQ.poll()
+                if (firstCur.`val` != secondCur.`val`) return false
+                if (firstCur.left == null && secondCur.left != null) return false
+                if (firstCur.left != null && secondCur.left == null) return false
+                if (firstCur.right == null && secondCur.right != null) return false
+                if (firstCur.right != null && secondCur.right == null) return false
+                if (firstCur.left != null && secondCur.left != null) {
+                    firstQ.add(firstCur.left)
+                    secondQ.add(secondCur.left)
+                }
+                if (firstCur.right != null && secondCur.right != null) {
+                    firstQ.add(firstCur.right)
+                    secondQ.add(secondCur.right)
+                }
+            }
+        }
+    }
 }
