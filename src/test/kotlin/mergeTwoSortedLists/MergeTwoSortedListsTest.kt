@@ -36,6 +36,7 @@ class MergeTwoSortedListsTest {
         )
         tests.forEach { test ->
             assertTrue(listNodeUtil.isEqual(mergeTwoSortedLists.mergeTwoLists(test.l1, test.l2), test.result))
+            assertTrue(listNodeUtil.isEqual(mergeTwoSortedLists.mergeTwoListsRecursive(test.l1, test.l2), test.result))
         }
     }
 }
