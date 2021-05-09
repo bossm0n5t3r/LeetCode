@@ -34,4 +34,17 @@ class ListNodeUtil {
         }
         return result
     }
+
+    fun isEqual(first: ListNode?, second: ListNode?): Boolean {
+        if (first == null && second == null) return true
+        var curFirst: ListNode? = first
+        var curSecond: ListNode? = second
+        while (curFirst != null && curSecond != null) {
+            if (curFirst.`val` != curSecond.`val`) return false
+            if (curFirst.next == null && curSecond.next == null) return true
+            curFirst = curFirst.next
+            curSecond = curSecond.next
+        }
+        return false
+    }
 }
