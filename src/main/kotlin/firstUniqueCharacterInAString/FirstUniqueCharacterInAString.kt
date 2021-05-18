@@ -10,6 +10,6 @@ class FirstUniqueCharacterInAString {
                 result[s[i]] = mutableListOf(i)
             }
         }
-        return result.values.filter { it.size < 2 }.map { it[0] }.min() ?: -1
+        return result.values.filter { it.size < 2 }.map { it[0] }.minOrNull() ?: -1
     }
 }
