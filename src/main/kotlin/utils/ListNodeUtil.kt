@@ -47,4 +47,43 @@ class ListNodeUtil {
         }
         return false
     }
+
+    fun generateBasicSingleListNode(): List<List<ListNode>> {
+        val result = mutableListOf<List<ListNode>>()
+        (0..9).forEach { _ ->
+            val basicResult = mutableListOf<ListNode>()
+            (0..9).forEach { i ->
+                basicResult.add(ListNode(i))
+            }
+            result.add(basicResult)
+        }
+        return result
+    }
+
+    fun clearBasicSingleListNode(basicSingleListNode: List<List<ListNode>>) {
+        basicSingleListNode.forEach { basicListNode ->
+            basicListNode.forEach {
+                it.next = null
+            }
+        }
+    }
+
+    fun getLastListNode(listNode: ListNode): ListNode {
+        var cur: ListNode? = listNode
+        while (cur != null) {
+            val next = cur.next ?: return cur
+            cur = next
+        }
+        return listNode
+    }
+
+    fun connectListNode(listNodeData: List<ListNode?>): ListNode? {
+        if (listNodeData.size <= 1) return listNodeData.first()
+        var cur: ListNode? = listNodeData.first()
+        for (i in 1 until listNodeData.size) {
+            cur?.next = listNodeData[i]
+            cur = cur?.next
+        }
+        return listNodeData.first()
+    }
 }
