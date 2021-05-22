@@ -61,9 +61,11 @@ class ListNodeUtil {
     }
 
     fun clearBasicSingleListNode(basicSingleListNode: List<List<ListNode>>) {
-        basicSingleListNode.forEach { basicListNode ->
-            basicListNode.forEach {
-                it.next = null
+        (0..9).forEach { index ->
+            val basicResult = basicSingleListNode[index]
+            (0..9).forEach { i ->
+                basicResult[i].`val` = i
+                basicResult[i].next = null
             }
         }
     }
