@@ -50,6 +50,29 @@ class LongestCommonPrefix {
         return commonPrefix(leftLongestCommonPrefix, rightLongestCommonPrefix)
     }
 
-    // TODO Approach 4: Binary search
+    fun longestCommonPrefixFourth(strs: Array<String>): String {
+        if (strs.isEmpty()) return ""
+        val minLen = strs.minOf { it.length }
+        var low = 0
+        var high = minLen
+        while (low <= high) {
+            val middle = (low + high) / 2
+            if (isCommonPrefix(strs, middle)) {
+                low = middle + 1
+            } else {
+                high = middle - 1
+            }
+        }
+        return strs[0].substring(0, (low + high) / 2)
+    }
+
+    private fun isCommonPrefix(strs: Array<String>, len: Int): Boolean {
+        val first = strs[0].substring(0, len)
+        for (i in 1 until strs.size) {
+            if (!strs[i].startsWith(first)) return false
+        }
+        return true
+    }
+
     // TODO Trie
 }

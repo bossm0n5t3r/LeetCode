@@ -39,6 +39,7 @@ class LongestCommonPrefixTest {
             assertEquals(longestCommonPrefix.longestCommonPrefixFirst(test.strs), test.result)
             assertEquals(longestCommonPrefix.longestCommonPrefixSecond(test.strs), test.result)
             assertEquals(longestCommonPrefix.longestCommonPrefixThird(test.strs), test.result)
+            assertEquals(longestCommonPrefix.longestCommonPrefixFourth(test.strs), test.result)
         }
     }
 }
