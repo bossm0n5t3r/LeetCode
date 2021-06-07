@@ -76,53 +76,71 @@ class LongestCommonPrefix {
 
     fun longestCommonPrefixTrie(strs: Array<String>): String {
         if (strs.isEmpty()) return ""
-        var result = makeTrie(str = strs[0])
-        for (i in 1 until strs.size) {
-            if (result == null) return ""
-            result = commonTrie(result, strs[i])
+        val trie = Trie()
+        for (str in strs) {
+            trie.insert(str)
         }
-        return makeString(result)
+        return trie.searchLongestPrefix(strs.first())
     }
 
-    private fun makeTrie(str: String): Trie? {
-        if (str.isEmpty()) return null
-        val result = Trie(str[0])
-        var cur = result
-        for (i in 1 until str.length) {
-            cur.next = Trie(str[i])
-            cur = cur.next!!
+    internal class TrieNode {
+        // R links to node children
+        private val links: Array<TrieNode?>
+        private val R = 26
+        var size = 0
+            private set
+        var isEnd = false
+            private set
+
+        fun containsKey(ch: Char): Boolean {
+            return links[ch - 'a'] != null
         }
-        return result
+
+        operator fun get(ch: Char): TrieNode? {
+            return links[ch - 'a']
+        }
+
+        fun put(ch: Char, node: TrieNode?) {
+            links[ch - 'a'] = node
+            size++
+        }
+
+        fun setEnd() {
+            isEnd = true
+        }
+
+        init {
+            links = arrayOfNulls(R)
+        }
     }
 
-    private fun commonTrie(t: Trie, str: String): Trie? {
-        if (str.isEmpty()) return null
-        if (t.c != str[0]) return null
-        var input: Trie? = t.next
-        var index = 0
-        val result = Trie(str[index++])
-        var cur = result
-        while (input != null && index != str.length) {
-            if (input.c != str[index]) break
-            cur.next = Trie(str[index++])
-            cur = cur.next!!
-            input = input.next
-        }
-        return result
-    }
+    internal class Trie {
+        private val root: TrieNode = TrieNode()
 
-    private fun makeString(t: Trie?): String {
-        if (t == null) return ""
-        val result = mutableListOf<Char>()
-        var cur: Trie? = t
-        while (cur != null) {
-            result.add(cur.c)
-            cur = cur.next
+        // Inserts a word into the trie.
+        fun insert(word: String) {
+            var node: TrieNode? = root
+            for (element in word) {
+                if (!node!!.containsKey(element)) {
+                    node.put(element, TrieNode())
+                }
+                node = node[element]
+            }
+            node!!.setEnd()
         }
-        return result.joinToString("")
-    }
-}
 
-class Trie(var c: Char) {
-    var next: Trie? = null
+        fun searchLongestPrefix(word: String): String {
+            var node: TrieNode? = root
+            val prefix = mutableListOf<Char>()
+            for (ch in word) {
+                if (node!!.containsKey(ch) && (node.size == 1) && !node.isEnd) {
+                    prefix.add(ch)
+                    node = node[ch]
+                } else {
+                    break
+                }
+            }
+            return prefix.joinToString("")
+        }
+    }
 }
