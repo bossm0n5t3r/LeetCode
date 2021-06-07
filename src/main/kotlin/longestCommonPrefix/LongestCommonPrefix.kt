@@ -74,5 +74,55 @@ class LongestCommonPrefix {
         return true
     }
 
-    // TODO Trie
+    fun longestCommonPrefixTrie(strs: Array<String>): String {
+        if (strs.isEmpty()) return ""
+        var result = makeTrie(str = strs[0])
+        for (i in 1 until strs.size) {
+            if (result == null) return ""
+            result = commonTrie(result, strs[i])
+        }
+        return makeString(result)
+    }
+
+    private fun makeTrie(str: String): Trie? {
+        if (str.isEmpty()) return null
+        val result = Trie(str[0])
+        var cur = result
+        for (i in 1 until str.length) {
+            cur.next = Trie(str[i])
+            cur = cur.next!!
+        }
+        return result
+    }
+
+    private fun commonTrie(t: Trie, str: String): Trie? {
+        if (str.isEmpty()) return null
+        if (t.c != str[0]) return null
+        var input: Trie? = t.next
+        var index = 0
+        val result = Trie(str[index++])
+        var cur = result
+        while (input != null && index != str.length) {
+            if (input.c != str[index]) break
+            cur.next = Trie(str[index++])
+            cur = cur.next!!
+            input = input.next
+        }
+        return result
+    }
+
+    private fun makeString(t: Trie?): String {
+        if (t == null) return ""
+        val result = mutableListOf<Char>()
+        var cur: Trie? = t
+        while (cur != null) {
+            result.add(cur.c)
+            cur = cur.next
+        }
+        return result.joinToString("")
+    }
+}
+
+class Trie(var c: Char) {
+    var next: Trie? = null
 }
