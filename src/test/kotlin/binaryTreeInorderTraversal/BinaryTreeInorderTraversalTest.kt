@@ -36,6 +36,11 @@ class BinaryTreeInorderTraversalTest {
                 binaryTreeInorderTraversal.inorderTraversalIteratingMethodUsingStack(test.root)
             assertTrue(resultIteratingMethodUsingStack.containsAll(test.result))
             assertEquals(resultIteratingMethodUsingStack.size, test.result.size)
+
+            // Morris Traversal
+            val resultMorrisTraversal = binaryTreeInorderTraversal.inorderTraversalMorrisTraversal(test.root)
+            assertTrue(resultMorrisTraversal.containsAll(test.result))
+            assertEquals(resultMorrisTraversal.size, test.result.size)
         }
     }
 }

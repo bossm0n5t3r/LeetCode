@@ -33,4 +33,25 @@ class BinaryTreeInorderTraversal {
         }
         return result
     }
+
+    fun inorderTraversalMorrisTraversal(root: TreeNode?): List<Int> {
+        val result = mutableListOf<Int>()
+        var cur = root
+        while (cur != null) {
+            if (cur.left == null) {
+                result.add(cur.`val`)
+                cur = cur.right // move to next right node
+            } else { // has a left subtree
+                var pre = cur.left
+                while (pre?.right != null) { // find rightmost
+                    pre = pre.right
+                }
+                pre?.right = cur // put cur after the pre node
+                val tmp = cur // store cur node
+                cur = cur.left // move cur to the top of the new tree
+                tmp.left = null // original cur left be null, avoid infinite loops
+            }
+        }
+        return result
+    }
 }
