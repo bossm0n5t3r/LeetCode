@@ -26,9 +26,16 @@ class BinaryTreeInorderTraversalTest {
             BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),
         )
         tests.forEach { test ->
-            val result = binaryTreeInorderTraversal.inorderTraversalRecursiveApproach(test.root)
-            assertTrue(result.containsAll(test.result))
-            assertEquals(result.size, test.result.size)
+            // RecursiveApproach
+            val resultRecursiveApproach = binaryTreeInorderTraversal.inorderTraversalRecursiveApproach(test.root)
+            assertTrue(resultRecursiveApproach.containsAll(test.result))
+            assertEquals(resultRecursiveApproach.size, test.result.size)
+
+            // Iterating Method Using Stack
+            val resultIteratingMethodUsingStack =
+                binaryTreeInorderTraversal.inorderTraversalIteratingMethodUsingStack(test.root)
+            assertTrue(resultIteratingMethodUsingStack.containsAll(test.result))
+            assertEquals(resultIteratingMethodUsingStack.size, test.result.size)
         }
     }
 }
