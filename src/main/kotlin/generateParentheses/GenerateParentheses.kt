@@ -1,7 +1,7 @@
 package generateParentheses
 
 class GenerateParentheses {
-    fun generateParenthesis(n: Int): List<String> {
+    fun generateParenthesisBruteForce(n: Int): List<String> {
         val result = mutableListOf<String>()
         val arr = CharArray(n * 2)
         generateAllParentheses(result, arr, 0)
@@ -33,5 +33,24 @@ class GenerateParentheses {
             if (balance < 0) return false
         }
         return balance == 0
+    }
+
+    fun generateParenthesisBacktracking(n: Int): List<String> {
+        val result = mutableListOf<String>()
+        backtracking(result, "", 0, 0, n)
+        return result
+    }
+
+    private fun backtracking(result: MutableList<String>, cur: String, open: Int, close: Int, max: Int) {
+        if (cur.length == max * 2) {
+            result.add(cur)
+            return
+        }
+        if (open < max) {
+            backtracking(result, "$cur(", open + 1, close, max)
+        }
+        if (close < open) {
+            backtracking(result, "$cur)", open, close + 1, max)
+        }
     }
 }

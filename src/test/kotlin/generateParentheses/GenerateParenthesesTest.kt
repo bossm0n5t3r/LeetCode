@@ -18,7 +18,8 @@ class GenerateParenthesesTest {
             GenerateParenthesesTestData(1, listOf("()"))
         )
         tests.forEach { test ->
-            assertEquals(generateParentheses.generateParenthesis(test.n), test.result)
+            assertEquals(generateParentheses.generateParenthesisBruteForce(test.n), test.result)
+            assertEquals(generateParentheses.generateParenthesisBacktracking(test.n), test.result)
         }
     }
 }
