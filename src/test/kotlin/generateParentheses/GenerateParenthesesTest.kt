@@ -2,6 +2,7 @@ package generateParentheses
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class GenerateParenthesesTest {
     private val generateParentheses = GenerateParentheses()
@@ -18,8 +19,17 @@ class GenerateParenthesesTest {
             GenerateParenthesesTestData(1, listOf("()"))
         )
         tests.forEach { test ->
-            assertEquals(generateParentheses.generateParenthesisBruteForce(test.n), test.result)
-            assertEquals(generateParentheses.generateParenthesisBacktracking(test.n), test.result)
+            val resultBruteForce = generateParentheses.generateParenthesisBruteForce(test.n)
+            assertTrue(resultBruteForce.containsAll(test.result))
+            assertEquals(resultBruteForce.size, test.result.size)
+
+            val resultBacktracking = generateParentheses.generateParenthesisBacktracking(test.n)
+            assertTrue(resultBacktracking.containsAll(test.result))
+            assertEquals(resultBacktracking.size, test.result.size)
+
+            val resultClosureNumber = generateParentheses.generateParenthesisClosureNumber(test.n)
+            assertTrue(resultClosureNumber.containsAll(test.result))
+            assertEquals(resultClosureNumber.size, test.result.size)
         }
     }
 }

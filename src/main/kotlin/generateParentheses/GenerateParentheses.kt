@@ -53,4 +53,20 @@ class GenerateParentheses {
             backtracking(result, "$cur)", open, close + 1, max)
         }
     }
+
+    fun generateParenthesisClosureNumber(n: Int): List<String> {
+        val result = mutableListOf<String>()
+        if (n == 0) {
+            result.add("")
+        } else {
+            for (c in 0 until n) {
+                for (left in generateParenthesisClosureNumber(c)) {
+                    for (right in generateParenthesisClosureNumber(n - 1 - c)) {
+                        result.add("($left)$right")
+                    }
+                }
+            }
+        }
+        return result
+    }
 }
