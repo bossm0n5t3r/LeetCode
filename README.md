@@ -50,4 +50,5 @@
 |                      [46. Permutations](./src/main/kotlin/permutations)                      | 2021-06-19 |   ✅   |
 |      [94. Binary Tree Inorder Traversal](./src/main/kotlin/binaryTreeInorderTraversal)       | 2021-06-20 |   ✅   |
 |                      [198. House Robber](./src/main/kotlin/houseRobber)                      | 2021-06-20 |   ✅   |
+|              [22. Generate Parentheses](./src/main/kotlin/generateParentheses)               | 2021-06-20 |   ✅   |
 |                                    [](./src/main/kotlin)                                     | 2021-00-00 |   ✅   |
