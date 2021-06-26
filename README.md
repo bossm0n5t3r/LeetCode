@@ -51,4 +51,6 @@
 |      [94. Binary Tree Inorder Traversal](./src/main/kotlin/binaryTreeInorderTraversal)       | 2021-06-20 |   ✅   |
 |                      [198. House Robber](./src/main/kotlin/houseRobber)                      | 2021-06-20 |   ✅   |
 |              [22. Generate Parentheses](./src/main/kotlin/generateParentheses)               | 2021-06-20 |   ✅   |
+|                           [78. Subsets](./src/main/kotlin/subsets)                           | 2021-06-25 |   ✅   |
+|            [347. Top K Frequent Elements](./src/main/kotlin/topKFrequentElements)            | 2021-06-26 |   ✅   |
 |                                    [](./src/main/kotlin)                                     | 2021-00-00 |   ✅   |
