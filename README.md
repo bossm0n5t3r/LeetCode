@@ -53,4 +53,5 @@
 |              [22. Generate Parentheses](./src/main/kotlin/generateParentheses)               | 2021-06-20 |   ✅   |
 |                           [78. Subsets](./src/main/kotlin/subsets)                           | 2021-06-25 |   ✅   |
 |            [347. Top K Frequent Elements](./src/main/kotlin/topKFrequentElements)            | 2021-06-26 |   ✅   |
+|                [371. Sum of Two Integers](./src/main/kotlin/sumOfTwoIntegers)                | 2021-07-17 |   ✅   |
 |                                    [](./src/main/kotlin)                                     | 2021-00-00 |   ✅   |
