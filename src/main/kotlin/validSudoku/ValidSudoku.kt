@@ -1,7 +1,7 @@
 package validSudoku
 
 class ValidSudoku {
-    fun isValidSudoku(board: Array<CharArray>): Boolean {
+    fun isValidSudokuFirstApproach(board: Array<CharArray>): Boolean {
         val convertedBoard = convertToListListInt(board)
         if (!checkSquare(convertedBoard)) return false
         if (!checkHorizontal(convertedBoard)) return false
@@ -90,5 +90,21 @@ class ValidSudoku {
             }
         }
         return result
+    }
+
+    fun isValidSudokuSecondApproach(board: Array<CharArray>): Boolean {
+        val seen = mutableSetOf<String>()
+        val sudokuIndex = 0 until 9
+        sudokuIndex.forEach { r ->
+            sudokuIndex.forEach { c ->
+                if (board[r][c] != '.') {
+                    val element = "(${board[r][c]})"
+                    if (!seen.add("$r$element") || !seen.add("$element$c") || !seen.add("${r / 3}$element${c / 3}")) {
+                        return false
+                    }
+                }
+            }
+        }
+        return true
     }
 }

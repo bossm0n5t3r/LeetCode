@@ -82,8 +82,8 @@ class ValidSudokuTest {
             )
         )
         tests.forEach { test ->
-//            println(validSudoku.isValidSudoku(test.board))
-            assertThat(validSudoku.isValidSudoku(test.board)).isEqualTo(test.result)
+            assertThat(validSudoku.isValidSudokuFirstApproach(test.board)).isEqualTo(test.result)
+            assertThat(validSudoku.isValidSudokuSecondApproach(test.board)).isEqualTo(test.result)
         }
     }
 
