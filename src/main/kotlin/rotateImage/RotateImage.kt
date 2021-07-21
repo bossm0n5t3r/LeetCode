@@ -40,4 +40,31 @@ class RotateImage {
             }
         }
     }
+
+    fun rotateApproachSecond(matrix: Array<IntArray>) {
+        transpose(matrix)
+        reflect(matrix)
+    }
+
+    private fun transpose(matrix: Array<IntArray>) {
+        val n = matrix.size
+        for (i in 0 until n) {
+            for (j in i until n) {
+                val tmp = matrix[j][i]
+                matrix[j][i] = matrix[i][j]
+                matrix[i][j] = tmp
+            }
+        }
+    }
+
+    private fun reflect(matrix: Array<IntArray>) {
+        val n = matrix.size
+        for (i in 0 until n) {
+            for (j in 0 until n / 2) {
+                val tmp = matrix[i][j]
+                matrix[i][j] = matrix[i][n - j - 1]
+                matrix[i][n - j - 1] = tmp
+            }
+        }
+    }
 }
