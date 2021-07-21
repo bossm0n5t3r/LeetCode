@@ -61,7 +61,8 @@ class RotateImageTest {
         )
         tests.forEach { test ->
             val inputMatrix = test.matrix
-            rotateImage.rotateMyFirstSolution(inputMatrix)
+//            rotateImage.rotateMyFirstSolution(inputMatrix)
+            rotateImage.rotateApproachFirst(inputMatrix)
             assertThat(inputMatrix).isEqualTo(test.resultMatrix)
         }
     }
