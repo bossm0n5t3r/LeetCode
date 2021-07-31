@@ -35,39 +35,42 @@ class WordSearchTest {
     @Test
     fun exist() {
         val tests = listOf(
+//            WordSearchTestData(
+//                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
+//                "ABCCED",
+//                true
+//            ),
+//            WordSearchTestData(
+//                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
+//                "SEE",
+//                true
+//            ),
+//            WordSearchTestData(
+//                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
+//                "ABCB",
+//                false
+//            ),
+//            WordSearchTestData(
+//                getBoard("[[\"a\",\"a\"]]"),
+//                "aa",
+//                true
+//            ),
+//            WordSearchTestData(
+//                getBoard("[[\"a\",\"b\"]]"),
+//                "aba",
+//                false
+//            ),
+//            WordSearchTestData(
+//                getBoard("[[\"C\",\"A\",\"A\"],[\"A\",\"A\",\"A\"],[\"B\",\"C\",\"D\"]]"),
+//                "AAB",
+//                true
+//            ),
             WordSearchTestData(
-                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
-                "ABCCED",
-                true
-            ),
-            WordSearchTestData(
-                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
-                "SEE",
-                true
-            ),
-            WordSearchTestData(
-                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
-                "ABCB",
-                false
-            ),
-            WordSearchTestData(
-                getBoard("[[\"a\",\"a\"]]"),
-                "aa",
-                true
-            ),
-            WordSearchTestData(
-                getBoard("[[\"a\",\"b\"]]"),
-                "aba",
-                false
-            ),
-            WordSearchTestData(
-                getBoard("[[\"C\",\"A\",\"A\"],[\"A\",\"A\",\"A\"],[\"B\",\"C\",\"D\"]]"),
-                "AAB",
+                getBoard("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"E\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"),
+                "ABCESEEEFS",
                 true
             ),
         )
-        // [["C","A","A"],["A","A","A"],["B","C","D"]]
-        //"AAB"
         tests.forEach { test ->
             println(wordSearch.exist(test.board, test.word))
 //            assertThat(wordSearch.exist(test.board, test.word)).isEqualTo(test.result)
