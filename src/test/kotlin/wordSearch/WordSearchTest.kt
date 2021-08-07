@@ -73,6 +73,7 @@ class WordSearchTest {
         )
         tests.forEach { test ->
             println(wordSearch.exist(test.board, test.word))
+            println(wordSearch.existByBfs(test.board, test.word))
 //            assertThat(wordSearch.exist(test.board, test.word)).isEqualTo(test.result)
         }
     }
