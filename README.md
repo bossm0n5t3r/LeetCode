@@ -55,4 +55,6 @@
 |            [347. Top K Frequent Elements](./src/main/kotlin/topKFrequentElements)            | 2021-06-26 |   ✅   |
 |                [371. Sum of Two Integers](./src/main/kotlin/sumOfTwoIntegers)                | 2021-07-17 |   ✅   |
 |                      [36. Valid Sudoku](./src/main/kotlin/validSudoku)                       | 2021-07-20 |   ✅   |
+|                      [48. Rotate Image](./src/main/kotlin/rotateImage)                       | 2021-07-22 |   ✅   |
+|       [238. Product of Array Except Self](./src/main/kotlin/productOfArrayExceptSelf)        | 2021-08-08 |   ✅   |
 |                                    [](./src/main/kotlin)                                     | 2021-00-00 |   ✅   |
