@@ -19,7 +19,7 @@ class ValidPalindrome {
                     result.add(c)
                 }
                 in 'A'..'Z' -> {
-                    result.add(c.toLowerCase())
+                    result.add(c.lowercaseChar())
                 }
                 in '0'..'9' -> {
                     result.add(c)
