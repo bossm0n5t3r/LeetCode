@@ -7,16 +7,14 @@ class GameOfLife {
         (0 until m).forEach { r ->
             (0 until n).forEach { c ->
                 val liveNeighborCells = checkLiveNeighbors(board, m, n, r, c)
-                board[r][c] += liveNeighborCells * 10
+                if (liveNeighborCells == 3 || (board[r][c] == 1 && liveNeighborCells == 2)) {
+                    board[r][c] = board[r][c] or 2
+                }
             }
         }
         (0 until m).forEach { r ->
             (0 until n).forEach { c ->
-                if (board[r][c] in setOf(21, 31, 30)) {
-                    board[r][c] = 1
-                } else {
-                    board[r][c] = 0
-                }
+                board[r][c] = board[r][c] ushr 1
             }
         }
     }
@@ -28,8 +26,8 @@ class GameOfLife {
         (0..7).forEach { i ->
             val nr = r + dr[i]
             val nc = c + dc[i]
-            if ((nr in 0 until m) && (nc in 0 until n) && board[nr][nc] % 10 == 1) {
-                liveCells++
+            if ((nr in 0 until m) && (nc in 0 until n)) {
+                liveCells += (board[nr][nc] and 1)
             }
         }
         return liveCells
