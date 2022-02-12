@@ -42,8 +42,13 @@ class GameOfLifeTest {
             )
         )
         tests.forEach { test ->
-            gameOfLife.gameOfLife(test.board)
-            assertThat(test.board).isEqualTo(test.result)
+            val notInfiniteTestBoard = test.board.map { it.copyOf() }.toTypedArray()
+            gameOfLife.gameOfLife(notInfiniteTestBoard)
+            assertThat(notInfiniteTestBoard).isEqualTo(test.result)
+
+            val infiniteTestBoard = test.board.map { it.copyOf() }.toTypedArray()
+            gameOfLife.gameOfLifeInfinite(infiniteTestBoard)
+            assertThat(infiniteTestBoard).isEqualTo(test.result)
         }
     }
 }
