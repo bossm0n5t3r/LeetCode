@@ -24,8 +24,7 @@ class ValidPalindrome {
                 in '0'..'9' -> {
                     result.add(c)
                 }
-                else -> {
-                }
+                else -> {}
             }
         }
         return result
