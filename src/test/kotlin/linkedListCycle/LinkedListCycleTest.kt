@@ -53,6 +53,10 @@ class LinkedListCycleTest {
                 linkedListCycle.hasCycleSecondApproach(head),
                 test.result
             )
+            assertEquals(
+                linkedListCycle.hasCycleThirdApproach(head),
+                test.result
+            )
             listNodeUtil.clearBasicSingleListNode(basicListNode)
         }
     }
