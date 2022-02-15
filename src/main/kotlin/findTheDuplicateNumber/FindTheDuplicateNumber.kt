@@ -2,12 +2,12 @@ package findTheDuplicateNumber
 
 class FindTheDuplicateNumber {
     fun findDuplicate(nums: IntArray): Int {
-        val set = mutableSetOf<Int>()
+        val seen = BooleanArray(nums.size)
         nums.forEach { num ->
-            if (set.contains(num)) {
+            if (seen[num]) {
                 return num
             }
-            set.add(num)
+            seen[num] = true
         }
         return -1
     }
