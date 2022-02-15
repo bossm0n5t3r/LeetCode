@@ -42,7 +42,9 @@ class FindTheDuplicateNumberTest {
             ),
         )
         tests.forEach { test ->
-            assertEquals(findTheDuplicateNumber.findDuplicate(test.nums), test.result)
+            assertEquals(findTheDuplicateNumber.findDuplicateUsingSet(test.nums), test.result)
+            assertEquals(findTheDuplicateNumber.findDuplicateUsingArray(test.nums), test.result)
+            assertEquals(findTheDuplicateNumber.findDuplicateUsingO1Space(test.nums), test.result)
         }
     }
 }
