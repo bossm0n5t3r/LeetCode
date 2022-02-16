@@ -1,9 +1,9 @@
 package convertSortedArrayToBST
 
-import kotlin.test.assertTrue
 import org.junit.jupiter.api.Test
 import utils.TreeNode
 import utils.TreeNodeUtil
+import kotlin.test.assertTrue
 
 class ConvertSortedArrayToBSTTest {
     private val convertSortedArrayToBST = ConvertSortedArrayToBST()
