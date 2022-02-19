@@ -21,6 +21,7 @@ class UniquePathsTest {
         )
         tests.forEach { test ->
             assertEquals(uniquePaths.uniquePaths(test.m, test.n), test.result)
+            assertEquals(uniquePaths.uniquePathsUsingDP(test.m, test.n), test.result)
         }
     }
 }
