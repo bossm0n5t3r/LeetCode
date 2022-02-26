@@ -48,6 +48,7 @@ class KthSmallestElementInASortedMatrixTest {
         )
         tests.forEach { test ->
             assertEquals(kthSmallestElementInASortedMatrix.kthSmallest(test.matrix, test.k), test.result)
+            assertEquals(kthSmallestElementInASortedMatrix.kthSmallestByUsingBiSect(test.matrix, test.k), test.result)
         }
     }
 }
