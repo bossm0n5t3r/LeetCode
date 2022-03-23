@@ -2,18 +2,16 @@ package longestSubstringWithoutRepeatingCharacters
 
 class LongestSubstringWithoutRepeatingCharacters {
     fun lengthOfLongestSubstring(s: String): Int {
-        if (s.length == s.toSet().size) return s.length
+        if (s.isEmpty()) return 0
+        val cache = mutableMapOf<Char, Int>()
         var result = -1
-        var start = 0
-        var end = 0
-        while (start < s.length) {
-            while (end <= s.length && s.substring(start, end).length == s.substring(start, end).toSet().size) {
-                end++
+        var j = 0
+        (s.indices).forEach { i ->
+            if (cache.containsKey(s[i])) {
+                j = j.coerceAtLeast(cache[s[i]]!! + 1)
             }
-            if (end - start - 1 > result) {
-                result = end - start - 1
-            }
-            start++
+            cache[s[i]] = i
+            result = result.coerceAtLeast(i - j + 1)
         }
         return result
     }
