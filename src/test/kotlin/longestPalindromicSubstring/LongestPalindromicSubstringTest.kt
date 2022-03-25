@@ -14,26 +14,26 @@ internal class LongestPalindromicSubstringTest {
     @Test
     fun longestPalindrome() {
         val tests = listOf(
-//            LongestPalindromicSubstringTestData(
-//                "babad",
-//                "bab"
-//            ),
-//            LongestPalindromicSubstringTestData(
-//                "cbbd",
-//                "bb"
-//            ),
-//            LongestPalindromicSubstringTestData(
-//                "a",
-//                "a"
-//            ),
-//            LongestPalindromicSubstringTestData(
-//                "ac",
-//                "a"
-//            ),
-//            LongestPalindromicSubstringTestData(
-//                "ccc",
-//                "ccc"
-//            ),
+            LongestPalindromicSubstringTestData(
+                "babad",
+                "bab"
+            ),
+            LongestPalindromicSubstringTestData(
+                "cbbd",
+                "bb"
+            ),
+            LongestPalindromicSubstringTestData(
+                "a",
+                "a"
+            ),
+            LongestPalindromicSubstringTestData(
+                "ac",
+                "a"
+            ),
+            LongestPalindromicSubstringTestData(
+                "ccc",
+                "ccc"
+            ),
             LongestPalindromicSubstringTestData(
                 "aaaa",
                 "aaaa"
