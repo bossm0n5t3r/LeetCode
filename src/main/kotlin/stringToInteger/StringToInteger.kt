@@ -35,29 +35,29 @@ class StringToInteger {
         }
     }
 
-    private fun Pair<Char, String>.step4(): Pair<Char, BigInteger> {
-        return if (this.second.isNotEmpty()) {
-            this.first to this.second.toBigInteger()
+    private fun Pair<Char, String>.step4(): BigInteger {
+        val tmp = if (this.second.isNotEmpty()) {
+            this.second.toBigInteger()
         } else {
-            this.first to BigInteger.valueOf(0L)
+            BigInteger.valueOf(0L)
+        }
+        return if (this.first == '-') {
+            tmp.times(BigInteger.valueOf(-1L))
+        } else {
+            tmp
         }
     }
 
-    private fun Pair<Char, BigInteger>.step5(): Int {
-        val tmp = if (this.first == '-') {
-            this.second.times(BigInteger.valueOf(-1L))
-        } else {
-            this.second
-        }
+    private fun BigInteger.step5(): Int {
         return when {
-            tmp < BigInteger.valueOf(Int.MIN_VALUE.toLong()) -> {
+            this < BigInteger.valueOf(Int.MIN_VALUE.toLong()) -> {
                 Int.MIN_VALUE
             }
-            tmp > BigInteger.valueOf(Int.MAX_VALUE.toLong()) -> {
+            this > BigInteger.valueOf(Int.MAX_VALUE.toLong()) -> {
                 Int.MAX_VALUE
             }
             else -> {
-                tmp.toInt()
+                this.toInt()
             }
         }
     }
