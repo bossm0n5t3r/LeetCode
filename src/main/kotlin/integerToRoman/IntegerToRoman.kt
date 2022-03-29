@@ -32,10 +32,13 @@ class IntegerToRoman {
                 }
                 result.add(tmpRoman)
             } else {
-                var tmpRoman = if (tmpDividedByFive > 0) {
-                    romanNumerals[idx]?.get(5)
-                } else ""
-                repeat(tmpRemainderWhenDividedByFive) { tmpRoman += romanNumerals[idx]?.get(1) }
+                val tmpRoman = (
+                    if (tmpDividedByFive > 0) {
+                        romanNumerals[idx]?.get(5)
+                    } else {
+                        ""
+                    }
+                    ) + romanNumerals[idx]?.get(1)?.repeat(tmpRemainderWhenDividedByFive)
                 result.add(tmpRoman)
             }
             tmpNum /= 10
