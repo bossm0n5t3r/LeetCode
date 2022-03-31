@@ -4,19 +4,21 @@ import kotlin.math.abs
 
 class ThreeSumClosest {
     fun threeSumClosest(nums: IntArray, target: Int): Int {
-        val seen = mutableSetOf<Int>()
-        var result = 13001
-        val size = nums.size
+        val sortedNums = nums.sorted()
+        var result = sortedNums.first() + sortedNums.last() + sortedNums[1]
+        val size = sortedNums.size
         (0 until size - 2).forEach { i ->
-            (i + 1 until size - 1).forEach { j ->
-                (j + 1 until size).forEach { k ->
-                    val tmp = nums[i] + nums[j] + nums[k]
-                    if (!seen.contains(tmp)) {
-                        seen.add(tmp)
-                        if (abs(tmp - target) < abs(result - target)) {
-                            result = tmp
-                        }
-                    }
+            var start = i + 1
+            var end = size - 1
+            while (start < end) {
+                val tmpSum = sortedNums[i] + sortedNums[start] + sortedNums[end]
+                if (tmpSum > target) {
+                    end--
+                } else {
+                    start++
+                }
+                if (abs(target - result) > abs(target - tmpSum)) {
+                    result = tmpSum
                 }
             }
         }
