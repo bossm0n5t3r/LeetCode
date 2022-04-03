@@ -22,6 +22,10 @@ internal class LetterCombinationsOfAPhoneNumberTest {
             println(letterCombinationsOfAPhoneNumber.letterCombinations(test.digits))
             assertThat(letterCombinationsOfAPhoneNumber.letterCombinations(test.digits))
                 .containsExactlyInAnyOrderElementsOf(test.result)
+
+            println(letterCombinationsOfAPhoneNumber.letterCombinationsGoodSolution(test.digits))
+            assertThat(letterCombinationsOfAPhoneNumber.letterCombinationsGoodSolution(test.digits))
+                .containsExactlyInAnyOrderElementsOf(test.result)
         }
     }
 }

@@ -1,5 +1,7 @@
 package letterCombinationsOfAPhoneNumber
 
+import java.util.LinkedList
+
 class LetterCombinationsOfAPhoneNumber {
     fun letterCombinations(digits: String): List<String> {
         if (digits.isBlank()) return emptyList()
@@ -28,6 +30,21 @@ class LetterCombinationsOfAPhoneNumber {
                 } as MutableList<String>
             }
             idx++
+        }
+        return result
+    }
+
+    fun letterCombinationsGoodSolution(digits: String): List<String> {
+        val result = LinkedList<String>()
+        if (digits.isBlank()) return result
+        val digitToLetters = arrayOf("0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz")
+        result.add("")
+        while (result.peek().length != digits.length) {
+            val remove = result.remove()
+            val targetDigit = digits[remove.length].digitToInt()
+            (digitToLetters[targetDigit].toCharArray()).forEach {
+                result.add("$remove$it")
+            }
         }
         return result
     }
