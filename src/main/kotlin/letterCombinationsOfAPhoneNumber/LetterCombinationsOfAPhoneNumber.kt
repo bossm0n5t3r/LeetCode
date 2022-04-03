@@ -14,19 +14,20 @@ class LetterCombinationsOfAPhoneNumber {
             9 to listOf("w", "x", "y", "z"),
         )
         var result = mutableListOf<String>()
-        var lastIdx = digits.length - 1
-        digitToLetters[digits[lastIdx].digitToInt()]?.let { result.addAll(it) }
-        lastIdx--
-        while (lastIdx >= 0) {
-            val tmp = mutableListOf<String>()
-            val target = digits[lastIdx].digitToInt()
-            digitToLetters[target]?.forEach { first ->
-                result.forEach { last ->
-                    tmp.add("$first$last")
-                }
+        var idx = 0
+        while (idx < digits.length) {
+            val targetDigit = digits[idx].digitToInt()
+            val targetLetters = digitToLetters[targetDigit] ?: continue
+            if (result.isEmpty()) {
+                result.addAll(targetLetters)
+            } else {
+                result = result.flatMap { first ->
+                    targetLetters.map { last ->
+                        "$first$last"
+                    }
+                } as MutableList<String>
             }
-            result = tmp
-            lastIdx--
+            idx++
         }
         return result
     }
