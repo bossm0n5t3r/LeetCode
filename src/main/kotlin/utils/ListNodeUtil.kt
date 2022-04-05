@@ -88,4 +88,14 @@ class ListNodeUtil {
         }
         return listNodeData.first()
     }
+
+    fun printListNode(listNode: ListNode?) {
+        var cur = listNode
+        val valueList = mutableListOf<Int>()
+        while (cur != null) {
+            valueList.add(cur.`val`)
+            cur = cur.next
+        }
+        println("ListNode : ${valueList.joinToString(" ")}")
+    }
 }
