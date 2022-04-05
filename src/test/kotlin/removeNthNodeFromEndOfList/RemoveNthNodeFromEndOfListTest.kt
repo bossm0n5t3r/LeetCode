@@ -38,6 +38,10 @@ internal class RemoveNthNodeFromEndOfListTest {
             val result = removeNthNodeFromEndOfList.removeNthFromEnd(test.head, test.n)
             listNodeUtil.printListNode(result)
             assertTrue(listNodeUtil.isEqual(result, test.result))
+
+            val resultUsingPointers = removeNthNodeFromEndOfList.removeNthFromEndUsingPointers(test.head, test.n)
+            listNodeUtil.printListNode(resultUsingPointers)
+            assertTrue(listNodeUtil.isEqual(resultUsingPointers, test.result))
         }
     }
 }

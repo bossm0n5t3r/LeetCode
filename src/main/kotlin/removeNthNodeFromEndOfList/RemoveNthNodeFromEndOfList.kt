@@ -21,4 +21,18 @@ class RemoveNthNodeFromEndOfList {
         }
         return result
     }
+
+    fun removeNthFromEndUsingPointers(head: ListNode?, n: Int): ListNode? {
+        val start = ListNode(-1)
+        var slow: ListNode? = start
+        var fast: ListNode? = start
+        slow?.next = head
+        repeat(n + 1) { fast = fast?.next }
+        while (fast != null) {
+            fast = fast?.next
+            slow = slow?.next
+        }
+        slow?.next = slow?.next?.next
+        return start.next
+    }
 }
