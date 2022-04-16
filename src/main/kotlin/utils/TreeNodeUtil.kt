@@ -38,7 +38,7 @@ class TreeNodeUtil {
         return result
     }
 
-    fun printTreeNode(treeNode: TreeNode) {
+    fun printTreeNode(treeNode: TreeNode?) {
         val q: Queue<TreeNode?> = LinkedList()
         q.add(treeNode)
         while (q.isNotEmpty()) {
@@ -55,8 +55,8 @@ class TreeNodeUtil {
         }
     }
 
-    fun isEqual(first: TreeNode, second: TreeNode): Boolean {
-        if (first.`val` != second.`val`) return false
+    fun isEqual(first: TreeNode?, second: TreeNode?): Boolean {
+        if (first?.`val` != second?.`val`) return false
         val firstQ: Queue<TreeNode> = LinkedList()
         val secondQ: Queue<TreeNode> = LinkedList()
         firstQ.add(first)
