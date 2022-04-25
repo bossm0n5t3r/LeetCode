@@ -7,19 +7,17 @@ class SudokuSolverFaster {
 
     private fun solve(board: Array<CharArray>, row: Int, column: Int): Boolean {
         var col = column
-        for (i in row until 9) {
-            for (j in col until 9) {
-                if (board[i][j] != '.') {
-                    continue
-                }
+        for (r in row until 9) {
+            for (c in col until 9) {
+                if (board[r][c] != '.') continue
 
-                for (c in '1'..'9') {
-                    if (isValid(board, i, j, c)) {
-                        board[i][j] = c
-                        if (solve(board, i, j + 1)) {
+                for (char in '1'..'9') {
+                    if (isValid(board, r, c, char)) {
+                        board[r][c] = char
+                        if (solve(board, r, c + 1)) {
                             return true
                         }
-                        board[i][j] = '.'
+                        board[r][c] = '.'
                     }
                 }
                 return false
