@@ -23,6 +23,10 @@ internal class BackspaceStringCompareTest {
             val result = backspaceStringCompare.backspaceCompare(test.s, test.t)
             println(result)
             assertEquals(result, test.result)
+
+            val resultWithRestriction = backspaceStringCompare.backspaceCompareWithRestriction(test.s, test.t)
+            println(resultWithRestriction)
+            assertEquals(resultWithRestriction, test.result)
         }
     }
 }
