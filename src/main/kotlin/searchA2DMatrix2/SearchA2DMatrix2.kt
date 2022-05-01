@@ -24,4 +24,20 @@ class SearchA2DMatrix2 {
         }
         return false
     }
+
+    fun searchMatrixEfficient(matrix: Array<IntArray>, target: Int): Boolean {
+        if (matrix.isEmpty() || matrix.first().isEmpty()) return false
+        var row = 0
+        var col = matrix.first().size - 1
+        while (col >= 0 && row < matrix.size) {
+            val cur = matrix[row][col]
+            if (cur == target) return true
+            else if (cur < target) {
+                row++
+            } else {
+                col--
+            }
+        }
+        return false
+    }
 }
