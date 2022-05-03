@@ -44,6 +44,9 @@ internal class ShortestUnsortedContinuousSubarrayTest {
             ShortestUnsortedContinuousSubarrayTestData(
                 intArrayOf(1, 2, 3, 3, 3), 0
             ),
+            ShortestUnsortedContinuousSubarrayTestData(
+                intArrayOf(2, 1), 2
+            ),
         )
         tests.forEach { test ->
             val result = shortestUnsortedContinuousSubarray.findUnsortedSubarray(test.nums)

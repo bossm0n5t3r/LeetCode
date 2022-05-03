@@ -2,23 +2,23 @@ package shortestUnsortedContinuousSubarray
 
 class ShortestUnsortedContinuousSubarray {
     fun findUnsortedSubarray(nums: IntArray): Int {
+        var e = -1
+        var max = nums.first()
+        (1 until nums.size).forEach { i ->
+            if (nums[i] < max) {
+                e = i
+            } else {
+                max = nums[i]
+            }
+        }
         var s = 0
-        while (s + 1 < nums.size && nums[s] <= nums[s + 1]) {
-            s++
-        }
-        var e = nums.size - 1
-        while (e - 1 >= 0 && nums[e] >= nums[e - 1]) {
-            e--
-        }
-        if (s >= e) return 0
-        val tmpSubarray = nums.toList().subList(s, e + 1)
-        val min = tmpSubarray.minOrNull()!!
-        val max = tmpSubarray.maxOrNull()!!
-        while (s - 1 >= 0 && nums[s - 1] > min) {
-            s--
-        }
-        while (e + 1 < nums.size && nums[e + 1] < max) {
-            e++
+        var min = nums.last()
+        (nums.size - 2 downTo 0).forEach { i ->
+            if (nums[i] > min) {
+                s = i
+            } else {
+                min = nums[i]
+            }
         }
         return (e - s + 1)
     }
