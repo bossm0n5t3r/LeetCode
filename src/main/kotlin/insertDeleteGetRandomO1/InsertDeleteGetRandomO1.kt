@@ -1,27 +1,33 @@
 package insertDeleteGetRandomO1
 
 class InsertDeleteGetRandomO1 {
-    private val set = mutableListOf<Int>()
+    private val map = mutableMapOf<Int, Int>()
+    private val values = mutableListOf<Int>()
 
     fun insert(`val`: Int): Boolean {
-        return if (set.contains(`val`)) {
+        return if (map.containsKey(`val`)) {
             false
         } else {
-            set.add(`val`)
+            values.add(`val`)
+            map[`val`] = values.lastIndex
             true
         }
     }
 
     fun remove(`val`: Int): Boolean {
-        return if (set.contains(`val`)) {
-            set.remove(`val`)
-            true
-        } else {
-            false
-        }
+        if (!map.containsKey(`val`)) return false
+        val index = map[`val`] ?: return false
+        val lastIndex = values.lastIndex
+        val lastValue = values.last()
+        values[index] = lastValue
+        map[lastValue] = index
+        map.remove(`val`)
+        values.removeAt(lastIndex)
+        return true
     }
 
     fun getRandom(): Int {
-        return set.random()
+        val randIndex = values.indices.random()
+        return values[randIndex]
     }
 }
