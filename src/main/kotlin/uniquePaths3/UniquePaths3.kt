@@ -3,7 +3,7 @@ package uniquePaths3
 import java.util.LinkedList
 
 class UniquePaths3 {
-    fun uniquePathsIII(grid: Array<IntArray>): Int {
+    fun uniquePathsIIIUsingBFS(grid: Array<IntArray>): Int {
         val m = grid.size
         val n = grid.first().size
         lateinit var start: String
@@ -29,13 +29,19 @@ class UniquePaths3 {
                 }
             }
         }
+        return bfs(m, n, start, end, emptySquares)
+    }
+
+    private fun bfs(m: Int, n: Int, start: String, end: String, emptySquares: MutableSet<String>): Int {
         val dr = intArrayOf(0, 0, 1, -1)
         val dc = intArrayOf(1, -1, 0, 0)
+
         var result = 0
         val queue = LinkedList<Pair<String, MutableSet<String>>>()
         val notVisited = emptySquares.toMutableSet()
         notVisited.add(end)
         queue.add(start to notVisited)
+
         while (queue.isNotEmpty()) {
             val (curPoint, willVisited) = queue.poll()
             if (willVisited.isEmpty() && curPoint == end) {

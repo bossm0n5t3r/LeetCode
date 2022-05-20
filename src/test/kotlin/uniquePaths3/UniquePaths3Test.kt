@@ -48,7 +48,7 @@ internal class UniquePaths3Test {
             ),
         )
         tests.forEach { test ->
-            uniquePaths3.uniquePathsIII(test.grid)
+            uniquePaths3.uniquePathsIIIUsingBFS(test.grid)
                 .also {
                     println(it)
                     assertEquals(it, test.result)
