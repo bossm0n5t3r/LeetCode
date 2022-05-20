@@ -63,4 +63,42 @@ class UniquePaths3 {
         }
         return result
     }
+
+    fun uniquePathsIIIUsingDFS(grid: Array<IntArray>): Int {
+        val m = grid.size
+        val n = grid.first().size
+        var (startR, startC) = -1 to -1
+        var empty = 1
+        (0 until m).forEach { r ->
+            (0 until n).forEach { c ->
+                if (grid[r][c] == 0) {
+                    empty++
+                } else if (grid[r][c] == 1) {
+                    startR = r
+                    startC = c
+                }
+            }
+        }
+        val result = IntWrapper()
+        dfs(grid, m, n, startR, startC, empty, result)
+        return result.value
+    }
+
+    private fun dfs(grid: Array<IntArray>, m: Int, n: Int, r: Int, c: Int, empty: Int, result: IntWrapper) {
+        if (r < 0 || r >= m || c < 0 || c >= n || grid[r][c] < 0) return
+        if (grid[r][c] == 2) {
+            if (empty == 0) {
+                result.value++
+            }
+            return
+        }
+        grid[r][c] = -2
+        dfs(grid, m, n, r, c + 1, empty - 1, result)
+        dfs(grid, m, n, r, c - 1, empty - 1, result)
+        dfs(grid, m, n, r + 1, c, empty - 1, result)
+        dfs(grid, m, n, r - 1, c, empty - 1, result)
+        grid[r][c] = 0
+    }
+
+    private data class IntWrapper(var value: Int = 0)
 }

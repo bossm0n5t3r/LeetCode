@@ -53,6 +53,11 @@ internal class UniquePaths3Test {
                     println(it)
                     assertEquals(it, test.result)
                 }
+            uniquePaths3.uniquePathsIIIUsingDFS(test.grid)
+                .also {
+                    println(it)
+                    assertEquals(it, test.result)
+                }
         }
     }
 }
