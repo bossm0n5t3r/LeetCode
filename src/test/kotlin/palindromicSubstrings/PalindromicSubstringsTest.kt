@@ -30,6 +30,12 @@ internal class PalindromicSubstringsTest {
                     println(it)
                     assertEquals(it, test.result)
                 }
+
+            palindromicSubstrings.countSubstringsUsingDP(test.s)
+                .also {
+                    println(it)
+                    assertEquals(it, test.result)
+                }
         }
     }
 
