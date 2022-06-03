@@ -33,4 +33,18 @@ class BeautifulArrangement2 {
         }
         return result
     }
+
+    fun constructArraySolution(n: Int, k: Int): IntArray {
+        val result = IntArray(n) { 0 }
+        var idx = 0
+        (1 until n - k).forEach { result[idx++] = it }
+        (0..k).forEach {
+            result[idx++] = if (it % 2 == 0) {
+                n - k + it / 2
+            } else {
+                n - it / 2
+            }
+        }
+        return result
+    }
 }
