@@ -2,8 +2,10 @@ package utils
 
 class MatrixUtil {
     fun generateMatrixFrom(raw: String): Array<IntArray> {
-        val length = raw.length
-        return raw.substring(2, length - 2)
+        val trimmedRaw = raw.replace(" ", "")
+        val length = trimmedRaw.length
+        return trimmedRaw
+            .substring(2, length - 2)
             .split("],[")
             .map {
                 it
