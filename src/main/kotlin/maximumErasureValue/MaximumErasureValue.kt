@@ -19,4 +19,25 @@ class MaximumErasureValue {
         }
         return result
     }
+
+    fun maximumUniqueSubarrayAnotherWay(nums: IntArray): Int {
+        // Fastest solution
+        // https://leetcode.com/submissions/detail/720605108/
+        val cache = mutableSetOf<Int>()
+        var start = 0
+        var end = 0
+        var sum = 0
+        var result = 0
+        while (start < nums.size && end < nums.size) {
+            if (!cache.contains(nums[end])) {
+                sum += nums[end]
+                result = result.coerceAtLeast(sum)
+                cache.add(nums[end++])
+            } else {
+                sum -= nums[start]
+                cache.remove(nums[start++])
+            }
+        }
+        return result
+    }
 }

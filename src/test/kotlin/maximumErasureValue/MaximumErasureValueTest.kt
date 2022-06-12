@@ -47,6 +47,12 @@ internal class MaximumErasureValueTest {
                     println(it)
                     assertEquals(it, test.result)
                 }
+
+            maximumErasureValue.maximumUniqueSubarrayAnotherWay(test.nums)
+                .also {
+                    println(it)
+                    assertEquals(it, test.result)
+                }
         }
     }
 }
