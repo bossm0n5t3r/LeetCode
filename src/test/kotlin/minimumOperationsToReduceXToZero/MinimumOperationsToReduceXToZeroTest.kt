@@ -706,6 +706,12 @@ internal class MinimumOperationsToReduceXToZeroTest {
                     println(it)
                     assertEquals(it, test.result)
                 }
+
+            minimumOperationsToReduceXToZero.minOperationsUsingMap(test.nums, test.x)
+                .also {
+                    println(it)
+                    assertEquals(it, test.result)
+                }
         }
     }
 }
