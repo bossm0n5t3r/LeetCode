@@ -5,23 +5,23 @@ import kotlin.math.min
 class Triangle {
     fun minimumTotal(triangle: List<List<Int>>): Int {
         val n = triangle.size
-        val cache = triangle.map { it.toMutableList() }
-        cache.first()[0] = triangle.first().first()
+        val cache = IntArray(n) { 0 }
+        cache[0] = triangle.first().first()
         (1 until n).forEach { i ->
-            (0..i).forEach { j ->
-                when (j) {
-                    0 -> {
-                        cache[i][j] = cache[i - 1][j] + triangle[i][j]
-                    }
+            (i downTo 0).forEach { j ->
+                cache[j] = when (j) {
                     i -> {
-                        cache[i][j] = cache[i - 1][j - 1] + triangle[i][j]
+                        cache[j - 1]
+                    }
+                    0 -> {
+                        cache[j]
                     }
                     else -> {
-                        cache[i][j] = min(cache[i - 1][j - 1], cache[i - 1][j]) + triangle[i][j]
+                        min(cache[j - 1], cache[j])
                     }
-                }
+                } + triangle[i][j]
             }
         }
-        return cache.last().minOrNull() ?: -1
+        return cache.minOrNull() ?: -1
     }
 }
