@@ -4,7 +4,7 @@ class LongestPalindromicSubstring {
     fun longestPalindrome(s: String): String {
         if (s.length <= 1) return s
         var result = ""
-        (s.indices).forEach { i ->
+        s.indices.forEach { i ->
             if (s[i].toString().length > result.length) {
                 result = s[i].toString()
             }
