@@ -3,7 +3,7 @@ import heapq
 
 class Solution:
     def findKthLargest(self, nums: list[int], k: int) -> int:
-        return self.using_heap(nums, k)
+        return self.using_sort(nums, k)
 
     def using_heap(self, nums, k):
         heap = []
@@ -14,6 +14,9 @@ class Solution:
             result = heapq.heappop(heap)
             k -= 1
         return -result
+
+    def using_sort(self, nums, k):
+        return sorted(nums)[len(nums) - k]
 
     def test(self):
         tests = [
