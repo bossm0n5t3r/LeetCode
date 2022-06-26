@@ -29,6 +29,17 @@ class Solution:
                 break
         return break_idx == -1
 
+    def checkPossibilitySimple(self, nums: list[int]) -> bool:
+        err = 0
+        for i in range(1, len(nums)):
+            if nums[i] < nums[i - 1]:
+                if err:
+                    return False
+                if 1 < i < len(nums) - 1 and nums[i - 2] > nums[i] and nums[i + 1] < nums[i - 1]:
+                    return False
+                err = 1
+        return True
+
     def test(self):
         tests = [
             [[4, 2, 3], True],
@@ -42,6 +53,9 @@ class Solution:
             nums, expect_result = test
             result = self.checkPossibility(nums)
             print(result == expect_result)
+
+            result_simple = self.checkPossibilitySimple(nums)
+            print(result_simple == expect_result)
 
 
 if __name__ == '__main__':
