@@ -2,7 +2,10 @@ class Solution:
     def minMoves2(self, nums: list[int]) -> int:
         sorted_nums = sorted(nums)
         median = sorted_nums[len(sorted_nums) // 2]
-        return sum([abs(num - median) for num in nums])
+        result = 0
+        for num in nums:
+            result += abs(num - median)
+        return result
 
     def test(self):
         tests = [
