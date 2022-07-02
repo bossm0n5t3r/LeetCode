@@ -2,16 +2,13 @@ class Solution:
     def maximumUnits(self, box_types: list[list[int]], truck_size: int) -> int:
         sorted_box_types = sorted(box_types, key=lambda x: -x[1])
         result = 0
-        box_types_idx = 0
-        while truck_size > 0 and box_types_idx < len(box_types):
-            num_of_boxes, num_of_units_per_box = sorted_box_types[box_types_idx]
-            while num_of_boxes > 0 and truck_size > 0:
-                result += num_of_units_per_box
-                num_of_boxes -= 1
-                truck_size -= 1
-            if num_of_boxes > 0:
-                break
-            box_types_idx += 1
+        for box, units in sorted_box_types:
+            if truck_size > box:
+                truck_size -= box
+                result += box * units
+            else:
+                result += truck_size * units
+                return result
         return result
 
     def test(self):
