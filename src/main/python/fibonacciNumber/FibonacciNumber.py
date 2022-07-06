@@ -1,12 +1,11 @@
 class Solution:
     def fib(self, n: int) -> int:
-        memo = {0: 0, 1: 1}
-        return self.__recursion(n, memo)
-
-    def __recursion(self, n: int, memo: dict):
-        if n not in memo:
-            memo[n] = self.__recursion(n - 1, memo) + self.__recursion(n - 2, memo)
-        return memo[n]
+        cnt = 0
+        a, b = 0, 1
+        while cnt < n:
+            a, b = b, a + b
+            cnt += 1
+        return a
 
     def test(self):
         tests = [
