@@ -3,25 +3,25 @@ class Solution:
         m, n, o = len(s1), len(s2), len(s3)
         if o != m + n:
             return False
-        dp = [[False] * (n + 1) for _ in range(m + 1)]
+        dp = [False] * (n + 1)
         for r in range(m + 1):
             for c in range(n + 1):
                 if r == 0 and c == 0:
-                    dp[r][c] = True
+                    dp[c] = True
                 elif r == 0:
-                    dp[r][c] = (
-                        dp[r][c - 1] and s2[c - 1] == s3[r + c - 1]
+                    dp[c] = (
+                        dp[c - 1] and s2[c - 1] == s3[r + c - 1]
                     )
                 elif c == 0:
-                    dp[r][c] = (
-                        dp[r - 1][c] and s1[r - 1] == s3[r + c - 1]
+                    dp[c] = (
+                        dp[c] and s1[r - 1] == s3[r + c - 1]
                     )
                 else:
-                    dp[r][c] = (
-                        (dp[r][c - 1] and s2[c - 1] == s3[r + c - 1]) or
-                        (dp[r - 1][c] and s1[r - 1] == s3[r + c - 1])
+                    dp[c] = (
+                        (dp[c - 1] and s2[c - 1] == s3[r + c - 1]) or
+                        (dp[c] and s1[r - 1] == s3[r + c - 1])
                     )
-        return dp[m][n]
+        return dp[n]
 
     def test(self):
         tests = [
