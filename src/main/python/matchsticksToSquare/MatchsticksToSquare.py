@@ -37,7 +37,7 @@ class Solution:
             ans = False
 
             # rem stores available space in the current side (incomplete).
-            c = int(total / possible_side)
+            c = total // possible_side
             rem = possible_side * (c + 1) - total
 
             # Iterate over all the matchsticks
