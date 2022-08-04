@@ -16,9 +16,7 @@ class NextPermutation {
         var i = start
         var j = nums.size - 1
         while (i < j) {
-            swap(nums, i, j)
-            i++
-            j--
+            swap(nums, i++, j--)
         }
     }
 
