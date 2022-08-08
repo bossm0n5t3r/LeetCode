@@ -1,19 +1,11 @@
 class Solution:
     def arithmeticTriplets(self, nums: list[int], diff: int) -> int:
-        n = len(nums)
+        seen = set()
         result = 0
-        for i in range(len(nums) - 2):
-            start = nums[i]
-            j = i + 1
-            while j < n and start + diff > nums[j]:
-                j += 1
-            if j < n and start + diff == nums[j]:
-                start = nums[j]
-                k = j + 1
-                while k < n and start + diff > nums[k]:
-                    k += 1
-                if k < n and start + diff == nums[k]:
-                    result += 1
+        for num in nums:
+            if num - diff in seen and num - diff * 2 in seen:
+                result += 1
+            seen.add(num)
         return result
 
     def test(self):
