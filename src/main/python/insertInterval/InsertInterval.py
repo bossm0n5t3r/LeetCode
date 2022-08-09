@@ -1,14 +1,16 @@
 class Solution:
     def insert(self, intervals, newInterval):
-        sorted_intevals = sorted(intervals + [newInterval], key=lambda x: x[0])
-        result = []
-        while sorted_intevals:
-            interval = sorted_intevals.pop(0)
-            if not result or result[-1][1] < interval[0]:
-                result.append(interval)
+        s, e = newInterval
+        left, right = [], []
+        for interval in intervals:
+            if interval[1] < s:
+                left += (interval,)
+            elif interval[0] > e:
+                right += (interval,)
             else:
-                result[-1][1] = max(result[-1][1], interval[1])
-        return result
+                s = min(s, interval[0])
+                e = max(e, interval[1])
+        return left + [[s, e]] + right
 
     def test(self):
         tests = [
