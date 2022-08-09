@@ -3,16 +3,11 @@ class Solution:
         sorted_intevals = sorted(intervals, key=lambda x: x[0])
         result = []
         while sorted_intevals:
-            cur = sorted_intevals.pop(0)
-            if result:
-                before = result[-1]
-                if before[1] >= cur[0]:
-                    before[1] = max(before[1], cur[1])
-                    result[-1] = before
-                else:
-                    result.append(cur)
+            interval = sorted_intevals.pop(0)
+            if not result or result[-1][1] < interval[0]:
+                result.append(interval)
             else:
-                result.append(cur)
+                result[-1][1] = max(result[-1][1], interval[1])
         return result
 
     def test(self):
