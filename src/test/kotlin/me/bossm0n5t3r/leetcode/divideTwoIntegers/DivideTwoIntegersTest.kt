@@ -1,10 +1,10 @@
-package divideTwoIntegers
+package me.bossm0n5t3r.leetcode.divideTwoIntegers
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class DivideTwoIntegersTest {
-    private val divideTwoIntegers = DivideTwoIntegers()
+    private val divideTwoIntegers = DivideTwoIntegers.Solution()
 
     private data class DivideTwoIntegersTestData(
         val dividend: Int,
