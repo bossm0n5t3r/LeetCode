@@ -1,10 +1,10 @@
-package bestTeamWithNoConflicts
+package me.bossm0n5t3r.leetcode.bestTeamWithNoConflicts
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class BestTeamWithNoConflictsTest {
-    private val bestTeamWithNoConflicts = BestTeamWithNoConflicts()
+    private val bestTeamWithNoConflicts = BestTeamWithNoConflicts.Solution()
 
     private data class BestTeamWithNoConflictsTestData(
         val scores: IntArray,
