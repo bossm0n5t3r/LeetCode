@@ -1,12 +1,12 @@
-package deleteNodeInALinkedList
+package me.bossm0n5t3r.leetcode.deleteNodeInALinkedList
 
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
 import kotlin.test.assertEquals
 
 class DeleteNodeInALinkedListTest {
-    private lateinit var deleteNodeInALinkedList: DeleteNodeInALinkedList
+    private lateinit var deleteNodeInALinkedList: DeleteNodeInALinkedList.Solution
     private val listNodeUtil = ListNodeUtil()
 
     data class DeleteNodeInALinkedListTestData(
@@ -46,7 +46,7 @@ class DeleteNodeInALinkedListTest {
         )
         tests.forEach { test ->
             val node = listNodeUtil.findListNodeByValue(test.node, test.head!!)
-            deleteNodeInALinkedList = DeleteNodeInALinkedList(test.head)
+            deleteNodeInALinkedList = DeleteNodeInALinkedList.Solution(test.head)
             deleteNodeInALinkedList.deleteNode(node)
             assertEquals(listNodeUtil.listNodeToList(deleteNodeInALinkedList.head), test.result)
         }
