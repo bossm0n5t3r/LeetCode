@@ -1,12 +1,12 @@
-package convertSortedArrayToBST
+package me.bossm0n5t3r.leetcode.convertSortedArrayToBST
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertTrue
 
 class ConvertSortedArrayToBSTTest {
-    private val convertSortedArrayToBST = ConvertSortedArrayToBST()
+    private val convertSortedArrayToBST = ConvertSortedArrayToBST.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     data class ConvertSortedArrayToBSTTestData(
