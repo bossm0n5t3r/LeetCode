@@ -1,10 +1,10 @@
-package findTheDuplicateNumber
+package me.bossm0n5t3r.leetcode.findTheDuplicateNumber
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class FindTheDuplicateNumberTest {
-    private val findTheDuplicateNumber = FindTheDuplicateNumber()
+    private val findTheDuplicateNumber = FindTheDuplicateNumber.Solution()
 
     data class FindTheDuplicateNumberTestData(
         val nums: IntArray,
