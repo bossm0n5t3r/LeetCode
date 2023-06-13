@@ -1,12 +1,12 @@
-package deepestLeavesSum
+package me.bossm0n5t3r.leetcode.deepestLeavesSum
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertEquals
 
 internal class DeepestLeavesSumTest {
-    private val deepestLeavesSum = DeepestLeavesSum()
+    private val deepestLeavesSum = DeepestLeavesSum.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     private data class DeepestLeavesSumTestData(
