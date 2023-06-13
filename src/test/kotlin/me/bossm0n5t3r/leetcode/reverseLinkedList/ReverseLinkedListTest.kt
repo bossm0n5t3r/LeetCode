@@ -1,12 +1,12 @@
-package reverseLinkedList
+package me.bossm0n5t3r.leetcode.reverseLinkedList
 
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
 import kotlin.test.assertEquals
 
 class ReverseLinkedListTest {
-    private val reverseLinkedList = ReverseLinkedList()
+    private val reverseLinkedList = ReverseLinkedList.Solution()
     private val listNodeUtil = ListNodeUtil()
 
     data class ReverseLinkedListTestData(
