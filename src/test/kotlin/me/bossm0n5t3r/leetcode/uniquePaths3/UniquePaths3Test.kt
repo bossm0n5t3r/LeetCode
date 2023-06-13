@@ -1,11 +1,11 @@
-package uniquePaths3
+package me.bossm0n5t3r.leetcode.uniquePaths3
 
+import me.bossm0n5t3r.leetcode.utils.MatrixUtil
 import org.junit.jupiter.api.Test
-import utils.MatrixUtil
 import kotlin.test.assertEquals
 
 internal class UniquePaths3Test {
-    private val uniquePaths3 = UniquePaths3()
+    private val uniquePaths3 = UniquePaths3.Solution()
     private val matrixUtil = MatrixUtil()
 
     private data class UniquePaths3TestData(
