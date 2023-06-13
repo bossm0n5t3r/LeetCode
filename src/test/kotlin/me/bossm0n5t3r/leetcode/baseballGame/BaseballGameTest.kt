@@ -1,10 +1,10 @@
-package baseballGame
+package me.bossm0n5t3r.leetcode.baseballGame
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class BaseballGameTest {
-    private val baseballGame = BaseballGame()
+    private val baseballGame = BaseballGame.Solution()
 
     private data class BaseballGameTestData(
         val ops: Array<String>,
