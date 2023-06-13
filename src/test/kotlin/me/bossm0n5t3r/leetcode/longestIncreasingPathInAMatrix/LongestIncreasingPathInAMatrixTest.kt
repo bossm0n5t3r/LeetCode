@@ -1,11 +1,11 @@
-package longestIncreasingPathInAMatrix
+package me.bossm0n5t3r.leetcode.longestIncreasingPathInAMatrix
 
+import me.bossm0n5t3r.leetcode.utils.MatrixUtil
 import org.junit.jupiter.api.Test
-import utils.MatrixUtil
 import kotlin.test.assertEquals
 
 internal class LongestIncreasingPathInAMatrixTest {
-    private val longestIncreasingPathInAMatrix = LongestIncreasingPathInAMatrix()
+    private val longestIncreasingPathInAMatrix = LongestIncreasingPathInAMatrix.Solution()
     private val matrixUtil = MatrixUtil()
 
     private data class LongestIncreasingPathInAMatrixTestData(
