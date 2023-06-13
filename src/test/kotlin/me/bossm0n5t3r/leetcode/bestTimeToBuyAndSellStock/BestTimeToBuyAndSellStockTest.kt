@@ -1,10 +1,10 @@
-package bestTimeToBuyAndSellStock
+package me.bossm0n5t3r.leetcode.bestTimeToBuyAndSellStock
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class BestTimeToBuyAndSellStockTest {
-    private val bestTimeToBuyAndSellStock = BestTimeToBuyAndSellStock()
+    private val bestTimeToBuyAndSellStock = BestTimeToBuyAndSellStock.Solution()
 
     data class BestTimeToBuyAndSellStockTestData(
         val prices: IntArray,
