@@ -1,12 +1,12 @@
-package addTwoNumbers
+package me.bossm0n5t3r.leetcode.addTwoNumbers
 
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import kotlin.test.assertTrue
 
 internal class AddTwoNumbersTest {
-    private val addTwoNumbers = AddTwoNumbers()
+    private val addTwoNumbers = AddTwoNumbers.Solution()
     private val listNodeUtil = ListNodeUtil()
 
     private data class AddTwoNumbersTestData(
