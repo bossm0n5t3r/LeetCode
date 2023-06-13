@@ -1,10 +1,10 @@
-package deleteOperationForTwoStrings
+package me.bossm0n5t3r.leetcode.deleteOperationForTwoStrings
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class DeleteOperationForTwoStringsTest {
-    private val deleteOperationForTwoStrings = DeleteOperationForTwoStrings()
+    private val deleteOperationForTwoStrings = DeleteOperationForTwoStrings.Solution()
 
     private data class DeleteOperationForTwoStringsTestData(
         val word1: String,
