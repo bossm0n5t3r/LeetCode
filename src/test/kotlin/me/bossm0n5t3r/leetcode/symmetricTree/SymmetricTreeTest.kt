@@ -1,12 +1,12 @@
-package symmetricTree
+package me.bossm0n5t3r.leetcode.symmetricTree
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertEquals
 
 class SymmetricTreeTest {
-    private val symmetricTree = SymmetricTree()
+    private val symmetricTree = SymmetricTree.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     data class SymmetricTreeTestData(
