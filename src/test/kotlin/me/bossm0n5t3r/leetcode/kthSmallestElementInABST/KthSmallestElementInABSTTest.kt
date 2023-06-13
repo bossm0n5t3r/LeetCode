@@ -1,12 +1,12 @@
-package kthSmallestElementInABST
+package me.bossm0n5t3r.leetcode.kthSmallestElementInABST
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertEquals
 
 class KthSmallestElementInABSTTest {
-    private val kthSmallestElementInABST = KthSmallestElementInABST()
+    private val kthSmallestElementInABST = KthSmallestElementInABST.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     data class KthSmallestElementInABSTTestData(
