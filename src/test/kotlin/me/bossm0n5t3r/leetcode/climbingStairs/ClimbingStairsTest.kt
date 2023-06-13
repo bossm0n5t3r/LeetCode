@@ -1,10 +1,10 @@
-package climbingStairs
+package me.bossm0n5t3r.leetcode.climbingStairs
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ClimbingStairsTest {
-    private val climbingStairs = ClimbingStairs()
+    private val climbingStairs = ClimbingStairs.Solution()
 
     data class ClimbingStairsTestData(
         val n: Int,
