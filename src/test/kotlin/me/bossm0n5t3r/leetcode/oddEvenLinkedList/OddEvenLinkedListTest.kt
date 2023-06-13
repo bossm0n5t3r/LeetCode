@@ -1,12 +1,12 @@
-package oddEvenLinkedList
+package me.bossm0n5t3r.leetcode.oddEvenLinkedList
 
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
 import kotlin.test.assertTrue
 
 class OddEvenLinkedListTest {
-    private val oddEvenLinkedList = OddEvenLinkedList()
+    private val oddEvenLinkedList = OddEvenLinkedList.Solution()
     private val listNodeUtil = ListNodeUtil()
 
     data class OddEvenLinkedListTestData(
