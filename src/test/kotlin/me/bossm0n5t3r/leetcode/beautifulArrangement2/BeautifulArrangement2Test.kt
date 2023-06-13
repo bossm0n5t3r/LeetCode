@@ -1,10 +1,10 @@
-package beautifulArrangement2
+package me.bossm0n5t3r.leetcode.beautifulArrangement2
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class BeautifulArrangement2Test {
-    private val beautifulArrangement2 = BeautifulArrangement2()
+    private val beautifulArrangement2 = BeautifulArrangement2.Solution()
 
     private data class BeautifulArrangement2TestData(
         val n: Int,
