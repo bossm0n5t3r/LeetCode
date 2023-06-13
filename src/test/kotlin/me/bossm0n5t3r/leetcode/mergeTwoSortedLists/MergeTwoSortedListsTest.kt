@@ -1,12 +1,12 @@
-package mergeTwoSortedLists
+package me.bossm0n5t3r.leetcode.mergeTwoSortedLists
 
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
 import kotlin.test.assertTrue
 
 class MergeTwoSortedListsTest {
-    private val mergeTwoSortedLists = MergeTwoSortedLists()
+    private val mergeTwoSortedLists = MergeTwoSortedLists.Solution()
     private val listNodeUtil = ListNodeUtil()
 
     data class MergeTwoSortedListsTestData(
