@@ -1,4 +1,4 @@
-package designHashMap
+package me.bossm0n5t3r.leetcode.designHashMap
 
 class DesignHashMap {
     private val data = IntArray(1_000_000 + 1) { -1 }
