@@ -1,11 +1,11 @@
-package encodeAndDecodeTinyURL
+package me.bossm0n5t3r.leetcode.encodeAndDecodeTinyURL
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 
 internal class EncodeAndDecodeTinyURLTest {
-    private val encodeAndDecodeTinyURL = EncodeAndDecodeTinyURL()
+    private val encodeAndDecodeTinyURL = EncodeAndDecodeTinyURL.Codec()
     private val longUrl = "https://leetcode.com/problems/design-tinyurl"
 
     @AfterEach
