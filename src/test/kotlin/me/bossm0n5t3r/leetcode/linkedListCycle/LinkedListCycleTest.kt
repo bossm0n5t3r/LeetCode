@@ -1,12 +1,12 @@
-package linkedListCycle
+package me.bossm0n5t3r.leetcode.linkedListCycle
 
+import me.bossm0n5t3r.leetcode.utils.ListNode
+import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import org.junit.jupiter.api.Test
-import utils.ListNode
-import utils.ListNodeUtil
 import kotlin.test.assertEquals
 
 class LinkedListCycleTest {
-    private val linkedListCycle = LinkedListCycle()
+    private val linkedListCycle = LinkedListCycle.Solution()
     private val listNodeUtil = ListNodeUtil()
     private val basicListNode = listNodeUtil.generateBasicSingleListNode()
 
