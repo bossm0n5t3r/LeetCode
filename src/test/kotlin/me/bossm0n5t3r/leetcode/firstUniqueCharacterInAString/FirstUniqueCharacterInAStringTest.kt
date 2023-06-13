@@ -1,10 +1,10 @@
-package firstUniqueCharacterInAString
+package me.bossm0n5t3r.leetcode.firstUniqueCharacterInAString
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class FirstUniqueCharacterInAStringTest {
-    private val firstUniqueCharacterInAString = FirstUniqueCharacterInAString()
+    private val firstUniqueCharacterInAString = FirstUniqueCharacterInAString.Solution()
 
     data class FirstUniqueCharacterInAStringTestData(
         val s: String,
