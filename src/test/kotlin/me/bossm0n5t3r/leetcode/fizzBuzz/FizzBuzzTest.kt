@@ -1,10 +1,10 @@
-package fizzBuzz
+package me.bossm0n5t3r.leetcode.fizzBuzz
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class FizzBuzzTest {
-    private val fizzBuzz = FizzBuzz()
+    private val fizzBuzz = FizzBuzz.Solution()
 
     data class FizzBuzzTestData(
         val n: Int,
