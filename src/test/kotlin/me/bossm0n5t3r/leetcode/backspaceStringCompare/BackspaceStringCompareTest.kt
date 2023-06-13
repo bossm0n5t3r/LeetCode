@@ -1,10 +1,10 @@
-package backspaceStringCompare
+package me.bossm0n5t3r.leetcode.backspaceStringCompare
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class BackspaceStringCompareTest {
-    private val backspaceStringCompare = BackspaceStringCompare()
+    private val backspaceStringCompare = BackspaceStringCompare.Solution()
 
     private data class BackspaceStringCompareTest(
         val s: String,
