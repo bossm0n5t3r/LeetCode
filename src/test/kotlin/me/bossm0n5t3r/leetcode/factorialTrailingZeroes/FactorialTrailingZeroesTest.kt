@@ -1,10 +1,10 @@
-package factorialTrailingZeroes
+package me.bossm0n5t3r.leetcode.factorialTrailingZeroes
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class FactorialTrailingZeroesTest {
-    private val factorialTrailingZeroes = FactorialTrailingZeroes()
+    private val factorialTrailingZeroes = FactorialTrailingZeroes.Solution()
 
     data class FactorialTrailingZeroesTestData(
         val n: Int,
