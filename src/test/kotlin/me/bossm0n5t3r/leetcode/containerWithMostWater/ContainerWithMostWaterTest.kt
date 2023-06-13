@@ -1,10 +1,10 @@
-package containerWithMostWater
+package me.bossm0n5t3r.leetcode.containerWithMostWater
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class ContainerWithMostWaterTest {
-    private val containerWithMostWater = ContainerWithMostWater()
+    private val containerWithMostWater = ContainerWithMostWater.Solution()
 
     private data class ContainerWithMostWaterTestData(
         val height: IntArray,
