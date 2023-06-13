@@ -1,12 +1,12 @@
-package distributeCoinsInBinaryTree
+package me.bossm0n5t3r.leetcode.distributeCoinsInBinaryTree
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertEquals
 
 internal class DistributeCoinsInBinaryTreeTest {
-    private val distributeCoinsInBinaryTree = DistributeCoinsInBinaryTree()
+    private val distributeCoinsInBinaryTree = DistributeCoinsInBinaryTree.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     private data class DistributeCoinsInBinaryTreeTestData(
