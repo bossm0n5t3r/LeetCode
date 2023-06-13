@@ -1,10 +1,10 @@
-package combinationSum2
+package me.bossm0n5t3r.leetcode.combinationSum2
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class CombinationSum2Test {
-    private val sut = CombinationSum2()
+    private val sut = CombinationSum2.Solution()
 
     private data class Example(
         val candidates: IntArray,
