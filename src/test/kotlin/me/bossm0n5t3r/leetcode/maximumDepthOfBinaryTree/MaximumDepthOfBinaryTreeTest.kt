@@ -1,12 +1,12 @@
-package maximumDepthOfBinaryTree
+package me.bossm0n5t3r.leetcode.maximumDepthOfBinaryTree
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 
 class MaximumDepthOfBinaryTreeTest {
-    private val maximumDepthOfBinaryTree = MaximumDepthOfBinaryTree()
+    private val maximumDepthOfBinaryTree = MaximumDepthOfBinaryTree.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     data class MaximumDepthOfBinaryTreeTestData(
