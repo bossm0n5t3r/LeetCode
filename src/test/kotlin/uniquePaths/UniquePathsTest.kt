@@ -9,7 +9,7 @@ class UniquePathsTest {
     data class UniquePathsTestData(
         val m: Int,
         val n: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test

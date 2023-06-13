@@ -8,7 +8,7 @@ class ReverseStringTest {
 
     data class ReverseStringTestData(
         val s: CharArray,
-        val result: CharArray
+        val result: CharArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

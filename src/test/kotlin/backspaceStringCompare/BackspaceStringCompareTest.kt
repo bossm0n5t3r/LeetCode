@@ -9,7 +9,7 @@ internal class BackspaceStringCompareTest {
     private data class BackspaceStringCompareTest(
         val s: String,
         val t: String,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test

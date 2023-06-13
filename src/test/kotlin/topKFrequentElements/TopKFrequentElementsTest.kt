@@ -9,7 +9,7 @@ class TopKFrequentElementsTest {
     data class TopKFrequentElementsTestData(
         val nums: IntArray,
         val k: Int,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

@@ -9,7 +9,7 @@ internal class PalindromicSubstringsTest {
 
     private data class PalindromicSubstringsTestData(
         val s: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -17,12 +17,12 @@ internal class PalindromicSubstringsTest {
         val tests = listOf(
             PalindromicSubstringsTestData(
                 "abc",
-                3
+                3,
             ),
             PalindromicSubstringsTestData(
                 "aaa",
-                6
-            )
+                6,
+            ),
         )
         tests.forEach { test ->
             palindromicSubstrings.countSubstrings(test.s)

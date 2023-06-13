@@ -8,7 +8,7 @@ internal class MaximumProductOfWordLengthsTest {
 
     private data class MaximumProductOfWordLengthsTestData(
         val words: Array<String>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,11 +34,11 @@ internal class MaximumProductOfWordLengthsTest {
         val tests = listOf(
             MaximumProductOfWordLengthsTestData(
                 arrayOf("abcw", "baz", "foo", "bar", "xtfn", "abcdef"),
-                16
+                16,
             ),
             MaximumProductOfWordLengthsTestData(
                 arrayOf("a", "ab", "abc", "d", "cd", "bcd", "abcd"),
-                4
+                4,
             ),
         )
         tests.forEach { test ->

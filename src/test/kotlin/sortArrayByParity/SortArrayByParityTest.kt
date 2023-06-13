@@ -8,7 +8,7 @@ internal class SortArrayByParityTest {
 
     private data class SortArrayByParityTestData(
         val nums: IntArray,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,11 +34,11 @@ internal class SortArrayByParityTest {
         val tests = listOf(
             SortArrayByParityTestData(
                 intArrayOf(3, 1, 2, 4),
-                intArrayOf(2, 4, 3, 1)
+                intArrayOf(2, 4, 3, 1),
             ),
             SortArrayByParityTestData(
                 intArrayOf(0),
-                intArrayOf(0)
+                intArrayOf(0),
             ),
         )
         tests.forEach { test ->

@@ -9,7 +9,7 @@ internal class DivideTwoIntegersTest {
     private data class DivideTwoIntegersTestData(
         val dividend: Int,
         val divisor: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test

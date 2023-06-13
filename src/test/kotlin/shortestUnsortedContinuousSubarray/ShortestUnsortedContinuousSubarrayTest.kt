@@ -8,7 +8,7 @@ internal class ShortestUnsortedContinuousSubarrayTest {
 
     private data class ShortestUnsortedContinuousSubarrayTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -33,19 +33,24 @@ internal class ShortestUnsortedContinuousSubarrayTest {
     fun findUnsortedSubarray() {
         val tests = listOf(
             ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(2, 6, 4, 8, 10, 9, 15), 5
+                intArrayOf(2, 6, 4, 8, 10, 9, 15),
+                5,
             ),
             ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1, 2, 3, 4), 0
+                intArrayOf(1, 2, 3, 4),
+                0,
             ),
             ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1), 0
+                intArrayOf(1),
+                0,
             ),
             ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1, 2, 3, 3, 3), 0
+                intArrayOf(1, 2, 3, 3, 3),
+                0,
             ),
             ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(2, 1), 2
+                intArrayOf(2, 1),
+                2,
             ),
         )
         tests.forEach { test ->

@@ -9,7 +9,7 @@ internal class MinimumAbsoluteDifferenceQueriesTest {
     private data class Example(
         val nums: IntArray,
         val queries: Array<IntArray>,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

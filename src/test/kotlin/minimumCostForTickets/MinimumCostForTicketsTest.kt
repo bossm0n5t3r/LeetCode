@@ -9,7 +9,7 @@ internal class MinimumCostForTicketsTest {
     private data class MinimumCostForTicketsTestData(
         val days: IntArray,
         val costs: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,12 +38,12 @@ internal class MinimumCostForTicketsTest {
             MinimumCostForTicketsTestData(
                 intArrayOf(1, 4, 6, 7, 8, 20),
                 intArrayOf(2, 7, 15),
-                11
+                11,
             ),
             MinimumCostForTicketsTestData(
                 intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31),
                 intArrayOf(2, 7, 15),
-                17
+                17,
             ),
         )
         tests.forEach { test ->

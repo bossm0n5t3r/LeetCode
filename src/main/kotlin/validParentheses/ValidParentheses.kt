@@ -5,7 +5,7 @@ class ValidParentheses {
         val map = mapOf(
             ')' to '(',
             '}' to '{',
-            ']' to '['
+            ']' to '[',
         )
         val stack = mutableListOf<Char>()
         s.forEach { c ->

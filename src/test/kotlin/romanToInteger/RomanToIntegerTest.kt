@@ -8,7 +8,7 @@ class RomanToIntegerTest {
 
     data class RomanToIntegerTestData(
         val s: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -18,7 +18,7 @@ class RomanToIntegerTest {
             RomanToIntegerTestData("IX", 9),
             RomanToIntegerTestData("LVIII", 58),
             RomanToIntegerTestData("MCMXCIV", 1994),
-            RomanToIntegerTestData("III", 3)
+            RomanToIntegerTestData("III", 3),
         )
         tests.forEach { test ->
             assertEquals(romanToInteger.romanToInt(test.s), test.result)

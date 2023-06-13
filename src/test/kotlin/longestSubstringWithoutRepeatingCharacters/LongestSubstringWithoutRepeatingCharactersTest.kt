@@ -8,7 +8,7 @@ internal class LongestSubstringWithoutRepeatingCharactersTest {
 
     private data class LongestSubstringWithoutRepeatingCharactersTestData(
         val s: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -16,32 +16,32 @@ internal class LongestSubstringWithoutRepeatingCharactersTest {
         val tests = listOf(
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "abcabcbb",
-                3
+                3,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "bbbbb",
-                1
+                1,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "pwwkew",
-                3
+                3,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "au",
-                2
+                2,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "",
-                0
+                0,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "a",
-                1
+                1,
             ),
             LongestSubstringWithoutRepeatingCharactersTestData(
                 "aab",
-                2
-            )
+                2,
+            ),
         )
         tests.forEach { test ->
             println(test.s)

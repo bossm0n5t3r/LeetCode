@@ -8,7 +8,7 @@ class ThreeSumTest {
 
     data class ThreeSumTestData(
         val nums: IntArray,
-        val result: List<List<Int>>
+        val result: List<List<Int>>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -37,15 +37,15 @@ class ThreeSumTest {
                 listOf(
                     listOf(-1, -1, 2),
                     listOf(-1, 0, 1),
-                )
+                ),
             ),
             ThreeSumTestData(
                 intArrayOf(),
-                listOf()
+                listOf(),
             ),
             ThreeSumTestData(
                 intArrayOf(0),
-                listOf()
+                listOf(),
             ),
         )
         tests.forEach { test ->

@@ -9,7 +9,7 @@ class SubsetsTest {
 
     data class SubsetsTestData(
         val nums: IntArray,
-        val result: List<List<Int>>
+        val result: List<List<Int>>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -36,14 +36,22 @@ class SubsetsTest {
             SubsetsTestData(
                 intArrayOf(1, 2, 3),
                 listOf(
-                    listOf(), listOf(1), listOf(2), listOf(3), listOf(1, 2), listOf(1, 3), listOf(2, 3), listOf(1, 2, 3)
-                )
+                    listOf(),
+                    listOf(1),
+                    listOf(2),
+                    listOf(3),
+                    listOf(1, 2),
+                    listOf(1, 3),
+                    listOf(2, 3),
+                    listOf(1, 2, 3),
+                ),
             ),
             SubsetsTestData(
                 intArrayOf(0),
                 listOf(
-                    listOf(), listOf(0)
-                )
+                    listOf(),
+                    listOf(0),
+                ),
             ),
         )
         tests.forEach { test ->

@@ -12,7 +12,7 @@ internal class AddTwoNumbersTest {
     private data class AddTwoNumbersTestData(
         val l1: ListNode?,
         val l2: ListNode?,
-        val result: ListNode?
+        val result: ListNode?,
     )
 
     @Test

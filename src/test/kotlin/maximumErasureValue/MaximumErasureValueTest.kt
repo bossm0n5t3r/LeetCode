@@ -8,7 +8,7 @@ internal class MaximumErasureValueTest {
 
     private data class MaximumErasureValueTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,11 +34,11 @@ internal class MaximumErasureValueTest {
         val tests = listOf(
             MaximumErasureValueTestData(
                 intArrayOf(4, 2, 4, 5, 6),
-                17
+                17,
             ),
             MaximumErasureValueTestData(
                 intArrayOf(5, 2, 1, 2, 5, 2, 1, 2, 5),
-                8
+                8,
             ),
         )
         tests.forEach { test ->

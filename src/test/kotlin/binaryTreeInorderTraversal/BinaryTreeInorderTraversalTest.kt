@@ -12,7 +12,7 @@ class BinaryTreeInorderTraversalTest {
 
     data class BinaryTreeInorderTraversalTestData(
         val root: TreeNode?,
-        val result: List<Int>
+        val result: List<Int>,
     )
 
     @Test
@@ -20,7 +20,7 @@ class BinaryTreeInorderTraversalTest {
         val tests = listOf(
             BinaryTreeInorderTraversalTestData(
                 treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, 3)),
-                listOf(1, 3, 2)
+                listOf(1, 3, 2),
             ),
             BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf()), listOf()),
             BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),

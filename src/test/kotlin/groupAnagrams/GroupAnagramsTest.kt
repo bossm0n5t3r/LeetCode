@@ -8,7 +8,7 @@ class GroupAnagramsTest {
 
     data class GroupAnagramsTestData(
         val strs: Array<String>,
-        val result: List<List<String>>
+        val result: List<List<String>>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,27 +38,27 @@ class GroupAnagramsTest {
                     listOf("bat"),
                     listOf("nat", "tan"),
                     listOf("ate", "eat", "tea"),
-                )
+                ),
             ),
             GroupAnagramsTestData(
                 arrayOf(""),
                 listOf(
                     listOf(""),
-                )
+                ),
             ),
             GroupAnagramsTestData(
                 arrayOf("a"),
                 listOf(
                     listOf("a"),
-                )
+                ),
             ),
             GroupAnagramsTestData(
                 arrayOf("ddddddddddg", "dgggggggggg"),
                 listOf(
                     listOf("ddddddddddg"),
-                    listOf("dgggggggggg")
-                )
-            )
+                    listOf("dgggggggggg"),
+                ),
+            ),
         )
         tests.forEach { test ->
             assertTrue(groupAnagrams.groupAnagrams(test.strs).isEqualTo(test.result))

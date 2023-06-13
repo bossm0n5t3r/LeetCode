@@ -9,7 +9,7 @@ internal class StringToIntegerTest {
 
     private data class StringToIntegerTestData(
         val s: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -17,27 +17,27 @@ internal class StringToIntegerTest {
         val tests = listOf(
             StringToIntegerTestData(
                 "42",
-                42
+                42,
             ),
             StringToIntegerTestData(
                 "   -42",
-                -42
+                -42,
             ),
             StringToIntegerTestData(
                 "4193 with words",
-                4193
+                4193,
             ),
             StringToIntegerTestData(
                 "-91283472332",
-                -2147483648
+                -2147483648,
             ),
             StringToIntegerTestData(
                 "+1",
-                1
+                1,
             ),
             StringToIntegerTestData(
                 "20000000000000000000",
-                2147483647
+                2147483647,
             ),
         )
         tests.forEach { test ->

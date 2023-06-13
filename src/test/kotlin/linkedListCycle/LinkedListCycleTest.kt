@@ -12,7 +12,7 @@ class LinkedListCycleTest {
 
     data class LinkedListCycleTestData(
         val head: List<ListNode?>,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -24,38 +24,38 @@ class LinkedListCycleTest {
                     basicListNode[0][2],
                     basicListNode[0][0],
                     basicListNode[0][4],
-                    basicListNode[0][2]
+                    basicListNode[0][2],
                 ),
-                result = true
+                result = true,
             ),
             LinkedListCycleTestData(
                 head = listOf(
                     basicListNode[0][1],
                     basicListNode[0][2],
-                    basicListNode[0][1]
+                    basicListNode[0][1],
                 ),
-                result = true
+                result = true,
             ),
             LinkedListCycleTestData(
                 head = listOf(
-                    basicListNode[0][1]
+                    basicListNode[0][1],
                 ),
-                result = false
-            )
+                result = false,
+            ),
         )
         tests.forEach { test ->
             val head = listNodeUtil.connectListNode(test.head)
             assertEquals(
                 linkedListCycle.hasCycleFirstApproach(head),
-                test.result
+                test.result,
             )
             assertEquals(
                 linkedListCycle.hasCycleSecondApproach(head),
-                test.result
+                test.result,
             )
             assertEquals(
                 linkedListCycle.hasCycleThirdApproach(head),
-                test.result
+                test.result,
             )
             listNodeUtil.clearBasicSingleListNode(basicListNode)
         }

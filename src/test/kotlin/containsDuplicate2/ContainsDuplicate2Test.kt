@@ -9,7 +9,7 @@ internal class ContainsDuplicate2Test {
     private data class ContainsDuplicate2TestData(
         val nums: IntArray,
         val k: Int,
-        val result: Boolean
+        val result: Boolean,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,37 +38,37 @@ internal class ContainsDuplicate2Test {
             ContainsDuplicate2TestData(
                 intArrayOf(1, 2, 3, 1),
                 3,
-                true
+                true,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(1, 0, 1, 1),
                 1,
-                true
+                true,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(1, 2, 3, 1, 2, 3),
                 2,
-                false
+                false,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(1),
                 0,
-                false
+                false,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(1),
                 1,
-                false
+                false,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(0, 1, 2, 3, 2, 5),
                 3,
-                true
+                true,
             ),
             ContainsDuplicate2TestData(
                 intArrayOf(1, 2, 2, 3),
                 3,
-                true
+                true,
             ),
         )
         tests.forEach { test ->

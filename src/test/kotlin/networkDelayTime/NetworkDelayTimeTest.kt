@@ -10,7 +10,7 @@ internal class NetworkDelayTimeTest {
         val times: Array<IntArray>,
         val n: Int,
         val k: Int,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -46,7 +46,7 @@ internal class NetworkDelayTimeTest {
                 ),
                 4,
                 2,
-                2
+                2,
             ),
             NetworkDelayTimeTestData(
                 arrayOf(
@@ -54,7 +54,7 @@ internal class NetworkDelayTimeTest {
                 ),
                 2,
                 1,
-                1
+                1,
             ),
             NetworkDelayTimeTestData(
                 arrayOf(
@@ -62,7 +62,7 @@ internal class NetworkDelayTimeTest {
                 ),
                 2,
                 2,
-                -1
+                -1,
             ),
             NetworkDelayTimeTestData(
                 arrayOf(
@@ -71,7 +71,7 @@ internal class NetworkDelayTimeTest {
                 ),
                 2,
                 2,
-                3
+                3,
             ),
             NetworkDelayTimeTestData(
                 arrayOf(
@@ -81,7 +81,7 @@ internal class NetworkDelayTimeTest {
                 ),
                 3,
                 1,
-                3
+                3,
             ),
         )
         tests.forEach { test ->

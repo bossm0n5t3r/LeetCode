@@ -8,7 +8,7 @@ internal class RemoveAllAdjacentDuplicatesInStringTest {
 
     private data class RemoveAllAdjacentDuplicatesInStringTestData(
         val s: String,
-        val result: String
+        val result: String,
     )
 
     @Test

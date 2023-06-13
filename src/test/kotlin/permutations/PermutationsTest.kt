@@ -9,7 +9,7 @@ class PermutationsTest {
 
     data class PermutationsTestData(
         val nums: IntArray,
-        val result: List<List<Int>>
+        val result: List<List<Int>>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -41,11 +41,11 @@ class PermutationsTest {
                     listOf(2, 1, 3),
                     listOf(2, 3, 1),
                     listOf(3, 1, 2),
-                    listOf(3, 2, 1)
-                )
+                    listOf(3, 2, 1),
+                ),
             ),
             PermutationsTestData(intArrayOf(0, 1), listOf(listOf(0, 1), listOf(1, 0))),
-            PermutationsTestData(intArrayOf(1), listOf(listOf(1)))
+            PermutationsTestData(intArrayOf(1), listOf(listOf(1))),
         )
         tests.forEach { test ->
             val result = permutations.permute(test.nums)

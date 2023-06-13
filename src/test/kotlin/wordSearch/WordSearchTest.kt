@@ -9,7 +9,7 @@ internal class WordSearchTest {
     private data class WordSearchTest(
         val board: Array<CharArray>,
         val word: String,
-        val result: Boolean
+        val result: Boolean,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -39,62 +39,62 @@ internal class WordSearchTest {
                 arrayOf(
                     charArrayOf('A', 'B', 'C', 'E'),
                     charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E')
+                    charArrayOf('A', 'D', 'E', 'E'),
                 ),
                 "ABCCED",
-                true
+                true,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('A', 'B', 'C', 'E'),
                     charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E')
+                    charArrayOf('A', 'D', 'E', 'E'),
                 ),
                 "SEE",
-                true
+                true,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('A', 'B', 'C', 'E'),
                     charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E')
+                    charArrayOf('A', 'D', 'E', 'E'),
                 ),
                 "ABCB",
-                false
+                false,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('A', 'B', 'C', 'E'),
                     charArrayOf('S', 'F', 'E', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E')
+                    charArrayOf('A', 'D', 'E', 'E'),
                 ),
                 "ABCESEEEFS",
-                true
+                true,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('C', 'A', 'A'),
                     charArrayOf('A', 'A', 'A'),
-                    charArrayOf('B', 'C', 'D')
+                    charArrayOf('B', 'C', 'D'),
                 ),
                 "AAB",
-                true
+                true,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('a'),
-                    charArrayOf('b')
+                    charArrayOf('b'),
                 ),
                 "aba",
-                false
+                false,
             ),
             WordSearchTest(
                 arrayOf(
                     charArrayOf('a'),
-                    charArrayOf('a')
+                    charArrayOf('a'),
                 ),
                 "aa",
-                true
+                true,
             ),
             WordSearchTest(
                 arrayOf(
@@ -106,7 +106,7 @@ internal class WordSearchTest {
                     charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
                 ),
                 "AAAAAAAAAAAABAA",
-                false
+                false,
             ),
         )
         tests.forEach { test ->

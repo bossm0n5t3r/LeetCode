@@ -8,7 +8,7 @@ class BestTimeToBuyAndSellStockTest {
 
     data class BestTimeToBuyAndSellStockTestData(
         val prices: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -33,7 +33,7 @@ class BestTimeToBuyAndSellStockTest {
     fun maxProfit() {
         val tests = listOf(
             BestTimeToBuyAndSellStockTestData(intArrayOf(7, 1, 5, 3, 6, 4), 5),
-            BestTimeToBuyAndSellStockTestData(intArrayOf(7, 6, 4, 3, 1), 0)
+            BestTimeToBuyAndSellStockTestData(intArrayOf(7, 6, 4, 3, 1), 0),
         )
         tests.forEach { test ->
             assertEquals(bestTimeToBuyAndSellStock.maxProfit(test.prices), test.result)

@@ -3,7 +3,7 @@ package deleteNodeInALinkedList
 import utils.ListNode
 
 class DeleteNodeInALinkedList(
-    val head: ListNode
+    val head: ListNode,
 ) {
     fun deleteNode(node: ListNode?) {
         node?.`val` = node?.next?.`val`!!

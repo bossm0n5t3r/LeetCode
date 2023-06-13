@@ -8,7 +8,7 @@ internal class LongestPalindromicSubstringTest {
 
     private data class LongestPalindromicSubstringTestData(
         val s: String,
-        val result: String
+        val result: String,
     )
 
     @Test
@@ -16,28 +16,28 @@ internal class LongestPalindromicSubstringTest {
         val tests = listOf(
             LongestPalindromicSubstringTestData(
                 "babad",
-                "bab"
+                "bab",
             ),
             LongestPalindromicSubstringTestData(
                 "cbbd",
-                "bb"
+                "bb",
             ),
             LongestPalindromicSubstringTestData(
                 "a",
-                "a"
+                "a",
             ),
             LongestPalindromicSubstringTestData(
                 "ac",
-                "a"
+                "a",
             ),
             LongestPalindromicSubstringTestData(
                 "ccc",
-                "ccc"
+                "ccc",
             ),
             LongestPalindromicSubstringTestData(
                 "aaaa",
-                "aaaa"
-            )
+                "aaaa",
+            ),
         )
         tests.forEach { test ->
             println(longestPalindromicSubstring.longestPalindrome(test.s))

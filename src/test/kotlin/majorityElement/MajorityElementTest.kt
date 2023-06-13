@@ -8,7 +8,7 @@ class MajorityElementTest {
 
     data class MajorityElementTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -36,7 +36,7 @@ class MajorityElementTest {
             MajorityElementTestData(intArrayOf(2, 2, 1, 1, 1, 2, 2), 2),
             MajorityElementTestData(intArrayOf(1), 1),
             MajorityElementTestData(intArrayOf(2, 2), 2),
-            MajorityElementTestData(intArrayOf(6, 5, 5), 5)
+            MajorityElementTestData(intArrayOf(6, 5, 5), 5),
         )
         tests.forEach { test ->
             assertEquals(majorityElement.majorityElement(test.nums), test.result)

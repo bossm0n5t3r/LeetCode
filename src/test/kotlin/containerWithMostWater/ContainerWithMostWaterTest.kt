@@ -8,7 +8,7 @@ internal class ContainerWithMostWaterTest {
 
     private data class ContainerWithMostWaterTestData(
         val height: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,15 +34,15 @@ internal class ContainerWithMostWaterTest {
         val tests = listOf(
             ContainerWithMostWaterTestData(
                 intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7),
-                49
+                49,
             ),
             ContainerWithMostWaterTestData(
                 intArrayOf(1, 1),
-                1
+                1,
             ),
             ContainerWithMostWaterTestData(
                 intArrayOf(1, 2, 1),
-                2
+                2,
             ),
         )
         tests.forEach { test ->

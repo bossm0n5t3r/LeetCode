@@ -11,7 +11,7 @@ class ConvertSortedArrayToBSTTest {
 
     data class ConvertSortedArrayToBSTTestData(
         val nums: IntArray,
-        val result: TreeNode?
+        val result: TreeNode?,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -37,12 +37,12 @@ class ConvertSortedArrayToBSTTest {
         val tests = listOf(
             ConvertSortedArrayToBSTTestData(
                 nums = intArrayOf(-10, -3, 0, 5, 9),
-                result = treeNodeUtil.generateTreeNodeOrNull(listOf(0, -3, 9, -10, null, 5))
+                result = treeNodeUtil.generateTreeNodeOrNull(listOf(0, -3, 9, -10, null, 5)),
             ),
             ConvertSortedArrayToBSTTestData(
                 nums = intArrayOf(1, 3),
-                result = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1))
-            )
+                result = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1)),
+            ),
         )
         tests.forEach { test ->
             assertTrue(treeNodeUtil.isEqual(convertSortedArrayToBST.sortedArrayToBST(test.nums), test.result!!))

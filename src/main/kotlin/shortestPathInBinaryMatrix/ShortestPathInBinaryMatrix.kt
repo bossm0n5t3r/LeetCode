@@ -31,6 +31,6 @@ class ShortestPathInBinaryMatrix {
 
     private data class Point(
         val r: Int,
-        val c: Int
+        val c: Int,
     )
 }

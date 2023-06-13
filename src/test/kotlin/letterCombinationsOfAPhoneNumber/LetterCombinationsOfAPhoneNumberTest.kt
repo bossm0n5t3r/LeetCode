@@ -8,7 +8,7 @@ internal class LetterCombinationsOfAPhoneNumberTest {
 
     private data class LetterCombinationsOfAPhoneNumberTestData(
         val digits: String,
-        val result: List<String>
+        val result: List<String>,
     )
 
     @Test

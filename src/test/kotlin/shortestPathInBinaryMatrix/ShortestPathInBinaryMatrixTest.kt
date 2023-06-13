@@ -8,7 +8,7 @@ internal class ShortestPathInBinaryMatrixTest {
 
     private data class ShortestPathInBinaryMatrixTestData(
         val grid: Array<IntArray>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -37,7 +37,7 @@ internal class ShortestPathInBinaryMatrixTest {
                     intArrayOf(0, 1),
                     intArrayOf(1, 0),
                 ),
-                2
+                2,
             ),
             ShortestPathInBinaryMatrixTestData(
                 arrayOf(
@@ -45,7 +45,7 @@ internal class ShortestPathInBinaryMatrixTest {
                     intArrayOf(1, 1, 0),
                     intArrayOf(1, 1, 0),
                 ),
-                4
+                4,
             ),
             ShortestPathInBinaryMatrixTestData(
                 arrayOf(
@@ -53,7 +53,7 @@ internal class ShortestPathInBinaryMatrixTest {
                     intArrayOf(1, 1, 0),
                     intArrayOf(1, 1, 0),
                 ),
-                -1
+                -1,
             ),
             ShortestPathInBinaryMatrixTestData(
                 arrayOf(
@@ -61,7 +61,7 @@ internal class ShortestPathInBinaryMatrixTest {
                     intArrayOf(1, 0, 0),
                     intArrayOf(1, 1, 0),
                 ),
-                3
+                3,
             ),
         )
         tests.forEach { test ->

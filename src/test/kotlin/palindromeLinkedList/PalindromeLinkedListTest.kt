@@ -11,7 +11,7 @@ class PalindromeLinkedListTest {
 
     data class PalindromeLinkedListTestData(
         val head: ListNode?,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -19,16 +19,16 @@ class PalindromeLinkedListTest {
         val tests = listOf(
             PalindromeLinkedListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1, 2, 2, 1)),
-                true
+                true,
             ),
             PalindromeLinkedListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1, 2, 1, 2, 1)),
-                true
+                true,
             ),
             PalindromeLinkedListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1, 2)),
-                false
-            )
+                false,
+            ),
         )
         tests.forEach { test ->
             assertEquals(palindromeLinkedList.isPalindrome(test.head), test.result)

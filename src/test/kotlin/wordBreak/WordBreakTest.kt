@@ -9,7 +9,7 @@ class WordBreakTest {
     data class WordBreakTestData(
         val s: String,
         val wordDict: List<String>,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -18,22 +18,22 @@ class WordBreakTest {
             WordBreakTestData(
                 s = "leetcode",
                 wordDict = listOf("leet", "code"),
-                result = true
+                result = true,
             ),
             WordBreakTestData(
                 s = "applepenapple",
                 wordDict = listOf("apple", "pen"),
-                result = true
+                result = true,
             ),
             WordBreakTestData(
                 s = "catsandog",
                 wordDict = listOf("cats", "dog", "sand", "and", "cat"),
-                result = false
+                result = false,
             ),
             WordBreakTestData(
                 s = "cars",
                 wordDict = listOf("car", "ca", "rs"),
-                result = true
+                result = true,
             ),
         )
         tests.forEach { test ->

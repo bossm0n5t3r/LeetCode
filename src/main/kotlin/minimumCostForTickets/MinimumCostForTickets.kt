@@ -31,7 +31,7 @@ class MinimumCostForTickets {
                 dp[i % 30] = listOf(
                     dp[(i - 1) % 30] + costs[0],
                     dp[(i - 7).coerceAtLeast(0) % 30] + costs[1],
-                    dp[(i - 30).coerceAtLeast(0) % 30] + costs[2]
+                    dp[(i - 30).coerceAtLeast(0) % 30] + costs[2],
                 ).minOrNull()!!
                 day++
             }

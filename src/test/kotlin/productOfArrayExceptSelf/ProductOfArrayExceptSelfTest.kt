@@ -8,7 +8,7 @@ class ProductOfArrayExceptSelfTest {
 
     data class ProductOfArrayExceptSelfTestData(
         val nums: IntArray,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

@@ -8,7 +8,7 @@ class ContainsDuplicateTest {
 
     data class ContainsDuplicateTestData(
         val nums: IntArray,
-        val result: Boolean
+        val result: Boolean,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,7 +34,7 @@ class ContainsDuplicateTest {
         val tests = listOf(
             ContainsDuplicateTestData(intArrayOf(1, 2, 3, 1), true),
             ContainsDuplicateTestData(intArrayOf(1, 2, 3, 4), false),
-            ContainsDuplicateTestData(intArrayOf(1, 1, 1, 3, 3, 4, 3, 2, 4, 2), true)
+            ContainsDuplicateTestData(intArrayOf(1, 1, 1, 3, 3, 4, 3, 2, 4, 2), true),
         )
         tests.forEach { test ->
             assertEquals(containsDuplicate.containsDuplicate(test.nums), test.result)

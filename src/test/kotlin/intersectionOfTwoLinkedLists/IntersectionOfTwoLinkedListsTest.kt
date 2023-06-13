@@ -13,7 +13,7 @@ class IntersectionOfTwoLinkedListsTest {
     data class IntersectionOfTwoLinkedListsTestData(
         val headA: List<ListNode?>,
         val headB: List<ListNode?>,
-        val result: ListNode?
+        val result: ListNode?,
     )
 
     @Test
@@ -35,7 +35,7 @@ class IntersectionOfTwoLinkedListsTest {
                     basicSingleListNode[0][4],
                     basicSingleListNode[0][5],
                 ),
-                result = basicSingleListNode[0][8]
+                result = basicSingleListNode[0][8],
             ),
             IntersectionOfTwoLinkedListsTestData(
                 headA = listOf(
@@ -48,21 +48,21 @@ class IntersectionOfTwoLinkedListsTest {
                 headB = listOf(
                     basicSingleListNode[2][3],
                     basicSingleListNode[0][2],
-                    basicSingleListNode[0][4]
+                    basicSingleListNode[0][4],
                 ),
-                result = basicSingleListNode[0][2]
+                result = basicSingleListNode[0][2],
             ),
             IntersectionOfTwoLinkedListsTestData(
                 headA = listOf(
                     basicSingleListNode[0][2],
                     basicSingleListNode[0][6],
-                    basicSingleListNode[0][4]
+                    basicSingleListNode[0][4],
                 ),
                 headB = listOf(
                     basicSingleListNode[0][1],
-                    basicSingleListNode[0][5]
+                    basicSingleListNode[0][5],
                 ),
-                result = null
+                result = null,
             ),
         )
         tests.forEach { test ->
@@ -70,7 +70,7 @@ class IntersectionOfTwoLinkedListsTest {
             val headB = listNodeUtil.connectListNode(test.headB)
             assertEquals(
                 intersectionOfTwoLinkedLists.getIntersectionNode(headA, headB),
-                test.result
+                test.result,
             )
             listNodeUtil.clearBasicSingleListNode(basicSingleListNode)
         }

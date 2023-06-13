@@ -9,32 +9,46 @@ internal class DeleteOperationForTwoStringsTest {
     private data class DeleteOperationForTwoStringsTestData(
         val word1: String,
         val word2: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
     fun minDistance() {
         val tests = listOf(
             DeleteOperationForTwoStringsTestData(
-                "sea", "eat", 2
+                "sea",
+                "eat",
+                2,
             ),
             DeleteOperationForTwoStringsTestData(
-                "leetcode", "etco", 4
+                "leetcode",
+                "etco",
+                4,
             ),
             DeleteOperationForTwoStringsTestData(
-                "a", "a", 0
+                "a",
+                "a",
+                0,
             ),
             DeleteOperationForTwoStringsTestData(
-                "sea", "ate", 4
+                "sea",
+                "ate",
+                4,
             ),
             DeleteOperationForTwoStringsTestData(
-                "intention", "execution", 8
+                "intention",
+                "execution",
+                8,
             ),
             DeleteOperationForTwoStringsTestData(
-                "abcdxabcde", "abcdeabcdx", 4
+                "abcdxabcde",
+                "abcdeabcdx",
+                4,
             ),
             DeleteOperationForTwoStringsTestData(
-                "food", "money", 7
+                "food",
+                "money",
+                7,
             ),
         )
         tests.forEach { test ->

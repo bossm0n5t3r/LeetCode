@@ -8,7 +8,7 @@ class SqrtXTest {
 
     data class SqrtXTestData(
         val x: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -16,7 +16,7 @@ class SqrtXTest {
         val tests = listOf(
             SqrtXTestData(4, 2),
             SqrtXTestData(8, 2),
-            SqrtXTestData(2147395600, 46340)
+            SqrtXTestData(2147395600, 46340),
         )
         tests.forEach { test ->
             assertEquals(sqrtX.mySqrtFirst(test.x), test.result)

@@ -12,7 +12,7 @@ class SudokuSolver {
     }
 
     private data class SudokuWrapper(
-        val result: Array<CharArray>
+        val result: Array<CharArray>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

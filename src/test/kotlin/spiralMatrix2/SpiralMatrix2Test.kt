@@ -8,7 +8,7 @@ internal class SpiralMatrix2Test {
 
     private data class SpiralMatrix2TestData(
         val n: Int,
-        val result: Array<IntArray>
+        val result: Array<IntArray>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,13 +38,13 @@ internal class SpiralMatrix2Test {
                     intArrayOf(1, 2, 3),
                     intArrayOf(8, 9, 4),
                     intArrayOf(7, 6, 5),
-                )
+                ),
             ),
             SpiralMatrix2TestData(
                 1,
                 arrayOf(
-                    intArrayOf(1)
-                )
+                    intArrayOf(1),
+                ),
             ),
         )
         tests.forEach { test ->

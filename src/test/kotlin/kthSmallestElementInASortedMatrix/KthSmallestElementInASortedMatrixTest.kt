@@ -9,7 +9,7 @@ class KthSmallestElementInASortedMatrixTest {
     data class KthSmallestElementInASortedMatrixTestData(
         val matrix: Array<IntArray>,
         val k: Int,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,12 +38,12 @@ class KthSmallestElementInASortedMatrixTest {
             KthSmallestElementInASortedMatrixTestData(
                 arrayOf(intArrayOf(1, 5, 9), intArrayOf(10, 11, 13), intArrayOf(12, 13, 15)),
                 8,
-                13
+                13,
             ),
             KthSmallestElementInASortedMatrixTestData(
                 arrayOf(intArrayOf(-5)),
                 1,
-                -5
+                -5,
             ),
         )
         tests.forEach { test ->

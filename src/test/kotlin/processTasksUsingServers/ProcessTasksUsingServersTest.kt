@@ -9,7 +9,7 @@ internal class ProcessTasksUsingServersTest {
     private data class ProcessTasksUsingServersTestData(
         val servers: IntArray,
         val tasks: IntArray,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -116,7 +116,7 @@ internal class ProcessTasksUsingServersTest {
                     147,
                     985,
                     619,
-                    865
+                    865,
                 ),
                 intArrayOf(
                     773,
@@ -322,7 +322,7 @@ internal class ProcessTasksUsingServersTest {
                     755,
                     721,
                     159,
-                    843
+                    843,
                 ),
                 intArrayOf(
                     26,
@@ -528,7 +528,7 @@ internal class ProcessTasksUsingServersTest {
                     58,
                     9,
                     52,
-                    40
+                    40,
                 ),
             ),
         )

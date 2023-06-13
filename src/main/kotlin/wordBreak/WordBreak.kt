@@ -8,7 +8,7 @@ class WordBreak {
                 if (i + 1 >= word.length) {
                     if (word == s.substring(
                             i - word.length + 1,
-                            i + 1
+                            i + 1,
                         ) && (i + 1 == word.length || dp[i - word.length])
                     ) {
                         dp[i] = true

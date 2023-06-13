@@ -11,7 +11,7 @@ internal class SwapNodesInPairsTest {
 
     private data class SwapNodesInPairsTestData(
         val head: ListNode?,
-        val result: ListNode?
+        val result: ListNode?,
     )
 
     @Test

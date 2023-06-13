@@ -10,7 +10,7 @@ internal class UniquePaths3Test {
 
     private data class UniquePaths3TestData(
         val grid: Array<IntArray>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

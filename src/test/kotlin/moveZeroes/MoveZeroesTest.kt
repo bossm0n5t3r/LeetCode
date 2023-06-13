@@ -8,7 +8,7 @@ class MoveZeroesTest {
 
     data class MoveZeroesTestData(
         val nums: IntArray,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -33,7 +33,7 @@ class MoveZeroesTest {
     fun moveZeroes() {
         val tests = listOf(
             MoveZeroesTestData(intArrayOf(0, 1, 0, 3, 12), intArrayOf(1, 3, 12, 0, 0)),
-            MoveZeroesTestData(intArrayOf(0), intArrayOf(0))
+            MoveZeroesTestData(intArrayOf(0), intArrayOf(0)),
         )
         tests.forEach { test ->
             moveZeroes.moveZeroes(test.nums)

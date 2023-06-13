@@ -8,7 +8,7 @@ class UniquePathsTest2 {
 
     data class UniquePaths2TestData(
         val obstacleGrid: Array<IntArray>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,27 +38,27 @@ class UniquePathsTest2 {
                     intArrayOf(0, 1, 0),
                     intArrayOf(0, 0, 0),
                 ),
-                result = 2
+                result = 2,
             ),
             UniquePaths2TestData(
                 obstacleGrid = arrayOf(
                     intArrayOf(0, 1),
                     intArrayOf(0, 0),
                 ),
-                result = 1
+                result = 1,
             ),
             UniquePaths2TestData(
                 obstacleGrid = arrayOf(
                     intArrayOf(1, 0),
                 ),
-                result = 0
+                result = 0,
             ),
             UniquePaths2TestData(
                 obstacleGrid = arrayOf(
                     intArrayOf(1),
                     intArrayOf(0),
                 ),
-                result = 0
+                result = 0,
             ),
             UniquePaths2TestData(
                 obstacleGrid = arrayOf(
@@ -66,7 +66,7 @@ class UniquePathsTest2 {
                     intArrayOf(1, 1),
                     intArrayOf(0, 0),
                 ),
-                result = 0
+                result = 0,
             ),
         )
         tests.forEach { test ->

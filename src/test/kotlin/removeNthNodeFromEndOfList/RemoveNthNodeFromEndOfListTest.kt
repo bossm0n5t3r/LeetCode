@@ -12,7 +12,7 @@ internal class RemoveNthNodeFromEndOfListTest {
     private data class RemoveNthNodeFromEndOfListTestData(
         val head: ListNode?,
         val n: Int,
-        val result: ListNode?
+        val result: ListNode?,
     )
 
     @Test
@@ -21,17 +21,17 @@ internal class RemoveNthNodeFromEndOfListTest {
             RemoveNthNodeFromEndOfListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
                 2,
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 5))
+                listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 5)),
             ),
             RemoveNthNodeFromEndOfListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1)),
                 1,
-                listNodeUtil.generateListNodeFromList(listOf())
+                listNodeUtil.generateListNodeFromList(listOf()),
             ),
             RemoveNthNodeFromEndOfListTestData(
                 listNodeUtil.generateListNodeFromList(listOf(1, 2)),
                 1,
-                listNodeUtil.generateListNodeFromList(listOf(1))
+                listNodeUtil.generateListNodeFromList(listOf(1)),
             ),
         )
         tests.forEach { test ->

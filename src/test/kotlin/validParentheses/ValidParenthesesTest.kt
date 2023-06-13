@@ -8,7 +8,7 @@ class ValidParenthesesTest {
 
     data class ValidParenthesesTestData(
         val s: String,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -18,7 +18,7 @@ class ValidParenthesesTest {
             ValidParenthesesTestData("()[]{}", true),
             ValidParenthesesTestData("(]", false),
             ValidParenthesesTestData("([)]", false),
-            ValidParenthesesTestData("{[]}", true)
+            ValidParenthesesTestData("{[]}", true),
         )
         tests.forEach { test ->
             assertEquals(validParentheses.isValid(test.s), test.result)

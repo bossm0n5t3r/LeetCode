@@ -8,7 +8,7 @@ internal class LongestStringChainTest {
 
     private data class LongestStringChainTestData(
         val words: Array<String>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,15 +34,15 @@ internal class LongestStringChainTest {
         val tests = listOf(
             LongestStringChainTestData(
                 arrayOf("a", "b", "ba", "bca", "bda", "bdca"),
-                4
+                4,
             ),
             LongestStringChainTestData(
                 arrayOf("xbc", "pcxbcf", "xb", "cxbc", "pcxbc"),
-                5
+                5,
             ),
             LongestStringChainTestData(
                 arrayOf("bdca", "bda", "ca", "dca", "a"),
-                4
+                4,
             ),
             LongestStringChainTestData(
                 arrayOf(
@@ -64,9 +64,9 @@ internal class LongestStringChainTest {
                     "grukkmj",
                     "grukj",
                     "zczpzfvdhx",
-                    "gru"
+                    "gru",
                 ),
-                7
+                7,
             ),
         )
         tests.forEach { test ->

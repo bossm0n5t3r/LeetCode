@@ -9,7 +9,7 @@ internal class SmallestStringWithSwapsTest {
     private data class SmallestStringWithSwapsTestData(
         val s: String,
         val pairs: List<List<Int>>,
-        val result: String
+        val result: String,
     )
 
     @Test

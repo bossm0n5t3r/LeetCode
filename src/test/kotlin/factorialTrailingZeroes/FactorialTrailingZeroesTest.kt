@@ -8,7 +8,7 @@ class FactorialTrailingZeroesTest {
 
     data class FactorialTrailingZeroesTestData(
         val n: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -16,7 +16,7 @@ class FactorialTrailingZeroesTest {
         val tests = listOf(
             FactorialTrailingZeroesTestData(3, 0),
             FactorialTrailingZeroesTestData(5, 1),
-            FactorialTrailingZeroesTestData(0, 0)
+            FactorialTrailingZeroesTestData(0, 0),
         )
         tests.forEach { test ->
             assertEquals(factorialTrailingZeroes.trailingZeroes(test.n), test.result)

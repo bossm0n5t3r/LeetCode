@@ -8,14 +8,14 @@ class HappyNumberTest {
 
     data class HappyNumberTestData(
         val n: Int,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
     fun isHappy() {
         val tests = listOf(
             HappyNumberTestData(19, true),
-            HappyNumberTestData(2, false)
+            HappyNumberTestData(2, false),
         )
         tests.forEach { test ->
             assertEquals(happyNumber.isHappy(test.n), test.result)

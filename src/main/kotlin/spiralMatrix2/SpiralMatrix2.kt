@@ -15,13 +15,13 @@ class SpiralMatrix2 {
         var value: Int = 1,
         var r: Int = 0,
         var c: Int = 0,
-        var direction: Direction = Direction.RIGHT
+        var direction: Direction = Direction.RIGHT,
     ) {
         enum class Direction {
             LEFT,
             RIGHT,
             DOWN,
-            UP
+            UP,
         }
 
         fun next(n: Int, matrix: Array<IntArray>) {

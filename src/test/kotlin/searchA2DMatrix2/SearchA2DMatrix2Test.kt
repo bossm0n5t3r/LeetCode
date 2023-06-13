@@ -9,7 +9,7 @@ internal class SearchA2DMatrix2Test {
     private data class SearchA2DMatrix2TestData(
         val matrix: Array<IntArray>,
         val target: Int,
-        val result: Boolean
+        val result: Boolean,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -44,7 +44,7 @@ internal class SearchA2DMatrix2Test {
                     intArrayOf(18, 21, 23, 26, 30),
                 ),
                 target = 5,
-                result = true
+                result = true,
             ),
             SearchA2DMatrix2TestData(
                 matrix = arrayOf(
@@ -55,14 +55,14 @@ internal class SearchA2DMatrix2Test {
                     intArrayOf(18, 21, 23, 26, 30),
                 ),
                 target = 20,
-                result = false
+                result = false,
             ),
             SearchA2DMatrix2TestData(
                 matrix = arrayOf(
                     intArrayOf(-1, 3),
                 ),
                 target = 3,
-                result = true
+                result = true,
             ),
         )
         tests.forEach { test ->

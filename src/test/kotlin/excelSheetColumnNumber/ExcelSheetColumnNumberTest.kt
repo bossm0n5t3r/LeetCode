@@ -8,7 +8,7 @@ class ExcelSheetColumnNumberTest {
 
     data class ExcelSheetColumnNumberTestData(
         val columnTitle: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -17,7 +17,7 @@ class ExcelSheetColumnNumberTest {
             ExcelSheetColumnNumberTestData("A", 1),
             ExcelSheetColumnNumberTestData("AB", 28),
             ExcelSheetColumnNumberTestData("ZY", 701),
-            ExcelSheetColumnNumberTestData("FXSHRXW", 2147483647)
+            ExcelSheetColumnNumberTestData("FXSHRXW", 2147483647),
         )
         tests.forEach { test ->
             assertEquals(excelSheetColumnNumber.titleToNumber(test.columnTitle), test.result)

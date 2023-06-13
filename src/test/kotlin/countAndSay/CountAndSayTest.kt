@@ -8,7 +8,7 @@ class CountAndSayTest {
 
     data class CountAndSayTestData(
         val n: Int,
-        val result: String
+        val result: String,
     )
 
     @Test
@@ -16,7 +16,7 @@ class CountAndSayTest {
         val tests = listOf(
             CountAndSayTestData(1, "1"),
             CountAndSayTestData(4, "1211"),
-            CountAndSayTestData(5, "111221")
+            CountAndSayTestData(5, "111221"),
         )
         tests.forEach { test ->
             assertEquals(countAndSay.countAndSay(test.n), test.result)

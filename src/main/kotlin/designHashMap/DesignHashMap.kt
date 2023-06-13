@@ -20,7 +20,7 @@ class DesignAnotherHashMap {
     private data class ListNode(
         val key: Int,
         val value: Int,
-        var next: ListNode?
+        var next: ListNode?,
     )
 
     private val size = 19997

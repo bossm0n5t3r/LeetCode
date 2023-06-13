@@ -16,7 +16,7 @@ class Permutations2 {
         arr: IntArray,
         visited: BooleanArray,
         totalLength: Int,
-        cnt: Int
+        cnt: Int,
     ) {
         if (cnt == totalLength) {
             result.add(arr.toList())

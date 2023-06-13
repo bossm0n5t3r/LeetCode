@@ -9,14 +9,14 @@ class ValidAnagramTest {
     data class ValidAnagramTestData(
         val s: String,
         val t: String,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
     fun isAnagram() {
         val tests = listOf(
             ValidAnagramTestData("anagram", "nagaram", true),
-            ValidAnagramTestData("rat", "car", false)
+            ValidAnagramTestData("rat", "car", false),
         )
         tests.forEach { test ->
             assertEquals(validAnagram.isAnagram(test.s, test.t), test.result)

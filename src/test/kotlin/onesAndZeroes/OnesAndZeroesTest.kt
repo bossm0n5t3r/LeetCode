@@ -10,7 +10,7 @@ internal class OnesAndZeroesTest {
         val strs: Array<String>,
         val m: Int,
         val n: Int,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -42,13 +42,13 @@ internal class OnesAndZeroesTest {
                 arrayOf("10", "0001", "111001", "1", "0"),
                 5,
                 3,
-                4
+                4,
             ),
             OnesAndZeroesTestData(
                 arrayOf("10", "0", "1"),
                 1,
                 1,
-                2
+                2,
             ),
         )
         tests.forEach { test ->

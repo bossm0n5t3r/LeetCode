@@ -46,6 +46,6 @@ class ProcessTasksUsingServers {
     private data class Server(
         val index: Int,
         val weight: Int,
-        var task: Int = 0
+        var task: Int = 0,
     )
 }

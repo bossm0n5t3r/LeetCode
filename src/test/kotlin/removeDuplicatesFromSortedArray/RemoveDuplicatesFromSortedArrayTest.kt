@@ -8,7 +8,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 
     data class RemoveDuplicatesFromSortedArrayTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -33,7 +33,7 @@ class RemoveDuplicatesFromSortedArrayTest {
     fun removeDuplicates() {
         val tests = listOf(
             RemoveDuplicatesFromSortedArrayTestData(intArrayOf(1, 1, 2), 2),
-            RemoveDuplicatesFromSortedArrayTestData(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4), 5)
+            RemoveDuplicatesFromSortedArrayTestData(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4), 5),
         )
         tests.forEach { test ->
             assertEquals(removeDuplicatesFromSortedArray.removeDuplicates(test.nums), test.result)

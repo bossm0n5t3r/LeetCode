@@ -8,7 +8,7 @@ class PowerOfThreeTest {
 
     data class PowerOfThreeTestData(
         val n: Int,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -18,7 +18,7 @@ class PowerOfThreeTest {
             PowerOfThreeTestData(0, false),
             PowerOfThreeTestData(9, true),
             PowerOfThreeTestData(45, false),
-            PowerOfThreeTestData(-3, false)
+            PowerOfThreeTestData(-3, false),
 
         )
         tests.forEach { test ->

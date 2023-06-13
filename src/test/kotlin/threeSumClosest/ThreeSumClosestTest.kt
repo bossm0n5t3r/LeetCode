@@ -9,7 +9,7 @@ internal class ThreeSumClosestTest {
     private data class ThreeSumClosestTestData(
         val nums: IntArray,
         val target: Int,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

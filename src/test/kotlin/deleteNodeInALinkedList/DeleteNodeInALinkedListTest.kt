@@ -12,7 +12,7 @@ class DeleteNodeInALinkedListTest {
     data class DeleteNodeInALinkedListTestData(
         val head: ListNode?,
         val node: Int,
-        val result: List<Int>
+        val result: List<Int>,
     )
 
     @Test
@@ -21,27 +21,27 @@ class DeleteNodeInALinkedListTest {
             DeleteNodeInALinkedListTestData(
                 head = listNodeUtil.generateListNodeFromList(listOf(4, 5, 1, 9)),
                 node = 5,
-                result = listOf(4, 1, 9)
+                result = listOf(4, 1, 9),
             ),
             DeleteNodeInALinkedListTestData(
                 head = listNodeUtil.generateListNodeFromList(listOf(4, 5, 1, 9)),
                 node = 1,
-                result = listOf(4, 5, 9)
+                result = listOf(4, 5, 9),
             ),
             DeleteNodeInALinkedListTestData(
                 head = listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4)),
                 node = 3,
-                result = listOf(1, 2, 4)
+                result = listOf(1, 2, 4),
             ),
             DeleteNodeInALinkedListTestData(
                 head = listNodeUtil.generateListNodeFromList(listOf(0, 1)),
                 node = 0,
-                result = listOf(1)
+                result = listOf(1),
             ),
             DeleteNodeInALinkedListTestData(
                 head = listNodeUtil.generateListNodeFromList(listOf(-3, 5, -99)),
                 node = -3,
-                result = listOf(5, -99)
+                result = listOf(5, -99),
             ),
         )
         tests.forEach { test ->

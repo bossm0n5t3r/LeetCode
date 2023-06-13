@@ -8,7 +8,7 @@ class MinStackTest {
 
     data class MinStackTestData(
         val input: Pair<List<String>, List<List<Int>>>,
-        val output: List<Int?>
+        val output: List<Int?>,
     )
 
     @Test
@@ -17,9 +17,9 @@ class MinStackTest {
             MinStackTestData(
                 input = Pair(
                     listOf("MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"),
-                    listOf(listOf(), listOf(-2), listOf(0), listOf(-3), listOf(), listOf(), listOf(), listOf())
+                    listOf(listOf(), listOf(-2), listOf(0), listOf(-3), listOf(), listOf(), listOf(), listOf()),
                 ),
-                output = listOf(null, null, null, null, -3, null, 0, -2)
+                output = listOf(null, null, null, null, -3, null, 0, -2),
             ),
             MinStackTestData(
                 input = Pair(
@@ -41,7 +41,7 @@ class MinStackTest {
                         "top",
                         "getMin",
                         "pop",
-                        "getMin"
+                        "getMin",
                     ),
                     listOf(
                         listOf(),
@@ -61,8 +61,8 @@ class MinStackTest {
                         listOf(),
                         listOf(),
                         listOf(),
-                        listOf()
-                    )
+                        listOf(),
+                    ),
                 ),
                 output = listOf(
                     null,
@@ -82,9 +82,9 @@ class MinStackTest {
                     -2147483648,
                     -2147483648,
                     null,
-                    2147483647
-                )
-            )
+                    2147483647,
+                ),
+            ),
         )
         tests.forEach { test ->
             val (commandList, inputData) = test.input

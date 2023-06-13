@@ -8,7 +8,7 @@ internal class NQueens2Test {
 
     private data class NQueens2TestData(
         val n: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test

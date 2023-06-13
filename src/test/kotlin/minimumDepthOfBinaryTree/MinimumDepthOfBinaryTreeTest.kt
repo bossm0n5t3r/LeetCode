@@ -11,7 +11,7 @@ internal class MinimumDepthOfBinaryTreeTest {
 
     private data class MinimumDepthOfBinaryTreeTestData(
         val root: TreeNode?,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -19,11 +19,11 @@ internal class MinimumDepthOfBinaryTreeTest {
         val tests = listOf(
             MinimumDepthOfBinaryTreeTestData(
                 treeNodeUtil.generateTreeNodeOrNull(listOf(3, 9, 20, null, null, 15, 7)),
-                2
+                2,
             ),
             MinimumDepthOfBinaryTreeTestData(
                 treeNodeUtil.generateTreeNodeOrNull(listOf(2, null, 3, null, 4, null, 5, null, 6)),
-                5
+                5,
             ),
         )
         tests.forEach { test ->

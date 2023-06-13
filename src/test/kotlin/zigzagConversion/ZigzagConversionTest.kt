@@ -9,7 +9,7 @@ internal class ZigzagConversionTest {
     private data class ZigzagConversionTestData(
         val s: String,
         val numRows: Int,
-        val result: String
+        val result: String,
     )
 
     @Test

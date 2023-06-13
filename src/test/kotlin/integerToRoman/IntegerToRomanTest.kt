@@ -8,7 +8,7 @@ internal class IntegerToRomanTest {
 
     private data class IntegerToRomanTestData(
         val num: Int,
-        val result: String
+        val result: String,
     )
 
     @Test

@@ -14,7 +14,7 @@ class NQueens {
         n: Int,
         board: Array<CharArray>,
         row: Int,
-        result: Result
+        result: Result,
     ) {
         if (row == n) {
             result.result.add(board.map { it.joinToString("") })

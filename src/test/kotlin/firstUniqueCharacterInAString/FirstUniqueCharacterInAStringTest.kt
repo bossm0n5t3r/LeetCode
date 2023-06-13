@@ -8,7 +8,7 @@ class FirstUniqueCharacterInAStringTest {
 
     data class FirstUniqueCharacterInAStringTestData(
         val s: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test

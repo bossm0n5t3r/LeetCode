@@ -8,7 +8,7 @@ class ValidPalindromeTest {
 
     data class ValidPalindromeTestData(
         val s: String,
-        val result: Boolean
+        val result: Boolean,
     )
 
     @Test
@@ -17,7 +17,7 @@ class ValidPalindromeTest {
             ValidPalindromeTestData("A man, a plan, a canal: Panama", true),
             ValidPalindromeTestData("race a car", false),
             ValidPalindromeTestData(" ", true),
-            ValidPalindromeTestData("0P", false)
+            ValidPalindromeTestData("0P", false),
         )
         tests.forEach { test ->
             assertEquals(validPalindrome.isPalindrome(test.s), test.result)

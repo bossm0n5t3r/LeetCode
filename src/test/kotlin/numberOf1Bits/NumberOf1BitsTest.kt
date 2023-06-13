@@ -8,7 +8,7 @@ class NumberOf1BitsTest {
 
     data class NumberOf1BitsTestData(
         val n: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -17,7 +17,7 @@ class NumberOf1BitsTest {
             NumberOf1BitsTestData(11, 3),
             NumberOf1BitsTestData(128, 1),
             NumberOf1BitsTestData(-3, 31),
-            NumberOf1BitsTestData(0, 0)
+            NumberOf1BitsTestData(0, 0),
         )
         tests.forEach { test ->
             assertEquals(numberOf1Bits.hammingWeight(test.n), test.result)

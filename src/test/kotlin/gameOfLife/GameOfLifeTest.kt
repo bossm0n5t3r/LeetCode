@@ -8,7 +8,7 @@ class GameOfLifeTest {
 
     data class GameOfLifeTestData(
         val board: Array<IntArray>,
-        val result: Array<IntArray>
+        val result: Array<IntArray>,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,8 +38,8 @@ class GameOfLifeTest {
             ),
             GameOfLifeTestData(
                 arrayOf(intArrayOf(1, 1), intArrayOf(1, 0)),
-                arrayOf(intArrayOf(1, 1), intArrayOf(1, 1))
-            )
+                arrayOf(intArrayOf(1, 1), intArrayOf(1, 1)),
+            ),
         )
         tests.forEach { test ->
             val notInfiniteTestBoard = test.board.map { it.copyOf() }.toTypedArray()

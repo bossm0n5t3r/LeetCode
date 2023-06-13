@@ -8,7 +8,7 @@ internal class NQueensTest {
 
     private data class NQueensTestData(
         val n: Int,
-        val result: List<List<String>>
+        val result: List<List<String>>,
     )
 
     @Test
@@ -19,14 +19,14 @@ internal class NQueensTest {
                 listOf(
                     listOf(".Q..", "...Q", "Q...", "..Q."),
                     listOf("..Q.", "Q...", "...Q", ".Q.."),
-                )
+                ),
             ),
             NQueensTestData(
                 1,
                 listOf(
                     listOf("Q"),
-                )
-            )
+                ),
+            ),
         )
         tests.forEach { test ->
             nQueens.solveNQueens(test.n)

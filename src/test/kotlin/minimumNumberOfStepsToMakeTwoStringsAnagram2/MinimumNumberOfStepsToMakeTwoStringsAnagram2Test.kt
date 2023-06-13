@@ -9,17 +9,21 @@ internal class MinimumNumberOfStepsToMakeTwoStringsAnagram2Test {
     private data class MinimumNumberOfStepsToMakeTwoStringsAnagram2TestData(
         val s: String,
         val t: String,
-        val result: Int
+        val result: Int,
     )
 
     @Test
     fun minSteps() {
         val tests = listOf(
             MinimumNumberOfStepsToMakeTwoStringsAnagram2TestData(
-                "leetcode", "coats", 7
+                "leetcode",
+                "coats",
+                7,
             ),
             MinimumNumberOfStepsToMakeTwoStringsAnagram2TestData(
-                "night", "thing", 0
+                "night",
+                "thing",
+                0,
             ),
         )
         tests.forEach { test ->

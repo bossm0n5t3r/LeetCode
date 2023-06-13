@@ -8,7 +8,7 @@ class ValidSudokuTest {
 
     data class ValidSudokuTestData(
         val board: Array<CharArray>,
-        val result: Boolean
+        val result: Boolean,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -44,9 +44,9 @@ class ValidSudokuTest {
                         ,[".","6",".",".",".",".","2","8","."]
                         ,[".",".",".","4","1","9",".",".","5"]
                         ,[".",".",".",".","8",".",".","7","9"]]
-                    """.trimIndent()
+                    """.trimIndent(),
                 ),
-                true
+                true,
             ),
             ValidSudokuTestData(
                 getSudoku(
@@ -60,9 +60,9 @@ class ValidSudokuTest {
                         ,[".","6",".",".",".",".","2","8","."]
                         ,[".",".",".","4","1","9",".",".","5"]
                         ,[".",".",".",".","8",".",".","7","9"]]
-                    """.trimIndent()
+                    """.trimIndent(),
                 ),
-                false
+                false,
             ),
             ValidSudokuTestData(
                 getSudoku(
@@ -76,10 +76,10 @@ class ValidSudokuTest {
                         ,[".",".",".",".",".","2",".",".","."]
                         ,[".","2",".","9",".",".",".",".","."]
                         ,[".",".","4",".",".",".",".",".","."]]
-                    """.trimIndent()
+                    """.trimIndent(),
                 ),
-                false
-            )
+                false,
+            ),
         )
         tests.forEach { test ->
             assertThat(validSudoku.isValidSudokuFirstApproach(test.board)).isEqualTo(test.result)

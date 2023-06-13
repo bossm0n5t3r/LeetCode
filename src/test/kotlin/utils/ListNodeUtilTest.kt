@@ -22,7 +22,7 @@ class ListNodeUtilTest {
             basicListNode[0][3],
             basicListNode[0][5],
             basicListNode[0][7],
-            basicListNode[0][9]
+            basicListNode[0][9],
         )
         val expectListNodeVal = listOf(1, 3, 5, 7, 9)
         var cur: ListNode? = listNodeUtil.connectListNode(listNodeData)

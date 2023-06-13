@@ -12,7 +12,7 @@ class KthSmallestElementInABST {
     }
 
     data class IntWrapper(
-        var value: Int = 0
+        var value: Int = 0,
     ) {
         fun increment() {
             value++

@@ -8,7 +8,7 @@ internal class TriangleTest {
 
     private data class TriangleTestData(
         val triangle: List<List<Int>>,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -21,14 +21,14 @@ internal class TriangleTest {
                     listOf(6, 5, 7),
                     listOf(4, 1, 8, 3),
                 ),
-                11
+                11,
             ),
             TriangleTestData(
                 listOf(
                     listOf(-10),
                 ),
-                -10
-            )
+                -10,
+            ),
         )
         tests.forEach { test ->
             triangle.minimumTotal(test.triangle)

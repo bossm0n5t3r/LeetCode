@@ -43,7 +43,7 @@ internal class CombinationSum2Test {
                     listOf(1, 2, 5),
                     listOf(1, 7),
                     listOf(2, 6),
-                )
+                ),
             ),
             Example(
                 intArrayOf(2, 5, 2, 1, 2),
@@ -51,7 +51,7 @@ internal class CombinationSum2Test {
                 listOf(
                     listOf(1, 2, 2),
                     listOf(5),
-                )
+                ),
             ),
         )
         tests.forEach { test ->

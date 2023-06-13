@@ -9,7 +9,7 @@ class SumOfTwoIntegersTest {
     data class SumOfTwoIntegersTestData(
         val a: Int,
         val b: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test

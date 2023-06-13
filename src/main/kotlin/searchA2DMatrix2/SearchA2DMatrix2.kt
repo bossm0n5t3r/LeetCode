@@ -31,8 +31,9 @@ class SearchA2DMatrix2 {
         var col = matrix.first().size - 1
         while (col >= 0 && row < matrix.size) {
             val cur = matrix[row][col]
-            if (cur == target) return true
-            else if (cur < target) {
+            if (cur == target) {
+                return true
+            } else if (cur < target) {
                 row++
             } else {
                 col--

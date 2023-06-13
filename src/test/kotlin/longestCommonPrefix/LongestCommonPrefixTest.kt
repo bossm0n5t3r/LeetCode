@@ -8,7 +8,7 @@ class LongestCommonPrefixTest {
 
     data class LongestCommonPrefixTestData(
         val strs: Array<String>,
-        val result: String
+        val result: String,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

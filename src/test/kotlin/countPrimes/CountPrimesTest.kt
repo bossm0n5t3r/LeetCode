@@ -8,7 +8,7 @@ class CountPrimesTest {
 
     data class CountPrimesTestData(
         val n: Int,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -16,7 +16,7 @@ class CountPrimesTest {
         val tests = listOf(
             CountPrimesTestData(10, 4),
             CountPrimesTestData(0, 0),
-            CountPrimesTestData(1, 0)
+            CountPrimesTestData(1, 0),
         )
         tests.forEach { test ->
             assertEquals(countPrimes.countPrimes(test.n), test.result)

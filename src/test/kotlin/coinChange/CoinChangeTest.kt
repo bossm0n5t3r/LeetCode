@@ -9,7 +9,7 @@ internal class CoinChangeTest {
     private data class CoinChangeTestData(
         val coins: IntArray,
         val amount: Int,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -38,27 +38,27 @@ internal class CoinChangeTest {
             CoinChangeTestData(
                 intArrayOf(1, 2, 5),
                 11,
-                3
+                3,
             ),
             CoinChangeTestData(
                 intArrayOf(2),
                 3,
-                -1
+                -1,
             ),
             CoinChangeTestData(
                 intArrayOf(1),
                 0,
-                0
+                0,
             ),
             CoinChangeTestData(
                 intArrayOf(2),
                 1,
-                -1
+                -1,
             ),
             CoinChangeTestData(
                 intArrayOf(1, 2),
                 2,
-                1
+                1,
             ),
         )
         tests.forEach { test ->

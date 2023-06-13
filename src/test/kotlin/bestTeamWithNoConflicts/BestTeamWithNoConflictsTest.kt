@@ -9,7 +9,7 @@ internal class BestTeamWithNoConflictsTest {
     private data class BestTeamWithNoConflictsTestData(
         val scores: IntArray,
         val ages: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -36,23 +36,29 @@ internal class BestTeamWithNoConflictsTest {
     fun bestTeamScore() {
         val tests = listOf(
             BestTeamWithNoConflictsTestData(
-                intArrayOf(1, 3, 5, 10, 15), intArrayOf(1, 2, 3, 4, 5), 34
+                intArrayOf(1, 3, 5, 10, 15),
+                intArrayOf(1, 2, 3, 4, 5),
+                34,
             ),
             BestTeamWithNoConflictsTestData(
-                intArrayOf(4, 5, 6, 5), intArrayOf(2, 1, 2, 1), 16
+                intArrayOf(4, 5, 6, 5),
+                intArrayOf(2, 1, 2, 1),
+                16,
             ),
             BestTeamWithNoConflictsTestData(
-                intArrayOf(1, 2, 3, 5), intArrayOf(8, 9, 10, 1), 6
+                intArrayOf(1, 2, 3, 5),
+                intArrayOf(8, 9, 10, 1),
+                6,
             ),
             BestTeamWithNoConflictsTestData(
                 intArrayOf(319776, 611683, 835240, 602298, 430007, 574, 142444, 858606, 734364, 896074),
                 intArrayOf(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                5431066
+                5431066,
             ),
             BestTeamWithNoConflictsTestData(
                 intArrayOf(6, 5, 1, 7, 6, 5, 5, 4, 10, 4),
                 intArrayOf(3, 2, 5, 3, 2, 1, 4, 4, 5, 1),
-                43
+                43,
             ),
         )
         tests.forEach { test ->

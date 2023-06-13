@@ -9,7 +9,7 @@ class TwoSumTest {
     data class TwoSumTestData(
         val nums: IntArray,
         val target: Int,
-        val result: IntArray
+        val result: IntArray,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

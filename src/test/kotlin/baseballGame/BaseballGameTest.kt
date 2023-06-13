@@ -8,7 +8,7 @@ internal class BaseballGameTest {
 
     private data class BaseballGameTestData(
         val ops: Array<String>,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true

@@ -9,7 +9,7 @@ internal class MultiplyStringsTest {
     private data class Example(
         val num1: String,
         val num2: String,
-        val result: String
+        val result: String,
     )
 
     @Test

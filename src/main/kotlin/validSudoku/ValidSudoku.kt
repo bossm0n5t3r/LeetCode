@@ -44,7 +44,7 @@ class ValidSudoku {
             mutableListOf(),
             mutableListOf(),
             mutableListOf(),
-            mutableListOf()
+            mutableListOf(),
         )
         var resultIdx = 0
         targetIdx.forEach { col ->
@@ -82,7 +82,7 @@ class ValidSudoku {
             mutableListOf(),
             mutableListOf(),
             mutableListOf(),
-            mutableListOf()
+            mutableListOf(),
         )
         board.forEach { row ->
             row.forEachIndexed { cIdx, e ->

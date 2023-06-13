@@ -8,7 +8,7 @@ class MissingNumberTest {
 
     data class MissingNumberTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -35,7 +35,7 @@ class MissingNumberTest {
             MissingNumberTestData(intArrayOf(3, 0, 1), 2),
             MissingNumberTestData(intArrayOf(0, 1), 2),
             MissingNumberTestData(intArrayOf(9, 6, 4, 2, 3, 5, 7, 0, 1), 8),
-            MissingNumberTestData(intArrayOf(0), 1)
+            MissingNumberTestData(intArrayOf(0), 1),
         )
         tests.forEach { test ->
             assertEquals(missingNumber.missingNumber(test.nums), test.result)

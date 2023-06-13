@@ -8,7 +8,7 @@ class FindTheDuplicateNumberTest {
 
     data class FindTheDuplicateNumberTestData(
         val nums: IntArray,
-        val result: Int
+        val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
@@ -34,11 +34,11 @@ class FindTheDuplicateNumberTest {
         val tests = listOf(
             FindTheDuplicateNumberTestData(
                 intArrayOf(1, 3, 4, 2, 2),
-                2
+                2,
             ),
             FindTheDuplicateNumberTestData(
                 intArrayOf(3, 1, 3, 4, 2),
-                3
+                3,
             ),
         )
         tests.forEach { test ->

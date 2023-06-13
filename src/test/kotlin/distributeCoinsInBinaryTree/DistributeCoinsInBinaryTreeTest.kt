@@ -11,7 +11,7 @@ internal class DistributeCoinsInBinaryTreeTest {
 
     private data class DistributeCoinsInBinaryTreeTestData(
         val root: TreeNode?,
-        val result: Int
+        val result: Int,
     )
 
     @Test
@@ -19,11 +19,11 @@ internal class DistributeCoinsInBinaryTreeTest {
         val tests = listOf(
             DistributeCoinsInBinaryTreeTestData(
                 treeNodeUtil.generateTreeNodeOrNull(listOf(3, 0, 0)),
-                2
+                2,
             ),
             DistributeCoinsInBinaryTreeTestData(
                 treeNodeUtil.generateTreeNodeOrNull(listOf(0, 3, 0)),
-                3
+                3,
             ),
         )
         tests.forEach { test ->
