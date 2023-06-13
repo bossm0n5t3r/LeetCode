@@ -1,10 +1,10 @@
-package combinationSum4
+package me.bossm0n5t3r.leetcode.combinationSum4
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class CombinationSum4Test {
-    private val sut = CombinationSum4()
+    private val sut = CombinationSum4.Solution()
 
     private data class Example(
         val nums: IntArray,
