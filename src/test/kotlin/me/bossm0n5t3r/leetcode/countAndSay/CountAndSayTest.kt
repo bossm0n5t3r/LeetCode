@@ -1,10 +1,10 @@
-package countAndSay
+package me.bossm0n5t3r.leetcode.countAndSay
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class CountAndSayTest {
-    private val countAndSay = CountAndSay()
+    private val countAndSay = CountAndSay.Solution()
 
     data class CountAndSayTestData(
         val n: Int,
