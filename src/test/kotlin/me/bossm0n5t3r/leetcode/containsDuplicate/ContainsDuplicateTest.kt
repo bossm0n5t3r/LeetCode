@@ -1,10 +1,10 @@
-package containsDuplicate
+package me.bossm0n5t3r.leetcode.containsDuplicate
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ContainsDuplicateTest {
-    private val containsDuplicate = ContainsDuplicate()
+    private val containsDuplicate = ContainsDuplicate.Solution()
 
     data class ContainsDuplicateTestData(
         val nums: IntArray,
