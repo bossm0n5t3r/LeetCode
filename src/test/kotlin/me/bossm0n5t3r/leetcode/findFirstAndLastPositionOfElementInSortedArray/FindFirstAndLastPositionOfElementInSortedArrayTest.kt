@@ -1,10 +1,10 @@
-package findFirstAndLastPositionOfElementInSortedArray
+package me.bossm0n5t3r.leetcode.findFirstAndLastPositionOfElementInSortedArray
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class FindFirstAndLastPositionOfElementInSortedArrayTest {
-    private val sut = FindFirstAndLastPositionOfElementInSortedArray()
+    private val sut = FindFirstAndLastPositionOfElementInSortedArray.Solution()
 
     private data class FindFirstAndLastPositionOfElementInSortedArrayTestData(
         val nums: IntArray,
