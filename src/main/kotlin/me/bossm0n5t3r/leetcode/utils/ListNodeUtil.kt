@@ -1,4 +1,4 @@
-package utils
+package me.bossm0n5t3r.leetcode.utils
 
 class ListNode(var `val`: Int) {
     var next: ListNode? = null

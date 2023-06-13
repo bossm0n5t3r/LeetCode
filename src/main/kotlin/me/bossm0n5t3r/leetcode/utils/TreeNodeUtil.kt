@@ -1,4 +1,4 @@
-package utils
+package me.bossm0n5t3r.leetcode.utils
 
 import java.util.LinkedList
 import java.util.Queue

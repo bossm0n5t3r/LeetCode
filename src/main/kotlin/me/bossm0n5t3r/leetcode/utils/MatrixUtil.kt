@@ -1,4 +1,4 @@
-package utils
+package me.bossm0n5t3r.leetcode.utils
 
 class MatrixUtil {
     fun generateMatrixFrom(raw: String): Array<IntArray> {
