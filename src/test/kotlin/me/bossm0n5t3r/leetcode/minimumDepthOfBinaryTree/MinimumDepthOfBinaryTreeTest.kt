@@ -1,12 +1,12 @@
-package minimumDepthOfBinaryTree
+package me.bossm0n5t3r.leetcode.minimumDepthOfBinaryTree
 
+import me.bossm0n5t3r.leetcode.utils.TreeNode
+import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
 import org.junit.jupiter.api.Test
-import utils.TreeNode
-import utils.TreeNodeUtil
 import kotlin.test.assertEquals
 
 internal class MinimumDepthOfBinaryTreeTest {
-    private val minimumDepthOfBinaryTree = MinimumDepthOfBinaryTree()
+    private val minimumDepthOfBinaryTree = MinimumDepthOfBinaryTree.Solution()
     private val treeNodeUtil = TreeNodeUtil()
 
     private data class MinimumDepthOfBinaryTreeTestData(
