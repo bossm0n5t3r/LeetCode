@@ -1,10 +1,10 @@
-package integerToRoman
+package me.bossm0n5t3r.leetcode.integerToRoman
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class IntegerToRomanTest {
-    private val integerToRoman = IntegerToRoman()
+    private val integerToRoman = IntegerToRoman.Solution()
 
     private data class IntegerToRomanTestData(
         val num: Int,
