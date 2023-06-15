@@ -1,10 +1,10 @@
-package fourSum
+package me.bossm0n5t3r.leetcode.fourSum
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class FourSumTest {
-    private val fourSum = FourSum()
+    private val fourSum = FourSum.Solution()
 
     private data class FourSumTestData(
         val nums: IntArray,
