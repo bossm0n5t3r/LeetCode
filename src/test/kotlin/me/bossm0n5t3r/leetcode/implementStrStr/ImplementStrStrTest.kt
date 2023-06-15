@@ -1,10 +1,10 @@
-package implementStrStr
+package me.bossm0n5t3r.leetcode.implementStrStr
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ImplementStrStrTest {
-    private val implementStrStr = ImplementStrStr()
+    private val implementStrStr = ImplementStrStr.Solution()
 
     data class ImplementStrStrTestData(
         val haystack: String,
