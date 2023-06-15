@@ -15,7 +15,7 @@ class KthSmallestElementInASortedMatrix {
             var low = matrix[0][0]
             var high = matrix[n - 1][n - 1] + 1
             while (low < high) {
-    //            println("low: $low, high: $high")
+                //            println("low: $low, high: $high")
                 val mid = low + (high - low) / 2
                 var count = 0
                 var j = n - 1
