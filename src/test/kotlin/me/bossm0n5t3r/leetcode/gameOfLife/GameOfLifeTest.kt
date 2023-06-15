@@ -1,10 +1,10 @@
-package gameOfLife
+package me.bossm0n5t3r.leetcode.gameOfLife
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class GameOfLifeTest {
-    private val gameOfLife = GameOfLife()
+    private val gameOfLife = GameOfLife.Solution()
 
     data class GameOfLifeTestData(
         val board: Array<IntArray>,
