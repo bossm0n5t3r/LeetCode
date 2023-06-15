@@ -1,10 +1,10 @@
-package happyNumber
+package me.bossm0n5t3r.leetcode.happyNumber
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class HappyNumberTest {
-    private val happyNumber = HappyNumber()
+    private val happyNumber = HappyNumber.Solution()
 
     data class HappyNumberTestData(
         val n: Int,
