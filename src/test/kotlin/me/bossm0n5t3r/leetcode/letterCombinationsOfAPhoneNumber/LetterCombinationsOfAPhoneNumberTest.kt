@@ -1,10 +1,10 @@
-package letterCombinationsOfAPhoneNumber
+package me.bossm0n5t3r.leetcode.letterCombinationsOfAPhoneNumber
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class LetterCombinationsOfAPhoneNumberTest {
-    private val letterCombinationsOfAPhoneNumber = LetterCombinationsOfAPhoneNumber()
+    private val letterCombinationsOfAPhoneNumber = LetterCombinationsOfAPhoneNumber.Solution()
 
     private data class LetterCombinationsOfAPhoneNumberTestData(
         val digits: String,
