@@ -1,10 +1,10 @@
-package houseRobber
+package me.bossm0n5t3r.leetcode.houseRobber
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class HouseRobberTest {
-    private val houseRobber = HouseRobber()
+    private val houseRobber = HouseRobber.Solution()
 
     data class HouseRobberTestData(
         val nums: IntArray,
