@@ -1,10 +1,10 @@
-package intersectionOfTwoArrays2
+package me.bossm0n5t3r.leetcode.intersectionOfTwoArrays2
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class IntersectionOfTwoArrays2Test {
-    private val intersectionOfTwoArrays2 = IntersectionOfTwoArrays2()
+    private val intersectionOfTwoArrays2 = IntersectionOfTwoArrays2.Solution()
 
     data class IntersectionOfTwoArrays2TestData(
         val num1: IntArray,
