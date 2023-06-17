@@ -1,10 +1,10 @@
-package longestPalindromicSubstring
+package me.bossm0n5t3r.leetcode.longestPalindromicSubstring
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class LongestPalindromicSubstringTest {
-    private val longestPalindromicSubstring = LongestPalindromicSubstring()
+    private val longestPalindromicSubstring = LongestPalindromicSubstring.Solution()
 
     private data class LongestPalindromicSubstringTestData(
         val s: String,
