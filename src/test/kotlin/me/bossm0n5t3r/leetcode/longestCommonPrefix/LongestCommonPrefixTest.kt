@@ -1,10 +1,10 @@
-package longestCommonPrefix
+package me.bossm0n5t3r.leetcode.longestCommonPrefix
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class LongestCommonPrefixTest {
-    private val longestCommonPrefix = LongestCommonPrefix()
+    private val longestCommonPrefix = LongestCommonPrefix.Solution()
 
     data class LongestCommonPrefixTestData(
         val strs: Array<String>,
