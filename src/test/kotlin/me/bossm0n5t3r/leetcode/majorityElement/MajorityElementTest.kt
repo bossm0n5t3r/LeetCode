@@ -1,10 +1,10 @@
-package majorityElement
+package me.bossm0n5t3r.leetcode.majorityElement
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class MajorityElementTest {
-    private val majorityElement = MajorityElement()
+    private val majorityElement = MajorityElement.Solution()
 
     data class MajorityElementTestData(
         val nums: IntArray,
