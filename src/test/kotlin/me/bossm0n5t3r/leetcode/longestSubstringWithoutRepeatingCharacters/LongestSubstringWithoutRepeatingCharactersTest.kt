@@ -1,10 +1,10 @@
-package longestSubstringWithoutRepeatingCharacters
+package me.bossm0n5t3r.leetcode.longestSubstringWithoutRepeatingCharacters
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class LongestSubstringWithoutRepeatingCharactersTest {
-    private val longestSubstringWithoutRepeatingCharacters = LongestSubstringWithoutRepeatingCharacters()
+    private val longestSubstringWithoutRepeatingCharacters = LongestSubstringWithoutRepeatingCharacters.Solution()
 
     private data class LongestSubstringWithoutRepeatingCharactersTestData(
         val s: String,
