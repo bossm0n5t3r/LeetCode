@@ -1,10 +1,10 @@
-package maximumErasureValue
+package me.bossm0n5t3r.leetcode.maximumErasureValue
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MaximumErasureValueTest {
-    private val maximumErasureValue = MaximumErasureValue()
+    private val maximumErasureValue = MaximumErasureValue.Solution()
 
     private data class MaximumErasureValueTestData(
         val nums: IntArray,
