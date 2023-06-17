@@ -1,10 +1,10 @@
-package maximumProductOfWordLengths
+package me.bossm0n5t3r.leetcode.maximumProductOfWordLengths
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MaximumProductOfWordLengthsTest {
-    private val maximumProductOfWordLengths = MaximumProductOfWordLengths()
+    private val maximumProductOfWordLengths = MaximumProductOfWordLengths.Solution()
 
     private data class MaximumProductOfWordLengthsTestData(
         val words: Array<String>,
