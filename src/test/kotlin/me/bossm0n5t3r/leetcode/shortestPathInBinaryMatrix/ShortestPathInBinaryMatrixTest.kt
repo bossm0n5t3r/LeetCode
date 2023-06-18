@@ -1,10 +1,10 @@
-package shortestPathInBinaryMatrix
+package me.bossm0n5t3r.leetcode.shortestPathInBinaryMatrix
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class ShortestPathInBinaryMatrixTest {
-    private val shortestPathInBinaryMatrix = ShortestPathInBinaryMatrix()
+    private val shortestPathInBinaryMatrix = ShortestPathInBinaryMatrix.Solution()
 
     private data class ShortestPathInBinaryMatrixTestData(
         val grid: Array<IntArray>,
