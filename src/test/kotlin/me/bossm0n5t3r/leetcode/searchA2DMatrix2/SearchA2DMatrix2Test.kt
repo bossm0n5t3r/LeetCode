@@ -1,10 +1,10 @@
-package searchA2DMatrix2
+package me.bossm0n5t3r.leetcode.searchA2DMatrix2
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class SearchA2DMatrix2Test {
-    private val searchA2DMatrix2 = SearchA2DMatrix2()
+    private val searchA2DMatrix2 = SearchA2DMatrix2.Solution()
 
     private data class SearchA2DMatrix2TestData(
         val matrix: Array<IntArray>,
