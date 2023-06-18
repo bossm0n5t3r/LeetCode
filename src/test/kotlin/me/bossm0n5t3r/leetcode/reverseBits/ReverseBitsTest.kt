@@ -1,10 +1,10 @@
-package reverseBits
+package me.bossm0n5t3r.leetcode.reverseBits
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ReverseBitsTest {
-    private val reverseBits = ReverseBits()
+    private val reverseBits = ReverseBits.Solution()
 
     data class ReverseBitsTestData(
         val n: Int,
