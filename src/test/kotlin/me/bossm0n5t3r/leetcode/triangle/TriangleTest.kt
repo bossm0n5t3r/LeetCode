@@ -1,10 +1,10 @@
-package triangle
+package me.bossm0n5t3r.leetcode.triangle
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class TriangleTest {
-    private val triangle = Triangle()
+    private val triangle = Triangle.Solution()
 
     private data class TriangleTestData(
         val triangle: List<List<Int>>,
