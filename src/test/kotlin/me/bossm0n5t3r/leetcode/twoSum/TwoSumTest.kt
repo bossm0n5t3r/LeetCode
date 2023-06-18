@@ -1,10 +1,10 @@
-package twoSum
+package me.bossm0n5t3r.leetcode.twoSum
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class TwoSumTest {
-    private val solution = TwoSum()
+    private val solution = TwoSum.Solution()
 
     data class TwoSumTestData(
         val nums: IntArray,
