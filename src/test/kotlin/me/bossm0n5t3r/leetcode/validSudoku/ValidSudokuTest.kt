@@ -1,10 +1,10 @@
-package validSudoku
+package me.bossm0n5t3r.leetcode.validSudoku
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class ValidSudokuTest {
-    private val validSudoku = ValidSudoku()
+    private val validSudoku = ValidSudoku.Solution()
 
     data class ValidSudokuTestData(
         val board: Array<CharArray>,
