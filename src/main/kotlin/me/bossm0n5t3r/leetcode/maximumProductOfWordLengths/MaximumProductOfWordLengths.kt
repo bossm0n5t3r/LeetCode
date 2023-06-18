@@ -21,7 +21,7 @@ class MaximumProductOfWordLengths {
             words.forEachIndexed { index, s ->
                 s.forEach { c ->
                     result[index] = result[index] or (1 shl (c.code - 'a'.code))
-    //                result[index] = result[index] or (1 shl (c.toByte().toInt() - 'a'.toByte().toInt()))
+                    //                result[index] = result[index] or (1 shl (c.toByte().toInt() - 'a'.toByte().toInt()))
                 }
             }
             return result
