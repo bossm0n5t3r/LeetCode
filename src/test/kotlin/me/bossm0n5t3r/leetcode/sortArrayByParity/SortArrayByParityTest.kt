@@ -1,10 +1,10 @@
-package sortArrayByParity
+package me.bossm0n5t3r.leetcode.sortArrayByParity
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue
 
 internal class SortArrayByParityTest {
-    private val sortArrayByParity = SortArrayByParity()
+    private val sortArrayByParity = SortArrayByParity.Solution()
 
     private data class SortArrayByParityTestData(
         val nums: IntArray,
