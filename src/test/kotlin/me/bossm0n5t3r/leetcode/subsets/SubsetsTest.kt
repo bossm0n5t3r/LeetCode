@@ -1,11 +1,11 @@
-package subsets
+package me.bossm0n5t3r.leetcode.subsets
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class SubsetsTest {
-    private val subsets = Subsets()
+    private val subsets = Subsets.Solution()
 
     data class SubsetsTestData(
         val nums: IntArray,
