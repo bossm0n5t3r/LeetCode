@@ -1,10 +1,10 @@
-package mirrorReflection
+package me.bossm0n5t3r.leetcode.mirrorReflection
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MirrorReflectionTest {
-    private val sut = MirrorReflection()
+    private val sut = MirrorReflection.Solution()
 
     private data class Example(
         val p: Int,
