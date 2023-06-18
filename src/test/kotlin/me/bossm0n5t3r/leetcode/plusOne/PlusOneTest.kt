@@ -1,10 +1,10 @@
-package plusOne
+package me.bossm0n5t3r.leetcode.plusOne
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class PlusOneTest {
-    private val plusOne = PlusOne()
+    private val plusOne = PlusOne.Solution()
 
     data class PlusOneTestData(
         val digits: IntArray,
