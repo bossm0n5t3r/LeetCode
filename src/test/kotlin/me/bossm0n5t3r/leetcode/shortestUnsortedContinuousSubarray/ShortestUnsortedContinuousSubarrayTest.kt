@@ -1,10 +1,10 @@
-package shortestUnsortedContinuousSubarray
+package me.bossm0n5t3r.leetcode.shortestUnsortedContinuousSubarray
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class ShortestUnsortedContinuousSubarrayTest {
-    private val shortestUnsortedContinuousSubarray = ShortestUnsortedContinuousSubarray()
+    private val shortestUnsortedContinuousSubarray = ShortestUnsortedContinuousSubarray.Solution()
 
     private data class ShortestUnsortedContinuousSubarrayTestData(
         val nums: IntArray,
