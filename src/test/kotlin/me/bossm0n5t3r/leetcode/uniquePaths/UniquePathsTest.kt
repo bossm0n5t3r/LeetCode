@@ -1,10 +1,10 @@
-package uniquePaths
+package me.bossm0n5t3r.leetcode.uniquePaths
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class UniquePathsTest {
-    private val uniquePaths = UniquePaths()
+    private val uniquePaths = UniquePaths.Solution()
 
     data class UniquePathsTestData(
         val m: Int,
