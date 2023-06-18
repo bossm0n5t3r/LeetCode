@@ -1,10 +1,10 @@
-package wordBreak
+package me.bossm0n5t3r.leetcode.wordBreak
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class WordBreakTest {
-    private val wordBreak = WordBreak()
+    private val wordBreak = WordBreak.Solution()
 
     data class WordBreakTestData(
         val s: String,
