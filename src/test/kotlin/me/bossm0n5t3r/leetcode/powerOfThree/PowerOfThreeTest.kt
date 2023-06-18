@@ -1,10 +1,10 @@
-package powerOfThree
+package me.bossm0n5t3r.leetcode.powerOfThree
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class PowerOfThreeTest {
-    private val powerOfThree = PowerOfThree()
+    private val powerOfThree = PowerOfThree.Solution()
 
     data class PowerOfThreeTestData(
         val n: Int,
