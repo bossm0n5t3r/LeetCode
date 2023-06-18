@@ -1,10 +1,10 @@
-package spiralMatrix2
+package me.bossm0n5t3r.leetcode.spiralMatrix2
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class SpiralMatrix2Test {
-    private val spiralMatrix2 = SpiralMatrix2()
+    private val spiralMatrix2 = SpiralMatrix2.Solution()
 
     private data class SpiralMatrix2TestData(
         val n: Int,
