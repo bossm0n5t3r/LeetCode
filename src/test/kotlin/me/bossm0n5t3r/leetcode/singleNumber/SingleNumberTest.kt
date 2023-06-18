@@ -1,10 +1,10 @@
-package singleNumber
+package me.bossm0n5t3r.leetcode.singleNumber
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class SingleNumberTest {
-    private val singleNumber = SingleNumber()
+    private val singleNumber = SingleNumber.Solution()
 
     data class SingleNumberTestData(
         val nums: IntArray,
