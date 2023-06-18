@@ -1,11 +1,11 @@
-package myCalendar1
+package me.bossm0n5t3r.leetcode.myCalendar1
 
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 internal class MyCalendar1Test {
-    private val myCalendar1 = MyCalendar1()
+    private val myCalendar1 = MyCalendar1.MyCalendar()
 
     @Test
     fun book() {
