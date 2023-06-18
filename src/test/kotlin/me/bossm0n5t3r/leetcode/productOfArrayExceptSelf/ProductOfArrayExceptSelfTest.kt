@@ -1,10 +1,10 @@
-package productOfArrayExceptSelf
+package me.bossm0n5t3r.leetcode.productOfArrayExceptSelf
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class ProductOfArrayExceptSelfTest {
-    private val productOfArrayExceptSelf = ProductOfArrayExceptSelf()
+    private val productOfArrayExceptSelf = ProductOfArrayExceptSelf.Solution()
 
     data class ProductOfArrayExceptSelfTestData(
         val nums: IntArray,
