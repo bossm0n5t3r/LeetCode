@@ -1,10 +1,10 @@
-package reverseString
+package me.bossm0n5t3r.leetcode.reverseString
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class ReverseStringTest {
-    private val solution = ReverseString()
+    private val solution = ReverseString.Solution()
 
     data class ReverseStringTestData(
         val s: CharArray,
