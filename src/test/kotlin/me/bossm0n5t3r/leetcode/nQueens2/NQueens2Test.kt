@@ -1,10 +1,10 @@
-package nQueens2
+package me.bossm0n5t3r.leetcode.nQueens2
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class NQueens2Test {
-    private val nQueens2 = NQueens2()
+    private val nQueens2 = NQueens2.Solution()
 
     private data class NQueens2TestData(
         val n: Int,
