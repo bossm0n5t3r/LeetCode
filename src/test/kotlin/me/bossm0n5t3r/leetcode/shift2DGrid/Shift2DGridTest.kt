@@ -1,10 +1,10 @@
-package shift2DGrid
+package me.bossm0n5t3r.leetcode.shift2DGrid
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class Shift2DGridTest {
-    private val shift2DGrid = Shift2DGrid()
+    private val shift2DGrid = Shift2DGrid.Solution()
 
     private data class Shift2DGridTestData(
         val grid: Array<IntArray>,
