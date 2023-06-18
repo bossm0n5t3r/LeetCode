@@ -1,10 +1,10 @@
-package networkDelayTime
+package me.bossm0n5t3r.leetcode.networkDelayTime
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class NetworkDelayTimeTest {
-    private val networkDelayTime = NetworkDelayTime()
+    private val networkDelayTime = NetworkDelayTime.Solution()
 
     private data class NetworkDelayTimeTestData(
         val times: Array<IntArray>,
