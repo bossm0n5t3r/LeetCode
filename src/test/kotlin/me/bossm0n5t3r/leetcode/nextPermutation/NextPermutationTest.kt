@@ -1,10 +1,10 @@
-package nextPermutation
+package me.bossm0n5t3r.leetcode.nextPermutation
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class NextPermutationTest {
-    private val sut = NextPermutation()
+    private val sut = NextPermutation.Solution()
 
     private data class NextPermutationTestData(
         val nums: IntArray,
