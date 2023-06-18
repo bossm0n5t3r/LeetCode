@@ -1,10 +1,10 @@
-package rotateImage
+package me.bossm0n5t3r.leetcode.rotateImage
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class RotateImageTest {
-    private val rotateImage = RotateImage()
+    private val rotateImage = RotateImage.Solution()
 
     data class RotateImageTestData(
         val matrix: Array<IntArray>,
