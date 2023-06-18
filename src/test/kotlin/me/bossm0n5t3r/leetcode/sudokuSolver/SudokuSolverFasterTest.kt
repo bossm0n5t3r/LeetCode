@@ -1,10 +1,10 @@
-package sudokuSolver
+package me.bossm0n5t3r.leetcode.sudokuSolver
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class SudokuSolverFasterTest {
-    private val sudokuSolverFaster = SudokuSolverFaster()
+    private val sudokuSolverFaster = SudokuSolverFaster.Solution()
 
     private data class SudokuSolverTestData(
         val board: Array<CharArray>,

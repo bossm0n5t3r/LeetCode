@@ -1,4 +1,4 @@
-package sudokuSolver
+package me.bossm0n5t3r.leetcode.sudokuSolver
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 internal class SudokuSolverTest {
-    private val sudokuSolver = SudokuSolver()
+    private val sudokuSolver = SudokuSolver.Solution()
 
     private data class SudokuSolverTestData(
         val board: Array<CharArray>,
