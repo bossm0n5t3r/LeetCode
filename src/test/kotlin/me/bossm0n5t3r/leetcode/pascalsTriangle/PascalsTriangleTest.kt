@@ -1,10 +1,10 @@
-package pascalsTriangle
+package me.bossm0n5t3r.leetcode.pascalsTriangle
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class PascalsTriangleTest {
-    private val pascalsTriangle = PascalsTriangle()
+    private val pascalsTriangle = PascalsTriangle.Solution()
 
     data class PascalsTriangleTestData(
         val numsRow: Int,
