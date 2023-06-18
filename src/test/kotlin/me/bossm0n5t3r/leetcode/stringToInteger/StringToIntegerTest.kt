@@ -1,11 +1,11 @@
-package stringToInteger
+package me.bossm0n5t3r.leetcode.stringToInteger
 
+import me.bossm0n5t3r.leetcode.stringToInteger.StringToInteger.Solution.Companion.step3
 import org.junit.jupiter.api.Test
-import stringToInteger.StringToInteger.Companion.step3
 import kotlin.test.assertEquals
 
 internal class StringToIntegerTest {
-    private val stringToInteger = StringToInteger()
+    private val stringToInteger = StringToInteger.Solution()
 
     private data class StringToIntegerTestData(
         val s: String,
