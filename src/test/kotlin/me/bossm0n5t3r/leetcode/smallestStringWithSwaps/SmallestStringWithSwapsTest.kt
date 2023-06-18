@@ -1,10 +1,10 @@
-package smallestStringWithSwaps
+package me.bossm0n5t3r.leetcode.smallestStringWithSwaps
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class SmallestStringWithSwapsTest {
-    private val smallestStringWithSwaps = SmallestStringWithSwaps()
+    private val smallestStringWithSwaps = SmallestStringWithSwaps.Solution()
 
     private data class SmallestStringWithSwapsTestData(
         val s: String,
