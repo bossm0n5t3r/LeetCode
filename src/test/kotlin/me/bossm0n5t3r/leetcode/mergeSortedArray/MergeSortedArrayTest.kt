@@ -1,10 +1,10 @@
-package mergeSortedArray
+package me.bossm0n5t3r.leetcode.mergeSortedArray
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue
 
 class MergeSortedArrayTest {
-    private val mergeSortedArray = MergeSortedArray()
+    private val mergeSortedArray = MergeSortedArray.Solution()
 
     data class MergeSortedArrayTestData(
         val nums1: IntArray,
