@@ -1,10 +1,10 @@
-package sumOfTwoIntegers
+package me.bossm0n5t3r.leetcode.sumOfTwoIntegers
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class SumOfTwoIntegersTest {
-    private val sumOfTwoIntegers = SumOfTwoIntegers()
+    private val sumOfTwoIntegers = SumOfTwoIntegers.Solution()
 
     data class SumOfTwoIntegersTestData(
         val a: Int,
