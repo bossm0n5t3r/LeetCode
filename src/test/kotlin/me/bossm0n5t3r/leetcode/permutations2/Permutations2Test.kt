@@ -1,11 +1,11 @@
-package permutations2
+package me.bossm0n5t3r.leetcode.permutations2
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 internal class Permutations2Test {
-    private val permutations2 = Permutations2()
+    private val permutations2 = Permutations2.Solution()
 
     private data class Permutations2TestData(
         val nums: IntArray,
