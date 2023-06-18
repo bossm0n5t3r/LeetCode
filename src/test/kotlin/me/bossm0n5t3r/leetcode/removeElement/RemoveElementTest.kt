@@ -1,10 +1,10 @@
-package removeElement
+package me.bossm0n5t3r.leetcode.removeElement
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class RemoveElementTest {
-    private val removeElement = RemoveElement()
+    private val removeElement = RemoveElement.Solution()
 
     private data class RemoveElementTestData(
         val nums: IntArray,
