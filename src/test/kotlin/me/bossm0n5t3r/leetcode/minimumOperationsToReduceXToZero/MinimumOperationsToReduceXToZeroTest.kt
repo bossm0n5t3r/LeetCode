@@ -1,10 +1,10 @@
-package minimumOperationsToReduceXToZero
+package me.bossm0n5t3r.leetcode.minimumOperationsToReduceXToZero
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MinimumOperationsToReduceXToZeroTest {
-    private val minimumOperationsToReduceXToZero = MinimumOperationsToReduceXToZero()
+    private val minimumOperationsToReduceXToZero = MinimumOperationsToReduceXToZero.Solution()
 
     private data class MinimumOperationsToReduceXToZeroTestData(
         val nums: IntArray,
