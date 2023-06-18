@@ -1,10 +1,10 @@
-package removeAllAdjacentDuplicatesInString
+package me.bossm0n5t3r.leetcode.removeAllAdjacentDuplicatesInString
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class RemoveAllAdjacentDuplicatesInStringTest {
-    private val removeAllAdjacentDuplicatesInString = RemoveAllAdjacentDuplicatesInString()
+    private val removeAllAdjacentDuplicatesInString = RemoveAllAdjacentDuplicatesInString.Solution()
 
     private data class RemoveAllAdjacentDuplicatesInStringTestData(
         val s: String,
