@@ -1,10 +1,10 @@
-package minimumAbsoluteDifferenceQueries
+package me.bossm0n5t3r.leetcode.minimumAbsoluteDifferenceQueries
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 
 internal class MinimumAbsoluteDifferenceQueriesTest {
-    private val sut = MinimumAbsoluteDifferenceQueries()
+    private val sut = MinimumAbsoluteDifferenceQueries.Solution()
 
     private data class Example(
         val nums: IntArray,
