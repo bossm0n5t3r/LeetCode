@@ -1,10 +1,10 @@
-package onesAndZeroes
+package me.bossm0n5t3r.leetcode.onesAndZeroes
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class OnesAndZeroesTest {
-    private val onesAndZeroes = OnesAndZeroes()
+    private val onesAndZeroes = OnesAndZeroes.Solution()
 
     private data class OnesAndZeroesTestData(
         val strs: Array<String>,
