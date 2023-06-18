@@ -1,10 +1,10 @@
-package minimumCostForTickets
+package me.bossm0n5t3r.leetcode.minimumCostForTickets
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MinimumCostForTicketsTest {
-    private val minimumCostForTickets = MinimumCostForTickets()
+    private val minimumCostForTickets = MinimumCostForTickets.Solution()
 
     private data class MinimumCostForTicketsTestData(
         val days: IntArray,
