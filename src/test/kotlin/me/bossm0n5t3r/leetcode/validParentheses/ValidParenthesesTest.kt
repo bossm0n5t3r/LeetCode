@@ -1,10 +1,10 @@
-package validParentheses
+package me.bossm0n5t3r.leetcode.validParentheses
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ValidParenthesesTest {
-    private val validParentheses = ValidParentheses()
+    private val validParentheses = ValidParentheses.Solution()
 
     data class ValidParenthesesTestData(
         val s: String,
