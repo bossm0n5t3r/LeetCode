@@ -1,10 +1,10 @@
-package topKFrequentElements
+package me.bossm0n5t3r.leetcode.topKFrequentElements
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue
 
 class TopKFrequentElementsTest {
-    private val topKFrequentElements = TopKFrequentElements()
+    private val topKFrequentElements = TopKFrequentElements.Solution()
 
     data class TopKFrequentElementsTestData(
         val nums: IntArray,
