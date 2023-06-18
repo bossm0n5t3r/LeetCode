@@ -1,10 +1,10 @@
-package validPalindrome
+package me.bossm0n5t3r.leetcode.validPalindrome
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ValidPalindromeTest {
-    private val validPalindrome = ValidPalindrome()
+    private val validPalindrome = ValidPalindrome.Solution()
 
     data class ValidPalindromeTestData(
         val s: String,
