@@ -1,10 +1,10 @@
-package validAnagram
+package me.bossm0n5t3r.leetcode.validAnagram
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ValidAnagramTest {
-    private val validAnagram = ValidAnagram()
+    private val validAnagram = ValidAnagram.Solution()
 
     data class ValidAnagramTestData(
         val s: String,
