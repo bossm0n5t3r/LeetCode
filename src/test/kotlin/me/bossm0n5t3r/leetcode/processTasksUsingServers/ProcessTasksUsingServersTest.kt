@@ -1,10 +1,10 @@
-package processTasksUsingServers
+package me.bossm0n5t3r.leetcode.processTasksUsingServers
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 
 internal class ProcessTasksUsingServersTest {
-    private val processTasksUsingServers = ProcessTasksUsingServers()
+    private val processTasksUsingServers = ProcessTasksUsingServers.Solution()
 
     private data class ProcessTasksUsingServersTestData(
         val servers: IntArray,
