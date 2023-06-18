@@ -1,10 +1,10 @@
-package threeSumClosest
+package me.bossm0n5t3r.leetcode.threeSumClosest
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class ThreeSumClosestTest {
-    private val threeSumClosest = ThreeSumClosest()
+    private val threeSumClosest = ThreeSumClosest.Solution()
 
     private data class ThreeSumClosestTestData(
         val nums: IntArray,
