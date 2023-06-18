@@ -1,10 +1,10 @@
-package nQueens
+package me.bossm0n5t3r.leetcode.nQueens
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 internal class NQueensTest {
-    private val nQueens = NQueens()
+    private val nQueens = NQueens.Solution()
 
     private data class NQueensTestData(
         val n: Int,
