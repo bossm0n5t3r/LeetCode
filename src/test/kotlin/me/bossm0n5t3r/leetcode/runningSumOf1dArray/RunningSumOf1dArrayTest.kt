@@ -1,10 +1,10 @@
-package runningSumOf1dArray
+package me.bossm0n5t3r.leetcode.runningSumOf1dArray
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 
 internal class RunningSumOf1dArrayTest {
-    private val runningSumOf1dArray = RunningSumOf1dArray()
+    private val runningSumOf1dArray = RunningSumOf1dArray.Solution()
 
     private data class RunningSumOf1dArrayTestData(
         val nums: IntArray,
