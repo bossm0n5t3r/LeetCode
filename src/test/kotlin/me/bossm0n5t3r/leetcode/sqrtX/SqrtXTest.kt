@@ -1,10 +1,10 @@
-package sqrtX
+package me.bossm0n5t3r.leetcode.sqrtX
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class SqrtXTest {
-    private val sqrtX = SqrtX()
+    private val sqrtX = SqrtX.Solution()
 
     data class SqrtXTestData(
         val x: Int,
