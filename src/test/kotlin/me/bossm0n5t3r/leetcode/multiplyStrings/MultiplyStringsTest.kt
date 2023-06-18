@@ -1,10 +1,10 @@
-package multiplyStrings
+package me.bossm0n5t3r.leetcode.multiplyStrings
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class MultiplyStringsTest {
-    private val sut = MultiplyStrings()
+    private val sut = MultiplyStrings.Solution()
 
     private data class Example(
         val num1: String,
