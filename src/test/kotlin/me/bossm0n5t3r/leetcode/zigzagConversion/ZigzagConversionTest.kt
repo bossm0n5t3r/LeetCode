@@ -1,10 +1,10 @@
-package zigzagConversion
+package me.bossm0n5t3r.leetcode.zigzagConversion
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class ZigzagConversionTest {
-    private val zigzagConversion = ZigzagConversion()
+    private val zigzagConversion = ZigzagConversion.Solution()
 
     private data class ZigzagConversionTestData(
         val s: String,
