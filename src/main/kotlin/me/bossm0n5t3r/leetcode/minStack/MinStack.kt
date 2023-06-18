@@ -1,6 +1,6 @@
-package minStack
+package me.bossm0n5t3r.leetcode.minStack
 
-class MinStack() {
+class MinStack {
     /** initialize your data structure here. */
     private val s = mutableListOf<Int>()
     private var min = Int.MAX_VALUE

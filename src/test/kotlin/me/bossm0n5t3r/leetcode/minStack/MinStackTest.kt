@@ -1,10 +1,10 @@
-package minStack
+package me.bossm0n5t3r.leetcode.minStack
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class MinStackTest {
-    lateinit var minStack: MinStack
+    private lateinit var minStack: MinStack
 
     data class MinStackTestData(
         val input: Pair<List<String>, List<List<Int>>>,
@@ -12,7 +12,7 @@ class MinStackTest {
     )
 
     @Test
-    fun minStackTest() {
+    fun test() {
         val tests = listOf(
             MinStackTestData(
                 input = Pair(
