@@ -1,10 +1,10 @@
-package reverseInteger
+package me.bossm0n5t3r.leetcode.reverseInteger
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ReverseIntegerTest {
-    private val reverseInteger = ReverseInteger()
+    private val reverseInteger = ReverseInteger.Solution()
 
     data class ReverseIntegerTestData(
         val x: Int,
