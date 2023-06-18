@@ -1,10 +1,10 @@
-package threeSum
+package me.bossm0n5t3r.leetcode.threeSum
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class ThreeSumTest {
-    private val threeSum = ThreeSum()
+    private val threeSum = ThreeSum.Solution()
 
     data class ThreeSumTestData(
         val nums: IntArray,
