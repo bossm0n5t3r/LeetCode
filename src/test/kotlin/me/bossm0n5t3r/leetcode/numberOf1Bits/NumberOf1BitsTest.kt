@@ -1,10 +1,10 @@
-package numberOf1Bits
+package me.bossm0n5t3r.leetcode.numberOf1Bits
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class NumberOf1BitsTest {
-    private val numberOf1Bits = NumberOf1Bits()
+    private val numberOf1Bits = NumberOf1Bits.Solution()
 
     data class NumberOf1BitsTestData(
         val n: Int,
