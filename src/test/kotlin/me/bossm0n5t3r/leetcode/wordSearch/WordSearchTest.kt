@@ -1,10 +1,10 @@
-package wordSearch
+package me.bossm0n5t3r.leetcode.wordSearch
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 internal class WordSearchTest {
-    private val wordSearch = WordSearch()
+    private val wordSearch = WordSearch.Solution()
 
     private data class WordSearchTest(
         val board: Array<CharArray>,
