@@ -1,10 +1,10 @@
-package moveZeroes
+package me.bossm0n5t3r.leetcode.moveZeroes
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class MoveZeroesTest {
-    private val moveZeroes = MoveZeroes()
+    private val moveZeroes = MoveZeroes.Solution()
 
     data class MoveZeroesTestData(
         val nums: IntArray,
