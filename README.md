@@ -1,5 +1,55 @@
 # LeetCode
 
+## [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/)
+
+### Array / String
+
+- [1768. Merge Strings Alternately](./src/main/kotlin/me/bossm0n5t3r/leetcode/mergeStringsAlternately)
+
+### Two Pointers
+
+### Sliding Window
+
+### Prefix Sum
+
+### Hash Map / Set
+
+### Stack
+
+### Queue
+
+### Linked List
+
+### Binary Tree - DFS
+
+### Binary Tree - BFS
+
+### Binary Search Tree
+
+### Graphs - DFS
+
+### Graphs - BFS
+
+### Heap / Priority Queue
+
+### Binary Search
+
+### Backtracking
+
+### DP - 1D
+
+### DP - Multidimensional
+
+### Bit Manipulation
+
+### Trie
+
+### Intervals
+
+### Monotonic Stack
+
+## History
+
 |                                                      Problem                                                      | Solved At  | Kotlin |
 |:-----------------------------------------------------------------------------------------------------------------:|:----------:|:------:|
 |                              [344. Reverse String](./src/main/kotlin/reverseString)                               | 2021-05-04 |   ✅    |
