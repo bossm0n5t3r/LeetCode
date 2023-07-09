@@ -17,9 +17,7 @@ internal class ContainerWithMostWaterTest {
             other as ContainerWithMostWaterTestData
 
             if (!height.contentEquals(other.height)) return false
-            if (result != other.result) return false
-
-            return true
+            return result == other.result
         }
 
         override fun hashCode(): Int {
@@ -48,6 +46,7 @@ internal class ContainerWithMostWaterTest {
         tests.forEach { test ->
             println(containerWithMostWater.maxArea(test.height))
             assertEquals(containerWithMostWater.maxArea(test.height), test.result)
+            assertEquals(containerWithMostWater.maxAreaAt230709(test.height), test.result)
         }
     }
 }

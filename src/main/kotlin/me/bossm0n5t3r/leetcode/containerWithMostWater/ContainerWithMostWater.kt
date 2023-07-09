@@ -1,7 +1,5 @@
 package me.bossm0n5t3r.leetcode.containerWithMostWater
 
-import kotlin.math.min
-
 class ContainerWithMostWater {
     class Solution {
         fun maxArea(height: IntArray): Int {
@@ -21,5 +19,20 @@ class ContainerWithMostWater {
             }
             return result
         }
+
+        fun maxAreaAt230709(height: IntArray): Int {
+            var area = 0
+            var (s, e) = 0 to height.size - 1
+            while (s < e) {
+                val tmp = (e - s) * min(height[s], height[e])
+                if (tmp > area) {
+                    area = tmp
+                }
+                if (height[s] < height[e]) s++ else e--
+            }
+            return area
+        }
+
+        private fun min(a: Int, b: Int) = if (a < b) a else b
     }
 }
