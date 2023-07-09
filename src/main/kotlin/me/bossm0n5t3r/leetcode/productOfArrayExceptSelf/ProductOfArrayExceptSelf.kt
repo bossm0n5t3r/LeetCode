@@ -48,5 +48,29 @@ class ProductOfArrayExceptSelf {
             }
             return Pair(numOfZeroes, productOfArrayExceptZeroes)
         }
+
+        fun productExceptSelfAt20230707(nums: IntArray): IntArray {
+            val countZero = nums.count { it == 0 }
+            if (countZero > 1) return IntArray(nums.size) { 0 }
+
+            val result = IntArray(nums.size) { 0 }
+            var total = 1L
+            var zeroIdx = -1
+            for (i in nums.indices) {
+                val num = nums[i]
+                if (num != 0) {
+                    total *= num
+                } else zeroIdx = i
+            }
+            return if (countZero == 1) {
+                result[zeroIdx] = total.toInt()
+                result
+            } else {
+                for (i in nums.indices) {
+                    result[i] = (total / nums[i]).toInt()
+                }
+                result
+            }
+        }
     }
 }

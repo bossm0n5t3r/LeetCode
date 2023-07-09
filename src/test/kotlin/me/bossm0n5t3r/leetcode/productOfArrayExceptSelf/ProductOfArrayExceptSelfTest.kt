@@ -17,9 +17,7 @@ class ProductOfArrayExceptSelfTest {
             other as ProductOfArrayExceptSelfTestData
 
             if (!nums.contentEquals(other.nums)) return false
-            if (!result.contentEquals(other.result)) return false
-
-            return true
+            return result.contentEquals(other.result)
         }
 
         override fun hashCode(): Int {
@@ -37,6 +35,7 @@ class ProductOfArrayExceptSelfTest {
         )
         tests.forEach { test ->
             assertThat(productOfArrayExceptSelf.productExceptSelf(test.nums)).isEqualTo(test.result)
+            assertThat(productOfArrayExceptSelf.productExceptSelfAt20230707(test.nums)).isEqualTo(test.result)
         }
     }
 }
