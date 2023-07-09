@@ -11,6 +11,7 @@
 - [345. Reverse Vowels of a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/reverseVowelsOfAString)
 - [151. Reverse Words in a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/reverseWordsInAString)
 - [238. Product of Array Except Self](./src/main/kotlin/me/bossm0n5t3r/leetcode/productOfArrayExceptSelf)
+- [334. Increasing Triplet Subsequence](./src/main/kotlin/me/bossm0n5t3r/leetcode/increasingTripletSubsequence)
 
 ### Two Pointers
 
