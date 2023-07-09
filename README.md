@@ -7,6 +7,7 @@
 - [1768. Merge Strings Alternately](./src/main/kotlin/me/bossm0n5t3r/leetcode/mergeStringsAlternately)
 - [1071. Greatest Common Divisor of Strings](./src/main/kotlin/me/bossm0n5t3r/leetcode/greatestCommonDivisorOfStrings)
 - [1431. Kids With the Greatest Number of Candies](./src/main/kotlin/me/bossm0n5t3r/leetcode/kidsWithTheGreatestNumberOfCandies)
+- [605. Can Place Flowers](./src/main/kotlin/me/bossm0n5t3r/leetcode/canPlaceFlowers)
 
 ### Two Pointers
 
