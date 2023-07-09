@@ -9,6 +9,7 @@
 - [1431. Kids With the Greatest Number of Candies](./src/main/kotlin/me/bossm0n5t3r/leetcode/kidsWithTheGreatestNumberOfCandies)
 - [605. Can Place Flowers](./src/main/kotlin/me/bossm0n5t3r/leetcode/canPlaceFlowers)
 - [345. Reverse Vowels of a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/reverseVowelsOfAString)
+- [151. Reverse Words in a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/reverseWordsInAString)
 
 ### Two Pointers
 
