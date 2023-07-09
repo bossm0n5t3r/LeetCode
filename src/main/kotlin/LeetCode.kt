@@ -117,10 +117,14 @@ class $pascalCaseTestClassName {
     
     @Test
     fun test() {
-        val tests = listOf(TestData())
+        val tests = listOf(
+            TestData(),
+        )
         
         tests.forEach { test ->
-            assertEquals()
+            assertEquals(
+                
+            )
         }
     }
 }
