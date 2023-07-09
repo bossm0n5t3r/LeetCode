@@ -5,6 +5,7 @@
 ### Array / String
 
 - [1768. Merge Strings Alternately](./src/main/kotlin/me/bossm0n5t3r/leetcode/mergeStringsAlternately)
+- [1071. Greatest Common Divisor of Strings](./src/main/kotlin/me/bossm0n5t3r/leetcode/greatestCommonDivisorOfStrings)
 
 ### Two Pointers
 
