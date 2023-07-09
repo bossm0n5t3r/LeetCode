@@ -5,6 +5,7 @@ import kotlin.io.path.exists
 class LeetCode {
     private val projectDirAbsolutePath = Paths.get("").toAbsolutePath().toString()
     private val problemPath = Paths.get(projectDirAbsolutePath, "src/main/kotlin/me/bossm0n5t3r/leetcode")
+    private val testPath = Paths.get(projectDirAbsolutePath, "src/test/kotlin/me/bossm0n5t3r/leetcode")
 
     private lateinit var name: String
     private lateinit var url: String
@@ -13,7 +14,7 @@ class LeetCode {
     fun run() {
         readProblem()
         createFiles()
-        // TODO Create test files
+        createTest()
     }
 
     private fun readProblem() {
@@ -36,9 +37,14 @@ class LeetCode {
         url = tmpUrl
 
         print("Enter sample code: ")
+        var emptyLines = 0
         while (true) {
             val line = readln()
             if (line == "") {
+                emptyLines++
+            }
+            if (line == "}" || emptyLines >= 2) {
+                if (line == "}") sampleCode.add(line)
                 break
             }
             sampleCode.add(line)
@@ -75,6 +81,48 @@ package me.bossm0n5t3r.leetcode.$camelCaseProblemName
 
 class $pascalCaseProblemName {
 $sampleCodeString
+}
+
+                """.trimIndent(),
+            )
+        } catch (e: Exception) {
+            println("Error: ${e.message}")
+        }
+    }
+
+    private fun createTest() {
+        val camelCaseProblemName = this.name.toCamelCase()
+        val newTestPath = Paths.get(testPath.toString(), camelCaseProblemName)
+        try {
+            if (newTestPath.exists()) throw Exception("Directory already exists")
+
+            newTestPath.toFile().mkdirs()
+            println("Created test directory: ${newTestPath.toAbsolutePath()}\n")
+
+            // Create Problem
+            val pascalCaseTestName = this.name.toPascalCase()
+            val pascalCaseTestClassName = "${pascalCaseTestName}Test"
+
+            File(newTestPath.toString(), "$pascalCaseTestClassName.kt").writeText(
+                """
+package me.bossm0n5t3r.leetcode.$camelCaseProblemName
+
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+
+class $pascalCaseTestClassName {
+    private val sut = $pascalCaseTestName.Solution()
+    
+    private data class TestData()
+    
+    @Test
+    fun test() {
+        val tests = listOf(TestData())
+        
+        tests.forEach { test ->
+            assertEquals()
+        }
+    }
 }
 
                 """.trimIndent(),
