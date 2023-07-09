@@ -16,6 +16,8 @@
 
 ### Two Pointers
 
+- [283. Move Zeroes](./src/main/kotlin/me/bossm0n5t3r/leetcode/moveZeroes)
+
 ### Sliding Window
 
 ### Prefix Sum
