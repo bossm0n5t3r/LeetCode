@@ -60,7 +60,9 @@ class ProductOfArrayExceptSelf {
                 val num = nums[i]
                 if (num != 0) {
                     total *= num
-                } else zeroIdx = i
+                } else {
+                    zeroIdx = i
+                }
             }
             return if (countZero == 1) {
                 result[zeroIdx] = total.toInt()
