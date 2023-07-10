@@ -23,6 +23,8 @@
 
 ### Sliding Window
 
+- [643. Maximum Average Subarray I](./src/main/kotlin/me/bossm0n5t3r/leetcode/maximumAverageSubarrayI)
+
 ### Prefix Sum
 
 ### Hash Map / Set
