@@ -140,6 +140,7 @@ class $pascalCaseTestClassName {
         return this
             .substringAfter(". ")
             .replace("II", "2")
+            .replace("-", " ")
             .split(" ")
             .mapIndexed { index, s ->
                 if (index == 0) {
@@ -155,6 +156,7 @@ class $pascalCaseTestClassName {
         return this
             .substringAfter(". ")
             .replace("II", "2")
+            .replace("-", " ")
             .split(" ")
             .joinToString("") { s ->
                 s.lowercase().replaceFirstChar { it.uppercase() }
