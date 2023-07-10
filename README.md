@@ -19,6 +19,7 @@
 - [283. Move Zeroes](./src/main/kotlin/me/bossm0n5t3r/leetcode/moveZeroes)
 - [392. Is Subsequence](./src/main/kotlin/me/bossm0n5t3r/leetcode/isSubsequence)
 - [11. Container With Most Water](./src/main/kotlin/me/bossm0n5t3r/leetcode/containerWithMostWater)
+- [1679. Max Number of K-Sum Pairs](./src/main/kotlin/me/bossm0n5t3r/leetcode/maxNumberOfKSumPairs)
 
 ### Sliding Window
 
