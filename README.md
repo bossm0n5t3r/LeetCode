@@ -25,6 +25,7 @@
 
 - [643. Maximum Average Subarray I](./src/main/kotlin/me/bossm0n5t3r/leetcode/maximumAverageSubarrayI)
 - [1456. Maximum Number of Vowels in a Substring of Given Length](./src/main/kotlin/me/bossm0n5t3r/leetcode/maximumNumberOfVowelsInASubstringOfGivenLength)
+- [1004. Max Consecutive Ones III](./src/main/kotlin/me/bossm0n5t3r/leetcode/maxConsecutiveOnes3)
 
 ### Prefix Sum
 
