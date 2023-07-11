@@ -35,6 +35,8 @@ class LeetCode {
             tmpUrl = readlnOrNull()
         }
         url = tmpUrl
+            .split("?")
+            .first()
 
         print("Enter sample code: ")
         var emptyLines = 0
