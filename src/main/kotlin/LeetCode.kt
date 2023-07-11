@@ -138,11 +138,15 @@ class $pascalCaseTestClassName {
         }
     }
 
+    private fun String.replaceRomanNumeralsAndHyphen() = this
+        .replace("III", "3")
+        .replace("II", "2")
+        .replace("-", " ")
+
     private fun String.toCamelCase(): String {
         return this
             .substringAfter(". ")
-            .replace("II", "2")
-            .replace("-", " ")
+            .replaceRomanNumeralsAndHyphen()
             .split(" ")
             .mapIndexed { index, s ->
                 if (index == 0) {
@@ -157,8 +161,7 @@ class $pascalCaseTestClassName {
     private fun String.toPascalCase(): String {
         return this
             .substringAfter(". ")
-            .replace("II", "2")
-            .replace("-", " ")
+            .replaceRomanNumeralsAndHyphen()
             .split(" ")
             .joinToString("") { s ->
                 s.lowercase().replaceFirstChar { it.uppercase() }
