@@ -35,6 +35,7 @@
 ### Hash Map / Set
 
 - [2215. Find the Difference of Two Arrays](./src/main/kotlin/me/bossm0n5t3r/leetcode/findTheDifferenceOfTwoArrays)
+- [1207. Unique Number of Occurrences](./src/main/kotlin/me/bossm0n5t3r/leetcode/uniqueNumberOfOccurrences)
 
 ### Stack
 
