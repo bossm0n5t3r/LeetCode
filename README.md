@@ -31,9 +31,10 @@
 ### Prefix Sum
 
 - [1732. Find the Highest Altitude](./src/main/kotlin/me/bossm0n5t3r/leetcode/findTheHighestAltitude)
-- [724. Find Pivot Index](./src/main/kotlin/me/bossm0n5t3r/leetcode/findPivotIndex)
 
 ### Hash Map / Set
+
+- [2215. Find the Difference of Two Arrays](./src/main/kotlin/me/bossm0n5t3r/leetcode/findTheDifferenceOfTwoArrays)
 
 ### Stack
 
