@@ -37,6 +37,7 @@
 - [2215. Find the Difference of Two Arrays](./src/main/kotlin/me/bossm0n5t3r/leetcode/findTheDifferenceOfTwoArrays)
 - [1207. Unique Number of Occurrences](./src/main/kotlin/me/bossm0n5t3r/leetcode/uniqueNumberOfOccurrences)
 - [1657. Determine if Two Strings Are Close](./src/main/kotlin/me/bossm0n5t3r/leetcode/determineIfTwoStringsAreClose)
+- [2352. Equal Row and Column Pairs](./src/main/kotlin/me/bossm0n5t3r/leetcode/equalRowAndColumnPairs)
 
 ### Stack
 
