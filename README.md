@@ -41,6 +41,8 @@
 
 ### Stack
 
+- [2390. Removing Stars From a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/removingStarsFromAString)
+
 ### Queue
 
 ### Linked List
