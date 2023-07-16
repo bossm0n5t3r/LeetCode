@@ -42,6 +42,7 @@
 ### Stack
 
 - [2390. Removing Stars From a String](./src/main/kotlin/me/bossm0n5t3r/leetcode/removingStarsFromAString)
+- [735. Asteroid Collision](./src/main/kotlin/me/bossm0n5t3r/leetcode/asteroidCollision)
 
 ### Queue
 
