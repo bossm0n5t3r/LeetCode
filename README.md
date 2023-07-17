@@ -47,6 +47,8 @@
 
 ### Queue
 
+- [933. Number of Recent Calls](./src/main/kotlin/me/bossm0n5t3r/leetcode/numberOfRecentCalls)
+
 ### Linked List
 
 ### Binary Tree - DFS
