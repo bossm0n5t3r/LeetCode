@@ -33,6 +33,10 @@ class DecodeStringTest {
                 sut.decodeString(test.s),
                 test.result,
             )
+            assertEquals(
+                sut.decodeStringUsingStack(test.s),
+                test.result,
+            )
         }
     }
 }

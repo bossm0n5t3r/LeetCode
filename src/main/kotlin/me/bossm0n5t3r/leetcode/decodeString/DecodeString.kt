@@ -1,5 +1,7 @@
 package me.bossm0n5t3r.leetcode.decodeString
 
+import java.util.ArrayDeque
+
 class DecodeString {
     class Solution {
         private val numbers = '0'..'9'
@@ -42,6 +44,28 @@ class DecodeString {
                 idx++
             }
             return if (result.contains('[')) decodeString(result.toString()) else result.toString()
+        }
+
+        fun decodeStringUsingStack(s: String): String = buildString {
+            val repeatStack = ArrayDeque<Pair<Int, Int>>()
+            var numOfRepeats = 0
+            for (c in s) {
+                when (c) {
+                    in numbers -> numOfRepeats = numOfRepeats * 10 + (c - '0')
+                    '[' -> {
+                        repeatStack += (numOfRepeats to length)
+                        numOfRepeats = 0
+                    }
+                    ']' -> {
+                        val (repeats, startIdx) = repeatStack.removeLast()
+                        if (repeats > 1) {
+                            val substring = this.substring(startIdx)
+                            repeat(repeats - 1) { append(substring) }
+                        }
+                    }
+                    else -> append(c)
+                }
+            }
         }
     }
 }
