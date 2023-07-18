@@ -54,6 +54,7 @@
 
 - [2095. Delete the Middle Node of a Linked List](./src/main/kotlin/me/bossm0n5t3r/leetcode/deleteTheMiddleNodeOfALinkedList)
 - [328. Odd Even Linked List](./src/main/kotlin/me/bossm0n5t3r/leetcode/oddEvenLinkedList)
+- [206. Reverse Linked List](./src/main/kotlin/me/bossm0n5t3r/leetcode/reverseLinkedList)
 
 ### Binary Tree - DFS
 
