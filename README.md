@@ -52,6 +52,8 @@
 
 ### Linked List
 
+- [2095. Delete the Middle Node of a Linked List](./src/main/kotlin/me/bossm0n5t3r/leetcode/deleteTheMiddleNodeOfALinkedList)
+
 ### Binary Tree - DFS
 
 ### Binary Tree - BFS
