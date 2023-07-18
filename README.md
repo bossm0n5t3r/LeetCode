@@ -48,6 +48,7 @@
 ### Queue
 
 - [933. Number of Recent Calls](./src/main/kotlin/me/bossm0n5t3r/leetcode/numberOfRecentCalls)
+- [649. Dota2 Senate](./src/main/kotlin/me/bossm0n5t3r/leetcode/dota2Senate)
 
 ### Linked List
 
