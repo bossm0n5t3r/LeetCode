@@ -59,6 +59,8 @@
 
 ### Binary Tree - DFS
 
+- [104. Maximum Depth of Binary Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/maximumDepthOfBinaryTree)
+
 ### Binary Tree - BFS
 
 ### Binary Search Tree

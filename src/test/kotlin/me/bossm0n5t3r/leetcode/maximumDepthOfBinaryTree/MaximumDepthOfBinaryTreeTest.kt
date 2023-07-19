@@ -36,6 +36,7 @@ class MaximumDepthOfBinaryTreeTest {
         )
         tests.forEach { test ->
             assertTrue(maximumDepthOfBinaryTree.maxDepth(test.root) == test.result)
+            assertTrue(maximumDepthOfBinaryTree.maxDepthAt230720(test.root) == test.result)
         }
     }
 }
