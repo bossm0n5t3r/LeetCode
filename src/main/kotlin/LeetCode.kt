@@ -38,7 +38,7 @@ class LeetCode {
             .split("?")
             .first()
 
-        print("Enter sample code: ")
+        println("Enter sample code: ")
         var emptyLines = 0
         while (true) {
             val line = readln()
