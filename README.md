@@ -64,6 +64,7 @@
 - [1448. Count Good Nodes in Binary Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/countGoodNodesInBinaryTree)
 - [437. Path Sum III](./src/main/kotlin/me/bossm0n5t3r/leetcode/pathSum3)
 - [1372. Longest ZigZag Path in a Binary Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/longestZigzagPathInABinaryTree)
+- [236. Lowest Common Ancestor of a Binary Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/lowestCommonAncestorOfABinaryTree)
 
 ### Binary Tree - BFS
 
