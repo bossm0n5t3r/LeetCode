@@ -18,7 +18,9 @@ class LongestZigzagPathInABinaryTreeTest {
     fun test() {
         val tests = listOf(
             TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1)),
+                root = treeNodeUtil.generateTreeNodeOrNull(
+                    listOf(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1),
+                ),
                 result = 3,
             ),
             TestData(
