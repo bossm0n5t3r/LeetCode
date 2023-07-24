@@ -69,6 +69,7 @@
 ### Binary Tree - BFS
 
 - [199. Binary Tree Right Side View](./src/main/kotlin/me/bossm0n5t3r/leetcode/binaryTreeRightSideView)
+- [1161. Maximum Level Sum of a Binary Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/maximumLevelSumOfABinaryTree)
 
 ### Binary Search Tree
 
