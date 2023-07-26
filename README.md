@@ -73,6 +73,8 @@
 
 ### Binary Search Tree
 
+- [700. Search in a Binary Search Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/searchInABinarySearchTree)
+
 ### Graphs - DFS
 
 ### Graphs - BFS
