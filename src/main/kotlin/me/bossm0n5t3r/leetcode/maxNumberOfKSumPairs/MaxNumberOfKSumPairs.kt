@@ -6,6 +6,11 @@ class MaxNumberOfKSumPairs {
     class Solution {
         fun maxOperations(nums: IntArray, k: Int): Int {
             val numToCount = getNumToCount(nums)
+//            val numToCount = nums
+//                .toList()
+//                .groupingBy { it }
+//                .eachCount()
+//                .toMutableMap()
             val sortedKeys = numToCount.keys.sorted()
             var operations = 0
             for (key in sortedKeys) {
