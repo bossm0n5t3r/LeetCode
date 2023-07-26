@@ -7,7 +7,7 @@ class ContainerWithMostWater {
             var back = height.lastIndex
             var result = 0
             while (front < back) {
-                val curWater = min(height[front], height[back]) * (back - front)
+                val curWater = minOf(height[front], height[back]) * (back - front)
                 if (curWater > result) {
                     result = curWater
                 }
@@ -24,7 +24,7 @@ class ContainerWithMostWater {
             var area = 0
             var (s, e) = 0 to height.size - 1
             while (s < e) {
-                val tmp = (e - s) * min(height[s], height[e])
+                val tmp = (e - s) * minOf(height[s], height[e])
                 if (tmp > area) {
                     area = tmp
                 }
@@ -32,7 +32,5 @@ class ContainerWithMostWater {
             }
             return area
         }
-
-        private fun min(a: Int, b: Int) = if (a < b) a else b
     }
 }
