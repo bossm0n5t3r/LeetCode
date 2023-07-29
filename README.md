@@ -74,6 +74,8 @@
 ### Binary Search Tree
 
 - [700. Search in a Binary Search Tree](./src/main/kotlin/me/bossm0n5t3r/leetcode/searchInABinarySearchTree)
+- [450. Delete Node in a BST](./src/main/kotlin/me/bossm0n5t3r/leetcode/deleteNodeInABst)
+  - **NEED TO SOLVE IT AGAIN LATER**
 
 ### Graphs - DFS
 
