@@ -79,6 +79,8 @@
 
 ### Graphs - DFS
 
+- [841. Keys and Rooms](./src/main/kotlin/me/bossm0n5t3r/leetcode/keysAndRooms)
+
 ### Graphs - BFS
 
 ### Heap / Priority Queue
