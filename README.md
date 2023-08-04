@@ -84,6 +84,8 @@
 
 ### Graphs - BFS
 
+- [1926. Nearest Exit from Entrance in Maze](./src/main/kotlin/me/bossm0n5t3r/leetcode/nearestExitFromEntranceInMaze)
+
 ### Heap / Priority Queue
 
 ### Binary Search
