@@ -85,6 +85,7 @@
 ### Graphs - BFS
 
 - [1926. Nearest Exit from Entrance in Maze](./src/main/kotlin/me/bossm0n5t3r/leetcode/nearestExitFromEntranceInMaze)
+- [994. Rotting Oranges](./src/main/kotlin/me/bossm0n5t3r/leetcode/rottingOranges)
 
 ### Heap / Priority Queue
 
