@@ -81,6 +81,7 @@
 
 - [841. Keys and Rooms](./src/main/kotlin/me/bossm0n5t3r/leetcode/keysAndRooms)
 - [547. Number of Provinces](./src/main/kotlin/me/bossm0n5t3r/leetcode/numberOfProvinces)
+- [1466. Reorder Routes to Make All Paths Lead to the City Zero](./src/main/kotlin/me/bossm0n5t3r/leetcode/reorderRoutesToMakeAllPathsLeadToTheCityZero)
 
 ### Graphs - BFS
 
