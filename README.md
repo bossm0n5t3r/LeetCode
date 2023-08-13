@@ -90,6 +90,7 @@
 ### Heap / Priority Queue
 
 - [215. Kth Largest Element in an Array](./src/main/kotlin/me/bossm0n5t3r/leetcode/kthLargestElementInAnArray)
+- [2336. Smallest Number in Infinite Set](./src/main/kotlin/me/bossm0n5t3r/leetcode/smallestNumberInInfiniteSet)
 
 ### Binary Search
 
