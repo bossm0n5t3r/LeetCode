@@ -106,6 +106,7 @@
 ### Bit Manipulation
 
 - [338. Counting Bits](./src/main/kotlin/me/bossm0n5t3r/leetcode/countingBits)
+- [136. Single Number](./src/main/kotlin/me/bossm0n5t3r/leetcode/singleNumber)
 
 ### Trie
 
