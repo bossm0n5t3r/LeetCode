@@ -107,6 +107,7 @@
 
 - [338. Counting Bits](./src/main/kotlin/me/bossm0n5t3r/leetcode/countingBits)
 - [136. Single Number](./src/main/kotlin/me/bossm0n5t3r/leetcode/singleNumber)
+- [1318. Minimum Flips to Make a OR b Equal to c](./src/main/kotlin/me/bossm0n5t3r/leetcode/minimumFlipsToMakeAOrBEqualToC)
 
 ### Trie
 
