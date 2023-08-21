@@ -97,6 +97,8 @@
 
 ### Binary Search
 
+- [374. Guess Number Higher or Lower](./src/main/kotlin/me/bossm0n5t3r/leetcode/guessNumberHigherOrLower)
+
 ### Backtracking
 
 ### DP - 1D
