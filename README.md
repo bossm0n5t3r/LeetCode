@@ -98,6 +98,7 @@
 ### Binary Search
 
 - [374. Guess Number Higher or Lower](./src/main/kotlin/me/bossm0n5t3r/leetcode/guessNumberHigherOrLower)
+- [2300. Successful Pairs of Spells and Potions](./src/main/kotlin/me/bossm0n5t3r/leetcode/successfulPairsOfSpellsAndPotions)
 
 ### Backtracking
 
