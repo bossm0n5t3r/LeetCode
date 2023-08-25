@@ -120,6 +120,8 @@
 
 ### Monotonic Stack
 
+- [901. Online Stock Span](./src/main/kotlin/me/bossm0n5t3r/leetcode/onlineStockSpan)
+
 ## History
 
 |                                                      Problem                                                      | Solved At  | Kotlin |
