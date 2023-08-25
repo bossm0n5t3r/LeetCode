@@ -3,17 +3,18 @@ package me.bossm0n5t3r.leetcode.teemoAttacking
 class TeemoAttacking {
     class Solution {
         fun findPoisonedDuration(timeSeries: IntArray, duration: Int): Int {
-            val result = sortedSetOf<Int>()
+            var cnt = 0
+            var start = -1
+            var end = -1
             for (time in timeSeries) {
-                if (result.isEmpty()) {
-                    result.addAll(time until time + duration)
-                    continue
+                if (end < time) {
+                    cnt += (end - start + 1)
+                    start = time
                 }
-                if (result.last() <= time + duration - 1) {
-                    result.addAll(maxOf(time, result.last()) until time + duration)
-                }
+                end = time + duration - 1
             }
-            return result.size
+            cnt += (end - start + 1)
+            return cnt - 1
         }
     }
 }
