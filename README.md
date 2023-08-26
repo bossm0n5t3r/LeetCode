@@ -106,6 +106,8 @@
 
 ### DP - 1D
 
+- [1137. N-th Tribonacci Number](./src/main/kotlin/me/bossm0n5t3r/leetcode/nThTribonacciNumber)
+
 ### DP - Multidimensional
 
 ### Bit Manipulation
