@@ -108,6 +108,7 @@
 
 - [1137. N-th Tribonacci Number](./src/main/kotlin/me/bossm0n5t3r/leetcode/nThTribonacciNumber)
 - [746. Min Cost Climbing Stairs](./src/main/kotlin/me/bossm0n5t3r/leetcode/minCostClimbingStairs)
+- [198. House Robber](./src/main/kotlin/me/bossm0n5t3r/leetcode/houseRobber)
 
 ### DP - Multidimensional
 
