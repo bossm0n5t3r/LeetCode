@@ -39,14 +39,10 @@ class LeetCode {
             .first()
 
         println("Enter sample code: ")
-        var emptyLines = 0
         while (true) {
             val line = readln()
-            if (line == "") {
-                emptyLines++
-            }
-            if (line == "}" || emptyLines >= 2) {
-                if (line == "}") sampleCode.add(line)
+            if (line == "}") {
+                sampleCode.add(line)
                 break
             }
             sampleCode.add(line)
@@ -75,7 +71,11 @@ class LeetCode {
             // Create Problem
             val pascalCaseProblemName = this.name.toPascalCase()
             val sampleCodeString = this.sampleCode.joinToString("\n") {
-                "    ${it.ifBlank { "${it}TODO()" }}"
+                if (it.isNotEmpty()) {
+                    "    ${it.ifBlank { "${it}TODO()" }}"
+                } else {
+                    ""
+                }
             }
             File(newProblemPath.toString(), "$pascalCaseProblemName.kt").writeText(
                 """
@@ -143,6 +143,8 @@ class $pascalCaseTestClassName {
         .replace("II", "2")
         .replace("-", " ")
         .replace("'", " ")
+        .replace("(", " ")
+        .replace(")", " ")
 
     private fun String.toCamelCase(): String {
         return this
