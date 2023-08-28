@@ -121,6 +121,7 @@
 ### Trie
 
 - [208. Implement Trie (Prefix Tree)](./src/main/kotlin/me/bossm0n5t3r/leetcode/implementTriePrefixTree)
+- [1268. Search Suggestions System](./src/main/kotlin/me/bossm0n5t3r/leetcode/searchSuggestionsSystem)
 
 ### Intervals
 
