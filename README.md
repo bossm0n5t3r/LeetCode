@@ -120,6 +120,8 @@
 
 ### Trie
 
+- [208. Implement Trie (Prefix Tree)](./src/main/kotlin/me/bossm0n5t3r/leetcode/implementTriePrefixTree)
+
 ### Intervals
 
 ### Monotonic Stack
