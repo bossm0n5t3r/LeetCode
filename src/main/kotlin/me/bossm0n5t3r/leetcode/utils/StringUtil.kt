@@ -38,4 +38,16 @@ object StringUtil {
             }
             .toTypedArray()
     }
+
+    fun String.toListOfStringList(): List<List<String>> {
+        return this
+            .drop(2)
+            .dropLast(2)
+            .split("],[")
+            .map {
+                it
+                    .replace("\"", "")
+                    .split(",")
+            }
+    }
 }
