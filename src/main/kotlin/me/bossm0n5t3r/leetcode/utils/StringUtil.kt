@@ -50,4 +50,18 @@ object StringUtil {
                     .split(",")
             }
     }
+
+    fun String.toListOfIntList(): List<List<Int>> {
+        if (this == "[]") return emptyList()
+        return this
+            .drop(2)
+            .dropLast(2)
+            .split("],[")
+            .map {
+                it
+                    .replace("\"", "")
+                    .split(",")
+                    .map { s -> s.toInt() }
+            }
+    }
 }
