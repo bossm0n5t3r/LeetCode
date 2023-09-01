@@ -116,6 +116,7 @@
 ### DP - Multidimensional
 
 - [62. Unique Paths](./src/main/kotlin/me/bossm0n5t3r/leetcode/uniquePaths)
+- [1143. Longest Common Subsequence](./src/main/kotlin/me/bossm0n5t3r/leetcode/longestCommonSubsequence)
 
 ### Bit Manipulation
 
