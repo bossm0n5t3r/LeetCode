@@ -115,6 +115,8 @@
 
 ### DP - Multidimensional
 
+- [62. Unique Paths](./src/main/kotlin/me/bossm0n5t3r/leetcode/uniquePaths)
+
 ### Bit Manipulation
 
 - [338. Counting Bits](./src/main/kotlin/me/bossm0n5t3r/leetcode/countingBits)
