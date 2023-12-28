@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.0"
-    id("org.jlleitschuh.gradle.ktlint") version "11.5.0"
+    kotlin("jvm") version "1.9.22"
+    id("org.jlleitschuh.gradle.ktlint") version "12.0.3"
 }
 
 repositories {
@@ -15,8 +15,8 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
     testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.1")
     testImplementation("org.assertj:assertj-core:3.24.2")
 }
 
@@ -25,9 +25,9 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
+    kotlinOptions.jvmTarget = "21"
 }
 
 ktlint {
-    version.set("0.50.0")
+    version.set("1.0.0")
 }
