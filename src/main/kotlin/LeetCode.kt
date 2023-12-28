@@ -80,14 +80,10 @@ class LeetCode {
                     }
                 }
             File(newProblemPath.toString(), "$pascalCaseProblemName.kt").writeText(
-                """
-                package me.bossm0n5t3r.leetcode.$camelCaseProblemName
-
-                class $pascalCaseProblemName {
-                $sampleCodeString
-                }
-
-                """.trimIndent(),
+                "package me.bossm0n5t3r.leetcode.$camelCaseProblemName\n\n" +
+                    "class $pascalCaseProblemName {\n" +
+                    "${sampleCodeString}\n" +
+                    "}\n",
             )
         } catch (e: Exception) {
             println("Error: ${e.message}")
