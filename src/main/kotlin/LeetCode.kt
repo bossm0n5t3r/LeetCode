@@ -84,7 +84,7 @@ class LeetCode {
                 package me.bossm0n5t3r.leetcode.$camelCaseProblemName
 
                 class $pascalCaseProblemName {
-                $sampleCodeStringsampleCodeString
+                $sampleCodeString
                 }
 
                 """.trimIndent(),
