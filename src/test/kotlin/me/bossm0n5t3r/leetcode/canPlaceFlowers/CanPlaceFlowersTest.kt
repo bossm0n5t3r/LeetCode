@@ -32,18 +32,19 @@ class CanPlaceFlowersTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                intArrayOf(1, 0, 0, 0, 1),
-                1,
-                true,
-            ),
-            TestData(
-                intArrayOf(1, 0, 0, 0, 1),
-                2,
-                false,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    intArrayOf(1, 0, 0, 0, 1),
+                    1,
+                    true,
+                ),
+                TestData(
+                    intArrayOf(1, 0, 0, 0, 1),
+                    2,
+                    false,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

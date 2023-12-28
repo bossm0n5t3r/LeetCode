@@ -14,18 +14,19 @@ class IsSubsequenceTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "abc",
-                "ahbgdc",
-                true,
-            ),
-            TestData(
-                "axc",
-                "ahbgdc",
-                false,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "abc",
+                    "ahbgdc",
+                    true,
+                ),
+                TestData(
+                    "axc",
+                    "ahbgdc",
+                    false,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

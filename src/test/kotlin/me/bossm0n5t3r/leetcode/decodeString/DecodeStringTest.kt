@@ -13,20 +13,21 @@ class DecodeStringTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                s = "3[a]2[bc]",
-                result = "aaabcbc",
-            ),
-            TestData(
-                s = "3[a2[c]]",
-                result = "accaccacc",
-            ),
-            TestData(
-                s = "2[abc]3[cd]ef",
-                result = "abcabccdcdcdef",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    s = "3[a]2[bc]",
+                    result = "aaabcbc",
+                ),
+                TestData(
+                    s = "3[a2[c]]",
+                    result = "accaccacc",
+                ),
+                TestData(
+                    s = "2[abc]3[cd]ef",
+                    result = "abcabccdcdcdef",
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

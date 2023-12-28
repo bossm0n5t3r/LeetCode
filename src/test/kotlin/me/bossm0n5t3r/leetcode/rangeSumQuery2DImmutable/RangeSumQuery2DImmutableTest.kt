@@ -9,11 +9,12 @@ internal class RangeSumQuery2DImmutableTest {
 
     @Test
     fun test() {
-        val rangeSumQuery2DImmutable = RangeSumQuery2DImmutable.NumMatrix(
-            matrixUtil.generateMatrixFrom(
-                "[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]",
-            ),
-        )
+        val rangeSumQuery2DImmutable =
+            RangeSumQuery2DImmutable.NumMatrix(
+                matrixUtil.generateMatrixFrom(
+                    "[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]",
+                ),
+            )
 
         assertThat(rangeSumQuery2DImmutable.sumRegion(2, 1, 4, 3)).isEqualTo(8)
         assertThat(rangeSumQuery2DImmutable.sumRegion(1, 1, 2, 2)).isEqualTo(11)

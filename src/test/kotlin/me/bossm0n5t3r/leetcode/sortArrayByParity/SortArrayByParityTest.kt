@@ -31,16 +31,17 @@ internal class SortArrayByParityTest {
 
     @Test
     fun sortArrayByParity() {
-        val tests = listOf(
-            SortArrayByParityTestData(
-                intArrayOf(3, 1, 2, 4),
-                intArrayOf(2, 4, 3, 1),
-            ),
-            SortArrayByParityTestData(
-                intArrayOf(0),
-                intArrayOf(0),
-            ),
-        )
+        val tests =
+            listOf(
+                SortArrayByParityTestData(
+                    intArrayOf(3, 1, 2, 4),
+                    intArrayOf(2, 4, 3, 1),
+                ),
+                SortArrayByParityTestData(
+                    intArrayOf(0),
+                    intArrayOf(0),
+                ),
+            )
         tests.forEach { test ->
             val result = sortArrayByParity.sortArrayByParity(test.nums)
             println(result.toList())

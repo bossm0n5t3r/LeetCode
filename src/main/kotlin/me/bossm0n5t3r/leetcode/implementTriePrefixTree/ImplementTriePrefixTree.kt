@@ -4,11 +4,13 @@ class ImplementTriePrefixTree {
     class Trie {
         companion object {
             private const val ALPHABET_SIZE = 26
+
             private class TrieNode {
                 val children = Array<TrieNode?>(ALPHABET_SIZE) { null }
                 var isEndOfWord = false
             }
         }
+
         private val root = TrieNode()
 
         fun insert(word: String) {

@@ -17,13 +17,14 @@ class ListNodeUtilTest {
     @Test
     fun connectListNodeTest() {
         val basicListNode = listNodeUtil.generateBasicSingleListNode()
-        val listNodeData = listOf(
-            basicListNode[0][1],
-            basicListNode[0][3],
-            basicListNode[0][5],
-            basicListNode[0][7],
-            basicListNode[0][9],
-        )
+        val listNodeData =
+            listOf(
+                basicListNode[0][1],
+                basicListNode[0][3],
+                basicListNode[0][5],
+                basicListNode[0][7],
+                basicListNode[0][9],
+            )
         val expectListNodeVal = listOf(1, 3, 5, 7, 9)
         var cur: ListNode? = listNodeUtil.connectListNode(listNodeData)
         for (i in expectListNodeVal.indices) {

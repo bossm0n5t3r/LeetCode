@@ -6,12 +6,13 @@ class KeysAndRooms {
     class Solution {
         fun canVisitAllRooms(rooms: List<List<Int>>): Boolean {
             val visited = BooleanArray(rooms.size) { false }
-            val keys = Stack<Int>().apply {
-                for (key in rooms[0]) {
-                    this.push(key)
+            val keys =
+                Stack<Int>().apply {
+                    for (key in rooms[0]) {
+                        this.push(key)
+                    }
+                    visited[0] = true
                 }
-                visited[0] = true
-            }
             while (keys.isNotEmpty()) {
                 val cur = keys.pop()
                 visited[cur] = true

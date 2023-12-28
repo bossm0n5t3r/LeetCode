@@ -16,20 +16,21 @@ class PalindromeLinkedListTest {
 
     @Test
     fun isPalindrome() {
-        val tests = listOf(
-            PalindromeLinkedListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 2, 1)),
-                true,
-            ),
-            PalindromeLinkedListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 1, 2, 1)),
-                true,
-            ),
-            PalindromeLinkedListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2)),
-                false,
-            ),
-        )
+        val tests =
+            listOf(
+                PalindromeLinkedListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 2, 1)),
+                    true,
+                ),
+                PalindromeLinkedListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 1, 2, 1)),
+                    true,
+                ),
+                PalindromeLinkedListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2)),
+                    false,
+                ),
+            )
         tests.forEach { test ->
             assertEquals(palindromeLinkedList.isPalindrome(test.head), test.result)
         }

@@ -13,10 +13,11 @@ internal class RemoveAllAdjacentDuplicatesInStringTest {
 
     @Test
     fun removeDuplicates() {
-        val tests = listOf(
-            RemoveAllAdjacentDuplicatesInStringTestData("abbaca", "ca"),
-            RemoveAllAdjacentDuplicatesInStringTestData("azxxzy", "ay"),
-        )
+        val tests =
+            listOf(
+                RemoveAllAdjacentDuplicatesInStringTestData("abbaca", "ca"),
+                RemoveAllAdjacentDuplicatesInStringTestData("azxxzy", "ay"),
+            )
         tests.forEach { test ->
             val result = removeAllAdjacentDuplicatesInString.removeDuplicates(test.s)
             println(result)

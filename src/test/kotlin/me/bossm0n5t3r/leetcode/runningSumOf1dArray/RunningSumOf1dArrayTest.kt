@@ -31,20 +31,21 @@ internal class RunningSumOf1dArrayTest {
 
     @Test
     fun runningSum() {
-        val tests = listOf(
-            RunningSumOf1dArrayTestData(
-                intArrayOf(1, 2, 3, 4),
-                intArrayOf(1, 3, 6, 10),
-            ),
-            RunningSumOf1dArrayTestData(
-                intArrayOf(1, 1, 1, 1, 1),
-                intArrayOf(1, 2, 3, 4, 5),
-            ),
-            RunningSumOf1dArrayTestData(
-                intArrayOf(3, 1, 2, 10, 1),
-                intArrayOf(3, 4, 6, 16, 17),
-            ),
-        )
+        val tests =
+            listOf(
+                RunningSumOf1dArrayTestData(
+                    intArrayOf(1, 2, 3, 4),
+                    intArrayOf(1, 3, 6, 10),
+                ),
+                RunningSumOf1dArrayTestData(
+                    intArrayOf(1, 1, 1, 1, 1),
+                    intArrayOf(1, 2, 3, 4, 5),
+                ),
+                RunningSumOf1dArrayTestData(
+                    intArrayOf(3, 1, 2, 10, 1),
+                    intArrayOf(3, 4, 6, 16, 17),
+                ),
+            )
         tests.forEach { test ->
             runningSumOf1dArray.runningSum(test.nums)
                 .also {

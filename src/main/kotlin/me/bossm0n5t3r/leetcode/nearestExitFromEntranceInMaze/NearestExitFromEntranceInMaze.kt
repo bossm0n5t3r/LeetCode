@@ -4,7 +4,10 @@ import java.util.LinkedList
 
 class NearestExitFromEntranceInMaze {
     class Solution {
-        fun nearestExit(maze: Array<CharArray>, entrance: IntArray): Int {
+        fun nearestExit(
+            maze: Array<CharArray>,
+            entrance: IntArray,
+        ): Int {
             val m = maze.size
             val n = maze.first().size
 
@@ -12,13 +15,15 @@ class NearestExitFromEntranceInMaze {
             val dc = intArrayOf(1, -1, 0, 0)
 
             val (entranceR, entranceC) = entrance
-            val visited = Array(m) { BooleanArray(n) { false } }.apply {
-                this[entranceR][entranceC] = true
-            }
-            val queue = LinkedList<MazeInfo>().apply {
-                val (r, c) = entrance
-                this.add(MazeInfo(r, c, 0))
-            }
+            val visited =
+                Array(m) { BooleanArray(n) { false } }.apply {
+                    this[entranceR][entranceC] = true
+                }
+            val queue =
+                LinkedList<MazeInfo>().apply {
+                    val (r, c) = entrance
+                    this.add(MazeInfo(r, c, 0))
+                }
             while (queue.isNotEmpty()) {
                 val size = queue.size
                 repeat(size) {

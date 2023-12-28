@@ -13,13 +13,14 @@ class ReverseIntegerTest {
 
     @Test
     fun reverse() {
-        val tests = listOf(
-            ReverseIntegerTestData(123, 321),
-            ReverseIntegerTestData(-123, -321),
-            ReverseIntegerTestData(120, 21),
-            ReverseIntegerTestData(0, 0),
-            ReverseIntegerTestData(1534236469, 0),
-        )
+        val tests =
+            listOf(
+                ReverseIntegerTestData(123, 321),
+                ReverseIntegerTestData(-123, -321),
+                ReverseIntegerTestData(120, 21),
+                ReverseIntegerTestData(0, 0),
+                ReverseIntegerTestData(1534236469, 0),
+            )
         tests.forEach { test ->
             assertEquals(reverseInteger.reverse(test.x), test.result)
         }

@@ -13,10 +13,11 @@ class NThTribonacciNumberTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(4, 4),
-            TestData(25, 1389537),
-        )
+        val tests =
+            listOf(
+                TestData(4, 4),
+                TestData(25, 1389537),
+            )
 
         tests.forEach { test ->
             assertEquals(

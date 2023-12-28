@@ -31,12 +31,13 @@ class LongestCommonPrefixTest {
 
     @Test
     fun longestCommonPrefix() {
-        val tests = listOf(
-            LongestCommonPrefixTestData(arrayOf("flower", "flow", "flight"), "fl"),
-            LongestCommonPrefixTestData(arrayOf("dog", "racecar", "car"), ""),
-            LongestCommonPrefixTestData(arrayOf(""), ""),
-            LongestCommonPrefixTestData(arrayOf("abab", "aba", ""), ""),
-        )
+        val tests =
+            listOf(
+                LongestCommonPrefixTestData(arrayOf("flower", "flow", "flight"), "fl"),
+                LongestCommonPrefixTestData(arrayOf("dog", "racecar", "car"), ""),
+                LongestCommonPrefixTestData(arrayOf(""), ""),
+                LongestCommonPrefixTestData(arrayOf("abab", "aba", ""), ""),
+            )
         tests.forEach { test ->
             assertEquals(longestCommonPrefix.longestCommonPrefixFirst(test.strs), test.result)
             assertEquals(longestCommonPrefix.longestCommonPrefixSecond(test.strs), test.result)

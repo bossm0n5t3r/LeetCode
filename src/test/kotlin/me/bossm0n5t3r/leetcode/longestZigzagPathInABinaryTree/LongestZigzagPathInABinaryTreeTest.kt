@@ -16,22 +16,24 @@ class LongestZigzagPathInABinaryTreeTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(
-                    listOf(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1),
+        val tests =
+            listOf(
+                TestData(
+                    root =
+                        treeNodeUtil.generateTreeNodeOrNull(
+                            listOf(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1),
+                        ),
+                    result = 3,
                 ),
-                result = 3,
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 1, null, 1, null, null, 1, 1, null, 1)),
-                result = 4,
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
-                result = 0,
-            ),
-        )
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 1, null, 1, null, null, 1, 1, null, 1)),
+                    result = 4,
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
+                    result = 0,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

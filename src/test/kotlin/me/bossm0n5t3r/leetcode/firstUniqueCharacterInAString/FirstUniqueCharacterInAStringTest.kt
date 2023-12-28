@@ -13,11 +13,12 @@ class FirstUniqueCharacterInAStringTest {
 
     @Test
     fun firstUniqChar() {
-        val tests = listOf(
-            FirstUniqueCharacterInAStringTestData("leetcode", 0),
-            FirstUniqueCharacterInAStringTestData("loveleetcode", 2),
-            FirstUniqueCharacterInAStringTestData("aabb", -1),
-        )
+        val tests =
+            listOf(
+                FirstUniqueCharacterInAStringTestData("leetcode", 0),
+                FirstUniqueCharacterInAStringTestData("loveleetcode", 2),
+                FirstUniqueCharacterInAStringTestData("aabb", -1),
+            )
 
         tests.forEach { test ->
             assertEquals(firstUniqueCharacterInAString.firstUniqChar(test.s), test.result)

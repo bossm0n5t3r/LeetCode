@@ -31,11 +31,12 @@ class SingleNumberTest {
 
     @Test
     fun singleNumber() {
-        val tests = listOf(
-            SingleNumberTestData(intArrayOf(2, 2, 1), 1),
-            SingleNumberTestData(intArrayOf(4, 1, 2, 1, 2), 4),
-            SingleNumberTestData(intArrayOf(1), 1),
-        )
+        val tests =
+            listOf(
+                SingleNumberTestData(intArrayOf(2, 2, 1), 1),
+                SingleNumberTestData(intArrayOf(4, 1, 2, 1, 2), 4),
+                SingleNumberTestData(intArrayOf(1), 1),
+            )
         tests.forEach { test ->
             assertTrue(singleNumber.singleNumber(test.nums) == test.result)
         }

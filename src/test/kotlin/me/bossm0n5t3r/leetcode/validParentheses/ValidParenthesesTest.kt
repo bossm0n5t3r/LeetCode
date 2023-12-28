@@ -13,13 +13,14 @@ class ValidParenthesesTest {
 
     @Test
     fun isValid() {
-        val tests = listOf(
-            ValidParenthesesTestData("()", true),
-            ValidParenthesesTestData("()[]{}", true),
-            ValidParenthesesTestData("(]", false),
-            ValidParenthesesTestData("([)]", false),
-            ValidParenthesesTestData("{[]}", true),
-        )
+        val tests =
+            listOf(
+                ValidParenthesesTestData("()", true),
+                ValidParenthesesTestData("()[]{}", true),
+                ValidParenthesesTestData("(]", false),
+                ValidParenthesesTestData("([)]", false),
+                ValidParenthesesTestData("{[]}", true),
+            )
         tests.forEach { test ->
             assertEquals(validParentheses.isValid(test.s), test.result)
         }

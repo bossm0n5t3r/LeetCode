@@ -29,16 +29,17 @@ class FindTheHighestAltitudeTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                gain = intArrayOf(-5, 1, 5, 0, -7),
-                result = 1,
-            ),
-            TestData(
-                gain = intArrayOf(-4, -3, -2, -1, 4, 3, 2),
-                result = 0,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    gain = intArrayOf(-5, 1, 5, 0, -7),
+                    result = 1,
+                ),
+                TestData(
+                    gain = intArrayOf(-4, -3, -2, -1, 4, 3, 2),
+                    result = 0,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

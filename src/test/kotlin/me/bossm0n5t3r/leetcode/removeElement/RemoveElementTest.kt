@@ -34,10 +34,11 @@ internal class RemoveElementTest {
 
     @Test
     fun removeElement() {
-        val tests = listOf(
-            RemoveElementTestData(intArrayOf(3, 2, 2, 3), 3, 2),
-            RemoveElementTestData(intArrayOf(0, 1, 2, 2, 3, 0, 4, 2), 2, 5),
-        )
+        val tests =
+            listOf(
+                RemoveElementTestData(intArrayOf(3, 2, 2, 3), 3, 2),
+                RemoveElementTestData(intArrayOf(0, 1, 2, 2, 3, 0, 4, 2), 2, 5),
+            )
         tests.forEach { test ->
             assertEquals(removeElement.removeElement(test.nums, test.target), test.result)
         }

@@ -14,11 +14,12 @@ class LongestCommonSubsequenceTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData("abcde", "ace", 3),
-            TestData("abc", "abc", 3),
-            TestData("abc", "def", 0),
-        )
+        val tests =
+            listOf(
+                TestData("abcde", "ace", 3),
+                TestData("abc", "abc", 3),
+                TestData("abc", "def", 0),
+            )
 
         tests.forEach { test ->
             assertEquals(

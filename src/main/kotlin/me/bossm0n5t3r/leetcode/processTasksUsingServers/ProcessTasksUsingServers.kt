@@ -4,26 +4,31 @@ import java.util.PriorityQueue
 
 class ProcessTasksUsingServers {
     class Solution {
-        fun assignTasks(servers: IntArray, tasks: IntArray): IntArray {
-            val freeServers = PriorityQueue<Server> { a, b ->
-                if (a.weight != b.weight) {
-                    a.weight - b.weight
-                } else {
-                    a.index - b.index
+        fun assignTasks(
+            servers: IntArray,
+            tasks: IntArray,
+        ): IntArray {
+            val freeServers =
+                PriorityQueue<Server> { a, b ->
+                    if (a.weight != b.weight) {
+                        a.weight - b.weight
+                    } else {
+                        a.index - b.index
+                    }
                 }
-            }
             servers.forEachIndexed { serverIndex, serverWeight ->
                 freeServers.add(Server(serverIndex, serverWeight))
             }
-            val workingServers = PriorityQueue<Server> { a, b ->
-                if (a.task != b.task) {
-                    a.task - b.task
-                } else if (a.weight != b.weight) {
-                    a.weight - b.weight
-                } else {
-                    a.index - b.index
+            val workingServers =
+                PriorityQueue<Server> { a, b ->
+                    if (a.task != b.task) {
+                        a.task - b.task
+                    } else if (a.weight != b.weight) {
+                        a.weight - b.weight
+                    } else {
+                        a.index - b.index
+                    }
                 }
-            }
             val result = IntArray(tasks.size) { 0 }
             tasks.forEachIndexed { index, task ->
                 while (workingServers.isNotEmpty() && workingServers.peek().task <= index) {

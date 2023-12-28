@@ -18,9 +18,10 @@ class LongestZigzagPathInABinaryTree {
 
         fun longestZigZag(root: TreeNode?): Int {
             if (root == null) return -1
-            val stack = Stack<Pair<TreeNode, ZigZagCount>>().apply {
-                this.push(root to ZigZagCount(dir = Direction.ROOT))
-            }
+            val stack =
+                Stack<Pair<TreeNode, ZigZagCount>>().apply {
+                    this.push(root to ZigZagCount(dir = Direction.ROOT))
+                }
             var result = 0
             while (stack.isNotEmpty()) {
                 val (cur, zigZagCount) = stack.pop()
@@ -31,54 +32,60 @@ class LongestZigzagPathInABinaryTree {
                     Direction.ROOT -> {
                         if (curLeft != null) {
                             stack.push(
-                                curLeft to ZigZagCount(
-                                    dir = Direction.LEFT,
-                                    count = 1,
-                                ),
+                                curLeft to
+                                    ZigZagCount(
+                                        dir = Direction.LEFT,
+                                        count = 1,
+                                    ),
                             )
                         }
                         if (curRight != null) {
                             stack.push(
-                                curRight to ZigZagCount(
-                                    dir = Direction.RIGHT,
-                                    count = 1,
-                                ),
+                                curRight to
+                                    ZigZagCount(
+                                        dir = Direction.RIGHT,
+                                        count = 1,
+                                    ),
                             )
                         }
                     }
                     Direction.LEFT -> {
                         if (curLeft != null) {
                             stack.push(
-                                curLeft to ZigZagCount(
-                                    dir = Direction.LEFT,
-                                    count = 1,
-                                ),
+                                curLeft to
+                                    ZigZagCount(
+                                        dir = Direction.LEFT,
+                                        count = 1,
+                                    ),
                             )
                         }
                         if (curRight != null) {
                             stack.push(
-                                curRight to ZigZagCount(
-                                    dir = Direction.RIGHT,
-                                    count = zigZagCount.count + 1,
-                                ),
+                                curRight to
+                                    ZigZagCount(
+                                        dir = Direction.RIGHT,
+                                        count = zigZagCount.count + 1,
+                                    ),
                             )
                         }
                     }
                     Direction.RIGHT -> {
                         if (curLeft != null) {
                             stack.push(
-                                curLeft to ZigZagCount(
-                                    dir = Direction.LEFT,
-                                    count = zigZagCount.count + 1,
-                                ),
+                                curLeft to
+                                    ZigZagCount(
+                                        dir = Direction.LEFT,
+                                        count = zigZagCount.count + 1,
+                                    ),
                             )
                         }
                         if (curRight != null) {
                             stack.push(
-                                curRight to ZigZagCount(
-                                    dir = Direction.RIGHT,
-                                    count = 1,
-                                ),
+                                curRight to
+                                    ZigZagCount(
+                                        dir = Direction.RIGHT,
+                                        count = 1,
+                                    ),
                             )
                         }
                     }

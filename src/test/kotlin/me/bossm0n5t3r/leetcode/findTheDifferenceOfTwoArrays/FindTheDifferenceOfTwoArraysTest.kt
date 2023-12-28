@@ -32,24 +32,27 @@ class FindTheDifferenceOfTwoArraysTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums1 = intArrayOf(1, 2, 3),
-                nums2 = intArrayOf(2, 4, 6),
-                result = listOf(
-                    listOf(1, 3),
-                    listOf(4, 6),
+        val tests =
+            listOf(
+                TestData(
+                    nums1 = intArrayOf(1, 2, 3),
+                    nums2 = intArrayOf(2, 4, 6),
+                    result =
+                        listOf(
+                            listOf(1, 3),
+                            listOf(4, 6),
+                        ),
                 ),
-            ),
-            TestData(
-                nums1 = intArrayOf(1, 2, 3, 3),
-                nums2 = intArrayOf(1, 1, 2, 2),
-                result = listOf(
-                    listOf(3),
-                    emptyList(),
+                TestData(
+                    nums1 = intArrayOf(1, 2, 3, 3),
+                    nums2 = intArrayOf(1, 1, 2, 2),
+                    result =
+                        listOf(
+                            listOf(3),
+                            emptyList(),
+                        ),
                 ),
-            ),
-        )
+            )
 
         tests.forEach { test ->
             assertEquals(

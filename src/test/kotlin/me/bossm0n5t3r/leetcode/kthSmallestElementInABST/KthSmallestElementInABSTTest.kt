@@ -17,18 +17,19 @@ class KthSmallestElementInABSTTest {
 
     @Test
     fun kthSmallest() {
-        val tests = listOf(
-            KthSmallestElementInABSTTestData(
-                treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, null, 2)),
-                1,
-                1,
-            ),
-            KthSmallestElementInABSTTestData(
-                treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, null, 1)),
-                3,
-                3,
-            ),
-        )
+        val tests =
+            listOf(
+                KthSmallestElementInABSTTestData(
+                    treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, null, 2)),
+                    1,
+                    1,
+                ),
+                KthSmallestElementInABSTTestData(
+                    treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, null, 1)),
+                    3,
+                    3,
+                ),
+            )
         tests.forEach { test ->
             assertEquals(kthSmallestElementInABST.kthSmallest(test.root, test.k), test.result)
         }

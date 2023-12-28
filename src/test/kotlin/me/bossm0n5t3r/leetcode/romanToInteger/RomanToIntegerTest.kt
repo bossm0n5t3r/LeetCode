@@ -13,13 +13,14 @@ class RomanToIntegerTest {
 
     @Test
     fun romanToInt() {
-        val tests = listOf(
-            RomanToIntegerTestData("III", 3),
-            RomanToIntegerTestData("IX", 9),
-            RomanToIntegerTestData("LVIII", 58),
-            RomanToIntegerTestData("MCMXCIV", 1994),
-            RomanToIntegerTestData("III", 3),
-        )
+        val tests =
+            listOf(
+                RomanToIntegerTestData("III", 3),
+                RomanToIntegerTestData("IX", 9),
+                RomanToIntegerTestData("LVIII", 58),
+                RomanToIntegerTestData("MCMXCIV", 1994),
+                RomanToIntegerTestData("III", 3),
+            )
         tests.forEach { test ->
             assertEquals(romanToInteger.romanToInt(test.s), test.result)
         }

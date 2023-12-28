@@ -34,18 +34,19 @@ class KthSmallestElementInASortedMatrixTest {
 
     @Test
     fun kthSmallest() {
-        val tests = listOf(
-            KthSmallestElementInASortedMatrixTestData(
-                arrayOf(intArrayOf(1, 5, 9), intArrayOf(10, 11, 13), intArrayOf(12, 13, 15)),
-                8,
-                13,
-            ),
-            KthSmallestElementInASortedMatrixTestData(
-                arrayOf(intArrayOf(-5)),
-                1,
-                -5,
-            ),
-        )
+        val tests =
+            listOf(
+                KthSmallestElementInASortedMatrixTestData(
+                    arrayOf(intArrayOf(1, 5, 9), intArrayOf(10, 11, 13), intArrayOf(12, 13, 15)),
+                    8,
+                    13,
+                ),
+                KthSmallestElementInASortedMatrixTestData(
+                    arrayOf(intArrayOf(-5)),
+                    1,
+                    -5,
+                ),
+            )
         tests.forEach { test ->
             assertEquals(kthSmallestElementInASortedMatrix.kthSmallest(test.matrix, test.k), test.result)
             assertEquals(kthSmallestElementInASortedMatrix.kthSmallestByUsingBiSect(test.matrix, test.k), test.result)

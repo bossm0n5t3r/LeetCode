@@ -34,39 +34,40 @@ internal class MinimumAbsoluteDifferenceQueriesTest {
 
     @Test
     fun minDifference() {
-        val tests = listOf(
-            Example(
-                intArrayOf(1, 3, 4, 8),
-                arrayOf(
-                    intArrayOf(0, 1),
-                    intArrayOf(1, 2),
-                    intArrayOf(2, 3),
-                    intArrayOf(0, 3),
+        val tests =
+            listOf(
+                Example(
+                    intArrayOf(1, 3, 4, 8),
+                    arrayOf(
+                        intArrayOf(0, 1),
+                        intArrayOf(1, 2),
+                        intArrayOf(2, 3),
+                        intArrayOf(0, 3),
+                    ),
+                    intArrayOf(2, 1, 4, 1),
                 ),
-                intArrayOf(2, 1, 4, 1),
-            ),
-            Example(
-                intArrayOf(4, 5, 2, 2, 7, 10),
-                arrayOf(
-                    intArrayOf(2, 3),
-                    intArrayOf(0, 2),
-                    intArrayOf(0, 5),
-                    intArrayOf(3, 5),
+                Example(
+                    intArrayOf(4, 5, 2, 2, 7, 10),
+                    arrayOf(
+                        intArrayOf(2, 3),
+                        intArrayOf(0, 2),
+                        intArrayOf(0, 5),
+                        intArrayOf(3, 5),
+                    ),
+                    intArrayOf(-1, 1, 1, 3),
                 ),
-                intArrayOf(-1, 1, 1, 3),
-            ),
-            Example(
-                intArrayOf(4, 6, 2, 2, 7),
-                arrayOf(
-                    intArrayOf(0, 3),
-                    intArrayOf(2, 4),
-                    intArrayOf(0, 4),
-                    intArrayOf(0, 4),
-                    intArrayOf(0, 3),
+                Example(
+                    intArrayOf(4, 6, 2, 2, 7),
+                    arrayOf(
+                        intArrayOf(0, 3),
+                        intArrayOf(2, 4),
+                        intArrayOf(0, 4),
+                        intArrayOf(0, 4),
+                        intArrayOf(0, 3),
+                    ),
+                    intArrayOf(2, 5, 1, 1, 2),
                 ),
-                intArrayOf(2, 5, 1, 1, 2),
-            ),
-        )
+            )
         tests.forEach { test ->
             sut.minDifference(test.nums, test.queries)
                 .also {

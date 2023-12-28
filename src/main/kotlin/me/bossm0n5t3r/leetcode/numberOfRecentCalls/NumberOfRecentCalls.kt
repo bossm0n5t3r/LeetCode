@@ -17,6 +17,7 @@ class NumberOfRecentCalls {
         companion object {
             private const val REQUEST_RANGE_MILLISECONDS = 3000
         }
+
         private val requests = mutableListOf<Int>()
 
         fun ping(t: Int): Int {

@@ -4,7 +4,11 @@ import java.util.Stack
 
 class EvaluateDivision {
     class Solution {
-        fun calcEquation(equations: List<List<String>>, values: DoubleArray, queries: List<List<String>>): DoubleArray {
+        fun calcEquation(
+            equations: List<List<String>>,
+            values: DoubleArray,
+            queries: List<List<String>>,
+        ): DoubleArray {
             val edges = mutableMapOf<String, MutableMap<String, Double>>()
             for (i in equations.indices) {
                 val (from, to) = equations[i]
@@ -28,7 +32,10 @@ class EvaluateDivision {
         }
 
         @Suppress("ReturnCount")
-        private fun calculateUsingDFS(edges: Map<String, Map<String, Double>>, query: List<String>): Double {
+        private fun calculateUsingDFS(
+            edges: Map<String, Map<String, Double>>,
+            query: List<String>,
+        ): Double {
             val (from, to) = query
             if (edges.containsKey(to)) {
                 if (edges[to]?.containsKey(from) == true) {
@@ -38,9 +45,10 @@ class EvaluateDivision {
             }
             if (edges.containsKey(from).not()) return -1.0
             if (from == to) return 1.0
-            val stack = Stack<Pair<String, Double>>().apply {
-                this.push(from to 1.0)
-            }
+            val stack =
+                Stack<Pair<String, Double>>().apply {
+                    this.push(from to 1.0)
+                }
             val visited = mutableSetOf(from)
             while (stack.isNotEmpty()) {
                 val (cur, accumulatedResult) = stack.pop()

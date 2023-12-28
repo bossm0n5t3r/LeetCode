@@ -14,10 +14,11 @@ internal class MirrorReflectionTest {
 
     @Test
     fun mirrorReflection() {
-        val tests = listOf(
-            Example(2, 1, 2),
-            Example(3, 1, 1),
-        )
+        val tests =
+            listOf(
+                Example(2, 1, 2),
+                Example(3, 1, 1),
+            )
         tests.forEach { test ->
             assertEquals(sut.mirrorReflection(test.p, test.q), test.result)
         }

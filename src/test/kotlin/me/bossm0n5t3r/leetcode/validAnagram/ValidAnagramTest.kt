@@ -14,10 +14,11 @@ class ValidAnagramTest {
 
     @Test
     fun isAnagram() {
-        val tests = listOf(
-            ValidAnagramTestData("anagram", "nagaram", true),
-            ValidAnagramTestData("rat", "car", false),
-        )
+        val tests =
+            listOf(
+                ValidAnagramTestData("anagram", "nagaram", true),
+                ValidAnagramTestData("rat", "car", false),
+            )
         tests.forEach { test ->
             assertEquals(validAnagram.isAnagram(test.s, test.t), test.result)
         }

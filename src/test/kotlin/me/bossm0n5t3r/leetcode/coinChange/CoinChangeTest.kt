@@ -34,33 +34,34 @@ internal class CoinChangeTest {
 
     @Test
     fun coinChange() {
-        val tests = listOf(
-            CoinChangeTestData(
-                intArrayOf(1, 2, 5),
-                11,
-                3,
-            ),
-            CoinChangeTestData(
-                intArrayOf(2),
-                3,
-                -1,
-            ),
-            CoinChangeTestData(
-                intArrayOf(1),
-                0,
-                0,
-            ),
-            CoinChangeTestData(
-                intArrayOf(2),
-                1,
-                -1,
-            ),
-            CoinChangeTestData(
-                intArrayOf(1, 2),
-                2,
-                1,
-            ),
-        )
+        val tests =
+            listOf(
+                CoinChangeTestData(
+                    intArrayOf(1, 2, 5),
+                    11,
+                    3,
+                ),
+                CoinChangeTestData(
+                    intArrayOf(2),
+                    3,
+                    -1,
+                ),
+                CoinChangeTestData(
+                    intArrayOf(1),
+                    0,
+                    0,
+                ),
+                CoinChangeTestData(
+                    intArrayOf(2),
+                    1,
+                    -1,
+                ),
+                CoinChangeTestData(
+                    intArrayOf(1, 2),
+                    2,
+                    1,
+                ),
+            )
         tests.forEach { test ->
             coinChange.coinChange(test.coins, test.amount)
                 .also {

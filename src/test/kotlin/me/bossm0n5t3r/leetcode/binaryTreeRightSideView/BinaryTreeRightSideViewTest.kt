@@ -16,20 +16,21 @@ class BinaryTreeRightSideViewTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, null, 5, null, 4)),
-                result = listOf(1, 3, 4),
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 3)),
-                result = listOf(1, 3),
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf()),
-                result = listOf(),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, null, 5, null, 4)),
+                    result = listOf(1, 3, 4),
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 3)),
+                    result = listOf(1, 3),
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    result = listOf(),
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

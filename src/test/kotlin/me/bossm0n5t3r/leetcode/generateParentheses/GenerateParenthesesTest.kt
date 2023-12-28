@@ -14,10 +14,11 @@ class GenerateParenthesesTest {
 
     @Test
     fun generateParenthesis() {
-        val tests = listOf(
-            GenerateParenthesesTestData(3, listOf("((()))", "(()())", "(())()", "()(())", "()()()")),
-            GenerateParenthesesTestData(1, listOf("()")),
-        )
+        val tests =
+            listOf(
+                GenerateParenthesesTestData(3, listOf("((()))", "(()())", "(())()", "()(())", "()()()")),
+                GenerateParenthesesTestData(1, listOf("()")),
+            )
         tests.forEach { test ->
             val resultBruteForce = generateParentheses.generateParenthesisBruteForce(test.n)
             assertTrue(resultBruteForce.containsAll(test.result))

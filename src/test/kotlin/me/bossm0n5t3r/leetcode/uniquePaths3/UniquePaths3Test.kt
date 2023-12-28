@@ -33,20 +33,21 @@ internal class UniquePaths3Test {
 
     @Test
     fun uniquePathsIII() {
-        val tests = listOf(
-            UniquePaths3TestData(
-                matrixUtil.generateMatrixFrom("[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"),
-                2,
-            ),
-            UniquePaths3TestData(
-                matrixUtil.generateMatrixFrom("[[1,0,0,0],[0,0,0,0],[0,0,0,2]]"),
-                4,
-            ),
-            UniquePaths3TestData(
-                matrixUtil.generateMatrixFrom("[[0,1],[2,0]]"),
-                0,
-            ),
-        )
+        val tests =
+            listOf(
+                UniquePaths3TestData(
+                    matrixUtil.generateMatrixFrom("[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"),
+                    2,
+                ),
+                UniquePaths3TestData(
+                    matrixUtil.generateMatrixFrom("[[1,0,0,0],[0,0,0,0],[0,0,0,2]]"),
+                    4,
+                ),
+                UniquePaths3TestData(
+                    matrixUtil.generateMatrixFrom("[[0,1],[2,0]]"),
+                    0,
+                ),
+            )
         tests.forEach { test ->
             uniquePaths3.uniquePathsIIIUsingBFS(test.grid)
                 .also {

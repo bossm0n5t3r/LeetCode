@@ -10,7 +10,12 @@ class ConvertSortedArrayToBST {
             return resultTreeNode
         }
 
-        private fun insertNumIntoTreeNode(nums: IntArray, treeNode: TreeNode?, start: Int, end: Int) {
+        private fun insertNumIntoTreeNode(
+            nums: IntArray,
+            treeNode: TreeNode?,
+            start: Int,
+            end: Int,
+        ) {
             if (start == end) {
                 treeNode?.`val` = nums[start]
                 return

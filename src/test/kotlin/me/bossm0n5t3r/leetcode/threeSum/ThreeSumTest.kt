@@ -31,23 +31,24 @@ class ThreeSumTest {
 
     @Test
     fun threeSum() {
-        val tests = listOf(
-            ThreeSumTestData(
-                intArrayOf(-1, 0, 1, 2, -1, -4),
-                listOf(
-                    listOf(-1, -1, 2),
-                    listOf(-1, 0, 1),
+        val tests =
+            listOf(
+                ThreeSumTestData(
+                    intArrayOf(-1, 0, 1, 2, -1, -4),
+                    listOf(
+                        listOf(-1, -1, 2),
+                        listOf(-1, 0, 1),
+                    ),
                 ),
-            ),
-            ThreeSumTestData(
-                intArrayOf(),
-                listOf(),
-            ),
-            ThreeSumTestData(
-                intArrayOf(0),
-                listOf(),
-            ),
-        )
+                ThreeSumTestData(
+                    intArrayOf(),
+                    listOf(),
+                ),
+                ThreeSumTestData(
+                    intArrayOf(0),
+                    listOf(),
+                ),
+            )
         tests.forEach { test ->
             assertThat(threeSum.threeSum(test.nums))
                 .containsExactlyInAnyOrderElementsOf(test.result)

@@ -13,19 +13,20 @@ class PascalsTriangleTest {
 
     @Test
     fun generate() {
-        val tests = listOf(
-            PascalsTriangleTestData(
-                5,
-                listOf(
-                    listOf(1),
-                    listOf(1, 1),
-                    listOf(1, 2, 1),
-                    listOf(1, 3, 3, 1),
-                    listOf(1, 4, 6, 4, 1),
+        val tests =
+            listOf(
+                PascalsTriangleTestData(
+                    5,
+                    listOf(
+                        listOf(1),
+                        listOf(1, 1),
+                        listOf(1, 2, 1),
+                        listOf(1, 3, 3, 1),
+                        listOf(1, 4, 6, 4, 1),
+                    ),
                 ),
-            ),
-            PascalsTriangleTestData(1, listOf(listOf(1))),
-        )
+                PascalsTriangleTestData(1, listOf(listOf(1))),
+            )
         tests.forEach { test ->
             assertEquals(pascalsTriangle.generate(test.numsRow), test.result)
         }

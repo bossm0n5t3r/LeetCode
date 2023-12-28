@@ -31,16 +31,17 @@ internal class MaximumProductOfWordLengthsTest {
 
     @Test
     fun maxProduct() {
-        val tests = listOf(
-            MaximumProductOfWordLengthsTestData(
-                arrayOf("abcw", "baz", "foo", "bar", "xtfn", "abcdef"),
-                16,
-            ),
-            MaximumProductOfWordLengthsTestData(
-                arrayOf("a", "ab", "abc", "d", "cd", "bcd", "abcd"),
-                4,
-            ),
-        )
+        val tests =
+            listOf(
+                MaximumProductOfWordLengthsTestData(
+                    arrayOf("abcw", "baz", "foo", "bar", "xtfn", "abcdef"),
+                    16,
+                ),
+                MaximumProductOfWordLengthsTestData(
+                    arrayOf("a", "ab", "abc", "d", "cd", "bcd", "abcd"),
+                    4,
+                ),
+            )
         tests.forEach { test ->
             maximumProductOfWordLengths.maxProduct(test.words)
                 .also {

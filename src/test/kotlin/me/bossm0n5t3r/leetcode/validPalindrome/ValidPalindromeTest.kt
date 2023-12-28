@@ -13,12 +13,13 @@ class ValidPalindromeTest {
 
     @Test
     fun isPalindrome() {
-        val tests = listOf(
-            ValidPalindromeTestData("A man, a plan, a canal: Panama", true),
-            ValidPalindromeTestData("race a car", false),
-            ValidPalindromeTestData(" ", true),
-            ValidPalindromeTestData("0P", false),
-        )
+        val tests =
+            listOf(
+                ValidPalindromeTestData("A man, a plan, a canal: Panama", true),
+                ValidPalindromeTestData("race a car", false),
+                ValidPalindromeTestData(" ", true),
+                ValidPalindromeTestData("0P", false),
+            )
         tests.forEach { test ->
             assertEquals(validPalindrome.isPalindrome(test.s), test.result)
         }

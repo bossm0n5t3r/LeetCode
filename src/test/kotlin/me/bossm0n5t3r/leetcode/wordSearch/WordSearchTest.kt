@@ -34,81 +34,82 @@ internal class WordSearchTest {
 
     @Test
     fun exist() {
-        val tests = listOf(
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('A', 'B', 'C', 'E'),
-                    charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E'),
+        val tests =
+            listOf(
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('A', 'B', 'C', 'E'),
+                        charArrayOf('S', 'F', 'C', 'S'),
+                        charArrayOf('A', 'D', 'E', 'E'),
+                    ),
+                    "ABCCED",
+                    true,
                 ),
-                "ABCCED",
-                true,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('A', 'B', 'C', 'E'),
-                    charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('A', 'B', 'C', 'E'),
+                        charArrayOf('S', 'F', 'C', 'S'),
+                        charArrayOf('A', 'D', 'E', 'E'),
+                    ),
+                    "SEE",
+                    true,
                 ),
-                "SEE",
-                true,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('A', 'B', 'C', 'E'),
-                    charArrayOf('S', 'F', 'C', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('A', 'B', 'C', 'E'),
+                        charArrayOf('S', 'F', 'C', 'S'),
+                        charArrayOf('A', 'D', 'E', 'E'),
+                    ),
+                    "ABCB",
+                    false,
                 ),
-                "ABCB",
-                false,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('A', 'B', 'C', 'E'),
-                    charArrayOf('S', 'F', 'E', 'S'),
-                    charArrayOf('A', 'D', 'E', 'E'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('A', 'B', 'C', 'E'),
+                        charArrayOf('S', 'F', 'E', 'S'),
+                        charArrayOf('A', 'D', 'E', 'E'),
+                    ),
+                    "ABCESEEEFS",
+                    true,
                 ),
-                "ABCESEEEFS",
-                true,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('C', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A'),
-                    charArrayOf('B', 'C', 'D'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('C', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A'),
+                        charArrayOf('B', 'C', 'D'),
+                    ),
+                    "AAB",
+                    true,
                 ),
-                "AAB",
-                true,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('a'),
-                    charArrayOf('b'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('a'),
+                        charArrayOf('b'),
+                    ),
+                    "aba",
+                    false,
                 ),
-                "aba",
-                false,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('a'),
-                    charArrayOf('a'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('a'),
+                        charArrayOf('a'),
+                    ),
+                    "aa",
+                    true,
                 ),
-                "aa",
-                true,
-            ),
-            WordSearchTest(
-                arrayOf(
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
-                    charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                WordSearchTest(
+                    arrayOf(
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                        charArrayOf('A', 'A', 'A', 'A', 'A', 'A'),
+                    ),
+                    "AAAAAAAAAAAABAA",
+                    false,
                 ),
-                "AAAAAAAAAAAABAA",
-                false,
-            ),
-        )
+            )
         tests.forEach { test ->
             println(test.word)
             println(wordSearch.exist(test.board, test.word))

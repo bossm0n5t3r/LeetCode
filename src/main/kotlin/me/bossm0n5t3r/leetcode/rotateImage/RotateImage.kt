@@ -13,7 +13,11 @@ class RotateImage {
             }
         }
 
-        private fun rotateAt(start: Pair<Int, Int>, matrix: Array<IntArray>, n: Int) {
+        private fun rotateAt(
+            start: Pair<Int, Int>,
+            matrix: Array<IntArray>,
+            n: Int,
+        ) {
             var beforeValue = matrix[start.first][start.second]
             var cur = start
             do {

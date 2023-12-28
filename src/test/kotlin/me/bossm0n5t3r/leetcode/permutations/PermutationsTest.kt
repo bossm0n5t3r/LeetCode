@@ -32,21 +32,22 @@ class PermutationsTest {
 
     @Test
     fun permute() {
-        val tests = listOf(
-            PermutationsTestData(
-                intArrayOf(1, 2, 3),
-                listOf(
-                    listOf(1, 2, 3),
-                    listOf(1, 3, 2),
-                    listOf(2, 1, 3),
-                    listOf(2, 3, 1),
-                    listOf(3, 1, 2),
-                    listOf(3, 2, 1),
+        val tests =
+            listOf(
+                PermutationsTestData(
+                    intArrayOf(1, 2, 3),
+                    listOf(
+                        listOf(1, 2, 3),
+                        listOf(1, 3, 2),
+                        listOf(2, 1, 3),
+                        listOf(2, 3, 1),
+                        listOf(3, 1, 2),
+                        listOf(3, 2, 1),
+                    ),
                 ),
-            ),
-            PermutationsTestData(intArrayOf(0, 1), listOf(listOf(0, 1), listOf(1, 0))),
-            PermutationsTestData(intArrayOf(1), listOf(listOf(1))),
-        )
+                PermutationsTestData(intArrayOf(0, 1), listOf(listOf(0, 1), listOf(1, 0))),
+                PermutationsTestData(intArrayOf(1), listOf(listOf(1))),
+            )
         tests.forEach { test ->
             val result = permutations.permute(test.nums)
             assertTrue(result.containsAll(test.result))

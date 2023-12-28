@@ -13,23 +13,24 @@ internal class TriangleTest {
 
     @Test
     fun minimumTotal() {
-        val tests = listOf(
-            TriangleTestData(
-                listOf(
-                    listOf(2),
-                    listOf(3, 4),
-                    listOf(6, 5, 7),
-                    listOf(4, 1, 8, 3),
+        val tests =
+            listOf(
+                TriangleTestData(
+                    listOf(
+                        listOf(2),
+                        listOf(3, 4),
+                        listOf(6, 5, 7),
+                        listOf(4, 1, 8, 3),
+                    ),
+                    11,
                 ),
-                11,
-            ),
-            TriangleTestData(
-                listOf(
-                    listOf(-10),
+                TriangleTestData(
+                    listOf(
+                        listOf(-10),
+                    ),
+                    -10,
                 ),
-                -10,
-            ),
-        )
+            )
         tests.forEach { test ->
             triangle.minimumTotal(test.triangle)
                 .also {

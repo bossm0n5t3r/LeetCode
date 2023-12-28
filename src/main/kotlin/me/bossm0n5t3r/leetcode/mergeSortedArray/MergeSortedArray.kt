@@ -2,7 +2,12 @@ package me.bossm0n5t3r.leetcode.mergeSortedArray
 
 class MergeSortedArray {
     class Solution {
-        fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
+        fun merge(
+            nums1: IntArray,
+            m: Int,
+            nums2: IntArray,
+            n: Int,
+        ) {
             if (n == 0) return
             val copyNums1 = nums1.copyOf()
             var totalIndex = 0

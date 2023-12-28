@@ -34,33 +34,34 @@ internal class BestTeamWithNoConflictsTest {
 
     @Test
     fun bestTeamScore() {
-        val tests = listOf(
-            BestTeamWithNoConflictsTestData(
-                intArrayOf(1, 3, 5, 10, 15),
-                intArrayOf(1, 2, 3, 4, 5),
-                34,
-            ),
-            BestTeamWithNoConflictsTestData(
-                intArrayOf(4, 5, 6, 5),
-                intArrayOf(2, 1, 2, 1),
-                16,
-            ),
-            BestTeamWithNoConflictsTestData(
-                intArrayOf(1, 2, 3, 5),
-                intArrayOf(8, 9, 10, 1),
-                6,
-            ),
-            BestTeamWithNoConflictsTestData(
-                intArrayOf(319776, 611683, 835240, 602298, 430007, 574, 142444, 858606, 734364, 896074),
-                intArrayOf(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-                5431066,
-            ),
-            BestTeamWithNoConflictsTestData(
-                intArrayOf(6, 5, 1, 7, 6, 5, 5, 4, 10, 4),
-                intArrayOf(3, 2, 5, 3, 2, 1, 4, 4, 5, 1),
-                43,
-            ),
-        )
+        val tests =
+            listOf(
+                BestTeamWithNoConflictsTestData(
+                    intArrayOf(1, 3, 5, 10, 15),
+                    intArrayOf(1, 2, 3, 4, 5),
+                    34,
+                ),
+                BestTeamWithNoConflictsTestData(
+                    intArrayOf(4, 5, 6, 5),
+                    intArrayOf(2, 1, 2, 1),
+                    16,
+                ),
+                BestTeamWithNoConflictsTestData(
+                    intArrayOf(1, 2, 3, 5),
+                    intArrayOf(8, 9, 10, 1),
+                    6,
+                ),
+                BestTeamWithNoConflictsTestData(
+                    intArrayOf(319776, 611683, 835240, 602298, 430007, 574, 142444, 858606, 734364, 896074),
+                    intArrayOf(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+                    5431066,
+                ),
+                BestTeamWithNoConflictsTestData(
+                    intArrayOf(6, 5, 1, 7, 6, 5, 5, 4, 10, 4),
+                    intArrayOf(3, 2, 5, 3, 2, 1, 4, 4, 5, 1),
+                    43,
+                ),
+            )
         tests.forEach { test ->
             val result = bestTeamWithNoConflicts.bestTeamScore(test.scores, test.ages)
             println(result)

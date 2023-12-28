@@ -33,7 +33,13 @@ class UniquePaths3 {
             return bfs(m, n, start, end, emptySquares)
         }
 
-        private fun bfs(m: Int, n: Int, start: String, end: String, emptySquares: MutableSet<String>): Int {
+        private fun bfs(
+            m: Int,
+            n: Int,
+            start: String,
+            end: String,
+            emptySquares: MutableSet<String>,
+        ): Int {
             val dr = intArrayOf(0, 0, 1, -1)
             val dc = intArrayOf(1, -1, 0, 0)
 
@@ -85,7 +91,15 @@ class UniquePaths3 {
             return result.value
         }
 
-        private fun dfs(grid: Array<IntArray>, m: Int, n: Int, r: Int, c: Int, empty: Int, result: IntWrapper) {
+        private fun dfs(
+            grid: Array<IntArray>,
+            m: Int,
+            n: Int,
+            r: Int,
+            c: Int,
+            empty: Int,
+            result: IntWrapper,
+        ) {
             if (r < 0 || r >= m || c < 0 || c >= n || grid[r][c] < 0) return
             if (grid[r][c] == 2) {
                 if (empty == 0) {

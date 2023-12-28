@@ -13,12 +13,13 @@ class NumberOf1BitsTest {
 
     @Test
     fun hammingWeight() {
-        val tests = listOf(
-            NumberOf1BitsTestData(11, 3),
-            NumberOf1BitsTestData(128, 1),
-            NumberOf1BitsTestData(-3, 31),
-            NumberOf1BitsTestData(0, 0),
-        )
+        val tests =
+            listOf(
+                NumberOf1BitsTestData(11, 3),
+                NumberOf1BitsTestData(128, 1),
+                NumberOf1BitsTestData(-3, 31),
+                NumberOf1BitsTestData(0, 0),
+            )
         tests.forEach { test ->
             assertEquals(numberOf1Bits.hammingWeight(test.n), test.result)
         }

@@ -5,13 +5,18 @@ import java.util.Stack
 
 class LowestCommonAncestorOfABinaryTree {
     class Solution {
-        fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
+        fun lowestCommonAncestor(
+            root: TreeNode?,
+            p: TreeNode?,
+            q: TreeNode?,
+        ): TreeNode? {
             if (root == null) return null
             var pAncestors = emptySet<Int>()
             var qAncestors = emptySet<Int>()
-            val stack = Stack<Pair<TreeNode, Set<Int>>>().apply {
-                this.push(root to setOf(root.`val`))
-            }
+            val stack =
+                Stack<Pair<TreeNode, Set<Int>>>().apply {
+                    this.push(root to setOf(root.`val`))
+                }
             while (stack.isNotEmpty()) {
                 val (cur, ancestors) = stack.pop()
                 if (cur.`val` == p?.`val`) {

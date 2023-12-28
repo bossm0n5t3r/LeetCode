@@ -31,16 +31,17 @@ class GameOfLifeTest {
 
     @Test
     fun gameOfLife() {
-        val tests = listOf(
-            GameOfLifeTestData(
-                arrayOf(intArrayOf(0, 1, 0), intArrayOf(0, 0, 1), intArrayOf(1, 1, 1), intArrayOf(0, 0, 0)),
-                arrayOf(intArrayOf(0, 0, 0), intArrayOf(1, 0, 1), intArrayOf(0, 1, 1), intArrayOf(0, 1, 0)),
-            ),
-            GameOfLifeTestData(
-                arrayOf(intArrayOf(1, 1), intArrayOf(1, 0)),
-                arrayOf(intArrayOf(1, 1), intArrayOf(1, 1)),
-            ),
-        )
+        val tests =
+            listOf(
+                GameOfLifeTestData(
+                    arrayOf(intArrayOf(0, 1, 0), intArrayOf(0, 0, 1), intArrayOf(1, 1, 1), intArrayOf(0, 0, 0)),
+                    arrayOf(intArrayOf(0, 0, 0), intArrayOf(1, 0, 1), intArrayOf(0, 1, 1), intArrayOf(0, 1, 0)),
+                ),
+                GameOfLifeTestData(
+                    arrayOf(intArrayOf(1, 1), intArrayOf(1, 0)),
+                    arrayOf(intArrayOf(1, 1), intArrayOf(1, 1)),
+                ),
+            )
         tests.forEach { test ->
             val notInfiniteTestBoard = test.board.map { it.copyOf() }.toTypedArray()
             gameOfLife.gameOfLife(notInfiniteTestBoard)

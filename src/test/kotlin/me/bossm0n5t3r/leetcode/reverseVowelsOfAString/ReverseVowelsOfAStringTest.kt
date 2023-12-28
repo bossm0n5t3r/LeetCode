@@ -13,10 +13,11 @@ class ReverseVowelsOfAStringTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData("hello", "holle"),
-            TestData("leetcode", "leotcede"),
-        )
+        val tests =
+            listOf(
+                TestData("hello", "holle"),
+                TestData("leetcode", "leotcede"),
+            )
         tests.forEach { test ->
             assertEquals(
                 sut.reverseVowels(test.s),

@@ -10,7 +10,10 @@ class BinaryTreeInorderTraversal {
             return inorder(root, result)
         }
 
-        private fun inorder(root: TreeNode?, result: MutableList<Int>): List<Int> {
+        private fun inorder(
+            root: TreeNode?,
+            result: MutableList<Int>,
+        ): List<Int> {
             if (root != null) {
                 inorder(root.left, result)
                 result.add(root.`val`)

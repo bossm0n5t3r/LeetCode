@@ -7,7 +7,10 @@ class GuessNumberHigherOrLower {
 
         abstract fun guessNumber(n: Int): Int
 
-        fun init(n: Int, pick: Int) {
+        fun init(
+            n: Int,
+            pick: Int,
+        ) {
             this.n = n
             this.pickedNumber = pick
         }

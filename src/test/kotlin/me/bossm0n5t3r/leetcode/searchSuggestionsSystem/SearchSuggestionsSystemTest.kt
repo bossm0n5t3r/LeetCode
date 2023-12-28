@@ -35,22 +35,25 @@ class SearchSuggestionsSystemTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                products = arrayOf("mobile", "mouse", "moneypot", "monitor", "mousepad"),
-                searchWord = "mouse",
-                result = """
-                    [["mobile","moneypot","monitor"],["mobile","moneypot","monitor"],["mouse","mousepad"],["mouse","mousepad"],["mouse","mousepad"]]
-                """.trimIndent().toListOfStringList(),
-            ),
-            TestData(
-                products = arrayOf("havana"),
-                searchWord = "havana",
-                result = """
-                    [["havana"],["havana"],["havana"],["havana"],["havana"],["havana"]]
-                """.trimIndent().toListOfStringList(),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    products = arrayOf("mobile", "mouse", "moneypot", "monitor", "mousepad"),
+                    searchWord = "mouse",
+                    result =
+                        """
+                        [["mobile","moneypot","monitor"],["mobile","moneypot","monitor"],["mouse","mousepad"],["mouse","mousepad"],["mouse","mousepad"]]
+                        """.trimIndent().toListOfStringList(),
+                ),
+                TestData(
+                    products = arrayOf("havana"),
+                    searchWord = "havana",
+                    result =
+                        """
+                        [["havana"],["havana"],["havana"],["havana"],["havana"],["havana"]]
+                        """.trimIndent().toListOfStringList(),
+                ),
+            )
 
         tests.forEach { test ->
             assertThat(sut.suggestedProducts(test.products, test.searchWord))

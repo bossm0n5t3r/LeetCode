@@ -31,13 +31,14 @@ class MajorityElementTest {
 
     @Test
     fun majorityElement() {
-        val tests = listOf(
-            MajorityElementTestData(intArrayOf(3, 2, 3), 3),
-            MajorityElementTestData(intArrayOf(2, 2, 1, 1, 1, 2, 2), 2),
-            MajorityElementTestData(intArrayOf(1), 1),
-            MajorityElementTestData(intArrayOf(2, 2), 2),
-            MajorityElementTestData(intArrayOf(6, 5, 5), 5),
-        )
+        val tests =
+            listOf(
+                MajorityElementTestData(intArrayOf(3, 2, 3), 3),
+                MajorityElementTestData(intArrayOf(2, 2, 1, 1, 1, 2, 2), 2),
+                MajorityElementTestData(intArrayOf(1), 1),
+                MajorityElementTestData(intArrayOf(2, 2), 2),
+                MajorityElementTestData(intArrayOf(6, 5, 5), 5),
+            )
         tests.forEach { test ->
             assertEquals(majorityElement.majorityElement(test.nums), test.result)
         }

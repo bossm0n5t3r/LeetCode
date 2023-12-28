@@ -34,23 +34,24 @@ internal class FindFirstAndLastPositionOfElementInSortedArrayTest {
 
     @Test
     fun searchRange() {
-        val tests = listOf(
-            FindFirstAndLastPositionOfElementInSortedArrayTestData(
-                intArrayOf(5, 7, 7, 8, 8, 10),
-                8,
-                intArrayOf(3, 4),
-            ),
-            FindFirstAndLastPositionOfElementInSortedArrayTestData(
-                intArrayOf(5, 7, 7, 8, 8, 10),
-                6,
-                intArrayOf(-1, -1),
-            ),
-            FindFirstAndLastPositionOfElementInSortedArrayTestData(
-                intArrayOf(),
-                0,
-                intArrayOf(-1, -1),
-            ),
-        )
+        val tests =
+            listOf(
+                FindFirstAndLastPositionOfElementInSortedArrayTestData(
+                    intArrayOf(5, 7, 7, 8, 8, 10),
+                    8,
+                    intArrayOf(3, 4),
+                ),
+                FindFirstAndLastPositionOfElementInSortedArrayTestData(
+                    intArrayOf(5, 7, 7, 8, 8, 10),
+                    6,
+                    intArrayOf(-1, -1),
+                ),
+                FindFirstAndLastPositionOfElementInSortedArrayTestData(
+                    intArrayOf(),
+                    0,
+                    intArrayOf(-1, -1),
+                ),
+            )
         tests.forEach { test ->
             assertThat(sut.searchRange(test.nums, test.target))
                 .isEqualTo(test.result)

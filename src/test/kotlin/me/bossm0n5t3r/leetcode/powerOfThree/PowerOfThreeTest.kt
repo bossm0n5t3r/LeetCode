@@ -13,14 +13,14 @@ class PowerOfThreeTest {
 
     @Test
     fun isPowerOfThree() {
-        val tests = listOf(
-            PowerOfThreeTestData(27, true),
-            PowerOfThreeTestData(0, false),
-            PowerOfThreeTestData(9, true),
-            PowerOfThreeTestData(45, false),
-            PowerOfThreeTestData(-3, false),
-
-        )
+        val tests =
+            listOf(
+                PowerOfThreeTestData(27, true),
+                PowerOfThreeTestData(0, false),
+                PowerOfThreeTestData(9, true),
+                PowerOfThreeTestData(45, false),
+                PowerOfThreeTestData(-3, false),
+            )
         tests.forEach { test ->
             assertEquals(powerOfThree.isPowerOfThree(test.n), test.result)
             assertEquals(powerOfThree.isPowerOfThreeUsingMathematics(test.n), test.result)

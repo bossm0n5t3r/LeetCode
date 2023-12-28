@@ -34,18 +34,19 @@ class KthLargestElementInAnArrayTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums = intArrayOf(3, 2, 1, 5, 6, 4),
-                k = 2,
-                result = 5,
-            ),
-            TestData(
-                nums = intArrayOf(3, 2, 3, 1, 2, 4, 5, 5, 6),
-                k = 4,
-                result = 4,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    nums = intArrayOf(3, 2, 1, 5, 6, 4),
+                    k = 2,
+                    result = 5,
+                ),
+                TestData(
+                    nums = intArrayOf(3, 2, 3, 1, 2, 4, 5, 5, 6),
+                    k = 4,
+                    result = 4,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

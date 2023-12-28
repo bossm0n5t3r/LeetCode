@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.determineIfTwoStringsAreClose
 
 class DetermineIfTwoStringsAreClose {
     class Solution {
-        fun closeStrings(word1: String, word2: String): Boolean {
+        fun closeStrings(
+            word1: String,
+            word2: String,
+        ): Boolean {
             val word1Map = word1.groupingBy { it }.eachCount()
             val word2Map = word2.groupingBy { it }.eachCount()
 

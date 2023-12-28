@@ -31,28 +31,29 @@ internal class ShortestUnsortedContinuousSubarrayTest {
 
     @Test
     fun findUnsortedSubarray() {
-        val tests = listOf(
-            ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(2, 6, 4, 8, 10, 9, 15),
-                5,
-            ),
-            ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1, 2, 3, 4),
-                0,
-            ),
-            ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1),
-                0,
-            ),
-            ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(1, 2, 3, 3, 3),
-                0,
-            ),
-            ShortestUnsortedContinuousSubarrayTestData(
-                intArrayOf(2, 1),
-                2,
-            ),
-        )
+        val tests =
+            listOf(
+                ShortestUnsortedContinuousSubarrayTestData(
+                    intArrayOf(2, 6, 4, 8, 10, 9, 15),
+                    5,
+                ),
+                ShortestUnsortedContinuousSubarrayTestData(
+                    intArrayOf(1, 2, 3, 4),
+                    0,
+                ),
+                ShortestUnsortedContinuousSubarrayTestData(
+                    intArrayOf(1),
+                    0,
+                ),
+                ShortestUnsortedContinuousSubarrayTestData(
+                    intArrayOf(1, 2, 3, 3, 3),
+                    0,
+                ),
+                ShortestUnsortedContinuousSubarrayTestData(
+                    intArrayOf(2, 1),
+                    2,
+                ),
+            )
         tests.forEach { test ->
             val result = shortestUnsortedContinuousSubarray.findUnsortedSubarray(test.nums)
             println(result)

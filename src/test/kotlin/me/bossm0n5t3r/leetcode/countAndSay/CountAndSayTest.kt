@@ -13,11 +13,12 @@ class CountAndSayTest {
 
     @Test
     fun countAndSay() {
-        val tests = listOf(
-            CountAndSayTestData(1, "1"),
-            CountAndSayTestData(4, "1211"),
-            CountAndSayTestData(5, "111221"),
-        )
+        val tests =
+            listOf(
+                CountAndSayTestData(1, "1"),
+                CountAndSayTestData(4, "1211"),
+                CountAndSayTestData(5, "111221"),
+            )
         tests.forEach { test ->
             assertEquals(countAndSay.countAndSay(test.n), test.result)
         }

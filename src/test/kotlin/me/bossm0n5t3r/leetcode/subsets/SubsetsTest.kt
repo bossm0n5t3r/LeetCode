@@ -32,28 +32,29 @@ class SubsetsTest {
 
     @Test
     fun subsets() {
-        val tests = listOf(
-            SubsetsTestData(
-                intArrayOf(1, 2, 3),
-                listOf(
-                    listOf(),
-                    listOf(1),
-                    listOf(2),
-                    listOf(3),
-                    listOf(1, 2),
-                    listOf(1, 3),
-                    listOf(2, 3),
-                    listOf(1, 2, 3),
+        val tests =
+            listOf(
+                SubsetsTestData(
+                    intArrayOf(1, 2, 3),
+                    listOf(
+                        listOf(),
+                        listOf(1),
+                        listOf(2),
+                        listOf(3),
+                        listOf(1, 2),
+                        listOf(1, 3),
+                        listOf(2, 3),
+                        listOf(1, 2, 3),
+                    ),
                 ),
-            ),
-            SubsetsTestData(
-                intArrayOf(0),
-                listOf(
-                    listOf(),
-                    listOf(0),
+                SubsetsTestData(
+                    intArrayOf(0),
+                    listOf(
+                        listOf(),
+                        listOf(0),
+                    ),
                 ),
-            ),
-        )
+            )
         tests.forEach { test ->
             val result = subsets.subsets(test.nums)
             assertEquals(result.size, test.result.size)

@@ -9,7 +9,11 @@ class GenerateParentheses {
             return result
         }
 
-        private fun generateAllParentheses(result: MutableList<String>, arr: CharArray, pos: Int) {
+        private fun generateAllParentheses(
+            result: MutableList<String>,
+            arr: CharArray,
+            pos: Int,
+        ) {
             if (pos == arr.size) {
                 val parenthesis = arr.joinToString("")
                 if (isValidParenthesis(parenthesis)) {
@@ -42,7 +46,13 @@ class GenerateParentheses {
             return result
         }
 
-        private fun backtracking(result: MutableList<String>, cur: String, open: Int, close: Int, max: Int) {
+        private fun backtracking(
+            result: MutableList<String>,
+            cur: String,
+            open: Int,
+            close: Int,
+            max: Int,
+        ) {
             if (cur.length == max * 2) {
                 result.add(cur)
                 return

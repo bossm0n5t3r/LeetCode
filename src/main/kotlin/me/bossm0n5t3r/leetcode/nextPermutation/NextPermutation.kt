@@ -13,7 +13,10 @@ class NextPermutation {
             reversed(nums, i + 1)
         }
 
-        private fun reversed(nums: IntArray, start: Int) {
+        private fun reversed(
+            nums: IntArray,
+            start: Int,
+        ) {
             var i = start
             var j = nums.size - 1
             while (i < j) {
@@ -21,7 +24,11 @@ class NextPermutation {
             }
         }
 
-        private fun swap(nums: IntArray, i: Int, j: Int) {
+        private fun swap(
+            nums: IntArray,
+            i: Int,
+            j: Int,
+        ) {
             val tmp = nums[i]
             nums[i] = nums[j]
             nums[j] = tmp

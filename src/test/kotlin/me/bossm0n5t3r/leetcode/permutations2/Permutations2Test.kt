@@ -32,27 +32,28 @@ internal class Permutations2Test {
 
     @Test
     fun permuteUnique() {
-        val tests = listOf(
-            Permutations2TestData(
-                intArrayOf(1, 1, 2),
-                listOf(
-                    listOf(1, 1, 2),
-                    listOf(1, 2, 1),
-                    listOf(2, 1, 1),
+        val tests =
+            listOf(
+                Permutations2TestData(
+                    intArrayOf(1, 1, 2),
+                    listOf(
+                        listOf(1, 1, 2),
+                        listOf(1, 2, 1),
+                        listOf(2, 1, 1),
+                    ),
                 ),
-            ),
-            Permutations2TestData(
-                intArrayOf(1, 2, 3),
-                listOf(
-                    listOf(1, 2, 3),
-                    listOf(1, 3, 2),
-                    listOf(2, 1, 3),
-                    listOf(2, 3, 1),
-                    listOf(3, 1, 2),
-                    listOf(3, 2, 1),
+                Permutations2TestData(
+                    intArrayOf(1, 2, 3),
+                    listOf(
+                        listOf(1, 2, 3),
+                        listOf(1, 3, 2),
+                        listOf(2, 1, 3),
+                        listOf(2, 3, 1),
+                        listOf(3, 1, 2),
+                        listOf(3, 2, 1),
+                    ),
                 ),
-            ),
-        )
+            )
         tests.forEach { test ->
             val result = permutations2.permuteUnique(test.nums)
             println(result)

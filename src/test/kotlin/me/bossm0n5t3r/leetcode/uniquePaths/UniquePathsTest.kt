@@ -14,11 +14,12 @@ class UniquePathsTest {
 
     @Test
     fun uniquePaths() {
-        val tests = listOf(
-            UniquePathsTestData(3, 7, 28),
-            UniquePathsTestData(3, 2, 3),
-            UniquePathsTestData(16, 16, 155117520),
-        )
+        val tests =
+            listOf(
+                UniquePathsTestData(3, 7, 28),
+                UniquePathsTestData(3, 2, 3),
+                UniquePathsTestData(16, 16, 155117520),
+            )
         tests.forEach { test ->
             assertEquals(uniquePaths.uniquePaths(test.m, test.n), test.result)
             assertEquals(uniquePaths.uniquePathsUsingDP(test.m, test.n), test.result)

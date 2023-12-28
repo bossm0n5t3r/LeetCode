@@ -13,12 +13,13 @@ class ExcelSheetColumnNumberTest {
 
     @Test
     fun titleToNumber() {
-        val tests = listOf(
-            ExcelSheetColumnNumberTestData("A", 1),
-            ExcelSheetColumnNumberTestData("AB", 28),
-            ExcelSheetColumnNumberTestData("ZY", 701),
-            ExcelSheetColumnNumberTestData("FXSHRXW", 2147483647),
-        )
+        val tests =
+            listOf(
+                ExcelSheetColumnNumberTestData("A", 1),
+                ExcelSheetColumnNumberTestData("AB", 28),
+                ExcelSheetColumnNumberTestData("ZY", 701),
+                ExcelSheetColumnNumberTestData("FXSHRXW", 2147483647),
+            )
         tests.forEach { test ->
             assertEquals(excelSheetColumnNumber.titleToNumber(test.columnTitle), test.result)
         }

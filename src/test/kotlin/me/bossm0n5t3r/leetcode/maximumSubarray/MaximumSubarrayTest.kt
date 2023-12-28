@@ -31,11 +31,12 @@ class MaximumSubarrayTest {
 
     @Test
     fun maxSubArray() {
-        val tests = listOf(
-            MaximumSubarrayTestData(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4), 6),
-            MaximumSubarrayTestData(intArrayOf(1), 1),
-            MaximumSubarrayTestData(intArrayOf(5, 4, -1, 7, 8), 23),
-        )
+        val tests =
+            listOf(
+                MaximumSubarrayTestData(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4), 6),
+                MaximumSubarrayTestData(intArrayOf(1), 1),
+                MaximumSubarrayTestData(intArrayOf(5, 4, -1, 7, 8), 23),
+            )
         tests.forEach { test ->
             assertEquals(maximumSubarray.maxSubArray(test.nums), test.result)
         }

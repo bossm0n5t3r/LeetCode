@@ -14,16 +14,17 @@ internal class DivideTwoIntegersTest {
 
     @Test
     fun divide() {
-        val tests = listOf(
-            DivideTwoIntegersTestData(10, 3, 3),
-            DivideTwoIntegersTestData(7, -3, -2),
-            DivideTwoIntegersTestData(0, 1, 0),
-            DivideTwoIntegersTestData(1, -1, -1),
-            DivideTwoIntegersTestData(-2147483648, -1, 2147483647),
-            DivideTwoIntegersTestData(-2147483648, 1, -2147483648),
-            DivideTwoIntegersTestData(2147483647, 3, 715827882),
-            DivideTwoIntegersTestData(-2147483648, -3, 715827882),
-        )
+        val tests =
+            listOf(
+                DivideTwoIntegersTestData(10, 3, 3),
+                DivideTwoIntegersTestData(7, -3, -2),
+                DivideTwoIntegersTestData(0, 1, 0),
+                DivideTwoIntegersTestData(1, -1, -1),
+                DivideTwoIntegersTestData(-2147483648, -1, 2147483647),
+                DivideTwoIntegersTestData(-2147483648, 1, -2147483648),
+                DivideTwoIntegersTestData(2147483647, 3, 715827882),
+                DivideTwoIntegersTestData(-2147483648, -3, 715827882),
+            )
         tests.forEach { test ->
             val result = divideTwoIntegers.divide(test.dividend, test.divisor)
             println(result)

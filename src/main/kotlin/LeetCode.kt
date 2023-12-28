@@ -34,9 +34,10 @@ class LeetCode {
             print("Enter problem url: ")
             tmpUrl = readlnOrNull()
         }
-        url = tmpUrl
-            .split("?")
-            .first()
+        url =
+            tmpUrl
+                .split("?")
+                .first()
 
         println("Enter sample code: ")
         while (true) {
@@ -70,20 +71,21 @@ class LeetCode {
 
             // Create Problem
             val pascalCaseProblemName = this.name.toPascalCase()
-            val sampleCodeString = this.sampleCode.joinToString("\n") {
-                if (it.isNotEmpty()) {
-                    "    ${it.ifBlank { "${it}TODO()" }}"
-                } else {
-                    ""
+            val sampleCodeString =
+                this.sampleCode.joinToString("\n") {
+                    if (it.isNotEmpty()) {
+                        "    ${it.ifBlank { "${it}TODO()" }}"
+                    } else {
+                        ""
+                    }
                 }
-            }
             File(newProblemPath.toString(), "$pascalCaseProblemName.kt").writeText(
                 """
-package me.bossm0n5t3r.leetcode.$camelCaseProblemName
+                package me.bossm0n5t3r.leetcode.$camelCaseProblemName
 
-class $pascalCaseProblemName {
-$sampleCodeString
-}
+                class $pascalCaseProblemName {
+                $sampleCodeStringsampleCodeString
+                }
 
                 """.trimIndent(),
             )
@@ -107,29 +109,29 @@ $sampleCodeString
 
             File(newTestPath.toString(), "$pascalCaseTestClassName.kt").writeText(
                 """
-package me.bossm0n5t3r.leetcode.$camelCaseProblemName
+                package me.bossm0n5t3r.leetcode.$camelCaseProblemName
 
-import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
+                import org.junit.jupiter.api.Test
+                import kotlin.test.assertEquals
 
-class $pascalCaseTestClassName {
-    private val sut = $pascalCaseTestName.Solution()
-    
-    private data class TestData()
-    
-    @Test
-    fun test() {
-        val tests = listOf(
-            TestData(),
-        )
-        
-        tests.forEach { test ->
-            assertEquals(
-                
-            )
-        }
-    }
-}
+                class $pascalCaseTestClassName {
+                    private val sut = $pascalCaseTestName.Solution()
+                    
+                    private data class TestData()
+                    
+                    @Test
+                    fun test() {
+                        val tests = listOf(
+                            TestData(),
+                        )
+                        
+                        tests.forEach { test ->
+                            assertEquals(
+                                
+                            )
+                        }
+                    }
+                }
 
                 """.trimIndent(),
             )
@@ -138,13 +140,14 @@ class $pascalCaseTestClassName {
         }
     }
 
-    private fun String.replaceRomanNumeralsAndSpecialCharacters() = this
-        .replace("III", "3")
-        .replace("II", "2")
-        .replace("-", " ")
-        .replace("'", " ")
-        .replace("(", " ")
-        .replace(")", " ")
+    private fun String.replaceRomanNumeralsAndSpecialCharacters() =
+        this
+            .replace("III", "3")
+            .replace("II", "2")
+            .replace("-", " ")
+            .replace("'", " ")
+            .replace("(", " ")
+            .replace(")", " ")
 
     private fun String.toCamelCase(): String {
         return this

@@ -31,35 +31,36 @@ class GroupAnagramsTest {
 
     @Test
     fun groupAnagrams() {
-        val tests = listOf(
-            GroupAnagramsTestData(
-                arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
-                listOf(
-                    listOf("bat"),
-                    listOf("nat", "tan"),
-                    listOf("ate", "eat", "tea"),
+        val tests =
+            listOf(
+                GroupAnagramsTestData(
+                    arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
+                    listOf(
+                        listOf("bat"),
+                        listOf("nat", "tan"),
+                        listOf("ate", "eat", "tea"),
+                    ),
                 ),
-            ),
-            GroupAnagramsTestData(
-                arrayOf(""),
-                listOf(
-                    listOf(""),
+                GroupAnagramsTestData(
+                    arrayOf(""),
+                    listOf(
+                        listOf(""),
+                    ),
                 ),
-            ),
-            GroupAnagramsTestData(
-                arrayOf("a"),
-                listOf(
-                    listOf("a"),
+                GroupAnagramsTestData(
+                    arrayOf("a"),
+                    listOf(
+                        listOf("a"),
+                    ),
                 ),
-            ),
-            GroupAnagramsTestData(
-                arrayOf("ddddddddddg", "dgggggggggg"),
-                listOf(
-                    listOf("ddddddddddg"),
-                    listOf("dgggggggggg"),
+                GroupAnagramsTestData(
+                    arrayOf("ddddddddddg", "dgggggggggg"),
+                    listOf(
+                        listOf("ddddddddddg"),
+                        listOf("dgggggggggg"),
+                    ),
                 ),
-            ),
-        )
+            )
         tests.forEach { test ->
             assertTrue(groupAnagrams.groupAnagrams(test.strs).isEqualTo(test.result))
         }

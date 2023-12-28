@@ -32,16 +32,17 @@ class MinCostClimbingStairsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                cost = "[10,15,20]".toIntArray(),
-                result = 15,
-            ),
-            TestData(
-                cost = "[1,100,1,1,1,100,1,1,100,1]".toIntArray(),
-                result = 6,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    cost = "[10,15,20]".toIntArray(),
+                    result = 15,
+                ),
+                TestData(
+                    cost = "[1,100,1,1,1,100,1,1,100,1]".toIntArray(),
+                    result = 6,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

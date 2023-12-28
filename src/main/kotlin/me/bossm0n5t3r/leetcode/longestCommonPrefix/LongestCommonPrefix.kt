@@ -15,7 +15,10 @@ class LongestCommonPrefix {
             return commonPrefix
         }
 
-        private fun commonPrefix(first: String, second: String): String {
+        private fun commonPrefix(
+            first: String,
+            second: String,
+        ): String {
             val shortLength = if (first.length <= second.length) first.length else second.length
             for (i in 0 until shortLength) {
                 if (first[i] != second[i]) {
@@ -43,7 +46,11 @@ class LongestCommonPrefix {
             return longestCommonPrefixThird(strs, 0, strs.size - 1)
         }
 
-        private fun longestCommonPrefixThird(strs: Array<String>, left: Int, right: Int): String {
+        private fun longestCommonPrefixThird(
+            strs: Array<String>,
+            left: Int,
+            right: Int,
+        ): String {
             if (left == right) return strs[left]
             val mid = (left + right) / 2
             val leftLongestCommonPrefix = longestCommonPrefixThird(strs, left, mid)
@@ -67,7 +74,10 @@ class LongestCommonPrefix {
             return strs[0].substring(0, (low + high) / 2)
         }
 
-        private fun isCommonPrefix(strs: Array<String>, len: Int): Boolean {
+        private fun isCommonPrefix(
+            strs: Array<String>,
+            len: Int,
+        ): Boolean {
             val first = strs[0].substring(0, len)
             for (i in 1 until strs.size) {
                 if (!strs[i].startsWith(first)) return false
@@ -87,7 +97,7 @@ class LongestCommonPrefix {
         internal class TrieNode {
             // R links to node children
             private val links: Array<TrieNode?>
-            private val R = 26
+            private val r = 26
             var size = 0
                 private set
             var isEnd = false
@@ -101,7 +111,10 @@ class LongestCommonPrefix {
                 return links[ch - 'a']
             }
 
-            fun put(ch: Char, node: TrieNode?) {
+            fun put(
+                ch: Char,
+                node: TrieNode?,
+            ) {
                 links[ch - 'a'] = node
                 size++
             }
@@ -111,7 +124,7 @@ class LongestCommonPrefix {
             }
 
             init {
-                links = arrayOfNulls(R)
+                links = arrayOfNulls(r)
             }
         }
 

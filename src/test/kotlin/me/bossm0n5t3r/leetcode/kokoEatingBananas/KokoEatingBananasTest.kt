@@ -35,33 +35,34 @@ class KokoEatingBananasTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                piles = "[3,6,7,11]".toIntArray(),
-                h = 8,
-                result = 4,
-            ),
-            TestData(
-                piles = "[30,11,23,4,20]".toIntArray(),
-                h = 5,
-                result = 30,
-            ),
-            TestData(
-                piles = "[30,11,23,4,20]".toIntArray(),
-                h = 6,
-                result = 23,
-            ),
-            TestData(
-                piles = "[3,6,7,11]".toIntArray(),
-                h = 18,
-                result = 2,
-            ),
-            TestData(
-                piles = "[805306368,805306368,805306368]".toIntArray(),
-                h = 1000000000,
-                result = 3,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    piles = "[3,6,7,11]".toIntArray(),
+                    h = 8,
+                    result = 4,
+                ),
+                TestData(
+                    piles = "[30,11,23,4,20]".toIntArray(),
+                    h = 5,
+                    result = 30,
+                ),
+                TestData(
+                    piles = "[30,11,23,4,20]".toIntArray(),
+                    h = 6,
+                    result = 23,
+                ),
+                TestData(
+                    piles = "[3,6,7,11]".toIntArray(),
+                    h = 18,
+                    result = 2,
+                ),
+                TestData(
+                    piles = "[805306368,805306368,805306368]".toIntArray(),
+                    h = 1000000000,
+                    result = 3,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

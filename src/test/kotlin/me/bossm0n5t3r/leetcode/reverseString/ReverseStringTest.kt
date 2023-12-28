@@ -31,11 +31,12 @@ class ReverseStringTest {
 
     @Test
     fun reverseString() {
-        val tests = listOf(
-            ReverseStringTestData("hello".toCharArray(), "olleh".toCharArray()),
-            ReverseStringTestData("Hannah".toCharArray(), "hannaH".toCharArray()),
-            ReverseStringTestData("A man, a plan, a canal: Panama".toCharArray(), "amanaP :lanac a ,nalp a ,nam A".toCharArray()),
-        )
+        val tests =
+            listOf(
+                ReverseStringTestData("hello".toCharArray(), "olleh".toCharArray()),
+                ReverseStringTestData("Hannah".toCharArray(), "hannaH".toCharArray()),
+                ReverseStringTestData("A man, a plan, a canal: Panama".toCharArray(), "amanaP :lanac a ,nalp a ,nam A".toCharArray()),
+            )
         tests.forEach { test ->
             assertTrue(solution.reverseString(test.s).contentEquals(test.result))
         }

@@ -20,7 +20,13 @@ class GameOfLife {
             }
         }
 
-        private fun checkLiveNeighbors(board: Array<IntArray>, m: Int, n: Int, r: Int, c: Int): Int {
+        private fun checkLiveNeighbors(
+            board: Array<IntArray>,
+            m: Int,
+            n: Int,
+            r: Int,
+            c: Int,
+        ): Int {
             var liveCells = 0
             val dr = intArrayOf(-1, -1, -1, 0, 0, 1, 1, 1)
             val dc = intArrayOf(-1, 0, 1, -1, 1, -1, 0, 1)
@@ -57,11 +63,12 @@ class GameOfLife {
             val nextState = getNextState(currentState)
             (0 until m).forEach { r ->
                 (0 until n).forEach { c ->
-                    board[r][c] = if (nextState.contains(Cell(r, c))) {
-                        1
-                    } else {
-                        0
-                    }
+                    board[r][c] =
+                        if (nextState.contains(Cell(r, c))) {
+                            1
+                        } else {
+                            0
+                        }
                 }
             }
         }

@@ -5,16 +5,23 @@ class SearchSuggestionsSystem {
         companion object {
             private const val ALPHABET_SIZE = 26
             private const val ANSWER_SIZE = 3
+
             private class TrieNode {
                 val children = Array<TrieNode?>(ALPHABET_SIZE) { null }
                 val candidates = mutableListOf<String>()
                 var isEndOfWord = false
             }
         }
+
         private val root = TrieNode()
 
-        fun suggestedProducts(products: Array<String>, searchWord: String): List<List<String>> {
-            for (product in products) { insert(product) }
+        fun suggestedProducts(
+            products: Array<String>,
+            searchWord: String,
+        ): List<List<String>> {
+            for (product in products) {
+                insert(product)
+            }
             var searchString = ""
             return searchWord.map { c ->
                 searchString = "$searchString$c"

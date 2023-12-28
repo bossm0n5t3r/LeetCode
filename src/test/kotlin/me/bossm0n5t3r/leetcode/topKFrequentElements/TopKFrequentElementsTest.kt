@@ -34,11 +34,12 @@ class TopKFrequentElementsTest {
 
     @Test
     fun topKFrequent() {
-        val tests = listOf(
-            TopKFrequentElementsTestData(intArrayOf(1, 1, 1, 2, 2, 3), 2, intArrayOf(1, 2)),
-            TopKFrequentElementsTestData(intArrayOf(1), 1, intArrayOf(1)),
-            TopKFrequentElementsTestData(intArrayOf(1, 2), 2, intArrayOf(1, 2)),
-        )
+        val tests =
+            listOf(
+                TopKFrequentElementsTestData(intArrayOf(1, 1, 1, 2, 2, 3), 2, intArrayOf(1, 2)),
+                TopKFrequentElementsTestData(intArrayOf(1), 1, intArrayOf(1)),
+                TopKFrequentElementsTestData(intArrayOf(1, 2), 2, intArrayOf(1, 2)),
+            )
         tests.forEach { test ->
             val result = topKFrequentElements.topKFrequent(test.nums, test.k)
             assertTrue(result.contentEquals(test.result))

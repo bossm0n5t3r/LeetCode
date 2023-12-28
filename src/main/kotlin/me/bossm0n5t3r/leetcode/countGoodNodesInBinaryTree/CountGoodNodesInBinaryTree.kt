@@ -7,9 +7,10 @@ class CountGoodNodesInBinaryTree {
     class Solution {
         fun goodNodes(root: TreeNode?): Int {
             if (root == null) return 0
-            val stack = Stack<Pair<TreeNode, Int>>().also {
-                it.push(root to root.`val`)
-            }
+            val stack =
+                Stack<Pair<TreeNode, Int>>().also {
+                    it.push(root to root.`val`)
+                }
             var result = 0
             while (stack.isNotEmpty()) {
                 val (cur, maxOfPath) = stack.pop()

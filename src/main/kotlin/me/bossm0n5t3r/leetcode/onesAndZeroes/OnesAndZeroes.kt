@@ -4,7 +4,11 @@ import kotlin.math.max
 
 class OnesAndZeroes {
     class Solution {
-        fun findMaxForm(strs: Array<String>, m: Int, n: Int): Int {
+        fun findMaxForm(
+            strs: Array<String>,
+            m: Int,
+            n: Int,
+        ): Int {
             val dp = Array(m + 1) { IntArray(n + 1) { 0 } }
             strs.forEach { str ->
                 val zero = str.count { it == '0' }

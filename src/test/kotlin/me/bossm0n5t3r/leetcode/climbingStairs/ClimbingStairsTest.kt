@@ -13,10 +13,11 @@ class ClimbingStairsTest {
 
     @Test
     fun climbStairs() {
-        val tests = listOf(
-            ClimbingStairsTestData(2, 2),
-            ClimbingStairsTestData(3, 3),
-        )
+        val tests =
+            listOf(
+                ClimbingStairsTestData(2, 2),
+                ClimbingStairsTestData(3, 3),
+            )
 
         tests.forEach { test ->
             assertEquals(climbingStairs.climbStairs(test.n), test.result)

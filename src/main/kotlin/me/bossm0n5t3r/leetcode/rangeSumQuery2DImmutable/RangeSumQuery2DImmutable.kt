@@ -18,7 +18,12 @@ class RangeSumQuery2DImmutable {
 
         private val dp = dp(matrix)
 
-        fun sumRegion(row1: Int, col1: Int, row2: Int, col2: Int): Int {
+        fun sumRegion(
+            row1: Int,
+            col1: Int,
+            row2: Int,
+            col2: Int,
+        ): Int {
             return dp[row2 + 1][col2 + 1] - dp[row2 + 1][col1] - dp[row1][col2 + 1] + dp[row1][col1]
         }
     }

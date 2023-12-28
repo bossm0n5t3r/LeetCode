@@ -29,20 +29,21 @@ class UniqueNumberOfOccurrencesTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                arr = intArrayOf(1, 2, 2, 1, 1, 3),
-                result = true,
-            ),
-            TestData(
-                arr = intArrayOf(1, 2),
-                result = false,
-            ),
-            TestData(
-                arr = intArrayOf(-3, 0, 1, -3, 1, 1, 1, -3, 10, 0),
-                result = true,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    arr = intArrayOf(1, 2, 2, 1, 1, 3),
+                    result = true,
+                ),
+                TestData(
+                    arr = intArrayOf(1, 2),
+                    result = false,
+                ),
+                TestData(
+                    arr = intArrayOf(-3, 0, 1, -3, 1, 1, 1, -3, 10, 0),
+                    result = true,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

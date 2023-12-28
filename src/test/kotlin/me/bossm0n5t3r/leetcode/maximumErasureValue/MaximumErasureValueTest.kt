@@ -31,16 +31,17 @@ internal class MaximumErasureValueTest {
 
     @Test
     fun maximumUniqueSubarray() {
-        val tests = listOf(
-            MaximumErasureValueTestData(
-                intArrayOf(4, 2, 4, 5, 6),
-                17,
-            ),
-            MaximumErasureValueTestData(
-                intArrayOf(5, 2, 1, 2, 5, 2, 1, 2, 5),
-                8,
-            ),
-        )
+        val tests =
+            listOf(
+                MaximumErasureValueTestData(
+                    intArrayOf(4, 2, 4, 5, 6),
+                    17,
+                ),
+                MaximumErasureValueTestData(
+                    intArrayOf(5, 2, 1, 2, 5, 2, 1, 2, 5),
+                    8,
+                ),
+            )
         tests.forEach { test ->
             maximumErasureValue.maximumUniqueSubarray(test.nums)
                 .also {

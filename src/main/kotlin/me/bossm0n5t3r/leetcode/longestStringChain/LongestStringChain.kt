@@ -6,10 +6,11 @@ class LongestStringChain {
             val sortedWords = words.sortedBy { it.length }
             val dp = mutableMapOf<String, Int>()
             sortedWords.forEach { word ->
-                dp[word] = word.indices.maxOf { i ->
-                    val tmp = word.take(i) + word.drop(i + 1)
-                    dp.getOrDefault(tmp, 0) + 1
-                }
+                dp[word] =
+                    word.indices.maxOf { i ->
+                        val tmp = word.take(i) + word.drop(i + 1)
+                        dp.getOrDefault(tmp, 0) + 1
+                    }
             }
             return dp.values.maxOrNull() ?: -1
         }

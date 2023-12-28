@@ -13,16 +13,17 @@ class RemovingStarsFromAStringTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                s = "leet**cod*e",
-                result = "lecoe",
-            ),
-            TestData(
-                s = "erase*****",
-                result = "",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    s = "leet**cod*e",
+                    result = "lecoe",
+                ),
+                TestData(
+                    s = "erase*****",
+                    result = "",
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

@@ -17,23 +17,24 @@ class MergeTwoSortedListsTest {
 
     @Test
     fun mergeTwoLists() {
-        val tests = listOf(
-            MergeTwoSortedListsTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 4)),
-                listNodeUtil.generateListNodeFromList(listOf(1, 3, 4)),
-                listNodeUtil.generateListNodeFromList(listOf(1, 1, 2, 3, 4, 4)),
-            ),
-            MergeTwoSortedListsTestData(
-                listNodeUtil.generateListNodeFromList(listOf()),
-                listNodeUtil.generateListNodeFromList(listOf()),
-                listNodeUtil.generateListNodeFromList(listOf()),
-            ),
-            MergeTwoSortedListsTestData(
-                listNodeUtil.generateListNodeFromList(listOf()),
-                listNodeUtil.generateListNodeFromList(listOf(0)),
-                listNodeUtil.generateListNodeFromList(listOf(0)),
-            ),
-        )
+        val tests =
+            listOf(
+                MergeTwoSortedListsTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 4)),
+                    listNodeUtil.generateListNodeFromList(listOf(1, 3, 4)),
+                    listNodeUtil.generateListNodeFromList(listOf(1, 1, 2, 3, 4, 4)),
+                ),
+                MergeTwoSortedListsTestData(
+                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNodeFromList(listOf()),
+                ),
+                MergeTwoSortedListsTestData(
+                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                ),
+            )
         tests.forEach { test ->
             assertTrue(listNodeUtil.isEqual(mergeTwoSortedLists.mergeTwoLists(test.l1, test.l2), test.result))
             assertTrue(listNodeUtil.isEqual(mergeTwoSortedLists.mergeTwoListsRecursive(test.l1, test.l2), test.result))

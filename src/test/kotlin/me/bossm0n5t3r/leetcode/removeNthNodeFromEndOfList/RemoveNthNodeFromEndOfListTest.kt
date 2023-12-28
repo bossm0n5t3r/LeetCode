@@ -17,23 +17,24 @@ internal class RemoveNthNodeFromEndOfListTest {
 
     @Test
     fun removeNthFromEnd() {
-        val tests = listOf(
-            RemoveNthNodeFromEndOfListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
-                2,
-                listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 5)),
-            ),
-            RemoveNthNodeFromEndOfListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1)),
-                1,
-                listNodeUtil.generateListNodeFromList(listOf()),
-            ),
-            RemoveNthNodeFromEndOfListTestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 2)),
-                1,
-                listNodeUtil.generateListNodeFromList(listOf(1)),
-            ),
-        )
+        val tests =
+            listOf(
+                RemoveNthNodeFromEndOfListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
+                    2,
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 5)),
+                ),
+                RemoveNthNodeFromEndOfListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1)),
+                    1,
+                    listNodeUtil.generateListNodeFromList(listOf()),
+                ),
+                RemoveNthNodeFromEndOfListTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 2)),
+                    1,
+                    listNodeUtil.generateListNodeFromList(listOf(1)),
+                ),
+            )
         tests.forEach { test ->
             val result = removeNthNodeFromEndOfList.removeNthFromEnd(test.head, test.n)
             listNodeUtil.printListNode(result)

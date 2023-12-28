@@ -36,17 +36,18 @@ class ValidSudoku {
 
         private fun splitIntoSmallSquareList(board: List<List<Int>>): List<List<Int>> {
             val targetIdx = listOf(0, 3, 6)
-            val result = listOf<MutableList<Int>>(
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-            )
+            val result =
+                listOf<MutableList<Int>>(
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                )
             var resultIdx = 0
             targetIdx.forEach { col ->
                 targetIdx.forEach { row ->
@@ -74,17 +75,18 @@ class ValidSudoku {
         }
 
         private fun transpose(board: List<List<Int>>): List<List<Int>> {
-            val result = listOf<MutableList<Int>>(
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-                mutableListOf(),
-            )
+            val result =
+                listOf<MutableList<Int>>(
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                    mutableListOf(),
+                )
             board.forEach { row ->
                 row.forEachIndexed { cIdx, e ->
                     result[cIdx].add(e)

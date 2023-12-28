@@ -7,7 +7,11 @@ class FindPeakElement {
         }
 
         @Suppress("ReturnCount")
-        private fun binarySearch(nums: IntArray, start: Int, end: Int): Int {
+        private fun binarySearch(
+            nums: IntArray,
+            start: Int,
+            end: Int,
+        ): Int {
             if (start > end) return -1
             if (start == end) return start
             if (start + 1 == end) return if (nums[start] > nums[end]) start else end

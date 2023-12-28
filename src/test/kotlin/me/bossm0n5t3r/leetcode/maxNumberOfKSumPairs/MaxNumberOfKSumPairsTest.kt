@@ -32,18 +32,19 @@ class MaxNumberOfKSumPairsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                intArrayOf(1, 2, 3, 4),
-                5,
-                2,
-            ),
-            TestData(
-                intArrayOf(3, 1, 3, 4, 3),
-                6,
-                1,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    intArrayOf(1, 2, 3, 4),
+                    5,
+                    2,
+                ),
+                TestData(
+                    intArrayOf(3, 1, 3, 4, 3),
+                    6,
+                    1,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

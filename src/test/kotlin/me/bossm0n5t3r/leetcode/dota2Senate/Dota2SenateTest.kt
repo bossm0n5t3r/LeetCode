@@ -13,16 +13,17 @@ class Dota2SenateTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "RD",
-                "Radiant",
-            ),
-            TestData(
-                "RDD",
-                "Dire",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "RD",
+                    "Radiant",
+                ),
+                TestData(
+                    "RDD",
+                    "Dire",
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

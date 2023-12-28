@@ -13,26 +13,29 @@ class KeysAndRoomsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                rooms = listOf(
-                    listOf(1),
-                    listOf(2),
-                    listOf(3),
-                    emptyList(),
+        val tests =
+            listOf(
+                TestData(
+                    rooms =
+                        listOf(
+                            listOf(1),
+                            listOf(2),
+                            listOf(3),
+                            emptyList(),
+                        ),
+                    result = true,
                 ),
-                result = true,
-            ),
-            TestData(
-                rooms = listOf(
-                    listOf(1, 3),
-                    listOf(3, 0, 1),
-                    listOf(2),
-                    listOf(0),
+                TestData(
+                    rooms =
+                        listOf(
+                            listOf(1, 3),
+                            listOf(3, 0, 1),
+                            listOf(2),
+                            listOf(0),
+                        ),
+                    result = false,
                 ),
-                result = false,
-            ),
-        )
+            )
 
         tests.forEach { test ->
             assertEquals(

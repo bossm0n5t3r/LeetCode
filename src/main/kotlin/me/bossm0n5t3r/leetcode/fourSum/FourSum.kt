@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.fourSum
 
 class FourSum {
     class Solution {
-        fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
+        fun fourSum(
+            nums: IntArray,
+            target: Int,
+        ): List<List<Int>> {
             if (nums.size <= 3) return emptyList()
             if (nums.size == 4 && nums.sum() == target) return listOf(nums.toList())
             val result = mutableSetOf<List<Int>>()

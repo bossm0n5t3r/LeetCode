@@ -13,16 +13,17 @@ class ReverseWordsInAStringTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "the sky is blue",
-                "blue is sky the",
-            ),
-            TestData(
-                "  hello world  ",
-                "world hello",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "the sky is blue",
+                    "blue is sky the",
+                ),
+                TestData(
+                    "  hello world  ",
+                    "world hello",
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

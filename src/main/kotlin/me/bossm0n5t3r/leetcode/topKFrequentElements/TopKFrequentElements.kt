@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.topKFrequentElements
 
 class TopKFrequentElements {
     class Solution {
-        fun topKFrequent(nums: IntArray, k: Int): IntArray {
+        fun topKFrequent(
+            nums: IntArray,
+            k: Int,
+        ): IntArray {
             val freqPairList = getFreqPairList(nums)
             return if (k >= freqPairList.size) {
                 freqPairList.map { (key, _) -> key }.toIntArray()

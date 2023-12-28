@@ -7,7 +7,10 @@ class MinimumAbsoluteDifferenceQueries {
         /**
          * @link https://leetcode.com/problems/minimum-absolute-difference-queries/discuss/1284329/Java-or-Prefix-sum-or-Easy-to-Understand-or-What-if-constraints-were-different
          */
-        fun minDifference(nums: IntArray, queries: Array<IntArray>): IntArray {
+        fun minDifference(
+            nums: IntArray,
+            queries: Array<IntArray>,
+        ): IntArray {
             val n = nums.size
             val count = Array(n + 1) { IntArray(100) { 0 } }
             (0 until n).forEach { i ->

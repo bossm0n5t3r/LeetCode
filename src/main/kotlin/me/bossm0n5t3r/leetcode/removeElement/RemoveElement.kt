@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.removeElement
 
 class RemoveElement {
     class Solution {
-        fun removeElement(nums: IntArray, target: Int): Int {
+        fun removeElement(
+            nums: IntArray,
+            target: Int,
+        ): Int {
             var count = 0
             var idx = 0
             nums.indices.forEach { i ->

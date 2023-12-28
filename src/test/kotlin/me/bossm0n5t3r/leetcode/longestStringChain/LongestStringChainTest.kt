@@ -31,44 +31,45 @@ internal class LongestStringChainTest {
 
     @Test
     fun longestStrChain() {
-        val tests = listOf(
-            LongestStringChainTestData(
-                arrayOf("a", "b", "ba", "bca", "bda", "bdca"),
-                4,
-            ),
-            LongestStringChainTestData(
-                arrayOf("xbc", "pcxbcf", "xb", "cxbc", "pcxbc"),
-                5,
-            ),
-            LongestStringChainTestData(
-                arrayOf("bdca", "bda", "ca", "dca", "a"),
-                4,
-            ),
-            LongestStringChainTestData(
-                arrayOf(
-                    "ksqvsyq",
-                    "ks",
-                    "kss",
-                    "czvh",
-                    "zczpzvdhx",
-                    "zczpzvh",
-                    "zczpzvhx",
-                    "zcpzvh",
-                    "zczvh",
-                    "gr",
-                    "grukmj",
-                    "ksqvsq",
-                    "gruj",
-                    "kssq",
-                    "ksqsq",
-                    "grukkmj",
-                    "grukj",
-                    "zczpzfvdhx",
-                    "gru",
+        val tests =
+            listOf(
+                LongestStringChainTestData(
+                    arrayOf("a", "b", "ba", "bca", "bda", "bdca"),
+                    4,
                 ),
-                7,
-            ),
-        )
+                LongestStringChainTestData(
+                    arrayOf("xbc", "pcxbcf", "xb", "cxbc", "pcxbc"),
+                    5,
+                ),
+                LongestStringChainTestData(
+                    arrayOf("bdca", "bda", "ca", "dca", "a"),
+                    4,
+                ),
+                LongestStringChainTestData(
+                    arrayOf(
+                        "ksqvsyq",
+                        "ks",
+                        "kss",
+                        "czvh",
+                        "zczpzvdhx",
+                        "zczpzvh",
+                        "zczpzvhx",
+                        "zcpzvh",
+                        "zczvh",
+                        "gr",
+                        "grukmj",
+                        "ksqvsq",
+                        "gruj",
+                        "kssq",
+                        "ksqsq",
+                        "grukkmj",
+                        "grukj",
+                        "zczpzfvdhx",
+                        "gru",
+                    ),
+                    7,
+                ),
+            )
         tests.forEach { test ->
             longestStringChain.longestStrChain(test.words)
                 .also {

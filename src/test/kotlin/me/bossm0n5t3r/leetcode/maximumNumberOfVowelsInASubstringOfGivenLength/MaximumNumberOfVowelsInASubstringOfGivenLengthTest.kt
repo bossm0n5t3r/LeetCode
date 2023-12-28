@@ -14,23 +14,24 @@ class MaximumNumberOfVowelsInASubstringOfGivenLengthTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                s = "abciiidef",
-                k = 3,
-                result = 3,
-            ),
-            TestData(
-                s = "aeiou",
-                k = 2,
-                result = 2,
-            ),
-            TestData(
-                s = "leetcode",
-                k = 3,
-                result = 2,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    s = "abciiidef",
+                    k = 3,
+                    result = 3,
+                ),
+                TestData(
+                    s = "aeiou",
+                    k = 2,
+                    result = 2,
+                ),
+                TestData(
+                    s = "leetcode",
+                    k = 3,
+                    result = 2,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

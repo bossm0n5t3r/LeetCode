@@ -27,9 +27,10 @@ class NumberOfProvinces {
             c: Int,
         ) {
             val n = isConnected.size
-            val stack = Stack<Pair<Int, Int>>().apply {
-                this.push(r to c)
-            }
+            val stack =
+                Stack<Pair<Int, Int>>().apply {
+                    this.push(r to c)
+                }
             visited[r][c] = true
             visited[c][r] = true
             while (stack.isNotEmpty()) {

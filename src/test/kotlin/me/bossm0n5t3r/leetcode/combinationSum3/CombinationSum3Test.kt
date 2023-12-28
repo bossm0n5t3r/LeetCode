@@ -15,11 +15,12 @@ class CombinationSum3Test {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(3, 7, "[[1,2,4]]".toListOfIntList()),
-            TestData(3, 9, "[[1,2,6],[1,3,5],[2,3,4]]".toListOfIntList()),
-            TestData(4, 1, "[]".toListOfIntList()),
-        )
+        val tests =
+            listOf(
+                TestData(3, 7, "[[1,2,4]]".toListOfIntList()),
+                TestData(3, 9, "[[1,2,6],[1,3,5],[2,3,4]]".toListOfIntList()),
+                TestData(4, 1, "[]".toListOfIntList()),
+            )
 
         tests.forEach { test ->
             assertEquals(

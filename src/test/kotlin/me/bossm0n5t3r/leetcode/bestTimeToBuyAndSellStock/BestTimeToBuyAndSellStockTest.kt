@@ -31,10 +31,11 @@ class BestTimeToBuyAndSellStockTest {
 
     @Test
     fun maxProfit() {
-        val tests = listOf(
-            BestTimeToBuyAndSellStockTestData(intArrayOf(7, 1, 5, 3, 6, 4), 5),
-            BestTimeToBuyAndSellStockTestData(intArrayOf(7, 6, 4, 3, 1), 0),
-        )
+        val tests =
+            listOf(
+                BestTimeToBuyAndSellStockTestData(intArrayOf(7, 1, 5, 3, 6, 4), 5),
+                BestTimeToBuyAndSellStockTestData(intArrayOf(7, 6, 4, 3, 1), 0),
+            )
         tests.forEach { test ->
             assertEquals(bestTimeToBuyAndSellStock.maxProfit(test.prices), test.result)
         }

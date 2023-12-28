@@ -31,10 +31,11 @@ class MoveZeroesTest {
 
     @Test
     fun moveZeroes() {
-        val tests = listOf(
-            MoveZeroesTestData(intArrayOf(0, 1, 0, 3, 12), intArrayOf(1, 3, 12, 0, 0)),
-            MoveZeroesTestData(intArrayOf(0), intArrayOf(0)),
-        )
+        val tests =
+            listOf(
+                MoveZeroesTestData(intArrayOf(0, 1, 0, 3, 12), intArrayOf(1, 3, 12, 0, 0)),
+                MoveZeroesTestData(intArrayOf(0), intArrayOf(0)),
+            )
         tests.forEach { test ->
             moveZeroes.moveZeroes(test.nums)
             assertTrue(test.nums.contentEquals(test.result))

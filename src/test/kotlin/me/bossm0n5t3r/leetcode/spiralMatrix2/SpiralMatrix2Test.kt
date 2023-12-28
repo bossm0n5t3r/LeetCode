@@ -31,22 +31,23 @@ internal class SpiralMatrix2Test {
 
     @Test
     fun generateMatrix() {
-        val tests = listOf(
-            SpiralMatrix2TestData(
-                3,
-                arrayOf(
-                    intArrayOf(1, 2, 3),
-                    intArrayOf(8, 9, 4),
-                    intArrayOf(7, 6, 5),
+        val tests =
+            listOf(
+                SpiralMatrix2TestData(
+                    3,
+                    arrayOf(
+                        intArrayOf(1, 2, 3),
+                        intArrayOf(8, 9, 4),
+                        intArrayOf(7, 6, 5),
+                    ),
                 ),
-            ),
-            SpiralMatrix2TestData(
-                1,
-                arrayOf(
-                    intArrayOf(1),
+                SpiralMatrix2TestData(
+                    1,
+                    arrayOf(
+                        intArrayOf(1),
+                    ),
                 ),
-            ),
-        )
+            )
         tests.forEach { test ->
             val result = spiralMatrix2.generateMatrix(test.n)
             result.forEach { println(it.toList()) }

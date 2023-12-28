@@ -38,20 +38,21 @@ class SuccessfulPairsOfSpellsAndPotionsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                spells = "[5,1,3]".toIntArray(),
-                potions = "[1,2,3,4,5]".toIntArray(),
-                success = 7L,
-                result = "[4,0,3]".toIntArray(),
-            ),
-            TestData(
-                spells = "[3,1,2]".toIntArray(),
-                potions = "[8,5,8]".toIntArray(),
-                success = 16L,
-                result = "[2,0,2]".toIntArray(),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    spells = "[5,1,3]".toIntArray(),
+                    potions = "[1,2,3,4,5]".toIntArray(),
+                    success = 7L,
+                    result = "[4,0,3]".toIntArray(),
+                ),
+                TestData(
+                    spells = "[3,1,2]".toIntArray(),
+                    potions = "[8,5,8]".toIntArray(),
+                    success = 16L,
+                    result = "[2,0,2]".toIntArray(),
+                ),
+            )
 
         tests.forEach { test ->
             assertThat(sut.successfulPairs(test.spells, test.potions, test.success)).isEqualTo(test.result)

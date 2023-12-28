@@ -31,16 +31,17 @@ class CountingBitsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                n = 2,
-                result = intArrayOf(0, 1, 1),
-            ),
-            TestData(
-                n = 5,
-                result = intArrayOf(0, 1, 1, 2, 1, 2),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    n = 2,
+                    result = intArrayOf(0, 1, 1),
+                ),
+                TestData(
+                    n = 5,
+                    result = intArrayOf(0, 1, 1, 2, 1, 2),
+                ),
+            )
 
         tests.forEach { test ->
             assertThat(sut.countBits(test.n)).isEqualTo(test.result)

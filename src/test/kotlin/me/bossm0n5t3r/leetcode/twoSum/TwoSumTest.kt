@@ -34,12 +34,13 @@ class TwoSumTest {
 
     @Test
     fun twoSum() {
-        val tests = listOf(
-            TwoSumTestData(intArrayOf(2, 7, 11, 15), 9, intArrayOf(0, 1)),
-            TwoSumTestData(intArrayOf(3, 2, 4), 6, intArrayOf(1, 2)),
-            TwoSumTestData(intArrayOf(3, 3), 6, intArrayOf(0, 1)),
-            TwoSumTestData(intArrayOf(0, 4, 3, 0), 0, intArrayOf(0, 3)),
-        )
+        val tests =
+            listOf(
+                TwoSumTestData(intArrayOf(2, 7, 11, 15), 9, intArrayOf(0, 1)),
+                TwoSumTestData(intArrayOf(3, 2, 4), 6, intArrayOf(1, 2)),
+                TwoSumTestData(intArrayOf(3, 3), 6, intArrayOf(0, 1)),
+                TwoSumTestData(intArrayOf(0, 4, 3, 0), 0, intArrayOf(0, 3)),
+            )
         tests.forEach { test ->
             assertTrue(solution.twoSumBruteForce(test.nums, test.target).contentEquals(test.result))
             assertTrue(solution.twoSumHashTable(test.nums, test.target).contentEquals(test.result))

@@ -31,33 +31,37 @@ class NumberOfProvincesTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                isConnected = arrayOf(
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(0, 0, 1),
+        val tests =
+            listOf(
+                TestData(
+                    isConnected =
+                        arrayOf(
+                            intArrayOf(1, 1, 0),
+                            intArrayOf(1, 1, 0),
+                            intArrayOf(0, 0, 1),
+                        ),
+                    result = 2,
                 ),
-                result = 2,
-            ),
-            TestData(
-                isConnected = arrayOf(
-                    intArrayOf(1, 0, 0),
-                    intArrayOf(0, 1, 0),
-                    intArrayOf(0, 0, 1),
+                TestData(
+                    isConnected =
+                        arrayOf(
+                            intArrayOf(1, 0, 0),
+                            intArrayOf(0, 1, 0),
+                            intArrayOf(0, 0, 1),
+                        ),
+                    result = 3,
                 ),
-                result = 3,
-            ),
-            TestData(
-                isConnected = arrayOf(
-                    intArrayOf(1, 0, 0, 1),
-                    intArrayOf(0, 1, 1, 0),
-                    intArrayOf(0, 1, 1, 1),
-                    intArrayOf(1, 0, 1, 1),
+                TestData(
+                    isConnected =
+                        arrayOf(
+                            intArrayOf(1, 0, 0, 1),
+                            intArrayOf(0, 1, 1, 0),
+                            intArrayOf(0, 1, 1, 1),
+                            intArrayOf(1, 0, 1, 1),
+                        ),
+                    result = 1,
                 ),
-                result = 1,
-            ),
-        )
+            )
 
         tests.forEach { test ->
             assertEquals(

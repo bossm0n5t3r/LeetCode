@@ -14,16 +14,17 @@ internal class PalindromicSubstringsTest {
 
     @Test
     fun countSubstrings() {
-        val tests = listOf(
-            PalindromicSubstringsTestData(
-                "abc",
-                3,
-            ),
-            PalindromicSubstringsTestData(
-                "aaa",
-                6,
-            ),
-        )
+        val tests =
+            listOf(
+                PalindromicSubstringsTestData(
+                    "abc",
+                    3,
+                ),
+                PalindromicSubstringsTestData(
+                    "aaa",
+                    6,
+                ),
+            )
         tests.forEach { test ->
             palindromicSubstrings.countSubstrings(test.s)
                 .also {

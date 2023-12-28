@@ -31,44 +31,50 @@ class UniquePathsTest2 {
 
     @Test
     fun uniquePathsWithObstacles() {
-        val tests = listOf(
-            UniquePaths2TestData(
-                obstacleGrid = arrayOf(
-                    intArrayOf(0, 0, 0),
-                    intArrayOf(0, 1, 0),
-                    intArrayOf(0, 0, 0),
+        val tests =
+            listOf(
+                UniquePaths2TestData(
+                    obstacleGrid =
+                        arrayOf(
+                            intArrayOf(0, 0, 0),
+                            intArrayOf(0, 1, 0),
+                            intArrayOf(0, 0, 0),
+                        ),
+                    result = 2,
                 ),
-                result = 2,
-            ),
-            UniquePaths2TestData(
-                obstacleGrid = arrayOf(
-                    intArrayOf(0, 1),
-                    intArrayOf(0, 0),
+                UniquePaths2TestData(
+                    obstacleGrid =
+                        arrayOf(
+                            intArrayOf(0, 1),
+                            intArrayOf(0, 0),
+                        ),
+                    result = 1,
                 ),
-                result = 1,
-            ),
-            UniquePaths2TestData(
-                obstacleGrid = arrayOf(
-                    intArrayOf(1, 0),
+                UniquePaths2TestData(
+                    obstacleGrid =
+                        arrayOf(
+                            intArrayOf(1, 0),
+                        ),
+                    result = 0,
                 ),
-                result = 0,
-            ),
-            UniquePaths2TestData(
-                obstacleGrid = arrayOf(
-                    intArrayOf(1),
-                    intArrayOf(0),
+                UniquePaths2TestData(
+                    obstacleGrid =
+                        arrayOf(
+                            intArrayOf(1),
+                            intArrayOf(0),
+                        ),
+                    result = 0,
                 ),
-                result = 0,
-            ),
-            UniquePaths2TestData(
-                obstacleGrid = arrayOf(
-                    intArrayOf(0, 0),
-                    intArrayOf(1, 1),
-                    intArrayOf(0, 0),
+                UniquePaths2TestData(
+                    obstacleGrid =
+                        arrayOf(
+                            intArrayOf(0, 0),
+                            intArrayOf(1, 1),
+                            intArrayOf(0, 0),
+                        ),
+                    result = 0,
                 ),
-                result = 0,
-            ),
-        )
+            )
         tests.forEach { test ->
             assertEquals(uniquePaths2.uniquePathsWithObstacles(test.obstacleGrid), test.result)
         }

@@ -37,20 +37,21 @@ internal class OnesAndZeroesTest {
 
     @Test
     fun findMaxForm() {
-        val tests = listOf(
-            OnesAndZeroesTestData(
-                arrayOf("10", "0001", "111001", "1", "0"),
-                5,
-                3,
-                4,
-            ),
-            OnesAndZeroesTestData(
-                arrayOf("10", "0", "1"),
-                1,
-                1,
-                2,
-            ),
-        )
+        val tests =
+            listOf(
+                OnesAndZeroesTestData(
+                    arrayOf("10", "0001", "111001", "1", "0"),
+                    5,
+                    3,
+                    4,
+                ),
+                OnesAndZeroesTestData(
+                    arrayOf("10", "0", "1"),
+                    1,
+                    1,
+                    2,
+                ),
+            )
         tests.forEach { test ->
             onesAndZeroes.findMaxForm(test.strs, test.m, test.n)
                 .also {

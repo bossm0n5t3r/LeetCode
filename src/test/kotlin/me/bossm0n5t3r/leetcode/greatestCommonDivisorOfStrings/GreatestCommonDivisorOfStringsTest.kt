@@ -14,23 +14,24 @@ class GreatestCommonDivisorOfStringsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "ABCABC",
-                "ABC",
-                "ABC",
-            ),
-            TestData(
-                "ABABAB",
-                "ABAB",
-                "AB",
-            ),
-            TestData(
-                "LEET",
-                "CODE",
-                "",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "ABCABC",
+                    "ABC",
+                    "ABC",
+                ),
+                TestData(
+                    "ABABAB",
+                    "ABAB",
+                    "AB",
+                ),
+                TestData(
+                    "LEET",
+                    "CODE",
+                    "",
+                ),
+            )
         tests.forEach { test ->
             assertEquals(
                 sut.gcdOfStrings(test.str1, test.str2),

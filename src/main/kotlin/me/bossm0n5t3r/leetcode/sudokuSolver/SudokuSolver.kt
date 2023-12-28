@@ -31,7 +31,11 @@ class SudokuSolver {
             }
         }
 
-        private fun dfs(board: Array<CharArray>, cur: Int, sudokuWrapper: SudokuWrapper) {
+        private fun dfs(
+            board: Array<CharArray>,
+            cur: Int,
+            sudokuWrapper: SudokuWrapper,
+        ) {
             if (cur == 81) {
                 if (!isValid(sudokuWrapper.result) && isValid(board)) {
                     (0 until 9).forEach { r ->
@@ -57,7 +61,11 @@ class SudokuSolver {
             board[r][c] = tmp
         }
 
-        private fun getCandidates(board: Array<CharArray>, r: Int, c: Int): Set<Char> {
+        private fun getCandidates(
+            board: Array<CharArray>,
+            r: Int,
+            c: Int,
+        ): Set<Char> {
             if (board[r][c] != '.') return emptySet()
             val result = ('1'..'9').toMutableSet()
             (0 until 9).forEach { i ->
@@ -88,37 +96,39 @@ class SudokuSolver {
                 if (row.sum() < 45) return false
                 if (index % 3 == 0) {
                     (0 until 3).forEach { tmpC ->
-                        val tmp = listOf(
-                            board[index][tmpC * 3],
-                            board[index][tmpC * 3 + 1],
-                            board[index][tmpC * 3 + 2],
-                            board[index + 1][tmpC * 3],
-                            board[index + 1][tmpC * 3 + 1],
-                            board[index + 1][tmpC * 3 + 2],
-                            board[index + 2][tmpC * 3],
-                            board[index + 2][tmpC * 3 + 1],
-                            board[index + 2][tmpC * 3 + 2],
-                        )
-                            .filter { it != '.' }
-                            .map { it.toString().toInt() }
+                        val tmp =
+                            listOf(
+                                board[index][tmpC * 3],
+                                board[index][tmpC * 3 + 1],
+                                board[index][tmpC * 3 + 2],
+                                board[index + 1][tmpC * 3],
+                                board[index + 1][tmpC * 3 + 1],
+                                board[index + 1][tmpC * 3 + 2],
+                                board[index + 2][tmpC * 3],
+                                board[index + 2][tmpC * 3 + 1],
+                                board[index + 2][tmpC * 3 + 2],
+                            )
+                                .filter { it != '.' }
+                                .map { it.toString().toInt() }
                         if (tmp.sum() < 45) return false
                     }
                 }
             }
             (0 until 9).forEach { c ->
-                val column = listOf(
-                    board[0][c],
-                    board[1][c],
-                    board[2][c],
-                    board[3][c],
-                    board[4][c],
-                    board[5][c],
-                    board[6][c],
-                    board[7][c],
-                    board[8][c],
-                )
-                    .filter { it != '.' }
-                    .map { it.toString().toInt() }
+                val column =
+                    listOf(
+                        board[0][c],
+                        board[1][c],
+                        board[2][c],
+                        board[3][c],
+                        board[4][c],
+                        board[5][c],
+                        board[6][c],
+                        board[7][c],
+                        board[8][c],
+                    )
+                        .filter { it != '.' }
+                        .map { it.toString().toInt() }
                 if (column.sum() < 45) return false
             }
             return true

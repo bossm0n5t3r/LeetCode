@@ -18,7 +18,14 @@ class LongestIncreasingPathInAMatrix {
             return result
         }
 
-        private fun dfs(matrix: Array<IntArray>, m: Int, n: Int, r: Int, c: Int, cache: Array<IntArray>): Int {
+        private fun dfs(
+            matrix: Array<IntArray>,
+            m: Int,
+            n: Int,
+            r: Int,
+            c: Int,
+            cache: Array<IntArray>,
+        ): Int {
             if (cache[r][c] != 0) return cache[r][c]
             val dr = intArrayOf(0, 0, 1, -1)
             val dc = intArrayOf(1, -1, 0, 0)

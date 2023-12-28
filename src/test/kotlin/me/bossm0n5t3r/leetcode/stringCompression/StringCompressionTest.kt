@@ -31,23 +31,24 @@ class StringCompressionTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "aabbccc".toCharArray(),
-                "a2b2c3".toCharArray(),
-                6,
-            ),
-            TestData(
-                "a".toCharArray(),
-                "a".toCharArray(),
-                1,
-            ),
-            TestData(
-                "abbbbbbbbbbbb".toCharArray(),
-                "ab12".toCharArray(),
-                4,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "aabbccc".toCharArray(),
+                    "a2b2c3".toCharArray(),
+                    6,
+                ),
+                TestData(
+                    "a".toCharArray(),
+                    "a".toCharArray(),
+                    1,
+                ),
+                TestData(
+                    "abbbbbbbbbbbb".toCharArray(),
+                    "ab12".toCharArray(),
+                    4,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

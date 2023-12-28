@@ -35,18 +35,19 @@ class TeemoAttackingTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                timeSeries = "[1,4]".toIntArray(),
-                duration = 2,
-                result = 4,
-            ),
-            TestData(
-                timeSeries = "[1,2]".toIntArray(),
-                duration = 2,
-                result = 3,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    timeSeries = "[1,4]".toIntArray(),
+                    duration = 2,
+                    result = 4,
+                ),
+                TestData(
+                    timeSeries = "[1,2]".toIntArray(),
+                    duration = 2,
+                    result = 3,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

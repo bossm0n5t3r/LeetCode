@@ -17,20 +17,22 @@ class LeafSimilarTreesTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)),
-                root2 = treeNodeUtil.generateTreeNodeOrNull(
-                    listOf(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8),
+        val tests =
+            listOf(
+                TestData(
+                    root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)),
+                    root2 =
+                        treeNodeUtil.generateTreeNodeOrNull(
+                            listOf(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8),
+                        ),
+                    result = true,
                 ),
-                result = true,
-            ),
-            TestData(
-                root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
-                root2 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 3, 2)),
-                result = false,
-            ),
-        )
+                TestData(
+                    root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
+                    root2 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 3, 2)),
+                    result = false,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

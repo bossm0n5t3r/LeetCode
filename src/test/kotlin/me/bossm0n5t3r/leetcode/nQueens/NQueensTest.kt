@@ -13,21 +13,22 @@ internal class NQueensTest {
 
     @Test
     fun solveNQueens() {
-        val tests = listOf(
-            NQueensTestData(
-                4,
-                listOf(
-                    listOf(".Q..", "...Q", "Q...", "..Q."),
-                    listOf("..Q.", "Q...", "...Q", ".Q.."),
+        val tests =
+            listOf(
+                NQueensTestData(
+                    4,
+                    listOf(
+                        listOf(".Q..", "...Q", "Q...", "..Q."),
+                        listOf("..Q.", "Q...", "...Q", ".Q.."),
+                    ),
                 ),
-            ),
-            NQueensTestData(
-                1,
-                listOf(
-                    listOf("Q"),
+                NQueensTestData(
+                    1,
+                    listOf(
+                        listOf("Q"),
+                    ),
                 ),
-            ),
-        )
+            )
         tests.forEach { test ->
             nQueens.solveNQueens(test.n)
                 .also {

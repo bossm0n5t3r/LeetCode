@@ -31,10 +31,11 @@ internal class JumpGame2Test {
 
     @Test
     fun jump() {
-        val tests = listOf(
-            Example(intArrayOf(2, 3, 1, 1, 4), 2),
-            Example(intArrayOf(2, 3, 0, 1, 4), 2),
-        )
+        val tests =
+            listOf(
+                Example(intArrayOf(2, 3, 1, 1, 4), 2),
+                Example(intArrayOf(2, 3, 0, 1, 4), 2),
+            )
         tests.forEach { test ->
             assertEquals(sut.jump(test.nums), test.result)
         }

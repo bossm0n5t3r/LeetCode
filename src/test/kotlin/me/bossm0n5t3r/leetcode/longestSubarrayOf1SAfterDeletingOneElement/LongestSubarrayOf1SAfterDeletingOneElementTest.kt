@@ -29,20 +29,21 @@ class LongestSubarrayOf1SAfterDeletingOneElementTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums = intArrayOf(1, 1, 0, 1),
-                result = 3,
-            ),
-            TestData(
-                nums = intArrayOf(0, 1, 1, 1, 0, 1, 1, 0, 1),
-                result = 5,
-            ),
-            TestData(
-                nums = intArrayOf(1, 1, 1),
-                result = 2,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    nums = intArrayOf(1, 1, 0, 1),
+                    result = 3,
+                ),
+                TestData(
+                    nums = intArrayOf(0, 1, 1, 1, 0, 1, 1, 0, 1),
+                    result = 5,
+                ),
+                TestData(
+                    nums = intArrayOf(1, 1, 1),
+                    result = 2,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

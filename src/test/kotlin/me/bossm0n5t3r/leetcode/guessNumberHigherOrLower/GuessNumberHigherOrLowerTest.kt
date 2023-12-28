@@ -14,12 +14,13 @@ class GuessNumberHigherOrLowerTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(10, 6, 6),
-            TestData(1, 1, 1),
-            TestData(2, 1, 1),
-            TestData(2126753390, 1702766719, 1702766719),
-        )
+        val tests =
+            listOf(
+                TestData(10, 6, 6),
+                TestData(1, 1, 1),
+                TestData(2, 1, 1),
+                TestData(2126753390, 1702766719, 1702766719),
+            )
 
         tests.forEach { test ->
             sut.init(test.n, test.pick)

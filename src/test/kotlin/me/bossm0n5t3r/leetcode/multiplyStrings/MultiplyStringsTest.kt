@@ -14,10 +14,11 @@ internal class MultiplyStringsTest {
 
     @Test
     fun multiply() {
-        val tests = listOf(
-            Example("2", "3", "6"),
-            Example("123", "456", "56088"),
-        )
+        val tests =
+            listOf(
+                Example("2", "3", "6"),
+                Example("123", "456", "56088"),
+            )
         tests.forEach { test ->
             assertEquals(sut.multiply(test.num1, test.num2), test.result)
         }

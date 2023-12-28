@@ -32,23 +32,24 @@ class KRadiusSubarrayAveragesTest {
 
     @Test
     fun test() {
-        val examples = listOf(
-            KRadiusSubarrayAveragesTestData(
-                intArrayOf(7, 4, 3, 9, 1, 8, 5, 2, 6),
-                3,
-                intArrayOf(-1, -1, -1, 5, 4, 4, -1, -1, -1),
-            ),
-            KRadiusSubarrayAveragesTestData(
-                intArrayOf(100000),
-                0,
-                intArrayOf(100000),
-            ),
-            KRadiusSubarrayAveragesTestData(
-                intArrayOf(8),
-                100000,
-                intArrayOf(-1),
-            ),
-        )
+        val examples =
+            listOf(
+                KRadiusSubarrayAveragesTestData(
+                    intArrayOf(7, 4, 3, 9, 1, 8, 5, 2, 6),
+                    3,
+                    intArrayOf(-1, -1, -1, 5, 4, 4, -1, -1, -1),
+                ),
+                KRadiusSubarrayAveragesTestData(
+                    intArrayOf(100000),
+                    0,
+                    intArrayOf(100000),
+                ),
+                KRadiusSubarrayAveragesTestData(
+                    intArrayOf(8),
+                    100000,
+                    intArrayOf(-1),
+                ),
+            )
         examples.forEach { example ->
             assertThat(kRadiusSubarrayAverages.getAverages(example.nums, example.k))
                 .isEqualTo(example.result)

@@ -40,17 +40,18 @@ class MergeSortedArrayTest {
 
     @Test
     fun merge() {
-        val tests = listOf(
-            MergeSortedArrayTestData(
-                intArrayOf(1, 2, 3, 0, 0, 0),
-                3,
-                intArrayOf(2, 5, 6),
-                3,
-                intArrayOf(1, 2, 2, 3, 5, 6),
-            ),
-            MergeSortedArrayTestData(intArrayOf(1), 1, intArrayOf(), 0, intArrayOf(1)),
-            MergeSortedArrayTestData(intArrayOf(2, 0), 1, intArrayOf(1), 1, intArrayOf(1, 2)),
-        )
+        val tests =
+            listOf(
+                MergeSortedArrayTestData(
+                    intArrayOf(1, 2, 3, 0, 0, 0),
+                    3,
+                    intArrayOf(2, 5, 6),
+                    3,
+                    intArrayOf(1, 2, 2, 3, 5, 6),
+                ),
+                MergeSortedArrayTestData(intArrayOf(1), 1, intArrayOf(), 0, intArrayOf(1)),
+                MergeSortedArrayTestData(intArrayOf(2, 0), 1, intArrayOf(1), 1, intArrayOf(1, 2)),
+            )
         tests.forEach { test ->
             mergeSortedArray.merge(test.nums1, test.m, test.nums2, test.n)
             assertTrue(test.nums1.contentEquals(test.result))

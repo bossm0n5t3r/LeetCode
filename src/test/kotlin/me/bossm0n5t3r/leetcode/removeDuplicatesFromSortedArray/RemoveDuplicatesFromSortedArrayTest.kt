@@ -31,10 +31,11 @@ class RemoveDuplicatesFromSortedArrayTest {
 
     @Test
     fun removeDuplicates() {
-        val tests = listOf(
-            RemoveDuplicatesFromSortedArrayTestData(intArrayOf(1, 1, 2), 2),
-            RemoveDuplicatesFromSortedArrayTestData(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4), 5),
-        )
+        val tests =
+            listOf(
+                RemoveDuplicatesFromSortedArrayTestData(intArrayOf(1, 1, 2), 2),
+                RemoveDuplicatesFromSortedArrayTestData(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4), 5),
+            )
         tests.forEach { test ->
             assertEquals(removeDuplicatesFromSortedArray.removeDuplicates(test.nums), test.result)
         }

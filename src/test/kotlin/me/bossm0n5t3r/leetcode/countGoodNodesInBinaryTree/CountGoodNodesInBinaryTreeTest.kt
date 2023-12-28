@@ -16,20 +16,21 @@ class CountGoodNodesInBinaryTreeTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, 3, null, 1, 5)),
-                result = 4,
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 3, null, 4, 2)),
-                result = 3,
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
-                result = 1,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, 3, null, 1, 5)),
+                    result = 4,
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 3, null, 4, 2)),
+                    result = 3,
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
+                    result = 1,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

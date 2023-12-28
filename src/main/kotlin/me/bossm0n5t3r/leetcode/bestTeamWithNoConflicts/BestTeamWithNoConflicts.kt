@@ -4,7 +4,10 @@ import java.util.Arrays
 
 class BestTeamWithNoConflicts {
     class Solution {
-        fun bestTeamScore(scores: IntArray, ages: IntArray): Int {
+        fun bestTeamScore(
+            scores: IntArray,
+            ages: IntArray,
+        ): Int {
             val n = ages.size
             val candidate = Array(n) { IntArray(2) }
             for (i in 0 until n) {

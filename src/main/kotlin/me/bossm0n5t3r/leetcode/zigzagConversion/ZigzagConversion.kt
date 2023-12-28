@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.zigzagConversion
 
 class ZigzagConversion {
     class Solution {
-        fun convert(s: String, numRows: Int): String {
+        fun convert(
+            s: String,
+            numRows: Int,
+        ): String {
             val result = Array(numRows) { mutableListOf<Char>() }
             val index = Index(numRows)
             s.forEach { c ->
@@ -37,7 +40,8 @@ class ZigzagConversion {
         }
 
         private enum class Direction {
-            DOWN, UP
+            DOWN,
+            UP,
         }
     }
 }

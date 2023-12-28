@@ -4,14 +4,18 @@ import me.bossm0n5t3r.leetcode.utils.TreeNode
 
 class DeleteNodeInABst {
     class Solution {
-        private fun inorderSuccessor(root: TreeNode?): TreeNode? = if (root?.left == null) {
-            root
-        } else {
-            inorderSuccessor(root.left)
-        }
+        private fun inorderSuccessor(root: TreeNode?): TreeNode? =
+            if (root?.left == null) {
+                root
+            } else {
+                inorderSuccessor(root.left)
+            }
 
         @Suppress("ReturnCount")
-        fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
+        fun deleteNode(
+            root: TreeNode?,
+            key: Int,
+        ): TreeNode? {
             if (root == null) return null
 
             if (root.`val` > key) {

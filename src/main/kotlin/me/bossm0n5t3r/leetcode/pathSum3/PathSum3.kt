@@ -5,21 +5,26 @@ import java.util.Stack
 
 class PathSum3 {
     class Solution {
-        fun pathSum(root: TreeNode?, targetSum: Int): Int {
+        fun pathSum(
+            root: TreeNode?,
+            targetSum: Int,
+        ): Int {
             if (root == null) return 0
             val result = mutableSetOf<Long>()
-            val stack = Stack<Pair<TreeNode, Map<Long, Long>>>().apply {
-                this.push(root to emptyMap())
-            }
+            val stack =
+                Stack<Pair<TreeNode, Map<Long, Long>>>().apply {
+                    this.push(root to emptyMap())
+                }
             while (stack.isNotEmpty()) {
                 val (cur, accumulatedMap) = stack.pop()
                 val curLeft = cur.left
                 val curRight = cur.right
 
-                val nextAccumulatedMap = accumulatedMap
-                    .map { (k, v) ->
-                        (k + cur.hashCode().toLong()) to (v + cur.`val`.toLong())
-                    }.toMap() + (cur.hashCode().toLong() to cur.`val`.toLong())
+                val nextAccumulatedMap =
+                    accumulatedMap
+                        .map { (k, v) ->
+                            (k + cur.hashCode().toLong()) to (v + cur.`val`.toLong())
+                        }.toMap() + (cur.hashCode().toLong() to cur.`val`.toLong())
 
                 if (nextAccumulatedMap.values.contains(targetSum.toLong())) {
                     result.addAll(

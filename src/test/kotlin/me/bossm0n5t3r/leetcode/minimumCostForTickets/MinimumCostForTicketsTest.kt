@@ -34,18 +34,19 @@ internal class MinimumCostForTicketsTest {
 
     @Test
     fun minCostTickets() {
-        val tests = listOf(
-            MinimumCostForTicketsTestData(
-                intArrayOf(1, 4, 6, 7, 8, 20),
-                intArrayOf(2, 7, 15),
-                11,
-            ),
-            MinimumCostForTicketsTestData(
-                intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31),
-                intArrayOf(2, 7, 15),
-                17,
-            ),
-        )
+        val tests =
+            listOf(
+                MinimumCostForTicketsTestData(
+                    intArrayOf(1, 4, 6, 7, 8, 20),
+                    intArrayOf(2, 7, 15),
+                    11,
+                ),
+                MinimumCostForTicketsTestData(
+                    intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31),
+                    intArrayOf(2, 7, 15),
+                    17,
+                ),
+            )
         tests.forEach { test ->
             minimumCostForTickets.minCostTicketsUsingQueue(test.days, test.costs)
                 .also {

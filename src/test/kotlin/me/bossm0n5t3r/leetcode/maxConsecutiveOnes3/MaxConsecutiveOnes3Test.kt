@@ -32,18 +32,19 @@ class MaxConsecutiveOnes3Test {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums = intArrayOf(1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0),
-                k = 2,
-                result = 6,
-            ),
-            TestData(
-                nums = intArrayOf(0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1),
-                k = 3,
-                result = 10,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    nums = intArrayOf(1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0),
+                    k = 2,
+                    result = 6,
+                ),
+                TestData(
+                    nums = intArrayOf(0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1),
+                    k = 3,
+                    result = 10,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

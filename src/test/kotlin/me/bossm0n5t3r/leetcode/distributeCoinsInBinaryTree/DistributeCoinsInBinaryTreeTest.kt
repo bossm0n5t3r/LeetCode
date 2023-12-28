@@ -16,16 +16,17 @@ internal class DistributeCoinsInBinaryTreeTest {
 
     @Test
     fun distributeCoins() {
-        val tests = listOf(
-            DistributeCoinsInBinaryTreeTestData(
-                treeNodeUtil.generateTreeNodeOrNull(listOf(3, 0, 0)),
-                2,
-            ),
-            DistributeCoinsInBinaryTreeTestData(
-                treeNodeUtil.generateTreeNodeOrNull(listOf(0, 3, 0)),
-                3,
-            ),
-        )
+        val tests =
+            listOf(
+                DistributeCoinsInBinaryTreeTestData(
+                    treeNodeUtil.generateTreeNodeOrNull(listOf(3, 0, 0)),
+                    2,
+                ),
+                DistributeCoinsInBinaryTreeTestData(
+                    treeNodeUtil.generateTreeNodeOrNull(listOf(0, 3, 0)),
+                    3,
+                ),
+            )
         tests.forEach { test ->
             distributeCoinsInBinaryTree.distributeCoins(test.root)
                 .also {

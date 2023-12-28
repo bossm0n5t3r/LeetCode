@@ -13,10 +13,11 @@ internal class NQueens2Test {
 
     @Test
     fun totalNQueens() {
-        val tests = listOf(
-            NQueens2TestData(4, 2),
-            NQueens2TestData(1, 1),
-        )
+        val tests =
+            listOf(
+                NQueens2TestData(4, 2),
+                NQueens2TestData(1, 1),
+            )
         tests.forEach { test ->
             nQueens2.totalNQueens(test.n)
                 .also {

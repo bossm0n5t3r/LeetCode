@@ -14,28 +14,29 @@ class WordBreakTest {
 
     @Test
     fun wordBreak() {
-        val tests = listOf(
-            WordBreakTestData(
-                s = "leetcode",
-                wordDict = listOf("leet", "code"),
-                result = true,
-            ),
-            WordBreakTestData(
-                s = "applepenapple",
-                wordDict = listOf("apple", "pen"),
-                result = true,
-            ),
-            WordBreakTestData(
-                s = "catsandog",
-                wordDict = listOf("cats", "dog", "sand", "and", "cat"),
-                result = false,
-            ),
-            WordBreakTestData(
-                s = "cars",
-                wordDict = listOf("car", "ca", "rs"),
-                result = true,
-            ),
-        )
+        val tests =
+            listOf(
+                WordBreakTestData(
+                    s = "leetcode",
+                    wordDict = listOf("leet", "code"),
+                    result = true,
+                ),
+                WordBreakTestData(
+                    s = "applepenapple",
+                    wordDict = listOf("apple", "pen"),
+                    result = true,
+                ),
+                WordBreakTestData(
+                    s = "catsandog",
+                    wordDict = listOf("cats", "dog", "sand", "and", "cat"),
+                    result = false,
+                ),
+                WordBreakTestData(
+                    s = "cars",
+                    wordDict = listOf("car", "ca", "rs"),
+                    result = true,
+                ),
+            )
         tests.forEach { test ->
             assertEquals(wordBreak.wordBreak(test.s, test.wordDict), test.result)
         }

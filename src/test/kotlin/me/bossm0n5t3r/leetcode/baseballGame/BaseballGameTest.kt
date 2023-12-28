@@ -31,11 +31,12 @@ internal class BaseballGameTest {
 
     @Test
     fun calPoints() {
-        val tests = listOf(
-            BaseballGameTestData(arrayOf("5", "2", "C", "D", "+"), 30),
-            BaseballGameTestData(arrayOf("5", "-2", "4", "C", "D", "9", "+", "+"), 27),
-            BaseballGameTestData(arrayOf("1"), 1),
-        )
+        val tests =
+            listOf(
+                BaseballGameTestData(arrayOf("5", "2", "C", "D", "+"), 30),
+                BaseballGameTestData(arrayOf("5", "-2", "4", "C", "D", "9", "+", "+"), 27),
+                BaseballGameTestData(arrayOf("1"), 1),
+            )
         tests.forEach { test ->
             val result = baseballGame.calPoints(test.ops)
             println(result)

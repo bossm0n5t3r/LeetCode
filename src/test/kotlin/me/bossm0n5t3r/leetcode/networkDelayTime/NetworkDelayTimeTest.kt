@@ -37,53 +37,54 @@ internal class NetworkDelayTimeTest {
 
     @Test
     fun networkDelayTime() {
-        val tests = listOf(
-            NetworkDelayTimeTestData(
-                arrayOf(
-                    intArrayOf(2, 1, 1),
-                    intArrayOf(2, 3, 1),
-                    intArrayOf(3, 4, 1),
+        val tests =
+            listOf(
+                NetworkDelayTimeTestData(
+                    arrayOf(
+                        intArrayOf(2, 1, 1),
+                        intArrayOf(2, 3, 1),
+                        intArrayOf(3, 4, 1),
+                    ),
+                    4,
+                    2,
+                    2,
                 ),
-                4,
-                2,
-                2,
-            ),
-            NetworkDelayTimeTestData(
-                arrayOf(
-                    intArrayOf(1, 2, 1),
+                NetworkDelayTimeTestData(
+                    arrayOf(
+                        intArrayOf(1, 2, 1),
+                    ),
+                    2,
+                    1,
+                    1,
                 ),
-                2,
-                1,
-                1,
-            ),
-            NetworkDelayTimeTestData(
-                arrayOf(
-                    intArrayOf(1, 2, 1),
+                NetworkDelayTimeTestData(
+                    arrayOf(
+                        intArrayOf(1, 2, 1),
+                    ),
+                    2,
+                    2,
+                    -1,
                 ),
-                2,
-                2,
-                -1,
-            ),
-            NetworkDelayTimeTestData(
-                arrayOf(
-                    intArrayOf(1, 2, 1),
-                    intArrayOf(2, 1, 3),
+                NetworkDelayTimeTestData(
+                    arrayOf(
+                        intArrayOf(1, 2, 1),
+                        intArrayOf(2, 1, 3),
+                    ),
+                    2,
+                    2,
+                    3,
                 ),
-                2,
-                2,
-                3,
-            ),
-            NetworkDelayTimeTestData(
-                arrayOf(
-                    intArrayOf(1, 2, 1),
-                    intArrayOf(2, 3, 2),
-                    intArrayOf(1, 3, 4),
+                NetworkDelayTimeTestData(
+                    arrayOf(
+                        intArrayOf(1, 2, 1),
+                        intArrayOf(2, 3, 2),
+                        intArrayOf(1, 3, 4),
+                    ),
+                    3,
+                    1,
+                    3,
                 ),
-                3,
-                1,
-                3,
-            ),
-        )
+            )
         tests.forEach { test ->
             val result = networkDelayTime.networkDelayTime(test.times, test.n, test.k)
             println(result)

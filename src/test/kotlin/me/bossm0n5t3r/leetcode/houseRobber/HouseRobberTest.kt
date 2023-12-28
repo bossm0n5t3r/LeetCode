@@ -31,10 +31,11 @@ class HouseRobberTest {
 
     @Test
     fun rob() {
-        val tests = listOf(
-            HouseRobberTestData(intArrayOf(1, 2, 3, 1), 4),
-            HouseRobberTestData(intArrayOf(2, 7, 9, 3, 1), 12),
-        )
+        val tests =
+            listOf(
+                HouseRobberTestData(intArrayOf(1, 2, 3, 1), 4),
+                HouseRobberTestData(intArrayOf(2, 7, 9, 3, 1), 12),
+            )
         tests.forEach { test ->
             assertEquals(houseRobber.rob(test.nums), test.result)
         }

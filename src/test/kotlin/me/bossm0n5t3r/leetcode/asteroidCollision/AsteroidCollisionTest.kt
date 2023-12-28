@@ -29,32 +29,33 @@ class AsteroidCollisionTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                asteroids = intArrayOf(5, 10, -5),
-                result = intArrayOf(5, 10),
-            ),
-            TestData(
-                asteroids = intArrayOf(8, -8),
-                result = intArrayOf(),
-            ),
-            TestData(
-                asteroids = intArrayOf(10, 2, -5),
-                result = intArrayOf(10),
-            ),
-            TestData(
-                asteroids = intArrayOf(-2, -2, 1, -2),
-                result = intArrayOf(-2, -2, -2),
-            ),
-            TestData(
-                asteroids = intArrayOf(-2, -2, 1, -1),
-                result = intArrayOf(-2, -2),
-            ),
-            TestData(
-                asteroids = intArrayOf(1, -2, -2, -2),
-                result = intArrayOf(-2, -2, -2),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    asteroids = intArrayOf(5, 10, -5),
+                    result = intArrayOf(5, 10),
+                ),
+                TestData(
+                    asteroids = intArrayOf(8, -8),
+                    result = intArrayOf(),
+                ),
+                TestData(
+                    asteroids = intArrayOf(10, 2, -5),
+                    result = intArrayOf(10),
+                ),
+                TestData(
+                    asteroids = intArrayOf(-2, -2, 1, -2),
+                    result = intArrayOf(-2, -2, -2),
+                ),
+                TestData(
+                    asteroids = intArrayOf(-2, -2, 1, -1),
+                    result = intArrayOf(-2, -2),
+                ),
+                TestData(
+                    asteroids = intArrayOf(1, -2, -2, -2),
+                    result = intArrayOf(-2, -2, -2),
+                ),
+            )
 
         tests.forEach { test ->
             assertThat(sut.asteroidCollision(test.asteroids))

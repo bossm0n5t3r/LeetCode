@@ -16,20 +16,21 @@ class MaximumTwinSumOfALinkedListTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                listNodeUtil.generateListNodeFromList(listOf(5, 4, 2, 1)),
-                6,
-            ),
-            TestData(
-                listNodeUtil.generateListNodeFromList(listOf(4, 2, 2, 3)),
-                7,
-            ),
-            TestData(
-                listNodeUtil.generateListNodeFromList(listOf(1, 100000)),
-                100001,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    listNodeUtil.generateListNodeFromList(listOf(5, 4, 2, 1)),
+                    6,
+                ),
+                TestData(
+                    listNodeUtil.generateListNodeFromList(listOf(4, 2, 2, 3)),
+                    7,
+                ),
+                TestData(
+                    listNodeUtil.generateListNodeFromList(listOf(1, 100000)),
+                    100001,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

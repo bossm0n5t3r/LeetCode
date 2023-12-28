@@ -29,10 +29,11 @@ class ProductOfArrayExceptSelfTest {
 
     @Test
     fun productExceptSelfTest() {
-        val tests = listOf(
-            ProductOfArrayExceptSelfTestData(intArrayOf(1, 2, 3, 4), intArrayOf(24, 12, 8, 6)),
-            ProductOfArrayExceptSelfTestData(intArrayOf(-1, 1, 0, -3, 3), intArrayOf(0, 0, 9, 0, 0)),
-        )
+        val tests =
+            listOf(
+                ProductOfArrayExceptSelfTestData(intArrayOf(1, 2, 3, 4), intArrayOf(24, 12, 8, 6)),
+                ProductOfArrayExceptSelfTestData(intArrayOf(-1, 1, 0, -3, 3), intArrayOf(0, 0, 9, 0, 0)),
+            )
         tests.forEach { test ->
             assertThat(productOfArrayExceptSelf.productExceptSelf(test.nums)).isEqualTo(test.result)
             assertThat(productOfArrayExceptSelf.productExceptSelfAt20230707(test.nums)).isEqualTo(test.result)

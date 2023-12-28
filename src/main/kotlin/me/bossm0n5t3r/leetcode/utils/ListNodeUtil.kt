@@ -17,7 +17,10 @@ class ListNodeUtil {
         return result
     }
 
-    fun findListNodeByValue(value: Int, head: ListNode): ListNode {
+    fun findListNodeByValue(
+        value: Int,
+        head: ListNode,
+    ): ListNode {
         var cur = head
         while (cur.`val` != value) {
             cur = cur.next!!
@@ -35,7 +38,10 @@ class ListNodeUtil {
         return result
     }
 
-    fun isEqual(first: ListNode?, second: ListNode?): Boolean {
+    fun isEqual(
+        first: ListNode?,
+        second: ListNode?,
+    ): Boolean {
         if (first == null && second == null) return true
         var curFirst: ListNode? = first
         var curSecond: ListNode? = second

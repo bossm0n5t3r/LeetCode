@@ -31,10 +31,11 @@ class ValidSudokuTest {
 
     @Test
     fun isValidSudokuTest() {
-        val tests = listOf(
-            ValidSudokuTestData(
-                getSudoku(
-                    """
+        val tests =
+            listOf(
+                ValidSudokuTestData(
+                    getSudoku(
+                        """
                         [["5","3",".",".","7",".",".",".","."]
                         ,["6",".",".","1","9","5",".",".","."]
                         ,[".","9","8",".",".",".",".","6","."]
@@ -44,13 +45,13 @@ class ValidSudokuTest {
                         ,[".","6",".",".",".",".","2","8","."]
                         ,[".",".",".","4","1","9",".",".","5"]
                         ,[".",".",".",".","8",".",".","7","9"]]
-                    """.trimIndent(),
+                        """.trimIndent(),
+                    ),
+                    true,
                 ),
-                true,
-            ),
-            ValidSudokuTestData(
-                getSudoku(
-                    """
+                ValidSudokuTestData(
+                    getSudoku(
+                        """
                         [["8","3",".",".","7",".",".",".","."]
                         ,["6",".",".","1","9","5",".",".","."]
                         ,[".","9","8",".",".",".",".","6","."]
@@ -60,13 +61,13 @@ class ValidSudokuTest {
                         ,[".","6",".",".",".",".","2","8","."]
                         ,[".",".",".","4","1","9",".",".","5"]
                         ,[".",".",".",".","8",".",".","7","9"]]
-                    """.trimIndent(),
+                        """.trimIndent(),
+                    ),
+                    false,
                 ),
-                false,
-            ),
-            ValidSudokuTestData(
-                getSudoku(
-                    """
+                ValidSudokuTestData(
+                    getSudoku(
+                        """
                         [[".",".",".",".","5",".",".","1","."]
                         ,[".","4",".","3",".",".",".",".","."]
                         ,[".",".",".",".",".","3",".",".","1"]
@@ -76,11 +77,11 @@ class ValidSudokuTest {
                         ,[".",".",".",".",".","2",".",".","."]
                         ,[".","2",".","9",".",".",".",".","."]
                         ,[".",".","4",".",".",".",".",".","."]]
-                    """.trimIndent(),
+                        """.trimIndent(),
+                    ),
+                    false,
                 ),
-                false,
-            ),
-        )
+            )
         tests.forEach { test ->
             assertThat(validSudoku.isValidSudokuFirstApproach(test.board)).isEqualTo(test.result)
             assertThat(validSudoku.isValidSudokuSecondApproach(test.board)).isEqualTo(test.result)

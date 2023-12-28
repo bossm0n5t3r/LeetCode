@@ -36,29 +36,31 @@ class NearestExitFromEntranceInMazeTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                maze = "[[\"+\",\"+\",\".\",\"+\"],[\".\",\".\",\".\",\"+\"],[\"+\",\"+\",\"+\",\".\"]]"
-                    .toArrayOfCharArray(),
-                entrance = "[1,2]".toIntArray(),
-                result = 1,
-            ),
-            TestData(
-                maze = "[[\"+\",\"+\",\"+\"],[\".\",\".\",\".\"],[\"+\",\"+\",\"+\"]]".toArrayOfCharArray(),
-                entrance = "[1,0]".toIntArray(),
-                result = 2,
-            ),
-            TestData(
-                maze = "[[\".\",\"+\"]]".toArrayOfCharArray(),
-                entrance = "[0,0]".toIntArray(),
-                result = -1,
-            ),
-            TestData(
-                maze = "[[\"+\",\".\",\".\"],[\"+\",\".\",\"+\"],[\".\",\".\",\"+\"]]".toArrayOfCharArray(),
-                entrance = "[2,1]".toIntArray(),
-                result = 1,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    maze =
+                        "[[\"+\",\"+\",\".\",\"+\"],[\".\",\".\",\".\",\"+\"],[\"+\",\"+\",\"+\",\".\"]]"
+                            .toArrayOfCharArray(),
+                    entrance = "[1,2]".toIntArray(),
+                    result = 1,
+                ),
+                TestData(
+                    maze = "[[\"+\",\"+\",\"+\"],[\".\",\".\",\".\"],[\"+\",\"+\",\"+\"]]".toArrayOfCharArray(),
+                    entrance = "[1,0]".toIntArray(),
+                    result = 2,
+                ),
+                TestData(
+                    maze = "[[\".\",\"+\"]]".toArrayOfCharArray(),
+                    entrance = "[0,0]".toIntArray(),
+                    result = -1,
+                ),
+                TestData(
+                    maze = "[[\"+\",\".\",\".\"],[\"+\",\".\",\"+\"],[\".\",\".\",\"+\"]]".toArrayOfCharArray(),
+                    entrance = "[2,1]".toIntArray(),
+                    result = 1,
+                ),
+            )
 
         tests.forEach { test ->
             test.maze.forEach { println(it.toList()) }

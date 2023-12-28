@@ -14,23 +14,24 @@ class MaximizeTheConfusionOfAnExamTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                answerKey = "TTFF",
-                k = 2,
-                result = 4,
-            ),
-            TestData(
-                answerKey = "TFFT",
-                k = 1,
-                result = 3,
-            ),
-            TestData(
-                answerKey = "TTFTTFTT",
-                k = 1,
-                result = 5,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    answerKey = "TTFF",
+                    k = 2,
+                    result = 4,
+                ),
+                TestData(
+                    answerKey = "TFFT",
+                    k = 1,
+                    result = 3,
+                ),
+                TestData(
+                    answerKey = "TTFTTFTT",
+                    k = 1,
+                    result = 5,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

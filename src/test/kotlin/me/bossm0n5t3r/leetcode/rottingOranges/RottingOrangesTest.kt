@@ -32,24 +32,25 @@ class RottingOrangesTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                grid = "[[2,1,1],[1,1,0],[0,1,1]]".toArrayOfIntArray(),
-                result = 4,
-            ),
-            TestData(
-                grid = "[[2,1,1],[0,1,1],[1,0,1]]".toArrayOfIntArray(),
-                result = -1,
-            ),
-            TestData(
-                grid = "[[0,2]]".toArrayOfIntArray(),
-                result = 0,
-            ),
-            TestData(
-                grid = "[[0]]".toArrayOfIntArray(),
-                result = 0,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    grid = "[[2,1,1],[1,1,0],[0,1,1]]".toArrayOfIntArray(),
+                    result = 4,
+                ),
+                TestData(
+                    grid = "[[2,1,1],[0,1,1],[1,0,1]]".toArrayOfIntArray(),
+                    result = -1,
+                ),
+                TestData(
+                    grid = "[[0,2]]".toArrayOfIntArray(),
+                    result = 0,
+                ),
+                TestData(
+                    grid = "[[0]]".toArrayOfIntArray(),
+                    result = 0,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

@@ -30,24 +30,25 @@ class EqualRowAndColumnPairsTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                grid = "[[3,2,1],[1,7,6],[2,7,7]]".toArrayOfIntArray(),
-                result = 1,
-            ),
-            TestData(
-                grid = "[[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]".toArrayOfIntArray(),
-                result = 3,
-            ),
-            TestData(
-                grid = "[[3,1,2,2],[1,4,4,4],[2,4,2,2],[2,5,2,2]]".toArrayOfIntArray(),
-                result = 3,
-            ),
-            TestData(
-                grid = "[[13,13],[13,13]]".toArrayOfIntArray(),
-                result = 4,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    grid = "[[3,2,1],[1,7,6],[2,7,7]]".toArrayOfIntArray(),
+                    result = 1,
+                ),
+                TestData(
+                    grid = "[[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]".toArrayOfIntArray(),
+                    result = 3,
+                ),
+                TestData(
+                    grid = "[[3,1,2,2],[1,4,4,4],[2,4,2,2],[2,5,2,2]]".toArrayOfIntArray(),
+                    result = 3,
+                ),
+                TestData(
+                    grid = "[[13,13],[13,13]]".toArrayOfIntArray(),
+                    result = 4,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

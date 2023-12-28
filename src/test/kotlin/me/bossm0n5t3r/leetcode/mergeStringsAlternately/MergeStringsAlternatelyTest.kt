@@ -14,23 +14,24 @@ class MergeStringsAlternatelyTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                "abc",
-                "pqr",
-                "apbqcr",
-            ),
-            TestData(
-                "ab",
-                "pqrs",
-                "apbqrs",
-            ),
-            TestData(
-                "abcd",
-                "pq",
-                "apbqcd",
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    "abc",
+                    "pqr",
+                    "apbqcr",
+                ),
+                TestData(
+                    "ab",
+                    "pqrs",
+                    "apbqrs",
+                ),
+                TestData(
+                    "abcd",
+                    "pq",
+                    "apbqcd",
+                ),
+            )
         tests.forEach { test ->
             assertEquals(
                 sut.mergeAlternately(test.word1, test.word2),

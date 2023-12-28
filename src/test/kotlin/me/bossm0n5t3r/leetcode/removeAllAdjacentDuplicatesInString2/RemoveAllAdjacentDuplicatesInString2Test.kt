@@ -14,28 +14,29 @@ internal class RemoveAllAdjacentDuplicatesInString2Test {
 
     @Test
     fun removeDuplicates() {
-        val tests = listOf(
-            RemoveAllAdjacentDuplicatesInString2TestData(
-                "abcd",
-                2,
-                "abcd",
-            ),
-            RemoveAllAdjacentDuplicatesInString2TestData(
-                "deeedbbcccbdaa",
-                3,
-                "aa",
-            ),
-            RemoveAllAdjacentDuplicatesInString2TestData(
-                "pbbcggttciiippooaais",
-                2,
-                "ps",
-            ),
-            RemoveAllAdjacentDuplicatesInString2TestData(
-                "iiiixxxxxiiccccczzffffflllllllllfffffllyyyyyuuuuuz",
-                5,
-                "izzlz",
-            ),
-        )
+        val tests =
+            listOf(
+                RemoveAllAdjacentDuplicatesInString2TestData(
+                    "abcd",
+                    2,
+                    "abcd",
+                ),
+                RemoveAllAdjacentDuplicatesInString2TestData(
+                    "deeedbbcccbdaa",
+                    3,
+                    "aa",
+                ),
+                RemoveAllAdjacentDuplicatesInString2TestData(
+                    "pbbcggttciiippooaais",
+                    2,
+                    "ps",
+                ),
+                RemoveAllAdjacentDuplicatesInString2TestData(
+                    "iiiixxxxxiiccccczzffffflllllllllfffffllyyyyyuuuuuz",
+                    5,
+                    "izzlz",
+                ),
+            )
         tests.forEach { test ->
             val result = removeAllAdjacentDuplicatesInString2.removeDuplicates(test.s, test.k)
             println(result)

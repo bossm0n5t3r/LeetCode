@@ -32,16 +32,17 @@ class FindPeakElementTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums = "[1,2,3,1]".toIntArray(),
-                result = 2,
-            ),
-            TestData(
-                nums = "[1,2,1,3,5,6,4]".toIntArray(),
-                result = 5,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    nums = "[1,2,3,1]".toIntArray(),
+                    result = 2,
+                ),
+                TestData(
+                    nums = "[1,2,1,3,5,6,4]".toIntArray(),
+                    result = 5,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

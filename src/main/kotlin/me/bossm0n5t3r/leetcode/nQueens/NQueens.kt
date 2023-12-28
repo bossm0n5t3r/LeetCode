@@ -30,7 +30,12 @@ class NQueens {
             }
         }
 
-        private fun isSafe(n: Int, board: Array<CharArray>, row: Int, col: Int): Boolean {
+        private fun isSafe(
+            n: Int,
+            board: Array<CharArray>,
+            row: Int,
+            col: Int,
+        ): Boolean {
             (0 until n).forEach { i ->
                 if (board[i][col] == 'Q') return false
                 if (row >= i && col >= i && board[row - i][col - i] == 'Q') return false

@@ -13,11 +13,12 @@ internal class LetterCombinationsOfAPhoneNumberTest {
 
     @Test
     fun letterCombinations() {
-        val tests = listOf(
-            LetterCombinationsOfAPhoneNumberTestData("23", listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf")),
-            LetterCombinationsOfAPhoneNumberTestData("", emptyList()),
-            LetterCombinationsOfAPhoneNumberTestData("2", listOf("a", "b", "c")),
-        )
+        val tests =
+            listOf(
+                LetterCombinationsOfAPhoneNumberTestData("23", listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf")),
+                LetterCombinationsOfAPhoneNumberTestData("", emptyList()),
+                LetterCombinationsOfAPhoneNumberTestData("2", listOf("a", "b", "c")),
+            )
         tests.forEach { test ->
             println(letterCombinationsOfAPhoneNumber.letterCombinations(test.digits))
             assertThat(letterCombinationsOfAPhoneNumber.letterCombinations(test.digits))

@@ -9,7 +9,12 @@ class Subsets {
             return result
         }
 
-        private fun dfs(result: MutableList<List<Int>>, target: MutableList<Int>, nums: IntArray, index: Int) {
+        private fun dfs(
+            result: MutableList<List<Int>>,
+            target: MutableList<Int>,
+            nums: IntArray,
+            index: Int,
+        ) {
             if (index == nums.size) {
                 result.add(target)
                 return

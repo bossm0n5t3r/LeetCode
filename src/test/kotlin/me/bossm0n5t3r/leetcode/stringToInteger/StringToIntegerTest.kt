@@ -14,32 +14,33 @@ internal class StringToIntegerTest {
 
     @Test
     fun myAtoi() {
-        val tests = listOf(
-            StringToIntegerTestData(
-                "42",
-                42,
-            ),
-            StringToIntegerTestData(
-                "   -42",
-                -42,
-            ),
-            StringToIntegerTestData(
-                "4193 with words",
-                4193,
-            ),
-            StringToIntegerTestData(
-                "-91283472332",
-                -2147483648,
-            ),
-            StringToIntegerTestData(
-                "+1",
-                1,
-            ),
-            StringToIntegerTestData(
-                "20000000000000000000",
-                2147483647,
-            ),
-        )
+        val tests =
+            listOf(
+                StringToIntegerTestData(
+                    "42",
+                    42,
+                ),
+                StringToIntegerTestData(
+                    "   -42",
+                    -42,
+                ),
+                StringToIntegerTestData(
+                    "4193 with words",
+                    4193,
+                ),
+                StringToIntegerTestData(
+                    "-91283472332",
+                    -2147483648,
+                ),
+                StringToIntegerTestData(
+                    "+1",
+                    1,
+                ),
+                StringToIntegerTestData(
+                    "20000000000000000000",
+                    2147483647,
+                ),
+            )
         tests.forEach { test ->
             println(stringToInteger.myAtoi(test.s))
             assertEquals(stringToInteger.myAtoi(test.s), test.result)

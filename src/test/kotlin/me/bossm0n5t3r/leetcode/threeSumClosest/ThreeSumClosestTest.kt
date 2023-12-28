@@ -34,10 +34,11 @@ internal class ThreeSumClosestTest {
 
     @Test
     fun threeSumClosest() {
-        val tests = listOf(
-            ThreeSumClosestTestData(intArrayOf(-1, 2, 1, -4), 1, 2),
-            ThreeSumClosestTestData(intArrayOf(0, 0, 0), 1, 0),
-        )
+        val tests =
+            listOf(
+                ThreeSumClosestTestData(intArrayOf(-1, 2, 1, -4), 1, 2),
+                ThreeSumClosestTestData(intArrayOf(0, 0, 0), 1, 0),
+            )
         tests.forEach { test ->
             println(threeSumClosest.threeSumClosest(test.nums, test.target))
             assertEquals(threeSumClosest.threeSumClosest(test.nums, test.target), test.result)

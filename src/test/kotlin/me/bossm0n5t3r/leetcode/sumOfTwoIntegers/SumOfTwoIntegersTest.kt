@@ -14,12 +14,13 @@ class SumOfTwoIntegersTest {
 
     @Test
     fun getSumTest() {
-        val tests = listOf(
-            SumOfTwoIntegersTestData(1, 2, 3),
-            SumOfTwoIntegersTestData(2, 3, 5),
-            SumOfTwoIntegersTestData(20, 30, 50),
-            SumOfTwoIntegersTestData(20, -30, -10),
-        )
+        val tests =
+            listOf(
+                SumOfTwoIntegersTestData(1, 2, 3),
+                SumOfTwoIntegersTestData(2, 3, 5),
+                SumOfTwoIntegersTestData(20, 30, 50),
+                SumOfTwoIntegersTestData(20, -30, -10),
+            )
         tests.forEach { test ->
             assertThat(sumOfTwoIntegers.getSum(test.a, test.b)).isEqualTo(test.result)
         }

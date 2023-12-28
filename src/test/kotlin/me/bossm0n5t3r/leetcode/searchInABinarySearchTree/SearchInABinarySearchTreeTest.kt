@@ -17,18 +17,19 @@ class SearchInABinarySearchTreeTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
-                `val` = 2,
-                result = treeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
-            ),
-            TestData(
-                root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
-                `val` = 5,
-                result = treeNodeUtil.generateTreeNodeOrNull(listOf()),
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
+                    `val` = 2,
+                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
+                ),
+                TestData(
+                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
+                    `val` = 5,
+                    result = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                ),
+            )
 
         tests.forEach { test ->
             assertTrue {

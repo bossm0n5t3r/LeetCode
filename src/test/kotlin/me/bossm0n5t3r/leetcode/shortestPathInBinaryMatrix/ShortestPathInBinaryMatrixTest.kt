@@ -31,39 +31,40 @@ internal class ShortestPathInBinaryMatrixTest {
 
     @Test
     fun shortestPathBinaryMatrix() {
-        val tests = listOf(
-            ShortestPathInBinaryMatrixTestData(
-                arrayOf(
-                    intArrayOf(0, 1),
-                    intArrayOf(1, 0),
+        val tests =
+            listOf(
+                ShortestPathInBinaryMatrixTestData(
+                    arrayOf(
+                        intArrayOf(0, 1),
+                        intArrayOf(1, 0),
+                    ),
+                    2,
                 ),
-                2,
-            ),
-            ShortestPathInBinaryMatrixTestData(
-                arrayOf(
-                    intArrayOf(0, 0, 0),
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(1, 1, 0),
+                ShortestPathInBinaryMatrixTestData(
+                    arrayOf(
+                        intArrayOf(0, 0, 0),
+                        intArrayOf(1, 1, 0),
+                        intArrayOf(1, 1, 0),
+                    ),
+                    4,
                 ),
-                4,
-            ),
-            ShortestPathInBinaryMatrixTestData(
-                arrayOf(
-                    intArrayOf(1, 0, 0),
-                    intArrayOf(1, 1, 0),
-                    intArrayOf(1, 1, 0),
+                ShortestPathInBinaryMatrixTestData(
+                    arrayOf(
+                        intArrayOf(1, 0, 0),
+                        intArrayOf(1, 1, 0),
+                        intArrayOf(1, 1, 0),
+                    ),
+                    -1,
                 ),
-                -1,
-            ),
-            ShortestPathInBinaryMatrixTestData(
-                arrayOf(
-                    intArrayOf(0, 0, 0),
-                    intArrayOf(1, 0, 0),
-                    intArrayOf(1, 1, 0),
+                ShortestPathInBinaryMatrixTestData(
+                    arrayOf(
+                        intArrayOf(0, 0, 0),
+                        intArrayOf(1, 0, 0),
+                        intArrayOf(1, 1, 0),
+                    ),
+                    3,
                 ),
-                3,
-            ),
-        )
+            )
         tests.forEach { test ->
             shortestPathInBinaryMatrix.shortestPathBinaryMatrix(test.grid)
                 .also {

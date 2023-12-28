@@ -29,20 +29,21 @@ class IncreasingTripletSubsequenceTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                intArrayOf(1, 2, 3, 4, 5),
-                true,
-            ),
-            TestData(
-                intArrayOf(5, 4, 3, 2, 1),
-                false,
-            ),
-            TestData(
-                intArrayOf(2, 1, 5, 0, 4, 6),
-                true,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    intArrayOf(1, 2, 3, 4, 5),
+                    true,
+                ),
+                TestData(
+                    intArrayOf(5, 4, 3, 2, 1),
+                    false,
+                ),
+                TestData(
+                    intArrayOf(2, 1, 5, 0, 4, 6),
+                    true,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

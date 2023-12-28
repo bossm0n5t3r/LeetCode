@@ -13,36 +13,37 @@ internal class LongestSubstringWithoutRepeatingCharactersTest {
 
     @Test
     fun lengthOfLongestSubstring() {
-        val tests = listOf(
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "abcabcbb",
-                3,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "bbbbb",
-                1,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "pwwkew",
-                3,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "au",
-                2,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "",
-                0,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "a",
-                1,
-            ),
-            LongestSubstringWithoutRepeatingCharactersTestData(
-                "aab",
-                2,
-            ),
-        )
+        val tests =
+            listOf(
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "abcabcbb",
+                    3,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "bbbbb",
+                    1,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "pwwkew",
+                    3,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "au",
+                    2,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "",
+                    0,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "a",
+                    1,
+                ),
+                LongestSubstringWithoutRepeatingCharactersTestData(
+                    "aab",
+                    2,
+                ),
+            )
         tests.forEach { test ->
             println(test.s)
             assertEquals(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring(test.s), test.result)

@@ -2,7 +2,10 @@ package me.bossm0n5t3r.leetcode.canPlaceFlowers
 
 class CanPlaceFlowers {
     class Solution {
-        fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
+        fun canPlaceFlowers(
+            flowerbed: IntArray,
+            n: Int,
+        ): Boolean {
             if (n == 0) return true
             val extendFlowerBed = intArrayOf(0) + flowerbed + 0
             var tmpN = n

@@ -17,23 +17,24 @@ internal class AddTwoNumbersTest {
 
     @Test
     fun addTwoNumbers() {
-        val tests = listOf(
-            AddTwoNumbersTestData(
-                listNodeUtil.generateListNodeFromList(listOf(2, 4, 3)),
-                listNodeUtil.generateListNodeFromList(listOf(5, 6, 4)),
-                listNodeUtil.generateListNodeFromList(listOf(7, 0, 8)),
-            ),
-            AddTwoNumbersTestData(
-                listNodeUtil.generateListNodeFromList(listOf(0)),
-                listNodeUtil.generateListNodeFromList(listOf(0)),
-                listNodeUtil.generateListNodeFromList(listOf(0)),
-            ),
-            AddTwoNumbersTestData(
-                listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9, 9, 9, 9)),
-                listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9)),
-                listNodeUtil.generateListNodeFromList(listOf(8, 9, 9, 9, 0, 0, 0, 1)),
-            ),
-        )
+        val tests =
+            listOf(
+                AddTwoNumbersTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(2, 4, 3)),
+                    listNodeUtil.generateListNodeFromList(listOf(5, 6, 4)),
+                    listNodeUtil.generateListNodeFromList(listOf(7, 0, 8)),
+                ),
+                AddTwoNumbersTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                ),
+                AddTwoNumbersTestData(
+                    listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9, 9, 9, 9)),
+                    listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9)),
+                    listNodeUtil.generateListNodeFromList(listOf(8, 9, 9, 9, 0, 0, 0, 1)),
+                ),
+            )
         tests.forEach { test ->
 //            println(listNodeUtil.listNodeToList(addTwoNumbers.addTwoNumbers(test.l1, test.l2)))
             assertTrue(listNodeUtil.isEqual(addTwoNumbers.addTwoNumbers(test.l1, test.l2), test.result))

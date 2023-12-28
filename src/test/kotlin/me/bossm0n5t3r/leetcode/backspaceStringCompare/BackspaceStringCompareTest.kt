@@ -14,11 +14,12 @@ internal class BackspaceStringCompareTest {
 
     @Test
     fun backspaceCompare() {
-        val tests = listOf(
-            BackspaceStringCompareTest("ab#c", "ad#c", true),
-            BackspaceStringCompareTest("ab##", "c#d#", true),
-            BackspaceStringCompareTest("a#c", "b", false),
-        )
+        val tests =
+            listOf(
+                BackspaceStringCompareTest("ab#c", "ad#c", true),
+                BackspaceStringCompareTest("ab##", "c#d#", true),
+                BackspaceStringCompareTest("a#c", "b", false),
+            )
         tests.forEach { test ->
             val result = backspaceStringCompare.backspaceCompare(test.s, test.t)
             println(result)

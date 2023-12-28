@@ -4,7 +4,10 @@ import me.bossm0n5t3r.leetcode.utils.TreeNode
 
 class KthSmallestElementInABST {
     class Solution {
-        fun kthSmallest(root: TreeNode?, k: Int): Int {
+        fun kthSmallest(
+            root: TreeNode?,
+            k: Int,
+        ): Int {
             if (root == null) return -1
             val count = IntWrapper()
             val number = IntWrapper()
@@ -20,7 +23,12 @@ class KthSmallestElementInABST {
             }
         }
 
-        private fun dfs(cur: TreeNode, k: Int, count: IntWrapper, number: IntWrapper) {
+        private fun dfs(
+            cur: TreeNode,
+            k: Int,
+            count: IntWrapper,
+            number: IntWrapper,
+        ) {
             if (cur.left != null) dfs(cur.left!!, k, count, number)
             count.increment()
             if (count.value == k) {

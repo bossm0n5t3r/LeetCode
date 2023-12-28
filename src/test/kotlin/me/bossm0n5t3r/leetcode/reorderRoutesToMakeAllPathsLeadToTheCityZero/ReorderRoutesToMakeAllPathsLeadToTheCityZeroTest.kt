@@ -35,23 +35,24 @@ class ReorderRoutesToMakeAllPathsLeadToTheCityZeroTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                n = 6,
-                connections = "[[0,1],[1,3],[2,3],[4,0],[4,5]]".toArrayOfIntArray(),
-                result = 3,
-            ),
-            TestData(
-                n = 5,
-                connections = "[[1,0],[1,2],[3,2],[3,4]]".toArrayOfIntArray(),
-                result = 2,
-            ),
-            TestData(
-                n = 3,
-                connections = "[[1,0],[2,0]]".toArrayOfIntArray(),
-                result = 0,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    n = 6,
+                    connections = "[[0,1],[1,3],[2,3],[4,0],[4,5]]".toArrayOfIntArray(),
+                    result = 3,
+                ),
+                TestData(
+                    n = 5,
+                    connections = "[[1,0],[1,2],[3,2],[3,4]]".toArrayOfIntArray(),
+                    result = 2,
+                ),
+                TestData(
+                    n = 3,
+                    connections = "[[1,0],[2,0]]".toArrayOfIntArray(),
+                    result = 0,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

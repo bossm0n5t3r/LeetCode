@@ -6,7 +6,11 @@ class SudokuSolverFaster {
             solve(board, 0, 0)
         }
 
-        private fun solve(board: Array<CharArray>, row: Int, column: Int): Boolean {
+        private fun solve(
+            board: Array<CharArray>,
+            row: Int,
+            column: Int,
+        ): Boolean {
             var col = column
             for (r in row until 9) {
                 for (c in col until 9) {
@@ -28,7 +32,12 @@ class SudokuSolverFaster {
             return true
         }
 
-        private fun isValid(board: Array<CharArray>, row: Int, column: Int, c: Char): Boolean {
+        private fun isValid(
+            board: Array<CharArray>,
+            row: Int,
+            column: Int,
+            c: Char,
+        ): Boolean {
             val blockRow = (row / 3) * 3
             val blockColumn = (column / 3) * 3
 

@@ -29,20 +29,21 @@ class FindPivotIndexTest {
 
     @Test
     fun test() {
-        val tests = listOf(
-            TestData(
-                nums = intArrayOf(1, 7, 3, 6, 5, 6),
-                result = 3,
-            ),
-            TestData(
-                nums = intArrayOf(1, 2, 3),
-                result = -1,
-            ),
-            TestData(
-                nums = intArrayOf(2, 1, -1),
-                result = 0,
-            ),
-        )
+        val tests =
+            listOf(
+                TestData(
+                    nums = intArrayOf(1, 7, 3, 6, 5, 6),
+                    result = 3,
+                ),
+                TestData(
+                    nums = intArrayOf(1, 2, 3),
+                    result = -1,
+                ),
+                TestData(
+                    nums = intArrayOf(2, 1, -1),
+                    result = 0,
+                ),
+            )
 
         tests.forEach { test ->
             assertEquals(

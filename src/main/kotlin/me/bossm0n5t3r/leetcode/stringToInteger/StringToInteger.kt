@@ -16,11 +16,12 @@ class StringToInteger {
             return if (this.second.isNotEmpty() && this.second[0] == '-') {
                 '-' to this.second.substring(1)
             } else {
-                val tmp = if (this.second.isNotEmpty() && this.second[0] == '+') {
-                    this.second.substring(1)
-                } else {
-                    this.second
-                }
+                val tmp =
+                    if (this.second.isNotEmpty() && this.second[0] == '+') {
+                        this.second.substring(1)
+                    } else {
+                        this.second
+                    }
                 this.first to tmp
             }
         }
@@ -37,11 +38,12 @@ class StringToInteger {
         }
 
         private fun Pair<Char, String>.step4(): BigInteger {
-            val tmp = if (this.second.isNotEmpty()) {
-                this.second.toBigInteger()
-            } else {
-                BigInteger.valueOf(0L)
-            }
+            val tmp =
+                if (this.second.isNotEmpty()) {
+                    this.second.toBigInteger()
+                } else {
+                    BigInteger.valueOf(0L)
+                }
             return if (this.first == '-') {
                 tmp.times(BigInteger.valueOf(-1L))
             } else {

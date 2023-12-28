@@ -55,7 +55,10 @@ class TreeNodeUtil {
         }
     }
 
-    fun isEqual(first: TreeNode?, second: TreeNode?): Boolean {
+    fun isEqual(
+        first: TreeNode?,
+        second: TreeNode?,
+    ): Boolean {
         if (first == null && second == null) return true
         if (first?.`val` != second?.`val`) return false
         val firstQ: Queue<TreeNode> = LinkedList()

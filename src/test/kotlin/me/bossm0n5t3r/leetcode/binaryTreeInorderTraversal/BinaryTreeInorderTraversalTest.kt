@@ -17,14 +17,15 @@ class BinaryTreeInorderTraversalTest {
 
     @Test
     fun inorderTraversal() {
-        val tests = listOf(
-            BinaryTreeInorderTraversalTestData(
-                treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, 3)),
-                listOf(1, 3, 2),
-            ),
-            BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf()), listOf()),
-            BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),
-        )
+        val tests =
+            listOf(
+                BinaryTreeInorderTraversalTestData(
+                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, 3)),
+                    listOf(1, 3, 2),
+                ),
+                BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf()), listOf()),
+                BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),
+            )
         tests.forEach { test ->
             // RecursiveApproach
             val resultRecursiveApproach = binaryTreeInorderTraversal.inorderTraversalRecursiveApproach(test.root)
