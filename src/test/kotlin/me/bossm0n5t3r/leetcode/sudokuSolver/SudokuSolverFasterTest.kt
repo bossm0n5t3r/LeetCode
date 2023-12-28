@@ -30,6 +30,7 @@ internal class SudokuSolverFasterTest {
         val length = this.length
         val content = this.substring(2, length - 2)
         return content
+            .replace("\n", "")
             .split("],[")
             .map { row ->
                 val rowLength = row.length
