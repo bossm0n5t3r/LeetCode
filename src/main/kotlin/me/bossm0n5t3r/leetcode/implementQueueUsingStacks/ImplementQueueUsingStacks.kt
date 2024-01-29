@@ -4,30 +4,29 @@ import java.util.Stack
 
 class ImplementQueueUsingStacks {
     class MyQueue {
-        private val stack = Stack<Int>()
-        private val subStack = Stack<Int>()
+        private val pushStack = Stack<Int>()
+        private val popStack = Stack<Int>()
 
         fun push(x: Int) {
-            stack.push(x)
+            pushStack.push(x)
         }
 
         fun pop(): Int {
-            while (stack.isNotEmpty()) {
-                subStack.push(stack.pop())
-            }
-            val result = subStack.pop()
-            while (subStack.isNotEmpty()) {
-                stack.push(subStack.pop())
-            }
-            return result
+            peek()
+            return popStack.pop()
         }
 
         fun peek(): Int {
-            return stack.elementAt(0)
+            if (popStack.isEmpty()) {
+                while (pushStack.isNotEmpty()) {
+                    popStack.push(pushStack.pop())
+                }
+            }
+            return popStack.peek()
         }
 
         fun empty(): Boolean {
-            return stack.isEmpty()
+            return pushStack.isEmpty() && popStack.isEmpty()
         }
     }
 }
