@@ -6,12 +6,12 @@ class FirstUniqueCharacterInAString {
             val result = mutableMapOf<Char, MutableList<Int>>()
             for (i in s.indices) {
                 if (result.containsKey(s[i])) {
-                    result[s[i]]!!.add(i)
+                    result[s[i]]?.add(i)
                 } else {
                     result[s[i]] = mutableListOf(i)
                 }
             }
-            return result.values.filter { it.size < 2 }.map { it[0] }.minOrNull() ?: -1
+            return result.values.filter { it.size < 2 }.minOfOrNull { it[0] } ?: -1
         }
     }
 }
