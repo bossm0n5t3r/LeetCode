@@ -6,21 +6,16 @@ class MaxPointsOnALine {
             if (points.size <= 2) {
                 return points.size
             }
-            val sortedPoints = points.sortedWith(compareBy({ it[0] }, { it[1] }))
             var result = 0
-            for (i in sortedPoints.indices) {
+            for (i in points.indices) {
                 val map = mutableMapOf<Double, Int>()
-                for (j in sortedPoints.indices) {
+                for (j in points.indices) {
                     if (i == j) continue
                     val gradient =
-                        if (sortedPoints[j][0] == sortedPoints[i][0]) {
+                        if (points[j][0] == points[i][0]) {
                             Double.POSITIVE_INFINITY
                         } else {
-                            if (j <= i) {
-                                (sortedPoints[i][1] - sortedPoints[j][1]).toDouble() / (sortedPoints[i][0] - sortedPoints[j][0])
-                            } else {
-                                (sortedPoints[j][1] - sortedPoints[i][1]).toDouble() / (sortedPoints[j][0] - sortedPoints[i][0])
-                            }
+                            (points[i][1] - points[j][1]).toDouble() / (points[i][0] - points[j][0])
                         }
                     map[gradient] = map.getOrDefault(gradient, 0) + 1
                 }
