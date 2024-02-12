@@ -144,11 +144,15 @@ class LeetCode {
             .replace("'", " ")
             .replace("(", " ")
             .replace(")", " ")
+            .replace("1", " one ")
+            .replace("2", " two ")
+            .replace("3", " three ")
 
     private fun String.toCamelCase(): String {
         return this
             .substringAfter(". ")
             .replaceRomanNumeralsAndSpecialCharacters()
+            .trim()
             .split(" ")
             .mapIndexed { index, s ->
                 if (index == 0) {
@@ -164,6 +168,7 @@ class LeetCode {
         return this
             .substringAfter(". ")
             .replaceRomanNumeralsAndSpecialCharacters()
+            .trim()
             .split(" ")
             .joinToString("") { s ->
                 s.lowercase().replaceFirstChar { it.uppercase() }
