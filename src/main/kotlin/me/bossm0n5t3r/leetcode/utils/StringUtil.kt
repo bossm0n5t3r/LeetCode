@@ -39,6 +39,15 @@ object StringUtil {
             .toTypedArray()
     }
 
+    fun String.toArrayOfString(): Array<String> {
+        return this
+            .drop(1)
+            .dropLast(1)
+            .replace("\"", "")
+            .split(",")
+            .toTypedArray()
+    }
+
     fun String.toListOfStringList(): List<List<String>> {
         return this
             .drop(2)
