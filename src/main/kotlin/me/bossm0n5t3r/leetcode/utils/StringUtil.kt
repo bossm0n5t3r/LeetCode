@@ -67,10 +67,13 @@ object StringUtil {
             .dropLast(2)
             .split("],[")
             .map {
-                it
-                    .replace("\"", "")
-                    .split(",")
-                    .map { s -> s.toInt() }
+                val stringList =
+                    it.replace("\"", "").split(",")
+
+                if (stringList.isEmpty() || stringList.all { s: String -> s.isBlank() }) {
+                    return@map emptyList()
+                }
+                stringList.map { string -> string.toInt() }
             }
     }
 }
