@@ -46,12 +46,18 @@ class ListNodeUtil {
         var curFirst: ListNode? = first
         var curSecond: ListNode? = second
         while (curFirst != null && curSecond != null) {
-            if (curFirst.`val` != curSecond.`val`) return false
+            if (curFirst.`val` != curSecond.`val`) {
+                print("first: ")
+                printListNode(first)
+                print("second: ")
+                printListNode(second)
+                return false
+            }
             if (curFirst.next == null && curSecond.next == null) return true
             curFirst = curFirst.next
             curSecond = curSecond.next
         }
-        return false
+        return true
     }
 
     fun generateBasicSingleListNode(): List<List<ListNode>> {
