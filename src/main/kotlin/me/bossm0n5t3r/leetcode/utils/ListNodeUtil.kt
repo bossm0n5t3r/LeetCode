@@ -43,13 +43,20 @@ class ListNodeUtil {
         second: ListNode?,
     ): Boolean {
         if (first == null && second == null) return true
+        if (first == null || second == null) {
+            print("First ")
+            printListNode(first)
+            print("Second ")
+            printListNode(second)
+            return false
+        }
         var curFirst: ListNode? = first
         var curSecond: ListNode? = second
         while (curFirst != null && curSecond != null) {
             if (curFirst.`val` != curSecond.`val`) {
-                print("first: ")
+                print("First ")
                 printListNode(first)
-                print("second: ")
+                print("Second ")
                 printListNode(second)
                 return false
             }
