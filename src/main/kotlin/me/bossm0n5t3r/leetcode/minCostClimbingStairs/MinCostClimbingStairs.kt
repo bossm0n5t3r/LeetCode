@@ -5,12 +5,8 @@ class MinCostClimbingStairs {
         fun minCostClimbingStairs(cost: IntArray): Int {
             val topIndex = cost.size
             val dp = IntArray(topIndex + 1)
-            for (i in 0..topIndex) {
-                when (i) {
-                    0, 1 -> dp[i] = cost[i]
-                    topIndex -> dp[i] = minOf(dp[i - 1], dp[i - 2])
-                    else -> dp[i] = cost[i] + minOf(dp[i - 1], dp[i - 2])
-                }
+            for (i in 2..topIndex) {
+                dp[i] = minOf(dp[i - 2] + cost[i - 2], dp[i - 1] + cost[i - 1])
             }
             return dp[topIndex]
         }
