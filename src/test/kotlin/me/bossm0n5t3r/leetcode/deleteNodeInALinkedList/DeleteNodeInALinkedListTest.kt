@@ -20,27 +20,27 @@ class DeleteNodeInALinkedListTest {
         val tests =
             listOf(
                 DeleteNodeInALinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(4, 5, 1, 9)),
+                    head = listNodeUtil.generateListNode(4, 5, 1, 9),
                     node = 5,
                     result = listOf(4, 1, 9),
                 ),
                 DeleteNodeInALinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(4, 5, 1, 9)),
+                    head = listNodeUtil.generateListNode(4, 5, 1, 9),
                     node = 1,
                     result = listOf(4, 5, 9),
                 ),
                 DeleteNodeInALinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4)),
+                    head = listNodeUtil.generateListNode(1, 2, 3, 4),
                     node = 3,
                     result = listOf(1, 2, 4),
                 ),
                 DeleteNodeInALinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(0, 1)),
+                    head = listNodeUtil.generateListNode(0, 1),
                     node = 0,
                     result = listOf(1),
                 ),
                 DeleteNodeInALinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(-3, 5, -99)),
+                    head = listNodeUtil.generateListNode(-3, 5, -99),
                     node = -3,
                     result = listOf(5, -99),
                 ),

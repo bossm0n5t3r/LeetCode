@@ -19,12 +19,12 @@ class DoubleANumberRepresentedAsALinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 8, 9)),
-                    listNodeUtil.generateListNodeFromList(listOf(3, 7, 8)),
+                    listNodeUtil.generateListNode(1, 8, 9),
+                    listNodeUtil.generateListNode(3, 7, 8),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(9, 9, 9)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 9, 9, 8)),
+                    listNodeUtil.generateListNode(9, 9, 9),
+                    listNodeUtil.generateListNode(1, 9, 9, 8),
                 ),
             )
 

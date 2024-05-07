@@ -20,19 +20,19 @@ internal class AddTwoNumbersTest {
         val tests =
             listOf(
                 AddTwoNumbersTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(2, 4, 3)),
-                    listNodeUtil.generateListNodeFromList(listOf(5, 6, 4)),
-                    listNodeUtil.generateListNodeFromList(listOf(7, 0, 8)),
+                    listNodeUtil.generateListNode(2, 4, 3),
+                    listNodeUtil.generateListNode(5, 6, 4),
+                    listNodeUtil.generateListNode(7, 0, 8),
                 ),
                 AddTwoNumbersTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(0)),
-                    listNodeUtil.generateListNodeFromList(listOf(0)),
-                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                    listNodeUtil.generateListNode(0),
+                    listNodeUtil.generateListNode(0),
+                    listNodeUtil.generateListNode(0),
                 ),
                 AddTwoNumbersTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9, 9, 9, 9)),
-                    listNodeUtil.generateListNodeFromList(listOf(9, 9, 9, 9)),
-                    listNodeUtil.generateListNodeFromList(listOf(8, 9, 9, 9, 0, 0, 0, 1)),
+                    listNodeUtil.generateListNode(9, 9, 9, 9, 9, 9, 9),
+                    listNodeUtil.generateListNode(9, 9, 9, 9),
+                    listNodeUtil.generateListNode(8, 9, 9, 9, 0, 0, 0, 1),
                 ),
             )
         tests.forEach { test ->

@@ -19,20 +19,20 @@ internal class SwapNodesInPairsTest {
         val tests =
             listOf(
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4)),
-                    listNodeUtil.generateListNodeFromList(listOf(2, 1, 4, 3)),
+                    listNodeUtil.generateListNode(1, 2, 3, 4),
+                    listNodeUtil.generateListNode(2, 1, 4, 3),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf()),
-                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNode(),
+                    listNodeUtil.generateListNode(),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1)),
-                    listNodeUtil.generateListNodeFromList(listOf(1)),
+                    listNodeUtil.generateListNode(1),
+                    listNodeUtil.generateListNode(1),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3)),
-                    listNodeUtil.generateListNodeFromList(listOf(2, 1, 3)),
+                    listNodeUtil.generateListNode(1, 2, 3),
+                    listNodeUtil.generateListNode(2, 1, 3),
                 ),
             )
         tests.forEach { test ->

@@ -19,20 +19,20 @@ class DeleteTheMiddleNodeOfALinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 3, 4, 7, 1, 2, 6)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 3, 4, 1, 2, 6)),
+                    listNodeUtil.generateListNode(1, 3, 4, 7, 1, 2, 6),
+                    listNodeUtil.generateListNode(1, 3, 4, 1, 2, 6),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 4)),
+                    listNodeUtil.generateListNode(1, 2, 3, 4),
+                    listNodeUtil.generateListNode(1, 2, 4),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(2, 1)),
-                    listNodeUtil.generateListNodeFromList(listOf(2)),
+                    listNodeUtil.generateListNode(2, 1),
+                    listNodeUtil.generateListNode(2),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1)),
-                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNode(1),
+                    listNodeUtil.generateListNode(),
                 ),
             )
 

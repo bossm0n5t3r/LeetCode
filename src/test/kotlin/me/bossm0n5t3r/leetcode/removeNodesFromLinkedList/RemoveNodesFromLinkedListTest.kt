@@ -19,12 +19,12 @@ class RemoveNodesFromLinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(5, 2, 13, 3, 8)),
-                    listNodeUtil.generateListNodeFromList(listOf(13, 8)),
+                    listNodeUtil.generateListNode(5, 2, 13, 3, 8),
+                    listNodeUtil.generateListNode(13, 8),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 1, 1, 1)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 1, 1, 1)),
+                    listNodeUtil.generateListNode(1, 1, 1, 1),
+                    listNodeUtil.generateListNode(1, 1, 1, 1),
                 ),
             )
 

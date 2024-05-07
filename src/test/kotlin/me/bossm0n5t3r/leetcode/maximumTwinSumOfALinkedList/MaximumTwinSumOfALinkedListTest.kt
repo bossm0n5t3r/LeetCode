@@ -19,15 +19,15 @@ class MaximumTwinSumOfALinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(5, 4, 2, 1)),
+                    listNodeUtil.generateListNode(5, 4, 2, 1),
                     6,
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(4, 2, 2, 3)),
+                    listNodeUtil.generateListNode(4, 2, 2, 3),
                     7,
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 100000)),
+                    listNodeUtil.generateListNode(1, 100000),
                     100001,
                 ),
             )

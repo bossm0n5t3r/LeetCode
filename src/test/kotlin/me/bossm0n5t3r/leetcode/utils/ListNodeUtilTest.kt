@@ -9,7 +9,7 @@ class ListNodeUtilTest {
 
     @Test
     fun getLastListNodeTest() {
-        val listNode = listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5))
+        val listNode = listNodeUtil.generateListNode(1, 2, 3, 4, 5)
         val lastListNode = listNodeUtil.getLastListNode(listNode!!)
         assertEquals(lastListNode.`val`, 5)
     }

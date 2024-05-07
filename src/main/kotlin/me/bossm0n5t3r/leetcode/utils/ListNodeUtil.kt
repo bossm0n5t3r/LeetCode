@@ -5,7 +5,8 @@ class ListNode(var `val`: Int) {
 }
 
 class ListNodeUtil {
-    fun generateListNodeFromList(head: List<Int>): ListNode? {
+    fun generateListNode(vararg values: Int): ListNode? {
+        val head = values.toList()
         if (head.isEmpty()) return null
         val length = head.size
         val result = ListNode(head[0])

@@ -20,19 +20,19 @@ internal class RemoveNthNodeFromEndOfListTest {
         val tests =
             listOf(
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
+                    listNodeUtil.generateListNode(1, 2, 3, 4, 5),
                     2,
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 5)),
+                    listNodeUtil.generateListNode(1, 2, 3, 5),
                 ),
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1)),
+                    listNodeUtil.generateListNode(1),
                     1,
-                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNode(),
                 ),
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2)),
+                    listNodeUtil.generateListNode(1, 2),
                     1,
-                    listNodeUtil.generateListNodeFromList(listOf(1)),
+                    listNodeUtil.generateListNode(1),
                 ),
             )
         tests.forEach { test ->

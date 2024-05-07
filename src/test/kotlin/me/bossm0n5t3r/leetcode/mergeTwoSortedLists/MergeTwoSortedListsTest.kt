@@ -20,19 +20,19 @@ class MergeTwoSortedListsTest {
         val tests =
             listOf(
                 MergeTwoSortedListsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 4)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 3, 4)),
-                    listNodeUtil.generateListNodeFromList(listOf(1, 1, 2, 3, 4, 4)),
+                    listNodeUtil.generateListNode(1, 2, 4),
+                    listNodeUtil.generateListNode(1, 3, 4),
+                    listNodeUtil.generateListNode(1, 1, 2, 3, 4, 4),
                 ),
                 MergeTwoSortedListsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf()),
-                    listNodeUtil.generateListNodeFromList(listOf()),
-                    listNodeUtil.generateListNodeFromList(listOf()),
+                    listNodeUtil.generateListNode(),
+                    listNodeUtil.generateListNode(),
+                    listNodeUtil.generateListNode(),
                 ),
                 MergeTwoSortedListsTestData(
-                    listNodeUtil.generateListNodeFromList(listOf()),
-                    listNodeUtil.generateListNodeFromList(listOf(0)),
-                    listNodeUtil.generateListNodeFromList(listOf(0)),
+                    listNodeUtil.generateListNode(),
+                    listNodeUtil.generateListNode(0),
+                    listNodeUtil.generateListNode(0),
                 ),
             )
         tests.forEach { test ->

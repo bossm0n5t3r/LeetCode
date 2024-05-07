@@ -19,15 +19,15 @@ class ReverseLinkedListTest {
         val tests =
             listOf(
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
+                    head = listNodeUtil.generateListNode(1, 2, 3, 4, 5),
                     result = listOf(5, 4, 3, 2, 1),
                 ),
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf(1, 2)),
+                    head = listNodeUtil.generateListNode(1, 2),
                     result = listOf(2, 1),
                 ),
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNodeFromList(listOf()),
+                    head = listNodeUtil.generateListNode(),
                     result = listOf(),
                 ),
             )

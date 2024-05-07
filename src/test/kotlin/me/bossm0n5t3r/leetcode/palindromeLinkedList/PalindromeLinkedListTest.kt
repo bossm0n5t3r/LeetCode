@@ -19,15 +19,15 @@ class PalindromeLinkedListTest {
         val tests =
             listOf(
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 2, 1)),
+                    listNodeUtil.generateListNode(1, 2, 2, 1),
                     true,
                 ),
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 1, 2, 1)),
+                    listNodeUtil.generateListNode(1, 2, 1, 2, 1),
                     true,
                 ),
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2)),
+                    listNodeUtil.generateListNode(1, 2),
                     false,
                 ),
             )

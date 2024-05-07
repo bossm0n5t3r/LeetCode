@@ -19,12 +19,12 @@ class MiddleOfTheLinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5)),
-                    listNodeUtil.generateListNodeFromList(listOf(3, 4, 5)),
+                    listNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    listNodeUtil.generateListNode(3, 4, 5),
                 ),
                 TestData(
-                    listNodeUtil.generateListNodeFromList(listOf(1, 2, 3, 4, 5, 6)),
-                    listNodeUtil.generateListNodeFromList(listOf(4, 5, 6)),
+                    listNodeUtil.generateListNode(1, 2, 3, 4, 5, 6),
+                    listNodeUtil.generateListNode(4, 5, 6),
                 ),
             )
 
