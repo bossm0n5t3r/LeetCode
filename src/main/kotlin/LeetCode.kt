@@ -10,6 +10,7 @@ class LeetCode {
     private lateinit var name: String
     private lateinit var url: String
     private val sampleCode = mutableListOf<String>()
+    private lateinit var methodParametersAndResultAsString: String
 
     fun run() {
         readProblem()
@@ -48,6 +49,23 @@ class LeetCode {
             }
             sampleCode.add(line)
         }
+
+        methodParametersAndResultAsString =
+            sampleCode[1]
+                .substringAfter('(')
+                .substringBefore('{')
+                .split(", ", "): ")
+                .let {
+                    val lastIndex = it.lastIndex
+                    it.mapIndexed { index, s ->
+                        if (index != lastIndex) {
+                            "val ${s.trim()}"
+                        } else {
+                            "val result: ${s.trim()}"
+                        }
+                    }
+                }
+                .joinToString(", ")
     }
 
     private fun createFiles() {
@@ -113,7 +131,7 @@ class LeetCode {
                 class $pascalCaseTestClassName {
                     private val sut = $pascalCaseTestName.Solution()
                     
-                    private data class TestData()
+                    private data class TestData($methodParametersAndResultAsString)
                     
                     @Test
                     fun test() {
