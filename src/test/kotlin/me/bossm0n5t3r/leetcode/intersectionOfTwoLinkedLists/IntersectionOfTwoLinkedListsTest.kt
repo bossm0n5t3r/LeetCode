@@ -7,8 +7,8 @@ import kotlin.test.assertEquals
 
 class IntersectionOfTwoLinkedListsTest {
     private val intersectionOfTwoLinkedLists = IntersectionOfTwoLinkedLists.Solution()
-    private val listNodeUtil = ListNodeUtil()
-    private val basicSingleListNode = listNodeUtil.generateBasicSingleListNode()
+
+    private val basicSingleListNode = ListNodeUtil.generateBasicSingleListNode()
 
     data class IntersectionOfTwoLinkedListsTestData(
         val headA: List<ListNode?>,
@@ -73,13 +73,13 @@ class IntersectionOfTwoLinkedListsTest {
                 ),
             )
         tests.forEach { test ->
-            val headA = listNodeUtil.connectListNode(test.headA)
-            val headB = listNodeUtil.connectListNode(test.headB)
+            val headA = ListNodeUtil.connectListNode(test.headA)
+            val headB = ListNodeUtil.connectListNode(test.headB)
             assertEquals(
                 intersectionOfTwoLinkedLists.getIntersectionNode(headA, headB),
                 test.result,
             )
-            listNodeUtil.clearBasicSingleListNode(basicSingleListNode)
+            ListNodeUtil.clearBasicSingleListNode(basicSingleListNode)
         }
     }
 }

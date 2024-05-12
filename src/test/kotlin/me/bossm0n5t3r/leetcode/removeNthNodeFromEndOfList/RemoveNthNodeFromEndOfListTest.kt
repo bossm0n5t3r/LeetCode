@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 internal class RemoveNthNodeFromEndOfListTest {
     private val removeNthNodeFromEndOfList = RemoveNthNodeFromEndOfList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     private data class RemoveNthNodeFromEndOfListTestData(
         val head: ListNode?,
@@ -20,29 +19,29 @@ internal class RemoveNthNodeFromEndOfListTest {
         val tests =
             listOf(
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4, 5),
                     2,
-                    listNodeUtil.generateListNode(1, 2, 3, 5),
+                    ListNodeUtil.generateListNode(1, 2, 3, 5),
                 ),
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNode(1),
+                    ListNodeUtil.generateListNode(1),
                     1,
-                    listNodeUtil.generateListNode(),
+                    ListNodeUtil.generateListNode(),
                 ),
                 RemoveNthNodeFromEndOfListTestData(
-                    listNodeUtil.generateListNode(1, 2),
+                    ListNodeUtil.generateListNode(1, 2),
                     1,
-                    listNodeUtil.generateListNode(1),
+                    ListNodeUtil.generateListNode(1),
                 ),
             )
         tests.forEach { test ->
             val result = removeNthNodeFromEndOfList.removeNthFromEnd(test.head, test.n)
-            listNodeUtil.printListNode(result)
-            assertTrue(listNodeUtil.isEqual(result, test.result))
+            ListNodeUtil.printListNode(result)
+            assertTrue(ListNodeUtil.isEqual(result, test.result))
 
             val resultUsingPointers = removeNthNodeFromEndOfList.removeNthFromEndUsingPointers(test.head, test.n)
-            listNodeUtil.printListNode(resultUsingPointers)
-            assertTrue(listNodeUtil.isEqual(resultUsingPointers, test.result))
+            ListNodeUtil.printListNode(resultUsingPointers)
+            assertTrue(ListNodeUtil.isEqual(resultUsingPointers, test.result))
         }
     }
 }

@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class MaximumTwinSumOfALinkedListTest {
     private val sut = MaximumTwinSumOfALinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     private data class TestData(
         val head: ListNode?,
@@ -19,15 +18,15 @@ class MaximumTwinSumOfALinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNode(5, 4, 2, 1),
+                    ListNodeUtil.generateListNode(5, 4, 2, 1),
                     6,
                 ),
                 TestData(
-                    listNodeUtil.generateListNode(4, 2, 2, 3),
+                    ListNodeUtil.generateListNode(4, 2, 2, 3),
                     7,
                 ),
                 TestData(
-                    listNodeUtil.generateListNode(1, 100000),
+                    ListNodeUtil.generateListNode(1, 100000),
                     100001,
                 ),
             )

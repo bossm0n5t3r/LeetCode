@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class MiddleOfTheLinkedListTest {
     private val sut = MiddleOfTheLinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     private data class TestData(
         val head: ListNode?,
@@ -19,17 +18,17 @@ class MiddleOfTheLinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNode(1, 2, 3, 4, 5),
-                    listNodeUtil.generateListNode(3, 4, 5),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    ListNodeUtil.generateListNode(3, 4, 5),
                 ),
                 TestData(
-                    listNodeUtil.generateListNode(1, 2, 3, 4, 5, 6),
-                    listNodeUtil.generateListNode(4, 5, 6),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4, 5, 6),
+                    ListNodeUtil.generateListNode(4, 5, 6),
                 ),
             )
 
         tests.forEach { test ->
-            assertTrue(listNodeUtil.isEqual(sut.middleNode(test.head), test.result))
+            assertTrue(ListNodeUtil.isEqual(sut.middleNode(test.head), test.result))
         }
     }
 }

@@ -7,8 +7,8 @@ import kotlin.test.assertEquals
 
 class LinkedListCycleTest {
     private val linkedListCycle = LinkedListCycle.Solution()
-    private val listNodeUtil = ListNodeUtil()
-    private val basicListNode = listNodeUtil.generateBasicSingleListNode()
+
+    private val basicListNode = ListNodeUtil.generateBasicSingleListNode()
 
     data class LinkedListCycleTestData(
         val head: List<ListNode?>,
@@ -48,7 +48,7 @@ class LinkedListCycleTest {
                 ),
             )
         tests.forEach { test ->
-            val head = listNodeUtil.connectListNode(test.head)
+            val head = ListNodeUtil.connectListNode(test.head)
             assertEquals(
                 linkedListCycle.hasCycleFirstApproach(head),
                 test.result,
@@ -61,7 +61,7 @@ class LinkedListCycleTest {
                 linkedListCycle.hasCycleThirdApproach(head),
                 test.result,
             )
-            listNodeUtil.clearBasicSingleListNode(basicListNode)
+            ListNodeUtil.clearBasicSingleListNode(basicListNode)
         }
     }
 }

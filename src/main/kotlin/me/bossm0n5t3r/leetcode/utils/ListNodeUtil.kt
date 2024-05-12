@@ -4,7 +4,7 @@ class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
 
-class ListNodeUtil {
+object ListNodeUtil {
     fun generateListNode(vararg values: Int): ListNode? {
         val head = values.toList()
         if (head.isEmpty()) return null

@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class ReverseLinkedListTest {
     private val reverseLinkedList = ReverseLinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     data class ReverseLinkedListTestData(
         val head: ListNode?,
@@ -19,20 +18,20 @@ class ReverseLinkedListTest {
         val tests =
             listOf(
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    head = ListNodeUtil.generateListNode(1, 2, 3, 4, 5),
                     result = listOf(5, 4, 3, 2, 1),
                 ),
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNode(1, 2),
+                    head = ListNodeUtil.generateListNode(1, 2),
                     result = listOf(2, 1),
                 ),
                 ReverseLinkedListTestData(
-                    head = listNodeUtil.generateListNode(),
+                    head = ListNodeUtil.generateListNode(),
                     result = listOf(),
                 ),
             )
         tests.forEach { test ->
-            assertEquals(listNodeUtil.listNodeToList(reverseLinkedList.reverseList(test.head)), test.result)
+            assertEquals(ListNodeUtil.listNodeToList(reverseLinkedList.reverseList(test.head)), test.result)
         }
     }
 }

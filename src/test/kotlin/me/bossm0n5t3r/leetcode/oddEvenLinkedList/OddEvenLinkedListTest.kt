@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class OddEvenLinkedListTest {
     private val oddEvenLinkedList = OddEvenLinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     data class OddEvenLinkedListTestData(
         val head: ListNode?,
@@ -19,24 +18,24 @@ class OddEvenLinkedListTest {
         val tests =
             listOf(
                 OddEvenLinkedListTestData(
-                    head = listNodeUtil.generateListNode(1, 2, 3, 4, 5),
-                    result = listNodeUtil.generateListNode(1, 3, 5, 2, 4),
+                    head = ListNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    result = ListNodeUtil.generateListNode(1, 3, 5, 2, 4),
                 ),
                 OddEvenLinkedListTestData(
-                    head = listNodeUtil.generateListNode(2, 1, 3, 5, 6, 4, 7),
-                    result = listNodeUtil.generateListNode(2, 3, 6, 7, 1, 5, 4),
+                    head = ListNodeUtil.generateListNode(2, 1, 3, 5, 6, 4, 7),
+                    result = ListNodeUtil.generateListNode(2, 3, 6, 7, 1, 5, 4),
                 ),
                 OddEvenLinkedListTestData(
-                    head = listNodeUtil.generateListNode(1, 2, 3, 4, 5, 6, 7, 8),
-                    result = listNodeUtil.generateListNode(1, 3, 5, 7, 2, 4, 6, 8),
+                    head = ListNodeUtil.generateListNode(1, 2, 3, 4, 5, 6, 7, 8),
+                    result = ListNodeUtil.generateListNode(1, 3, 5, 7, 2, 4, 6, 8),
                 ),
                 OddEvenLinkedListTestData(
-                    head = listNodeUtil.generateListNode(1, 1),
-                    result = listNodeUtil.generateListNode(1, 1),
+                    head = ListNodeUtil.generateListNode(1, 1),
+                    result = ListNodeUtil.generateListNode(1, 1),
                 ),
             )
         tests.forEach { test ->
-            assertTrue(listNodeUtil.isEqual(oddEvenLinkedList.oddEvenList(test.head), test.result))
+            assertTrue(ListNodeUtil.isEqual(oddEvenLinkedList.oddEvenList(test.head), test.result))
         }
     }
 }

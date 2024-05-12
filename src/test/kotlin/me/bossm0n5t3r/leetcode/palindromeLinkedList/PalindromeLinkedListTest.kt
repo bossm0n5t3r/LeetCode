@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class PalindromeLinkedListTest {
     private val palindromeLinkedList = PalindromeLinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     data class PalindromeLinkedListTestData(
         val head: ListNode?,
@@ -19,15 +18,15 @@ class PalindromeLinkedListTest {
         val tests =
             listOf(
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNode(1, 2, 2, 1),
+                    ListNodeUtil.generateListNode(1, 2, 2, 1),
                     true,
                 ),
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNode(1, 2, 1, 2, 1),
+                    ListNodeUtil.generateListNode(1, 2, 1, 2, 1),
                     true,
                 ),
                 PalindromeLinkedListTestData(
-                    listNodeUtil.generateListNode(1, 2),
+                    ListNodeUtil.generateListNode(1, 2),
                     false,
                 ),
             )

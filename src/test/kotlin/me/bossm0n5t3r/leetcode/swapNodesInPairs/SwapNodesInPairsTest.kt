@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 internal class SwapNodesInPairsTest {
     private val swapNodesInPairs = SwapNodesInPairs.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     private data class SwapNodesInPairsTestData(
         val head: ListNode?,
@@ -19,26 +18,26 @@ internal class SwapNodesInPairsTest {
         val tests =
             listOf(
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNode(1, 2, 3, 4),
-                    listNodeUtil.generateListNode(2, 1, 4, 3),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4),
+                    ListNodeUtil.generateListNode(2, 1, 4, 3),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNode(),
-                    listNodeUtil.generateListNode(),
+                    ListNodeUtil.generateListNode(),
+                    ListNodeUtil.generateListNode(),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNode(1),
-                    listNodeUtil.generateListNode(1),
+                    ListNodeUtil.generateListNode(1),
+                    ListNodeUtil.generateListNode(1),
                 ),
                 SwapNodesInPairsTestData(
-                    listNodeUtil.generateListNode(1, 2, 3),
-                    listNodeUtil.generateListNode(2, 1, 3),
+                    ListNodeUtil.generateListNode(1, 2, 3),
+                    ListNodeUtil.generateListNode(2, 1, 3),
                 ),
             )
         tests.forEach { test ->
             val result = swapNodesInPairs.swapPairs(test.head)
-            listNodeUtil.printListNode(result)
-            assertTrue(listNodeUtil.isEqual(result, test.result))
+            ListNodeUtil.printListNode(result)
+            assertTrue(ListNodeUtil.isEqual(result, test.result))
         }
     }
 }

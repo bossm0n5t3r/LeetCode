@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class DoubleANumberRepresentedAsALinkedListTest {
     private val sut = DoubleANumberRepresentedAsALinkedList.Solution()
-    private val listNodeUtil = ListNodeUtil()
 
     private data class TestData(
         val head: ListNode?,
@@ -19,18 +18,18 @@ class DoubleANumberRepresentedAsALinkedListTest {
         val tests =
             listOf(
                 TestData(
-                    listNodeUtil.generateListNode(1, 8, 9),
-                    listNodeUtil.generateListNode(3, 7, 8),
+                    ListNodeUtil.generateListNode(1, 8, 9),
+                    ListNodeUtil.generateListNode(3, 7, 8),
                 ),
                 TestData(
-                    listNodeUtil.generateListNode(9, 9, 9),
-                    listNodeUtil.generateListNode(1, 9, 9, 8),
+                    ListNodeUtil.generateListNode(9, 9, 9),
+                    ListNodeUtil.generateListNode(1, 9, 9, 8),
                 ),
             )
 
         tests.forEach { test ->
             assertTrue {
-                listNodeUtil.isEqual(test.result, sut.doubleIt(test.head))
+                ListNodeUtil.isEqual(test.result, sut.doubleIt(test.head))
             }
         }
     }

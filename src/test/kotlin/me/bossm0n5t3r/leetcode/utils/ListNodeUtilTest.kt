@@ -5,18 +5,16 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class ListNodeUtilTest {
-    private val listNodeUtil = ListNodeUtil()
-
     @Test
     fun getLastListNodeTest() {
-        val listNode = listNodeUtil.generateListNode(1, 2, 3, 4, 5)
-        val lastListNode = listNodeUtil.getLastListNode(listNode!!)
+        val listNode = ListNodeUtil.generateListNode(1, 2, 3, 4, 5)
+        val lastListNode = ListNodeUtil.getLastListNode(listNode!!)
         assertEquals(lastListNode.`val`, 5)
     }
 
     @Test
     fun connectListNodeTest() {
-        val basicListNode = listNodeUtil.generateBasicSingleListNode()
+        val basicListNode = ListNodeUtil.generateBasicSingleListNode()
         val listNodeData =
             listOf(
                 basicListNode[0][1],
@@ -26,7 +24,7 @@ class ListNodeUtilTest {
                 basicListNode[0][9],
             )
         val expectListNodeVal = listOf(1, 3, 5, 7, 9)
-        var cur: ListNode? = listNodeUtil.connectListNode(listNodeData)
+        var cur: ListNode? = ListNodeUtil.connectListNode(listNodeData)
         for (i in expectListNodeVal.indices) {
             assertTrue(cur != null)
             assertEquals(cur.`val`, expectListNodeVal[i])
