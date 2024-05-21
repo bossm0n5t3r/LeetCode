@@ -162,6 +162,7 @@ class LeetCode {
             .replace("'", " ")
             .replace("(", " ")
             .replace(")", " ")
+            .replace(",", " ")
             .replace("1", " one ")
             .replace("2", " two ")
             .replace("3", " three ")
