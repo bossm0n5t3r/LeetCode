@@ -156,16 +156,13 @@ class LeetCode {
 
     private fun String.replaceRomanNumeralsAndSpecialCharacters() =
         this
-            .replace("III", "3")
-            .replace("II", "2")
+            .replace("III", "I I I")
+            .replace("II", "I I")
             .replace("-", " ")
             .replace("'", " ")
             .replace("(", " ")
             .replace(")", " ")
             .replace(",", " ")
-            .replace("1", " one ")
-            .replace("2", " two ")
-            .replace("3", " three ")
 
     private fun String.toCamelCase(): String {
         return this
