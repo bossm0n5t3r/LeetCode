@@ -6,18 +6,16 @@ class SubarrayProductLessThanK {
             nums: IntArray,
             k: Int,
         ): Int {
+            if (k <= 1) return 0
+            var start = 0
+            var product = 1.0
             var result = 0
-            for (start in nums.indices) {
-                var product = nums[start]
-                if (product >= k) {
-                    continue
+            for (end in nums.indices) {
+                product *= nums[end]
+                while (product >= k) {
+                    product /= nums[start++]
                 }
-                result++
-                var end = start + 1
-                while (end < nums.size && product * nums[end] < k) {
-                    product *= nums[end++]
-                    result++
-                }
+                result += end - start + 1
             }
             return result
         }
