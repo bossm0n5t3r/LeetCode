@@ -8,36 +8,17 @@ class MergeSortedArray {
             nums2: IntArray,
             n: Int,
         ) {
-            if (n == 0) return
-            val copyNums1 = nums1.copyOf()
-            var totalIndex = 0
-            var indexNums1 = 0
-            var indexNums2 = 0
-            while (indexNums1 < m || indexNums2 < n) {
-                if (indexNums1 == m) {
-                    (totalIndex until nums1.size).forEach { i ->
-                        nums1[i] = nums2[indexNums2]
-                        indexNums2++
+            var i = m - 1
+            var j = n - 1
+            var k = m + n - 1
+
+            while (j >= 0) {
+                nums1[k--] =
+                    if (i >= 0 && nums1[i] > nums2[j]) {
+                        nums1[i--]
+                    } else {
+                        nums2[j--]
                     }
-                    break
-                }
-                if (indexNums2 == n) {
-                    (totalIndex until nums1.size).forEach { i ->
-                        nums1[i] = copyNums1[indexNums1]
-                        indexNums1++
-                    }
-                    break
-                }
-                val curNums1 = copyNums1[indexNums1]
-                val curNums2 = nums2[indexNums2]
-                if (curNums1 <= curNums2) {
-                    nums1[totalIndex] = curNums1
-                    indexNums1++
-                } else {
-                    nums1[totalIndex] = curNums2
-                    indexNums2++
-                }
-                totalIndex++
             }
         }
     }
