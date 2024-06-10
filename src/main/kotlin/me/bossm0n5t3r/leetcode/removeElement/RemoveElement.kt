@@ -4,18 +4,15 @@ class RemoveElement {
     class Solution {
         fun removeElement(
             nums: IntArray,
-            target: Int,
+            `val`: Int,
         ): Int {
-            var count = 0
-            var idx = 0
-            nums.indices.forEach { i ->
-                if (nums[i] != target) {
-                    nums[idx++] = nums[i]
-                } else {
-                    count++
+            var rootIndex = 0
+            for (num in nums) {
+                if (num != `val`) {
+                    nums[rootIndex++] = num
                 }
             }
-            return nums.size - count
+            return rootIndex
         }
     }
 }

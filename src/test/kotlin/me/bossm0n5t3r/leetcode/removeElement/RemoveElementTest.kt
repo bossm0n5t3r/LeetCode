@@ -8,7 +8,7 @@ internal class RemoveElementTest {
 
     private data class RemoveElementTestData(
         val nums: IntArray,
-        val target: Int,
+        val `val`: Int,
         val result: Int,
     ) {
         override fun equals(other: Any?): Boolean {
@@ -18,7 +18,7 @@ internal class RemoveElementTest {
             other as RemoveElementTestData
 
             if (!nums.contentEquals(other.nums)) return false
-            if (target != other.target) return false
+            if (`val` != other.`val`) return false
             if (result != other.result) return false
 
             return true
@@ -26,7 +26,7 @@ internal class RemoveElementTest {
 
         override fun hashCode(): Int {
             var result1 = nums.contentHashCode()
-            result1 = 31 * result1 + target
+            result1 = 31 * result1 + `val`
             result1 = 31 * result1 + result
             return result1
         }
@@ -40,7 +40,7 @@ internal class RemoveElementTest {
                 RemoveElementTestData(intArrayOf(0, 1, 2, 2, 3, 0, 4, 2), 2, 5),
             )
         tests.forEach { test ->
-            assertEquals(removeElement.removeElement(test.nums, test.target), test.result)
+            assertEquals(removeElement.removeElement(test.nums, test.`val`), test.result)
         }
     }
 }
