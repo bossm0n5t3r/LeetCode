@@ -32,8 +32,8 @@ class HeightCheckerTest {
         val tests =
             listOf(
                 TestData("[1,1,4,2,1,3]".toIntArray(), 3),
-                TestData("[5,1,2,3,4]".toIntArray(), 3),
-                TestData("[1,2,3,4,5]".toIntArray(), 3),
+                TestData("[5,1,2,3,4]".toIntArray(), 5),
+                TestData("[1,2,3,4,5]".toIntArray(), 0),
             )
 
         tests.forEach { test ->
