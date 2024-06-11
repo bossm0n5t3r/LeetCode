@@ -40,6 +40,7 @@ class RelativeSortArrayTest {
         tests.forEach { test ->
             assertTrue {
                 sut.relativeSortArray(test.arr1, test.arr2).contentEquals(test.result)
+                sut.relativeSortArrayUsingCountingSort(test.arr1, test.arr2).contentEquals(test.result)
             }
         }
     }
