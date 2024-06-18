@@ -52,5 +52,31 @@ class RotateArray {
                 nums[nums.lastIndex] = tmp
             }
         }
+
+        fun rotateThree(
+            nums: IntArray,
+            k: Int,
+        ) {
+            val modifiedK = k % nums.size
+            reverse(nums, 0, nums.size - 1)
+            reverse(nums, 0, modifiedK - 1)
+            reverse(nums, modifiedK, nums.size - 1)
+        }
+
+        private fun reverse(
+            nums: IntArray,
+            start: Int,
+            end: Int,
+        ) {
+            var s = start
+            var e = end
+            while (s < e) {
+                val temp = nums[s]
+                nums[s] = nums[e]
+                nums[e] = temp
+                s++
+                e--
+            }
+        }
     }
 }
