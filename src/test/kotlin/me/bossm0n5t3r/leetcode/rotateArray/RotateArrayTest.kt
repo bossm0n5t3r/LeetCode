@@ -38,9 +38,14 @@ class RotateArrayTest {
             )
 
         tests.forEach { test ->
-            val copiedOne = test.copy()
-            sut.rotateOne(copiedOne.nums, copiedOne.k)
-            assertTrue { copiedOne.nums.contentEquals(copiedOne.result) }
+            val (nums, k, result) = test
+            val copiedNumsOne = nums.copyOf()
+            sut.rotateOne(copiedNumsOne, k)
+            assertTrue { copiedNumsOne.contentEquals(result) }
+
+            val copiedNumsTwo = nums.copyOf()
+            sut.rotateTwo(copiedNumsTwo, k)
+            assertTrue { copiedNumsTwo.contentEquals(result) }
         }
     }
 }
