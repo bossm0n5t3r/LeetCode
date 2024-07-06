@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.intersectionOfTwoArraysII
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class IntersectionOfTwoArraysIITest {
     private val sut = IntersectionOfTwoArraysII.Solution()
@@ -34,13 +34,11 @@ class IntersectionOfTwoArraysIITest {
         val tests =
             listOf(
                 TestData("[1,2,2,1]".toIntArray(), "[2,2]".toIntArray(), "[2,2]".toIntArray()),
-                TestData("[4,9,5]".toIntArray(), "[9,4,9,8,4]".toIntArray(), "[4,9]".toIntArray()),
+                TestData("[4,9,5]".toIntArray(), "[9,4,9,8,4]".toIntArray(), "[9,4]".toIntArray()),
             )
 
         tests.forEach { test ->
-            assertTrue {
-                sut.intersect(test.nums1, test.nums2).contentEquals(test.result)
-            }
+            assertArrayEquals(test.result, sut.intersect(test.nums1, test.nums2))
         }
     }
 }
