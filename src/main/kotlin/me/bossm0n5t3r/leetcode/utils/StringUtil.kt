@@ -21,11 +21,14 @@ object StringUtil {
 
     fun String.toIntArray(): IntArray {
         return this
-            .drop(1)
-            .dropLast(1)
-            .split(",")
-            .map { it.toInt() }
-            .toIntArray()
+            .takeIf { it.isNotBlank() }
+            ?.drop(1)
+            ?.dropLast(1)
+            ?.takeIf { it.isNotBlank() }
+            ?.split(",")
+            ?.map { it.toInt() }
+            ?.toIntArray()
+            ?: IntArray(0)
     }
 
     fun String.toArrayOfCharArray(): Array<CharArray> {
