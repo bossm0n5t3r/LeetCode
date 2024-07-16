@@ -2,7 +2,7 @@ package me.bossm0n5t3r.leetcode.utils
 
 object StringUtil {
     fun String.toArrayOfIntArray(): Array<IntArray> {
-        return try {
+        return runCatching {
             this
                 .drop(2)
                 .dropLast(2)
@@ -14,9 +14,8 @@ object StringUtil {
                         .toIntArray()
                 }
                 .toTypedArray()
-        } catch (e: Exception) {
-            emptyArray()
         }
+            .getOrElse { emptyArray() }
     }
 
     fun String.toIntArray(): IntArray {
