@@ -8,7 +8,6 @@ import kotlin.test.assertEquals
 
 class BinaryTreeInorderTraversalTest {
     private val binaryTreeInorderTraversal = BinaryTreeInorderTraversal.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     data class BinaryTreeInorderTraversalTestData(
         val root: TreeNode?,
@@ -20,11 +19,11 @@ class BinaryTreeInorderTraversalTest {
         val tests =
             listOf(
                 BinaryTreeInorderTraversalTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, 3)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, 3)),
                     listOf(1, 3, 2),
                 ),
-                BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf()), listOf()),
-                BinaryTreeInorderTraversalTestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),
+                BinaryTreeInorderTraversalTestData(TreeNodeUtil.generateTreeNodeOrNull(listOf()), listOf()),
+                BinaryTreeInorderTraversalTestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(1)), listOf(1)),
             )
         tests.forEach { test ->
             // RecursiveApproach

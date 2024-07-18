@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class BinaryTreeRightSideViewTest {
     private val sut = BinaryTreeRightSideView.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -19,15 +18,15 @@ class BinaryTreeRightSideViewTest {
         val tests =
             listOf(
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, null, 5, null, 4)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, null, 5, null, 4)),
                     result = listOf(1, 3, 4),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 3)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 3)),
                     result = listOf(1, 3),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                     result = listOf(),
                 ),
             )

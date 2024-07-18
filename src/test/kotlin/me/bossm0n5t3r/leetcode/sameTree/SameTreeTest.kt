@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class SameTreeTest {
     private val sut = SameTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val p: TreeNode?,
@@ -20,18 +19,18 @@ class SameTreeTest {
         val tests =
             listOf(
                 TestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
                     true,
                 ),
                 TestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2)),
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2)),
                     false,
                 ),
                 TestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 1)),
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 2)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 1)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 2)),
                     false,
                 ),
             )

@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 internal class DeepestLeavesSumTest {
     private val deepestLeavesSum = DeepestLeavesSum.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class DeepestLeavesSumTestData(
         val root: TreeNode?,
@@ -19,11 +18,11 @@ internal class DeepestLeavesSumTest {
         val tests =
             listOf(
                 DeepestLeavesSumTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, 5, null, 6, 7, null, null, null, null, 8)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, 5, null, 6, 7, null, null, null, null, 8)),
                     15,
                 ),
                 DeepestLeavesSumTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)),
                     19,
                 ),
             )

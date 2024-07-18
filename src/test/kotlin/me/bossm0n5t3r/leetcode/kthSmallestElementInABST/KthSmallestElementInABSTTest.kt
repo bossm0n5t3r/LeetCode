@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class KthSmallestElementInABSTTest {
     private val kthSmallestElementInABST = KthSmallestElementInABST.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     data class KthSmallestElementInABSTTestData(
         val root: TreeNode?,
@@ -20,12 +19,12 @@ class KthSmallestElementInABSTTest {
         val tests =
             listOf(
                 KthSmallestElementInABSTTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, null, 2)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, null, 2)),
                     1,
                     1,
                 ),
                 KthSmallestElementInABSTTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, null, 1)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, null, 1)),
                     3,
                     3,
                 ),

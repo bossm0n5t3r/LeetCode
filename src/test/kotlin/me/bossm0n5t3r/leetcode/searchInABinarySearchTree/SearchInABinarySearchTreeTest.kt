@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class SearchInABinarySearchTreeTest {
     private val sut = SearchInABinarySearchTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -20,20 +19,20 @@ class SearchInABinarySearchTreeTest {
         val tests =
             listOf(
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
                     `val` = 2,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(4, 2, 7, 1, 3)),
                     `val` = 5,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                 ),
             )
 
         tests.forEach { test ->
             assertTrue {
-                treeNodeUtil.isEqual(
+                TreeNodeUtil.isEqual(
                     sut.searchBST(test.root, test.`val`),
                     test.result,
                 )

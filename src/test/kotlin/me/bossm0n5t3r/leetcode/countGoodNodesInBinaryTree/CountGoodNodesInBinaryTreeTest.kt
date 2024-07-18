@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class CountGoodNodesInBinaryTreeTest {
     private val sut = CountGoodNodesInBinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -19,15 +18,15 @@ class CountGoodNodesInBinaryTreeTest {
         val tests =
             listOf(
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, 3, null, 1, 5)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 1, 4, 3, null, 1, 5)),
                     result = 4,
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 3, null, 4, 2)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 3, null, 4, 2)),
                     result = 3,
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1)),
                     result = 1,
                 ),
             )

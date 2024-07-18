@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class DiameterOfBinaryTreeTest {
     private val sut = DiameterOfBinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -18,8 +17,8 @@ class DiameterOfBinaryTreeTest {
     fun test() {
         val tests =
             listOf(
-                TestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, 5)), 3),
-                TestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2)), 1),
+                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, 5)), 3),
+                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2)), 1),
             )
 
         tests.forEach { test ->

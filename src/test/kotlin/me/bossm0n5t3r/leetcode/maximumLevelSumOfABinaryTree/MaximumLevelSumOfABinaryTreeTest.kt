@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class MaximumLevelSumOfABinaryTreeTest {
     private val sut = MaximumLevelSumOfABinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -19,12 +18,12 @@ class MaximumLevelSumOfABinaryTreeTest {
         val tests =
             listOf(
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 7, 0, 7, -8, null, null)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 7, 0, 7, -8, null, null)),
                     result = 2,
                 ),
                 TestData(
                     root =
-                        treeNodeUtil.generateTreeNodeOrNull(
+                        TreeNodeUtil.generateTreeNodeOrNull(
                             listOf(989, null, 10250, 98693, -89388, null, null, null, -32127),
                         ),
                     result = 2,

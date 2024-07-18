@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class ConvertSortedArrayToBSTTest {
     private val convertSortedArrayToBST = ConvertSortedArrayToBST.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     data class ConvertSortedArrayToBSTTestData(
         val nums: IntArray,
@@ -38,15 +37,15 @@ class ConvertSortedArrayToBSTTest {
             listOf(
                 ConvertSortedArrayToBSTTestData(
                     nums = intArrayOf(-10, -3, 0, 5, 9),
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(0, -3, 9, -10, null, 5)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(0, -3, 9, -10, null, 5)),
                 ),
                 ConvertSortedArrayToBSTTestData(
                     nums = intArrayOf(1, 3),
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 1)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 1)),
                 ),
             )
         tests.forEach { test ->
-            assertTrue(treeNodeUtil.isEqual(convertSortedArrayToBST.sortedArrayToBST(test.nums), test.result!!))
+            assertTrue(TreeNodeUtil.isEqual(convertSortedArrayToBST.sortedArrayToBST(test.nums), test.result!!))
         }
     }
 }

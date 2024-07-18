@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 internal class DistributeCoinsInBinaryTreeTest {
     private val distributeCoinsInBinaryTree = DistributeCoinsInBinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class DistributeCoinsInBinaryTreeTestData(
         val root: TreeNode?,
@@ -19,11 +18,11 @@ internal class DistributeCoinsInBinaryTreeTest {
         val tests =
             listOf(
                 DistributeCoinsInBinaryTreeTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(3, 0, 0)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 0, 0)),
                     2,
                 ),
                 DistributeCoinsInBinaryTreeTestData(
-                    treeNodeUtil.generateTreeNodeOrNull(listOf(0, 3, 0)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(0, 3, 0)),
                     3,
                 ),
             )

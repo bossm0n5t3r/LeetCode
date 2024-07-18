@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class LeafSimilarTreesTest {
     private val sut = LeafSimilarTrees.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root1: TreeNode?,
@@ -20,16 +19,16 @@ class LeafSimilarTreesTest {
         val tests =
             listOf(
                 TestData(
-                    root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)),
+                    root1 = TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)),
                     root2 =
-                        treeNodeUtil.generateTreeNodeOrNull(
+                        TreeNodeUtil.generateTreeNodeOrNull(
                             listOf(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8),
                         ),
                     result = true,
                 ),
                 TestData(
-                    root1 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
-                    root2 = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 3, 2)),
+                    root1 = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3)),
+                    root2 = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 3, 2)),
                     result = false,
                 ),
             )

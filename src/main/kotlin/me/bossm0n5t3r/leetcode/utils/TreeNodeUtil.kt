@@ -8,7 +8,7 @@ class TreeNode(var `val`: Int) {
     var right: TreeNode? = null
 }
 
-class TreeNodeUtil {
+object TreeNodeUtil {
     fun generateTreeNodeOrNull(data: List<Int?>): TreeNode? {
         if (data.isEmpty()) return null
         val length = data.size

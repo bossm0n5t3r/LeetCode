@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class FindBottomLeftTreeValueTest {
     private val sut = FindBottomLeftTreeValue.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -18,8 +17,8 @@ class FindBottomLeftTreeValueTest {
     fun test() {
         val tests =
             listOf(
-                TestData(treeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)), 1),
-                TestData(treeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, null, 5, 6, null, null, 7)), 7),
+                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)), 1),
+                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 2, 3, 4, null, 5, 6, null, null, 7)), 7),
             )
 
         tests.forEach { test ->

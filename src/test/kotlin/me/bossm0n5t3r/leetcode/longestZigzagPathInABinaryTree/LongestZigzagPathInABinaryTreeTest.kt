@@ -7,7 +7,6 @@ import kotlin.test.assertEquals
 
 class LongestZigzagPathInABinaryTreeTest {
     private val sut = LongestZigzagPathInABinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -20,17 +19,17 @@ class LongestZigzagPathInABinaryTreeTest {
             listOf(
                 TestData(
                     root =
-                        treeNodeUtil.generateTreeNodeOrNull(
+                        TreeNodeUtil.generateTreeNodeOrNull(
                             listOf(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1),
                         ),
                     result = 3,
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 1, null, 1, null, null, 1, 1, null, 1)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 1, 1, null, 1, null, null, 1, 1, null, 1)),
                     result = 4,
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1)),
                     result = 0,
                 ),
             )

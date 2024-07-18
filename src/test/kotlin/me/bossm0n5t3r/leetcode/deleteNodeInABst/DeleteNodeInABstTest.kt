@@ -7,7 +7,6 @@ import kotlin.test.assertTrue
 
 class DeleteNodeInABstTest {
     private val sut = DeleteNodeInABst.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     private data class TestData(
         val root: TreeNode?,
@@ -20,42 +19,42 @@ class DeleteNodeInABstTest {
         val tests =
             listOf(
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
                     key = 3,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 4, 6, 2, null, null, 7)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 4, 6, 2, null, null, 7)),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
                     key = 0,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                     key = 0,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(0)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(0)),
                     key = 0,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
                     key = 5,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(6, 3, 7, 2, 4)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(6, 3, 7, 2, 4)),
                 ),
                 TestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4, null, 7)),
                     key = 7,
-                    result = treeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4)),
+                    result = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 3, 6, 2, 4)),
                 ),
             )
 
         tests.forEach { test ->
             assertTrue {
-                treeNodeUtil.isEqual(
+                TreeNodeUtil.isEqual(
                     sut.deleteNode(test.root, test.key)
-                        .also { treeNodeUtil.printTreeNode(it) },
+                        .also { TreeNodeUtil.printTreeNode(it) },
                     test.result,
                 )
             }

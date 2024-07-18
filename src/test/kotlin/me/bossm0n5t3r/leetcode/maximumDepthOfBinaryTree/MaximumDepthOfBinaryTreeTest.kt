@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test
 
 class MaximumDepthOfBinaryTreeTest {
     private val maximumDepthOfBinaryTree = MaximumDepthOfBinaryTree.Solution()
-    private val treeNodeUtil = TreeNodeUtil()
 
     data class MaximumDepthOfBinaryTreeTestData(
         val root: TreeNode?,
@@ -19,19 +18,19 @@ class MaximumDepthOfBinaryTreeTest {
         val tests =
             listOf(
                 MaximumDepthOfBinaryTreeTestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(3, 9, 20, null, null, 15, 7)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(3, 9, 20, null, null, 15, 7)),
                     result = 3,
                 ),
                 MaximumDepthOfBinaryTreeTestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2)),
                     result = 2,
                 ),
                 MaximumDepthOfBinaryTreeTestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf()),
                     result = 0,
                 ),
                 MaximumDepthOfBinaryTreeTestData(
-                    root = treeNodeUtil.generateTreeNodeOrNull(listOf(0)),
+                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(0)),
                     result = 1,
                 ),
             )
