@@ -3,38 +3,24 @@ package me.bossm0n5t3r.leetcode.luckyNumbersInAMatrix
 class LuckyNumbersInAMatrix {
     class Solution {
         fun luckyNumbers(matrix: Array<IntArray>): List<Int> {
-            return (matrix to matrix.getMinValueInEachRow()).filterMaxValueInEachColumn()
-        }
-
-        private fun Array<IntArray>.getMinValueInEachRow(): List<Pair<Int, Int>> {
-            val (m, n) = this.size to this[0].size
-            val result = mutableListOf<Pair<Int, Int>>()
+            val minRow = IntArray(matrix.size) { Int.MAX_VALUE }
+            val maxCol = IntArray(matrix[0].size) { Int.MIN_VALUE }
+            val result = mutableListOf<Int>()
+            val (m, n) = matrix.size to matrix[0].size
             for (r in 0 until m) {
-                var minColumnIndex = 0
-                var minValue = this[r][minColumnIndex]
                 for (c in 0 until n) {
-                    if (this[r][c] < minValue) {
-                        minColumnIndex = c
-                        minValue = this[r][minColumnIndex]
+                    minRow[r] = minOf(matrix[r][c], minRow[r])
+                    maxCol[c] = maxOf(matrix[r][c], maxCol[c])
+                }
+            }
+            for (r in 0 until m) {
+                for (c in 0 until n) {
+                    if (matrix[r][c] == minRow[r] && matrix[r][c] == maxCol[c]) {
+                        result.add(matrix[r][c])
                     }
                 }
-                result.add(r to minColumnIndex)
             }
             return result
-        }
-
-        private fun Pair<Array<IntArray>, List<Pair<Int, Int>>>.filterMaxValueInEachColumn(): List<Int> {
-            val (matrix, minValueInEachRow) = this
-            val m = matrix.size
-            return minValueInEachRow
-                .filter { (curR, curC) ->
-                    val currentValue = matrix[curR][curC]
-                    for (r in 0 until m) {
-                        if (matrix[r][curC] > currentValue) return@filter false
-                    }
-                    true
-                }
-                .map { (r, c) -> matrix[r][c] }
         }
     }
 }
