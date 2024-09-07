@@ -7,19 +7,11 @@ import java.util.Stack
 class Node(var `val`: Int) {
     var subNodeStore = mutableListOf<Node?>()
 
-    var children: MutableList<Node?>
-        get() = subNodeStore
-        set(value) {
-            subNodeStore = value
-        }
+    var children: MutableList<Node?> = subNodeStore
 
-    var neighbors: ArrayList<Node?>
-        get() = ArrayList(subNodeStore)
-        set(value) {
-            subNodeStore = value
-        }
+    var neighbors: ArrayList<Node?> = subNodeStore as ArrayList<Node?>
 
-    fun addSubNode(subNode: Node) {
+    fun addSubNode(subNode: Node?) {
         subNodeStore.add(subNode)
     }
 
@@ -36,13 +28,11 @@ class Node(var `val`: Int) {
     }
 
     override fun hashCode(): Int {
-        var result = `val`
-        result = 31 * result + subNodeStore.hashCode()
-        return result
+        return `val`
     }
 
     override fun toString(): String {
-        return "Node(`val`: ${this.`val`}, store: ${this.subNodeStore.toList()})"
+        return "Node(`val`: ${this.`val`}, store: ${this.subNodeStore.map { it?.`val` }})"
     }
 }
 
@@ -82,15 +72,29 @@ object NodeUtil {
         return if (candidatesStack.isEmpty() || candidatesStack.first().isEmpty()) null else candidatesStack.first().first()
     }
 
+    fun generateNodeOrNull(neighborsList: List<List<Int>>): Node? {
+        val nodeValToNode = (1..neighborsList.size).associateWith { Node(it) }
+        for ((index, neighbors) in neighborsList.withIndex()) {
+            val nodeVal = index + 1
+            for (neighbor in neighbors) {
+                val neighborNode = nodeValToNode[neighbor]
+                nodeValToNode[nodeVal]?.addSubNode(neighborNode)
+            }
+        }
+        return nodeValToNode[1]
+    }
+
     fun Node.toList(): List<Int?> {
         val result = mutableListOf<Int?>()
         val queue: Queue<Node?> = LinkedList()
+        val visited = mutableSetOf<Node?>()
         queue.add(this)
         while (queue.isNotEmpty()) {
-            if (queue.all { it == null }) break
+            if (queue.all { it == null } || queue.all { visited.contains(it) }) break
             var size = queue.size
             while (size-- > 0) {
                 val cur = queue.poll()
+                visited.add(cur)
                 result.add(cur?.`val`)
                 val subNodeStore = cur?.subNodeStore
                 if (subNodeStore.isNullOrEmpty()) {
