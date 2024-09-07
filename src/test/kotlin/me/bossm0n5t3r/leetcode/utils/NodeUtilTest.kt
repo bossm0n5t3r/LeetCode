@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 
 class NodeUtilTest {
     @Test
-    fun generateNodeOrNullTest() {
+    fun basicGenerateNodeOrNullTest() {
         //         1
         //         │
         //     ┌───┼───┐
@@ -18,6 +18,28 @@ class NodeUtilTest {
         //    │ │
         //    5 6
         val values = listOf(1, null, 3, 2, 4, null, 5, 6)
+        val result =
+            assertDoesNotThrow {
+                NodeUtil.generateNodeOrNull(*values.toTypedArray())
+            }
+        assertEquals(
+            values,
+            result?.toList(),
+        )
+    }
+
+    @Test
+    fun advancedGenerateNodeOrNullTest() {
+        //         1
+        //         │
+        //     ┌───┼───┐
+        //     │   │   │
+        //     3   2   4
+        //         │
+        //        ┌┴┐
+        //        │ │
+        //        5 6
+        val values = listOf(1, null, 3, 2, 4, null, null, 5, 6)
         val result =
             assertDoesNotThrow {
                 NodeUtil.generateNodeOrNull(*values.toTypedArray())

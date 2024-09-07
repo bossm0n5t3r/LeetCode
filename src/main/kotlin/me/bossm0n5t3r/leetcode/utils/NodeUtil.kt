@@ -5,10 +5,10 @@ import java.util.Queue
 import java.util.Stack
 
 class Node(var `val`: Int) {
-    var neighbors: ArrayList<Node?> = ArrayList()
+    var children: MutableList<Node?> = mutableListOf()
 
     fun addNeighbor(neighbor: Node) {
-        neighbors.add(neighbor)
+        children.add(neighbor)
     }
 
     override operator fun equals(other: Any?): Boolean {
@@ -18,19 +18,19 @@ class Node(var `val`: Int) {
         other as Node
 
         if (`val` != other.`val`) return false
-        if (neighbors.toList() != other.neighbors.toList()) return false
+        if (children.toList() != other.children.toList()) return false
 
         return true
     }
 
     override fun hashCode(): Int {
         var result = `val`
-        result = 31 * result + neighbors.hashCode()
+        result = 31 * result + children.hashCode()
         return result
     }
 
     override fun toString(): String {
-        return "Node(`val`: ${this.`val`}, neighbors: ${this.neighbors.toList()})"
+        return "Node(`val`: ${this.`val`}, neighbors: ${this.children.toList()})"
     }
 }
 
@@ -60,6 +60,9 @@ object NodeUtil {
                     cur.addNeighbor(neighbor)
                     nextCandidates.add(neighbor)
                 }
+                if (index < candidates.size) {
+                    require(queue.poll() == null) { "queue: $queue, candidates: $candidates, candidatesStack: $candidatesStack" }
+                }
             }
             candidatesStack.push(nextCandidates)
             require(queue.poll() == null) { "queue: $queue, candidates: $candidates, candidatesStack: $candidatesStack" }
@@ -77,13 +80,21 @@ object NodeUtil {
             while (size-- > 0) {
                 val cur = queue.poll()
                 result.add(cur?.`val`)
-                for (neighbor in cur?.neighbors ?: emptyList()) {
+                val children = cur?.children
+                if (children.isNullOrEmpty()) {
+                    queue.offer(null)
+                    continue
+                }
+                for (neighbor in children) {
                     queue.offer(neighbor)
                 }
             }
             if (queue.isNotEmpty()) {
                 result.add(null)
             }
+        }
+        while (result.isNotEmpty() && result.last() == null) {
+            result.removeLast()
         }
         return result
     }
