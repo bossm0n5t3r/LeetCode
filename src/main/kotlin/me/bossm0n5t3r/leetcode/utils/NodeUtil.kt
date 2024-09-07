@@ -5,10 +5,22 @@ import java.util.Queue
 import java.util.Stack
 
 class Node(var `val`: Int) {
-    var children: MutableList<Node?> = mutableListOf()
+    var subNodeStore = mutableListOf<Node?>()
 
-    fun addNeighbor(neighbor: Node) {
-        children.add(neighbor)
+    var children: MutableList<Node?>
+        get() = subNodeStore
+        set(value) {
+            subNodeStore = value
+        }
+
+    var neighbors: ArrayList<Node?>
+        get() = ArrayList(subNodeStore)
+        set(value) {
+            subNodeStore = value
+        }
+
+    fun addSubNode(subNode: Node) {
+        subNodeStore.add(subNode)
     }
 
     override operator fun equals(other: Any?): Boolean {
@@ -18,19 +30,19 @@ class Node(var `val`: Int) {
         other as Node
 
         if (`val` != other.`val`) return false
-        if (children.toList() != other.children.toList()) return false
+        if (subNodeStore.toList() != other.subNodeStore.toList()) return false
 
         return true
     }
 
     override fun hashCode(): Int {
         var result = `val`
-        result = 31 * result + children.hashCode()
+        result = 31 * result + subNodeStore.hashCode()
         return result
     }
 
     override fun toString(): String {
-        return "Node(`val`: ${this.`val`}, neighbors: ${this.children.toList()})"
+        return "Node(`val`: ${this.`val`}, store: ${this.subNodeStore.toList()})"
     }
 }
 
@@ -56,9 +68,9 @@ object NodeUtil {
             while (index < candidates.size) {
                 val cur = candidates[index++]
                 while (queue.isNotEmpty() && queue.peek() != null) {
-                    val neighbor = Node(requireNotNull(queue.poll()))
-                    cur.addNeighbor(neighbor)
-                    nextCandidates.add(neighbor)
+                    val subNode = Node(requireNotNull(queue.poll()))
+                    cur.addSubNode(subNode)
+                    nextCandidates.add(subNode)
                 }
                 if (index < candidates.size) {
                     require(queue.poll() == null) { "queue: $queue, candidates: $candidates, candidatesStack: $candidatesStack" }
@@ -80,13 +92,13 @@ object NodeUtil {
             while (size-- > 0) {
                 val cur = queue.poll()
                 result.add(cur?.`val`)
-                val children = cur?.children
-                if (children.isNullOrEmpty()) {
+                val subNodeStore = cur?.subNodeStore
+                if (subNodeStore.isNullOrEmpty()) {
                     queue.offer(null)
                     continue
                 }
-                for (neighbor in children) {
-                    queue.offer(neighbor)
+                for (subNode in subNodeStore) {
+                    queue.offer(subNode)
                 }
             }
             if (queue.isNotEmpty()) {
