@@ -156,6 +156,7 @@ class LeetCode {
 
     private fun String.replaceRomanNumeralsAndSpecialCharacters() =
         this
+            .replace("IV", "I V")
             .replace("III", "I I I")
             .replace("II", "I I")
             .replace("-", " ")
