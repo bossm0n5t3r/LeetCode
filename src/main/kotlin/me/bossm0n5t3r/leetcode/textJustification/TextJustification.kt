@@ -26,9 +26,7 @@ class TextJustification {
             return result
         }
 
-        private fun List<String>.currentLength(): Int {
-            return this.sumOf { it.length } + (this.size - 1)
-        }
+        private fun List<String>.currentLength(): Int = this.sumOf { it.length } + (this.size - 1)
 
         private fun List<String>.buildFullJustifiedString(
             maxWidth: Int,

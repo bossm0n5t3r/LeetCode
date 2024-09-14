@@ -7,9 +7,12 @@ class ReverseNodesInKGroup {
         fun reverseKGroup(
             head: ListNode?,
             k: Int,
-        ): ListNode? {
-            return head?.toList()?.chunked(k)?.flatMap { if (it.size == k) it.reversed() else it }?.toListNode()
-        }
+        ): ListNode? =
+            head
+                ?.toList()
+                ?.chunked(k)
+                ?.flatMap { if (it.size == k) it.reversed() else it }
+                ?.toListNode()
 
         private fun ListNode.toList(): List<Int> {
             val result = mutableListOf<Int>()

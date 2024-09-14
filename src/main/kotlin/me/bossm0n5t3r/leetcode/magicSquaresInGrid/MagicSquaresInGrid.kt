@@ -2,17 +2,14 @@ package me.bossm0n5t3r.leetcode.magicSquaresInGrid
 
 class MagicSquaresInGrid {
     class Solution {
-        fun numMagicSquaresInside(grid: Array<IntArray>): Int {
-            return grid
+        fun numMagicSquaresInside(grid: Array<IntArray>): Int =
+            grid
                 .toListOfIntList()
                 .validateOrNull()
                 ?.countMagicSquares()
                 ?: 0
-        }
 
-        private fun Array<IntArray>.toListOfIntList(): List<List<Int>> {
-            return this.map { it.toList() }
-        }
+        private fun Array<IntArray>.toListOfIntList(): List<List<Int>> = this.map { it.toList() }
 
         private fun List<List<Int>>.validateOrNull(): List<List<Int>>? {
             val (m, n) = this.size to this.firstOrNull()?.size

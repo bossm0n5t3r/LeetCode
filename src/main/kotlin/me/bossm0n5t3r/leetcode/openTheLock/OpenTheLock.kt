@@ -18,8 +18,8 @@ class OpenTheLock {
                 str[3].toString().toInt(),
             )
 
-            fun nextLocks(): List<Lock> {
-                return listOf(
+            fun nextLocks(): List<Lock> =
+                listOf(
                     Lock((first + 1) % 10, second, third, fourth),
                     Lock((first + 9) % 10, second, third, fourth),
                     Lock(first, (second + 1) % 10, third, fourth),
@@ -29,7 +29,6 @@ class OpenTheLock {
                     Lock(first, second, third, (fourth + 1) % 10),
                     Lock(first, second, third, (fourth + 9) % 10),
                 )
-            }
 
             override fun toString() = "$first$second$third$fourth"
 

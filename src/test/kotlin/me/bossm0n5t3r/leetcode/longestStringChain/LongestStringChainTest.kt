@@ -71,7 +71,8 @@ internal class LongestStringChainTest {
                 ),
             )
         tests.forEach { test ->
-            longestStringChain.longestStrChain(test.words)
+            longestStringChain
+                .longestStrChain(test.words)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

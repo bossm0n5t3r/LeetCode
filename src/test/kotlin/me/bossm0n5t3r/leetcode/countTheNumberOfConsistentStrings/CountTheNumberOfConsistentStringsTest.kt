@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class CountTheNumberOfConsistentStringsTest {
     private val sut = CountTheNumberOfConsistentStrings.Solution()
 
-    private data class TestData(val allowed: String, val words: Array<String>, val result: Int) {
+    private data class TestData(
+        val allowed: String,
+        val words: Array<String>,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

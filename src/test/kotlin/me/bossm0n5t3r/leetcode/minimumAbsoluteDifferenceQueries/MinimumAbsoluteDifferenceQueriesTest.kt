@@ -69,7 +69,8 @@ internal class MinimumAbsoluteDifferenceQueriesTest {
                 ),
             )
         tests.forEach { test ->
-            sut.minDifference(test.nums, test.queries)
+            sut
+                .minDifference(test.nums, test.queries)
                 .also {
                     println(it.toList())
                     assertContentEquals(it, test.result)

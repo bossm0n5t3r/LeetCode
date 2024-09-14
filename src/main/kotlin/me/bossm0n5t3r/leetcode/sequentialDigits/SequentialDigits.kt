@@ -5,14 +5,11 @@ class SequentialDigits {
         fun sequentialDigits(
             low: Int,
             high: Int,
-        ): List<Int> {
-            return (low.toString().length..high.toString().length)
+        ): List<Int> =
+            (low.toString().length..high.toString().length)
                 .flatMap { n -> generateSequentialDigits(n) }
                 .filter { it in low..high }
-        }
 
-        private fun generateSequentialDigits(n: Int): List<Int> {
-            return (1..9).windowed(n).map { it.joinToString("").toInt() }
-        }
+        private fun generateSequentialDigits(n: Int): List<Int> = (1..9).windowed(n).map { it.joinToString("").toInt() }
     }
 }

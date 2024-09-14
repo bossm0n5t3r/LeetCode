@@ -7,14 +7,14 @@ class ReplaceWords {
             sentence: String,
         ): String {
             val sortedDictionary = dictionary.sorted()
-            return sentence.split(" ")
+            return sentence
+                .split(" ")
                 .map {
                     for (root in sortedDictionary) {
                         if (it.startsWith(root)) return@map root
                     }
                     it
-                }
-                .joinToString(" ")
+                }.joinToString(" ")
         }
     }
 }

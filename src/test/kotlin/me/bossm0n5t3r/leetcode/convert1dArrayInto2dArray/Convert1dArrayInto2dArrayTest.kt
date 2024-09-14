@@ -7,7 +7,12 @@ import kotlin.test.assertTrue
 class Convert1dArrayInto2dArrayTest {
     private val sut = Convert1dArrayInto2dArray.Solution()
 
-    private data class TestData(val original: IntArray, val m: Int, val n: Int, val result: Array<IntArray>) {
+    private data class TestData(
+        val original: IntArray,
+        val m: Int,
+        val n: Int,
+        val result: Array<IntArray>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

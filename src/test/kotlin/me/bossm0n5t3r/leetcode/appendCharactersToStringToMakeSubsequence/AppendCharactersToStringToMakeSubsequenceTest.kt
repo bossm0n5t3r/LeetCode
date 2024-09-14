@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class AppendCharactersToStringToMakeSubsequenceTest {
     private val sut = AppendCharactersToStringToMakeSubsequence.Solution()
 
-    private data class TestData(val s: String, val t: String, val result: Int)
+    private data class TestData(
+        val s: String,
+        val t: String,
+        val result: Int,
+    )
 
     @Test
     fun test() {

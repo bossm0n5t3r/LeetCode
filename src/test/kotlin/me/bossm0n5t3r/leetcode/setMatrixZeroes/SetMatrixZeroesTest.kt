@@ -7,7 +7,10 @@ import org.junit.jupiter.api.Test
 class SetMatrixZeroesTest {
     private val sut = SetMatrixZeroes.Solution()
 
-    private data class TestData(val matrix: Array<IntArray>, val result: Array<IntArray>) {
+    private data class TestData(
+        val matrix: Array<IntArray>,
+        val result: Array<IntArray>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

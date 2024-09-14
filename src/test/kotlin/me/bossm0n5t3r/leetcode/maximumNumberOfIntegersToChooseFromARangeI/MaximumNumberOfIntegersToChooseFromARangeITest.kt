@@ -7,7 +7,12 @@ import kotlin.test.assertEquals
 class MaximumNumberOfIntegersToChooseFromARangeITest {
     private val sut = MaximumNumberOfIntegersToChooseFromARangeI.Solution()
 
-    private data class TestData(val banned: IntArray, val n: Int, val maxSum: Int, val result: Int) {
+    private data class TestData(
+        val banned: IntArray,
+        val n: Int,
+        val maxSum: Int,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

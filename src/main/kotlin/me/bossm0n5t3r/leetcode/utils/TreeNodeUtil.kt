@@ -3,7 +3,9 @@ package me.bossm0n5t3r.leetcode.utils
 import java.util.LinkedList
 import java.util.Queue
 
-class TreeNode(var `val`: Int) {
+class TreeNode(
+    var `val`: Int,
+) {
     var left: TreeNode? = null
     var right: TreeNode? = null
 }

@@ -12,7 +12,6 @@ class MatrixUtil {
                     .split(",")
                     .map { str -> str.toInt() }
                     .toIntArray()
-            }
-            .toTypedArray()
+            }.toTypedArray()
     }
 }

@@ -5,10 +5,9 @@ class SplitStringsBySeparator {
         fun splitWordsBySeparator(
             words: List<String>,
             separator: Char,
-        ): List<String> {
-            return words
+        ): List<String> =
+            words
                 .flatMap { word -> word.split(separator) }
                 .filter { it.isNotBlank() }
-        }
     }
 }

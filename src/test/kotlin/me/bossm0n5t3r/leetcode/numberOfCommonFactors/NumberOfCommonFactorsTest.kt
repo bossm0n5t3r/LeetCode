@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class NumberOfCommonFactorsTest {
     private val sut = NumberOfCommonFactors.Solution()
 
-    private data class TestData(val a: Int, val b: Int, val result: Int)
+    private data class TestData(
+        val a: Int,
+        val b: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

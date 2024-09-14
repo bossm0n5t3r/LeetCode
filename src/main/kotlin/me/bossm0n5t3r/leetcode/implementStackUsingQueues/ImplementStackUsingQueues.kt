@@ -31,8 +31,6 @@ class ImplementStackUsingQueues {
             return top
         }
 
-        fun empty(): Boolean {
-            return queue.isEmpty()
-        }
+        fun empty(): Boolean = queue.isEmpty()
     }
 }

@@ -14,8 +14,7 @@ class MeetingRoomsThree {
                     this.addAll(0 until n)
                 }
             val taken =
-                PriorityQueue<Pair<Int, Int>> {
-                        a, b ->
+                PriorityQueue<Pair<Int, Int>> { a, b ->
                     if (a.first == b.first) a.second - b.second else a.first - b.first
                 }
             val count = IntArray(n)

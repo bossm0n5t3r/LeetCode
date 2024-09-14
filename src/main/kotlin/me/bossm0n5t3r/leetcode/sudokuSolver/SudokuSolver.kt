@@ -26,9 +26,7 @@ class SudokuSolver {
                 return true
             }
 
-            override fun hashCode(): Int {
-                return result.contentDeepHashCode()
-            }
+            override fun hashCode(): Int = result.contentDeepHashCode()
         }
 
         private fun dfs(
@@ -107,8 +105,7 @@ class SudokuSolver {
                                 board[index + 2][tmpC * 3],
                                 board[index + 2][tmpC * 3 + 1],
                                 board[index + 2][tmpC * 3 + 2],
-                            )
-                                .filter { it != '.' }
+                            ).filter { it != '.' }
                                 .map { it.toString().toInt() }
                         if (tmp.sum() < 45) return false
                     }
@@ -126,8 +123,7 @@ class SudokuSolver {
                         board[6][c],
                         board[7][c],
                         board[8][c],
-                    )
-                        .filter { it != '.' }
+                    ).filter { it != '.' }
                         .map { it.toString().toInt() }
                 if (column.sum() < 45) return false
             }

@@ -7,7 +7,12 @@ import kotlin.test.assertEquals
 class MostProfitAssigningWorkTest {
     private val sut = MostProfitAssigningWork.Solution()
 
-    private data class TestData(val difficulty: IntArray, val profit: IntArray, val worker: IntArray, val result: Int) {
+    private data class TestData(
+        val difficulty: IntArray,
+        val profit: IntArray,
+        val worker: IntArray,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

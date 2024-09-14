@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class IntegerToEnglishWordsTest {
     private val sut = IntegerToEnglishWords.Solution()
 
-    private data class TestData(val num: Int, val result: String)
+    private data class TestData(
+        val num: Int,
+        val result: String,
+    )
 
     @Test
     fun test() {

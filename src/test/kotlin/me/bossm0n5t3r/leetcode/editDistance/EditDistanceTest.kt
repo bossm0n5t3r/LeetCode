@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class EditDistanceTest {
     private val sut = EditDistance.Solution()
 
-    private data class TestData(val word1: String, val word2: String, val result: Int)
+    private data class TestData(
+        val word1: String,
+        val word2: String,
+        val result: Int,
+    )
 
     @Test
     fun test() {

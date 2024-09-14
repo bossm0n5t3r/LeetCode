@@ -27,7 +27,8 @@ internal class MinimumDepthOfBinaryTreeTest {
                 ),
             )
         tests.forEach { test ->
-            minimumDepthOfBinaryTree.minDepth(test.root)
+            minimumDepthOfBinaryTree
+                .minDepth(test.root)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.integerToEnglishWords
 
 class IntegerToEnglishWords {
     class Solution {
-        fun numberToWords(num: Int): String {
-            return num
+        fun numberToWords(num: Int): String =
+            num
                 .toString()
                 .reversed()
                 .chunked(3)
@@ -11,10 +11,8 @@ class IntegerToEnglishWords {
                 .reversed()
                 .flatMap { (index, value) ->
                     numberUnderThousandToWord(value.reversed()) + (commaToWord.takeIf { value != THREE_DIGITS_ZEROS }?.get(index) ?: "")
-                }
-                .filter { it.isNotBlank() }
+                }.filter { it.isNotBlank() }
                 .joinToString(" ")
-        }
 
         private fun numberUnderThousandToWord(num: String): List<String> {
             if (num == TWO_DIGITS_ZEROS || num == THREE_DIGITS_ZEROS) return emptyList()

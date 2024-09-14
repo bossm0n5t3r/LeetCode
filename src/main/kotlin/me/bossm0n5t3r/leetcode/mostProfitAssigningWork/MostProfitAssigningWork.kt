@@ -8,7 +8,8 @@ class MostProfitAssigningWork {
             worker: IntArray,
         ): Int {
             val sortedDifficultyAndProfit =
-                difficulty.zip(profit)
+                difficulty
+                    .zip(profit)
                     .sortedBy { it.first }
             return worker
                 .toList()

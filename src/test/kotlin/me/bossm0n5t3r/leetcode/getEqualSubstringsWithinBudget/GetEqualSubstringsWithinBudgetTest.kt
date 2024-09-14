@@ -6,7 +6,12 @@ import kotlin.test.assertEquals
 class GetEqualSubstringsWithinBudgetTest {
     private val sut = GetEqualSubstringsWithinBudget.Solution()
 
-    private data class TestData(val s: String, val t: String, val maxCost: Int, val result: Int)
+    private data class TestData(
+        val s: String,
+        val t: String,
+        val maxCost: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

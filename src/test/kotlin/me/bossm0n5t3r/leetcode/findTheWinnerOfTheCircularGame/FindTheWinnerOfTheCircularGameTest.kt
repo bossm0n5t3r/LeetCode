@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class FindTheWinnerOfTheCircularGameTest {
     private val sut = FindTheWinnerOfTheCircularGame.Solution()
 
-    private data class TestData(val n: Int, val k: Int, val result: Int)
+    private data class TestData(
+        val n: Int,
+        val k: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

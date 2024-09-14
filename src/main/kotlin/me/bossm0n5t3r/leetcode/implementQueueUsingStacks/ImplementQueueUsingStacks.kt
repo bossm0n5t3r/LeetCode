@@ -25,8 +25,6 @@ class ImplementQueueUsingStacks {
             return popStack.peek()
         }
 
-        fun empty(): Boolean {
-            return pushStack.isEmpty() && popStack.isEmpty()
-        }
+        fun empty(): Boolean = pushStack.isEmpty() && popStack.isEmpty()
     }
 }

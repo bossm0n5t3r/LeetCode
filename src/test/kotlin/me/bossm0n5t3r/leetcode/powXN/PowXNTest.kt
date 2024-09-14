@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class PowXNTest {
     private val sut = PowXN.Solution()
 
-    private data class TestData(val x: Double, val n: Int, val result: Double)
+    private data class TestData(
+        val x: Double,
+        val n: Int,
+        val result: Double,
+    )
 
     @Test
     fun test() {

@@ -9,7 +9,11 @@ import kotlin.test.assertTrue
 class SplitLinkedListInPartsTest {
     private val sut = SplitLinkedListInParts.Solution()
 
-    private data class TestData(val head: ListNode?, val k: Int, val result: Array<ListNode?>) {
+    private data class TestData(
+        val head: ListNode?,
+        val k: Int,
+        val result: Array<ListNode?>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

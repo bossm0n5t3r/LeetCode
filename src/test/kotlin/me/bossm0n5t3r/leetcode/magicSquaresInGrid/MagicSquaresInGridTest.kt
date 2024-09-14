@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class MagicSquaresInGridTest {
     private val sut = MagicSquaresInGrid.Solution()
 
-    private data class TestData(val grid: Array<IntArray>, val result: Int) {
+    private data class TestData(
+        val grid: Array<IntArray>,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

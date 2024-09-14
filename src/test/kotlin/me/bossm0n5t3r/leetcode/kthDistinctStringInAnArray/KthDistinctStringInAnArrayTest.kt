@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class KthDistinctStringInAnArrayTest {
     private val sut = KthDistinctStringInAnArray.Solution()
 
-    private data class TestData(val arr: Array<String>, val k: Int, val result: String) {
+    private data class TestData(
+        val arr: Array<String>,
+        val k: Int,
+        val result: String,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

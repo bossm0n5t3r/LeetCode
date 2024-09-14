@@ -8,7 +8,10 @@ import kotlin.test.assertTrue
 class MergeNodesInBetweenZerosTest {
     private val sut = MergeNodesInBetweenZeros.Solution()
 
-    private data class TestData(val head: ListNode?, val result: ListNode?)
+    private data class TestData(
+        val head: ListNode?,
+        val result: ListNode?,
+    )
 
     @Test
     fun test() {

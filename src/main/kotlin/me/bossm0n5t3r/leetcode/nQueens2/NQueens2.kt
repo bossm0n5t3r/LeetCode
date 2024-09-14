@@ -9,7 +9,9 @@ class NQueens2 {
             return result.result
         }
 
-        private data class Result(var result: Int = 0) {
+        private data class Result(
+            var result: Int = 0,
+        ) {
             fun add() {
                 this.result++
             }

@@ -4,16 +4,18 @@ import java.math.BigInteger
 
 class StringToInteger {
     class Solution {
-        fun myAtoi(s: String): Int {
-            return s.step1().step2().step3().step4().step5()
-        }
+        fun myAtoi(s: String): Int =
+            s
+                .step1()
+                .step2()
+                .step3()
+                .step4()
+                .step5()
 
-        private fun String.step1(): Pair<Char, String> {
-            return '+' to this.trim()
-        }
+        private fun String.step1(): Pair<Char, String> = '+' to this.trim()
 
-        private fun Pair<Char, String>.step2(): Pair<Char, String> {
-            return if (this.second.isNotEmpty() && this.second[0] == '-') {
+        private fun Pair<Char, String>.step2(): Pair<Char, String> =
+            if (this.second.isNotEmpty() && this.second[0] == '-') {
                 '-' to this.second.substring(1)
             } else {
                 val tmp =
@@ -24,7 +26,6 @@ class StringToInteger {
                     }
                 this.first to tmp
             }
-        }
 
         companion object {
             // Use companion object for testing
@@ -51,8 +52,8 @@ class StringToInteger {
             }
         }
 
-        private fun BigInteger.step5(): Int {
-            return when {
+        private fun BigInteger.step5(): Int =
+            when {
                 this < BigInteger.valueOf(Int.MIN_VALUE.toLong()) -> {
                     Int.MIN_VALUE
                 }
@@ -63,6 +64,5 @@ class StringToInteger {
                     this.toInt()
                 }
             }
-        }
     }
 }

@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class ScoreOfAStringTest {
     private val sut = ScoreOfAString.Solution()
 
-    private data class TestData(val s: String, val result: Int)
+    private data class TestData(
+        val s: String,
+        val result: Int,
+    )
 
     @Test
     fun test() {

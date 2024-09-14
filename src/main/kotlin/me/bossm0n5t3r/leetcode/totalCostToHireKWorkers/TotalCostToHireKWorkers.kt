@@ -17,7 +17,8 @@ class TotalCostToHireKWorkers {
             val costToIndexPriorityQueue = PriorityQueue(compareBy<Pair<Int, Int>> { it.first }.thenBy { it.second })
 
             val costToIndex =
-                costs.mapIndexed { index, cost -> cost to index }
+                costs
+                    .mapIndexed { index, cost -> cost to index }
                     .sortedBy { it.second }
 
             val costToIndexArrayDeque =

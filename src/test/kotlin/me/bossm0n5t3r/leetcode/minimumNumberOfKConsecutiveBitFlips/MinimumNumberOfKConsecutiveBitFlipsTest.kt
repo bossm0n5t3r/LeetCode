@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class MinimumNumberOfKConsecutiveBitFlipsTest {
     private val sut = MinimumNumberOfKConsecutiveBitFlips.Solution()
 
-    private data class TestData(val nums: IntArray, val k: Int, val result: Int) {
+    private data class TestData(
+        val nums: IntArray,
+        val k: Int,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

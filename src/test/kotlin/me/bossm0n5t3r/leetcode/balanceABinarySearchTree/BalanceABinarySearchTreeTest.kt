@@ -8,7 +8,10 @@ import kotlin.test.assertTrue
 class BalanceABinarySearchTreeTest {
     private val sut = BalanceABinarySearchTree.Solution()
 
-    private data class TestData(val root: TreeNode?, val result: TreeNode?)
+    private data class TestData(
+        val root: TreeNode?,
+        val result: TreeNode?,
+    )
 
     @Test
     fun test() {

@@ -8,7 +8,11 @@ import kotlin.test.assertTrue
 class SortThePeopleTest {
     private val sut = SortThePeople.Solution()
 
-    private data class TestData(val names: Array<String>, val heights: IntArray, val result: Array<String>) {
+    private data class TestData(
+        val names: Array<String>,
+        val heights: IntArray,
+        val result: Array<String>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class NumberComplementTest {
     private val sut = NumberComplement.Solution()
 
-    private data class TestData(val num: Int, val result: Int)
+    private data class TestData(
+        val num: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

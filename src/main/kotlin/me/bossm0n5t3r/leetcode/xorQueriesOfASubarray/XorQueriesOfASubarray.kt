@@ -5,12 +5,10 @@ class XorQueriesOfASubarray {
         fun xorQueries(
             arr: IntArray,
             queries: Array<IntArray>,
-        ): IntArray {
-            return queries
+        ): IntArray =
+            queries
                 .map { (left, right) ->
                     (left + 1..right).fold(arr[left]) { acc, i -> acc xor arr[i] }
-                }
-                .toIntArray()
-        }
+                }.toIntArray()
     }
 }

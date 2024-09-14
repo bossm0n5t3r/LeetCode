@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class SimplifyPathTest {
     private val sut = SimplifyPath.Solution()
 
-    private data class TestData(val path: String, val result: String)
+    private data class TestData(
+        val path: String,
+        val result: String,
+    )
 
     @Test
     fun test() {

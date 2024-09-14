@@ -53,7 +53,8 @@ class DeleteNodeInABstTest {
         tests.forEach { test ->
             assertTrue {
                 TreeNodeUtil.isEqual(
-                    sut.deleteNode(test.root, test.key)
+                    sut
+                        .deleteNode(test.root, test.key)
                         .also { TreeNodeUtil.printTreeNode(it) },
                     test.result,
                 )

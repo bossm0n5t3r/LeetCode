@@ -8,7 +8,11 @@ import kotlin.test.assertEquals
 class RemoveDuplicatesFromSortedArrayIITest {
     private val sut = RemoveDuplicatesFromSortedArrayII.Solution()
 
-    private data class TestData(val nums: IntArray, val result: Int, val resultNumList: List<Int>)
+    private data class TestData(
+        val nums: IntArray,
+        val result: Int,
+        val resultNumList: List<Int>,
+    )
 
     @Test
     fun test() {

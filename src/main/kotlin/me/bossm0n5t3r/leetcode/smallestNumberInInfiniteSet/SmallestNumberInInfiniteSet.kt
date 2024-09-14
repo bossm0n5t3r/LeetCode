@@ -25,12 +25,11 @@ class SmallestNumberInInfiniteSet {
             fillQueue()
         }
 
-        fun popSmallest(): Int {
-            return pq.poll().also {
+        fun popSmallest(): Int =
+            pq.poll().also {
                 elementsOfPriorityQueue.remove(it)
                 if (pq.isEmpty()) fillQueue()
             }
-        }
 
         fun addBack(num: Int) {
             if (elementsOfPriorityQueue.contains(num).not() && fillQueueIndex > num) {

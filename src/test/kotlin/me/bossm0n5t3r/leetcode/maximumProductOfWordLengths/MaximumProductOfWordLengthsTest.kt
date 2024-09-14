@@ -43,7 +43,8 @@ internal class MaximumProductOfWordLengthsTest {
                 ),
             )
         tests.forEach { test ->
-            maximumProductOfWordLengths.maxProduct(test.words)
+            maximumProductOfWordLengths
+                .maxProduct(test.words)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

@@ -1,7 +1,9 @@
 package me.bossm0n5t3r.leetcode.rangeSumQuery2DImmutable
 
 class RangeSumQuery2DImmutable {
-    class NumMatrix(matrix: Array<IntArray>) {
+    class NumMatrix(
+        matrix: Array<IntArray>,
+    ) {
         private fun dp(matrix: Array<IntArray>): Array<IntArray> {
             val m = matrix.size
             val n = matrix.first().size
@@ -23,8 +25,6 @@ class RangeSumQuery2DImmutable {
             col1: Int,
             row2: Int,
             col2: Int,
-        ): Int {
-            return dp[row2 + 1][col2 + 1] - dp[row2 + 1][col1] - dp[row1][col2 + 1] + dp[row1][col1]
-        }
+        ): Int = dp[row2 + 1][col2 + 1] - dp[row2 + 1][col1] - dp[row1][col2 + 1] + dp[row1][col1]
     }
 }

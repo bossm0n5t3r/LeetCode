@@ -5,8 +5,6 @@ class MinimumBitFlipsToConvertNumber {
         fun minBitFlips(
             start: Int,
             goal: Int,
-        ): Int {
-            return (start xor goal).toString(2).count { it == '1' }
-        }
+        ): Int = (start xor goal).toString(2).count { it == '1' }
     }
 }

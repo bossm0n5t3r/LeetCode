@@ -4,8 +4,8 @@ import me.bossm0n5t3r.leetcode.utils.ListNode
 
 class InsertGreatestCommonDivisorsInLinkedList {
     class Solution {
-        fun insertGreatestCommonDivisors(head: ListNode?): ListNode? {
-            return head
+        fun insertGreatestCommonDivisors(head: ListNode?): ListNode? =
+            head
                 ?.toList()
                 ?.takeIf { it.size > 1 }
                 ?.windowed(2)
@@ -17,11 +17,9 @@ class InsertGreatestCommonDivisorsInLinkedList {
                     } else {
                         triple
                     }
-                }
-                ?.flatten()
+                }?.flatten()
                 ?.toListNode()
                 ?: head
-        }
 
         private fun ListNode.toList(): List<Int> {
             val result = mutableListOf<Int>()
@@ -33,12 +31,11 @@ class InsertGreatestCommonDivisorsInLinkedList {
             return result
         }
 
-        private fun List<List<Int>>.isLastOrNot(): List<Pair<List<Int>, Boolean>> {
-            return this.foldIndexed(mutableListOf()) { index, acc, item ->
+        private fun List<List<Int>>.isLastOrNot(): List<Pair<List<Int>, Boolean>> =
+            this.foldIndexed(mutableListOf()) { index, acc, item ->
                 acc.add(item to (index != this.lastIndex))
                 acc
             }
-        }
 
         private infix fun Int.gcd(other: Int): Int {
             if (other == 0) return this

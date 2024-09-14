@@ -32,7 +32,8 @@ internal class TriangleTest {
                 ),
             )
         tests.forEach { test ->
-            triangle.minimumTotal(test.triangle)
+            triangle
+                .minimumTotal(test.triangle)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

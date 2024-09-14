@@ -15,7 +15,11 @@ class ZigzagConversion {
             return result.joinToString("") { it.joinToString("") }
         }
 
-        private data class Index(val numRows: Int, var idx: Int = -1, var direction: Direction = Direction.DOWN) {
+        private data class Index(
+            val numRows: Int,
+            var idx: Int = -1,
+            var direction: Direction = Direction.DOWN,
+        ) {
             fun next(): Index {
                 when (this.direction) {
                     Direction.DOWN -> {

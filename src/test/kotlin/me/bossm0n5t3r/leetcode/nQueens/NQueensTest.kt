@@ -30,7 +30,8 @@ internal class NQueensTest {
                 ),
             )
         tests.forEach { test ->
-            nQueens.solveNQueens(test.n)
+            nQueens
+                .solveNQueens(test.n)
                 .also {
                     println(it)
                     assertThat(it)

@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class FractionAdditionAndSubtractionTest {
     private val sut = FractionAdditionAndSubtraction.Solution()
 
-    private data class TestData(val expression: String, val result: String)
+    private data class TestData(
+        val expression: String,
+        val result: String,
+    )
 
     @Test
     fun test() {

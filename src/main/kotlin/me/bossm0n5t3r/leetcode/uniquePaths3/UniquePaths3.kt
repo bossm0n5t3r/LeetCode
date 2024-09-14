@@ -115,6 +115,8 @@ class UniquePaths3 {
             grid[r][c] = 0
         }
 
-        private data class IntWrapper(var value: Int = 0)
+        private data class IntWrapper(
+            var value: Int = 0,
+        )
     }
 }

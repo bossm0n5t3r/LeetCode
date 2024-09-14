@@ -26,13 +26,15 @@ internal class PalindromicSubstringsTest {
                 ),
             )
         tests.forEach { test ->
-            palindromicSubstrings.countSubstrings(test.s)
+            palindromicSubstrings
+                .countSubstrings(test.s)
                 .also {
                     println(it)
                     assertEquals(it, test.result)
                 }
 
-            palindromicSubstrings.countSubstringsUsingDP(test.s)
+            palindromicSubstrings
+                .countSubstringsUsingDP(test.s)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

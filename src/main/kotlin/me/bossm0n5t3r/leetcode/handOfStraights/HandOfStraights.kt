@@ -7,7 +7,12 @@ class HandOfStraights {
             groupSize: Int,
         ): Boolean {
             if (hand.size % groupSize != 0) return false
-            val intToCount = hand.toList().groupingBy { it }.eachCount().toMutableMap()
+            val intToCount =
+                hand
+                    .toList()
+                    .groupingBy { it }
+                    .eachCount()
+                    .toMutableMap()
             val sortedKeys = intToCount.keys.sorted()
             for (key in sortedKeys) {
                 var count = intToCount.getOrElse(key) { 0 }

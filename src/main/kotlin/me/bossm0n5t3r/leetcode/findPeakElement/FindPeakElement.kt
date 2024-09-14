@@ -2,9 +2,7 @@ package me.bossm0n5t3r.leetcode.findPeakElement
 
 class FindPeakElement {
     class Solution {
-        fun findPeakElement(nums: IntArray): Int {
-            return binarySearch(nums, 0, nums.size - 1)
-        }
+        fun findPeakElement(nums: IntArray): Int = binarySearch(nums, 0, nums.size - 1)
 
         @Suppress("ReturnCount")
         private fun binarySearch(

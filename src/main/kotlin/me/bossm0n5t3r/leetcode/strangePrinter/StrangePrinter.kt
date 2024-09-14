@@ -44,14 +44,14 @@ class StrangePrinter {
             return minTurns.also { memo[start][end] = it }
         }
 
-        private fun removeDuplicates(s: String): String {
-            return s.fold(StringBuilder()) { acc: StringBuilder, c: Char ->
-                if (acc.lastOrNull() != c) {
-                    acc.append(c)
-                } else {
-                    acc
-                }
-            }.toString()
-        }
+        private fun removeDuplicates(s: String): String =
+            s
+                .fold(StringBuilder()) { acc: StringBuilder, c: Char ->
+                    if (acc.lastOrNull() != c) {
+                        acc.append(c)
+                    } else {
+                        acc
+                    }
+                }.toString()
     }
 }

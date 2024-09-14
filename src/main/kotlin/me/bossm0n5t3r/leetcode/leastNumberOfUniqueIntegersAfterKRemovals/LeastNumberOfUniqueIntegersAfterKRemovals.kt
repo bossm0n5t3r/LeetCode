@@ -5,8 +5,8 @@ class LeastNumberOfUniqueIntegersAfterKRemovals {
         fun findLeastNumOfUniqueInts(
             arr: IntArray,
             k: Int,
-        ): Int {
-            return arr
+        ): Int =
+            arr
                 .toList()
                 .groupingBy { it }
                 .eachCount()
@@ -14,10 +14,8 @@ class LeastNumberOfUniqueIntegersAfterKRemovals {
                 .sortedBy { (_, v) -> v }
                 .flatMap { (number, count) ->
                     Array(count) { number }.toList()
-                }
-                .subList(k, arr.size)
+                }.subList(k, arr.size)
                 .toSet()
                 .size
-        }
     }
 }

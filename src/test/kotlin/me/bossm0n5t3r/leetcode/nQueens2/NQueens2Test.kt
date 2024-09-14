@@ -19,7 +19,8 @@ internal class NQueens2Test {
                 NQueens2TestData(1, 1),
             )
         tests.forEach { test ->
-            nQueens2.totalNQueens(test.n)
+            nQueens2
+                .totalNQueens(test.n)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

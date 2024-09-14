@@ -48,13 +48,15 @@ internal class MinimumCostForTicketsTest {
                 ),
             )
         tests.forEach { test ->
-            minimumCostForTickets.minCostTicketsUsingQueue(test.days, test.costs)
+            minimumCostForTickets
+                .minCostTicketsUsingQueue(test.days, test.costs)
                 .also {
                     println(it)
                     assertEquals(it, test.result)
                 }
 
-            minimumCostForTickets.minCostTicketsUsingDP(test.days, test.costs)
+            minimumCostForTickets
+                .minCostTicketsUsingDP(test.days, test.costs)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

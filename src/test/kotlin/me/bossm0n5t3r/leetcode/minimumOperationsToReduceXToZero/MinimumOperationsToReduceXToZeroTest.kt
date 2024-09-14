@@ -708,13 +708,15 @@ internal class MinimumOperationsToReduceXToZeroTest {
                 ),
             )
         tests.forEach { test ->
-            minimumOperationsToReduceXToZero.minOperations(test.nums, test.x)
+            minimumOperationsToReduceXToZero
+                .minOperations(test.nums, test.x)
                 .also {
                     println(it)
                     assertEquals(it, test.result)
                 }
 
-            minimumOperationsToReduceXToZero.minOperationsUsingMap(test.nums, test.x)
+            minimumOperationsToReduceXToZero
+                .minOperationsUsingMap(test.nums, test.x)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

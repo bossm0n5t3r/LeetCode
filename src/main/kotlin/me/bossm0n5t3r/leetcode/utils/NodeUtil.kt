@@ -4,7 +4,9 @@ import java.util.LinkedList
 import java.util.Queue
 import java.util.Stack
 
-class Node(var `val`: Int) {
+class Node(
+    var `val`: Int,
+) {
     var subNodeStore = mutableListOf<Node?>()
 
     var children: MutableList<Node?> = subNodeStore
@@ -27,13 +29,9 @@ class Node(var `val`: Int) {
         return true
     }
 
-    override fun hashCode(): Int {
-        return `val`
-    }
+    override fun hashCode(): Int = `val`
 
-    override fun toString(): String {
-        return "Node(`val`: ${this.`val`}, store: ${this.subNodeStore.map { it?.`val` }})"
-    }
+    override fun toString(): String = "Node(`val`: ${this.`val`}, store: ${this.subNodeStore.map { it?.`val` }})"
 }
 
 object NodeUtil {

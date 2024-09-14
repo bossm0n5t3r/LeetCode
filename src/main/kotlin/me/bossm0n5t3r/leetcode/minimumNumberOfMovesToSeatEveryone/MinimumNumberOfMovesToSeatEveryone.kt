@@ -7,8 +7,6 @@ class MinimumNumberOfMovesToSeatEveryone {
         fun minMovesToSeat(
             seats: IntArray,
             students: IntArray,
-        ): Int {
-            return seats.sorted().zip(students.sorted()).sumOf { abs(it.first - it.second) }
-        }
+        ): Int = seats.sorted().zip(students.sorted()).sumOf { abs(it.first - it.second) }
     }
 }

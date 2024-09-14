@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class WaterBottlesTest {
     private val sut = WaterBottles.Solution()
 
-    private data class TestData(val numBottles: Int, val numExchange: Int, val result: Int)
+    private data class TestData(
+        val numBottles: Int,
+        val numExchange: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

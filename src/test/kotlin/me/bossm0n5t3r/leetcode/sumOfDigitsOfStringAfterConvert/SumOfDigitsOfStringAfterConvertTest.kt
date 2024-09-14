@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class SumOfDigitsOfStringAfterConvertTest {
     private val sut = SumOfDigitsOfStringAfterConvert.Solution()
 
-    private data class TestData(val s: String, val k: Int, val result: Int)
+    private data class TestData(
+        val s: String,
+        val k: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

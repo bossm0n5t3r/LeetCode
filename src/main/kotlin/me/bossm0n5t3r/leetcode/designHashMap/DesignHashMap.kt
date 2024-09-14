@@ -10,9 +10,7 @@ class DesignHashMap {
         data[key] = value
     }
 
-    fun get(key: Int): Int {
-        return data[key]
-    }
+    fun get(key: Int): Int = data[key]
 
     fun remove(key: Int) {
         data[key] = -1

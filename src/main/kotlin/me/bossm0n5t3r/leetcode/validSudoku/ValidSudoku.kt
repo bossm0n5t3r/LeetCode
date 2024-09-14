@@ -10,8 +10,8 @@ class ValidSudoku {
             return true
         }
 
-        private fun convertToListListInt(board: Array<CharArray>): List<List<Int>> {
-            return board.map { row ->
+        private fun convertToListListInt(board: Array<CharArray>): List<List<Int>> =
+            board.map { row ->
                 row.map { e ->
                     when (e) {
                         '.' -> {
@@ -23,7 +23,6 @@ class ValidSudoku {
                     }
                 }
             }
-        }
 
         private fun checkSquare(board: List<List<Int>>): Boolean {
             splitIntoSmallSquareList(board)
@@ -70,9 +69,7 @@ class ValidSudoku {
             return true
         }
 
-        private fun checkVertical(board: List<List<Int>>): Boolean {
-            return checkHorizontal(transpose(board))
-        }
+        private fun checkVertical(board: List<List<Int>>): Boolean = checkHorizontal(transpose(board))
 
         private fun transpose(board: List<List<Int>>): List<List<Int>> {
             val result =

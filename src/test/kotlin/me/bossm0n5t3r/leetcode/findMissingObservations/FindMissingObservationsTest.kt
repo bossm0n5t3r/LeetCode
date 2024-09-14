@@ -6,7 +6,12 @@ import kotlin.test.assertTrue
 class FindMissingObservationsTest {
     private val sut = FindMissingObservations.Solution()
 
-    private data class TestData(val rolls: IntArray, val mean: Int, val n: Int, val result: IntArray) {
+    private data class TestData(
+        val rolls: IntArray,
+        val mean: Int,
+        val n: Int,
+        val result: IntArray,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

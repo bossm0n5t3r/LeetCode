@@ -5,8 +5,6 @@ class PassThePillow {
         fun passThePillow(
             n: Int,
             time: Int,
-        ): Int {
-            return if (time / (n - 1) % 2 == 0) (time % (n - 1) + 1) else (n - time % (n - 1))
-        }
+        ): Int = if (time / (n - 1) % 2 == 0) (time % (n - 1) + 1) else (n - time % (n - 1))
     }
 }

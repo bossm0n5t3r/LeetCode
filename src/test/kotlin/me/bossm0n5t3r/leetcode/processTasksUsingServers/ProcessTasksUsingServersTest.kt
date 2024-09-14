@@ -534,7 +534,8 @@ internal class ProcessTasksUsingServersTest {
                 ),
             )
         tests.forEach { test ->
-            processTasksUsingServers.assignTasks(test.servers, test.tasks)
+            processTasksUsingServers
+                .assignTasks(test.servers, test.tasks)
                 .also {
                     println(it.toList())
                     assertContentEquals(it, test.result)

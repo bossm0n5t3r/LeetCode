@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class ReplaceWordsTest {
     private val sut = ReplaceWords.Solution()
 
-    private data class TestData(val dictionary: List<String>, val sentence: String, val result: String)
+    private data class TestData(
+        val dictionary: List<String>,
+        val sentence: String,
+        val result: String,
+    )
 
     @Test
     fun test() {

@@ -11,7 +11,9 @@ class DistributeCoinsInBinaryTree {
             return result.value
         }
 
-        private data class IntWrapper(var value: Int = 0)
+        private data class IntWrapper(
+            var value: Int = 0,
+        )
 
         private fun dfs(
             node: TreeNode?,

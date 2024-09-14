@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class PalindromePartitioningTest {
     private val sut = PalindromePartitioning.Solution()
 
-    private data class TestData(val s: String, val result: List<List<String>>)
+    private data class TestData(
+        val s: String,
+        val result: List<List<String>>,
+    )
 
     @Test
     fun test() {

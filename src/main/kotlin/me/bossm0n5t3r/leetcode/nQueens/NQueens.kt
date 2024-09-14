@@ -9,7 +9,9 @@ class NQueens {
             return result.result.map { it.toList() }
         }
 
-        private data class Result(val result: MutableSet<List<String>> = mutableSetOf())
+        private data class Result(
+            val result: MutableSet<List<String>> = mutableSetOf(),
+        )
 
         private fun dfs(
             n: Int,

@@ -7,7 +7,11 @@ import kotlin.test.assertTrue
 class RelativeSortArrayTest {
     private val sut = RelativeSortArray.Solution()
 
-    private data class TestData(val arr1: IntArray, val arr2: IntArray, val result: IntArray) {
+    private data class TestData(
+        val arr1: IntArray,
+        val arr2: IntArray,
+        val result: IntArray,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

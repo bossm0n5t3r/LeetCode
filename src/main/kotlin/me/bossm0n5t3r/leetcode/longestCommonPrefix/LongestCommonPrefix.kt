@@ -103,13 +103,9 @@ class LongestCommonPrefix {
             var isEnd = false
                 private set
 
-            fun containsKey(ch: Char): Boolean {
-                return links[ch - 'a'] != null
-            }
+            fun containsKey(ch: Char): Boolean = links[ch - 'a'] != null
 
-            operator fun get(ch: Char): TrieNode? {
-                return links[ch - 'a']
-            }
+            operator fun get(ch: Char): TrieNode? = links[ch - 'a']
 
             fun put(
                 ch: Char,

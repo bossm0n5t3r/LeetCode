@@ -40,7 +40,10 @@ class GameOfLife {
             return liveCells
         }
 
-        data class Cell(val r: Int, val c: Int) {
+        data class Cell(
+            val r: Int,
+            val c: Int,
+        ) {
             fun neighborCells(): List<Cell> {
                 val dr = intArrayOf(-1, -1, -1, 0, 0, 1, 1, 1)
                 val dc = intArrayOf(-1, 0, 1, -1, 1, -1, 0, 1)

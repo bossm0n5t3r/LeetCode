@@ -7,7 +7,11 @@ import kotlin.test.assertEquals
 class HandOfStraightsTest {
     private val sut = HandOfStraights.Solution()
 
-    private data class TestData(val hand: IntArray, val groupSize: Int, val result: Boolean) {
+    private data class TestData(
+        val hand: IntArray,
+        val groupSize: Int,
+        val result: Boolean,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

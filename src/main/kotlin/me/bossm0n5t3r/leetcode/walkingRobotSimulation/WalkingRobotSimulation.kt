@@ -13,7 +13,9 @@ class WalkingRobotSimulation {
             return robot.furthestDistance
         }
 
-        class Robot(obstacles: Array<IntArray>) {
+        class Robot(
+            obstacles: Array<IntArray>,
+        ) {
             private var x: Int = 0
             private var y: Int = 0
             private var curDirection: Direction = Direction.NORTH

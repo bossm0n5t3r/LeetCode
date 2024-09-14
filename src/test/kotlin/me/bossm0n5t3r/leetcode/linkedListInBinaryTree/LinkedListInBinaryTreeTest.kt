@@ -10,7 +10,11 @@ import kotlin.test.assertEquals
 class LinkedListInBinaryTreeTest {
     private val sut = LinkedListInBinaryTree.Solution()
 
-    private data class TestData(val head: ListNode?, val root: TreeNode?, val result: Boolean)
+    private data class TestData(
+        val head: ListNode?,
+        val root: TreeNode?,
+        val result: Boolean,
+    )
 
     @Test
     fun test() {

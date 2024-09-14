@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class MinimumBitFlipsToConvertNumberTest {
     private val sut = MinimumBitFlipsToConvertNumber.Solution()
 
-    private data class TestData(val start: Int, val goal: Int, val result: Int)
+    private data class TestData(
+        val start: Int,
+        val goal: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

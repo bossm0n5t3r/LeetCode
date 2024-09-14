@@ -10,7 +10,9 @@ import kotlin.test.assertEquals
 class CloneGraphTest {
     private val sut = CloneGraph.Solution()
 
-    private data class TestData(val node: Node?)
+    private data class TestData(
+        val node: Node?,
+    )
 
     @Test
     fun test() {

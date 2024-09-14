@@ -7,9 +7,7 @@ class FreedomTrail {
         fun findRotateSteps(
             ring: String,
             key: String,
-        ): Int {
-            return dp(ring, 0, key, 0, Array(ring.length) { IntArray(key.length) { -1 } })
-        }
+        ): Int = dp(ring, 0, key, 0, Array(ring.length) { IntArray(key.length) { -1 } })
 
         private fun dp(
             ring: String,

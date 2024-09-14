@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class StrangePrinterTest {
     private val sut = StrangePrinter.Solution()
 
-    private data class TestData(val s: String, val result: Int)
+    private data class TestData(
+        val s: String,
+        val result: Int,
+    )
 
     @Test
     fun test() {

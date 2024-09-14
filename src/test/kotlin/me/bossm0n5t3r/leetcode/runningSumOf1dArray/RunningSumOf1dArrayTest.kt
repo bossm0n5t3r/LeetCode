@@ -47,7 +47,8 @@ internal class RunningSumOf1dArrayTest {
                 ),
             )
         tests.forEach { test ->
-            runningSumOf1dArray.runningSum(test.nums)
+            runningSumOf1dArray
+                .runningSum(test.nums)
                 .also {
                     println(it.toList())
                     assertContentEquals(it, test.result)

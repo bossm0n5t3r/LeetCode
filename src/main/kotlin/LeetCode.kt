@@ -69,8 +69,7 @@ class LeetCode {
                             "val result: ${s.trim()}"
                         }
                     }
-                }
-                .joinToString(", ")
+                }.joinToString(", ")
     }
 
     private fun createFiles(filePath: String) {

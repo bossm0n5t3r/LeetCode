@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class ExistenceOfASubstringInAStringAndItsReverseTest {
     private val sut = ExistenceOfASubstringInAStringAndItsReverse.Solution()
 
-    private data class TestData(val s: String, val result: Boolean)
+    private data class TestData(
+        val s: String,
+        val result: Boolean,
+    )
 
     @Test
     fun test() {

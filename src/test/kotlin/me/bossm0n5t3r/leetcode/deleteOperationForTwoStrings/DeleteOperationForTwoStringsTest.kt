@@ -53,7 +53,8 @@ internal class DeleteOperationForTwoStringsTest {
                 ),
             )
         tests.forEach { test ->
-            deleteOperationForTwoStrings.minDistance(test.word1, test.word2)
+            deleteOperationForTwoStrings
+                .minDistance(test.word1, test.word2)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class TextJustificationTest {
     private val sut = TextJustification.Solution()
 
-    private data class TestData(val words: Array<String>, val maxWidth: Int, val result: List<String>) {
+    private data class TestData(
+        val words: Array<String>,
+        val maxWidth: Int,
+        val result: List<String>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

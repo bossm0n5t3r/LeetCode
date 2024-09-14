@@ -23,8 +23,6 @@ class CompareVersionNumbers {
         fun compareVersion(
             version1: String,
             version2: String,
-        ): Int {
-            return VersionManager(version1).compareTo(VersionManager(version2))
-        }
+        ): Int = VersionManager(version1).compareTo(VersionManager(version2))
     }
 }

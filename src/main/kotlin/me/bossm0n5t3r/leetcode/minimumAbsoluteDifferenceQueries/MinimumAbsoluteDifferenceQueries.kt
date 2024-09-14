@@ -20,24 +20,25 @@ class MinimumAbsoluteDifferenceQueries {
                 ++count[i + 1][nums[i] - 1]
             }
 
-            return queries.map { (low, b) ->
-                val high = b + 1
-                val present = mutableListOf<Int>()
-                var min = 100
+            return queries
+                .map { (low, b) ->
+                    val high = b + 1
+                    val present = mutableListOf<Int>()
+                    var min = 100
 
-                (0 until min).forEach { j ->
-                    if (count[high][j] - count[low][j] != 0) {
-                        present.add(j)
+                    (0 until min).forEach { j ->
+                        if (count[high][j] - count[low][j] != 0) {
+                            present.add(j)
+                        }
                     }
-                }
-                (1 until present.size).forEach { j ->
-                    min = min(min, present[j] - present[j - 1])
-                }
-                if (present.size == 1) {
-                    min = -1
-                }
-                min
-            }.toIntArray()
+                    (1 until present.size).forEach { j ->
+                        min = min(min, present[j] - present[j - 1])
+                    }
+                    if (present.size == 1) {
+                        min = -1
+                    }
+                    min
+                }.toIntArray()
         }
     }
 }

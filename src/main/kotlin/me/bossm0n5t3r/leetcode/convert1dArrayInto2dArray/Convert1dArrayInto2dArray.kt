@@ -8,7 +8,11 @@ class Convert1dArrayInto2dArray {
             n: Int,
         ): Array<IntArray> {
             if (original.size != m * n) return emptyArray()
-            return original.toList().chunked(n).map { it.toIntArray() }.toTypedArray()
+            return original
+                .toList()
+                .chunked(n)
+                .map { it.toIntArray() }
+                .toTypedArray()
         }
     }
 }

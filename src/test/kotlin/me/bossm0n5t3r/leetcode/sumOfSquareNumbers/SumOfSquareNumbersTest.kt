@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class SumOfSquareNumbersTest {
     private val sut = SumOfSquareNumbers.Solution()
 
-    private data class TestData(val c: Int, val result: Boolean)
+    private data class TestData(
+        val c: Int,
+        val result: Boolean,
+    )
 
     @Test
     fun test() {

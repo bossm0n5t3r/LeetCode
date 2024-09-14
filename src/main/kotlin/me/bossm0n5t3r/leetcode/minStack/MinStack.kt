@@ -20,11 +20,7 @@ class MinStack {
         }
     }
 
-    fun top(): Int {
-        return s.last()
-    }
+    fun top(): Int = s.last()
 
-    fun getMin(): Int {
-        return min
-    }
+    fun getMin(): Int = min
 }

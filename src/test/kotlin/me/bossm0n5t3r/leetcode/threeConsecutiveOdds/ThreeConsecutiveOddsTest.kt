@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class ThreeConsecutiveOddsTest {
     private val sut = ThreeConsecutiveOdds.Solution()
 
-    private data class TestData(val arr: IntArray, val result: Boolean) {
+    private data class TestData(
+        val arr: IntArray,
+        val result: Boolean,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

@@ -73,7 +73,8 @@ internal class ContainsDuplicate2Test {
                 ),
             )
         tests.forEach { test ->
-            containsDuplicate2.containsNearbyDuplicate(test.nums, test.k)
+            containsDuplicate2
+                .containsNearbyDuplicate(test.nums, test.k)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

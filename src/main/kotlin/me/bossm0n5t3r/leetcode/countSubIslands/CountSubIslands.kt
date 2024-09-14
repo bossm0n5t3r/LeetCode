@@ -5,7 +5,10 @@ import java.util.Queue
 
 class CountSubIslands {
     class Solution {
-        private data class Point(val r: Int, val c: Int)
+        private data class Point(
+            val r: Int,
+            val c: Int,
+        )
 
         private val dr = intArrayOf(0, 0, 1, -1)
         private val dc = intArrayOf(1, -1, 0, 0)

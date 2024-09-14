@@ -63,7 +63,8 @@ internal class CoinChangeTest {
                 ),
             )
         tests.forEach { test ->
-            coinChange.coinChange(test.coins, test.amount)
+            coinChange
+                .coinChange(test.coins, test.amount)
                 .also {
                     println(it)
                     assertEquals(it, test.result)

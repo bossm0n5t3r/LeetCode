@@ -11,8 +11,6 @@ class FindFirstPalindromicStringInTheArray {
             return ""
         }
 
-        private fun isPalindrome(word: String): Boolean {
-            return word == word.reversed()
-        }
+        private fun isPalindrome(word: String): Boolean = word == word.reversed()
     }
 }

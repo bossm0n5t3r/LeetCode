@@ -5,11 +5,11 @@ class SortThePeople {
         fun sortPeople(
             names: Array<String>,
             heights: IntArray,
-        ): Array<String> {
-            return names.zip(heights.toTypedArray())
+        ): Array<String> =
+            names
+                .zip(heights.toTypedArray())
                 .sortedByDescending { it.second }
                 .map { it.first }
                 .toTypedArray()
-        }
     }
 }

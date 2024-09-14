@@ -11,12 +11,11 @@ class EqualRowAndColumnPairs {
             }
         }
 
-        private fun transpose(grid: Array<IntArray>): Array<List<Int>> {
-            return Array(grid.first().size) { j ->
+        private fun transpose(grid: Array<IntArray>): Array<List<Int>> =
+            Array(grid.first().size) { j ->
                 List(grid.size) { i ->
                     grid[i][j]
                 }
             }
-        }
     }
 }

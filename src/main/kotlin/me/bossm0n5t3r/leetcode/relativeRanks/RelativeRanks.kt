@@ -4,7 +4,8 @@ class RelativeRanks {
     class Solution {
         fun findRelativeRanks(score: IntArray): Array<String> {
             val scoreToRank =
-                score.sortedDescending()
+                score
+                    .sortedDescending()
                     .mapIndexed { index, score ->
                         score to
                             when (index) {
@@ -13,8 +14,7 @@ class RelativeRanks {
                                 2 -> "Bronze Medal"
                                 else -> "${index + 1}"
                             }
-                    }
-                    .toMap()
+                    }.toMap()
             return score
                 .toList()
                 .mapNotNull { scoreToRank[it] }

@@ -5,16 +5,12 @@ class KthSmallestElementInASortedMatrix {
         fun kthSmallest(
             matrix: Array<IntArray>,
             k: Int,
-        ): Int {
-            return matrix.flatMap { it.toList() }.sorted()[k - 1]
-        }
+        ): Int = matrix.flatMap { it.toList() }.sorted()[k - 1]
 
         fun kthSmallestByUsingBiSect(
             matrix: Array<IntArray>,
             k: Int,
-        ): Int {
-            return biSelect(matrix, k)
-        }
+        ): Int = biSelect(matrix, k)
 
         private fun biSelect(
             matrix: Array<IntArray>,

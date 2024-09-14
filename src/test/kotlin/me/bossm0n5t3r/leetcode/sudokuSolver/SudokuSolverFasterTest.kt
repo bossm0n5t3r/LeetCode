@@ -21,9 +21,7 @@ internal class SudokuSolverFasterTest {
             return true
         }
 
-        override fun hashCode(): Int {
-            return board.contentDeepHashCode()
-        }
+        override fun hashCode(): Int = board.contentDeepHashCode()
     }
 
     private fun String.toSudokuBoard(): Array<CharArray> {
@@ -39,8 +37,7 @@ internal class SudokuSolverFasterTest {
                     .split("\",\"")
                     .map { it.single() }
                     .toCharArray()
-            }
-            .toTypedArray()
+            }.toTypedArray()
     }
 
     @Test

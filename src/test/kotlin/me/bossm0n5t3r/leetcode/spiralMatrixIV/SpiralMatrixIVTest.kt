@@ -9,7 +9,12 @@ import kotlin.test.assertTrue
 class SpiralMatrixIVTest {
     private val sut = SpiralMatrixIV.Solution()
 
-    private data class TestData(val m: Int, val n: Int, val head: ListNode?, val result: Array<IntArray>) {
+    private data class TestData(
+        val m: Int,
+        val n: Int,
+        val head: ListNode?,
+        val result: Array<IntArray>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

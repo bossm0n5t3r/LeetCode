@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.utils
 
 object StringUtil {
-    fun String.toArrayOfIntArray(): Array<IntArray> {
-        return runCatching {
+    fun String.toArrayOfIntArray(): Array<IntArray> =
+        runCatching {
             this
                 .drop(2)
                 .dropLast(2)
@@ -12,14 +12,11 @@ object StringUtil {
                         .split(",")
                         .map { c -> c.toInt() }
                         .toIntArray()
-                }
-                .toTypedArray()
-        }
-            .getOrElse { emptyArray() }
-    }
+                }.toTypedArray()
+        }.getOrElse { emptyArray() }
 
-    fun String.toIntArray(): IntArray {
-        return this
+    fun String.toIntArray(): IntArray =
+        this
             .takeIf { it.isNotBlank() }
             ?.drop(1)
             ?.dropLast(1)
@@ -28,10 +25,9 @@ object StringUtil {
             ?.map { it.toInt() }
             ?.toIntArray()
             ?: IntArray(0)
-    }
 
-    fun String.toArrayOfCharArray(): Array<CharArray> {
-        return this
+    fun String.toArrayOfCharArray(): Array<CharArray> =
+        this
             .drop(2)
             .dropLast(2)
             .split("],[")
@@ -41,21 +37,18 @@ object StringUtil {
                     .split(",")
                     .map { c -> c.first() }
                     .toCharArray()
-            }
-            .toTypedArray()
-    }
+            }.toTypedArray()
 
-    fun String.toArrayOfString(): Array<String> {
-        return this
+    fun String.toArrayOfString(): Array<String> =
+        this
             .drop(1)
             .dropLast(1)
             .replace("\"", "")
             .split(",")
             .toTypedArray()
-    }
 
-    fun String.toListOfStringList(): List<List<String>> {
-        return this
+    fun String.toListOfStringList(): List<List<String>> =
+        this
             .drop(2)
             .dropLast(2)
             .split("],[")
@@ -64,7 +57,6 @@ object StringUtil {
                     .replace("\"", "")
                     .split(",")
             }
-    }
 
     fun String.toListOfIntList(): List<List<Int>> {
         if (this == "[]") return emptyList()

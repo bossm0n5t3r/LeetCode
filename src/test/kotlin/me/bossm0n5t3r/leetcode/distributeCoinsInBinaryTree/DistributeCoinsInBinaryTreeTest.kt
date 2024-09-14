@@ -27,7 +27,8 @@ internal class DistributeCoinsInBinaryTreeTest {
                 ),
             )
         tests.forEach { test ->
-            distributeCoinsInBinaryTree.distributeCoins(test.root)
+            distributeCoinsInBinaryTree
+                .distributeCoins(test.root)
                 .also {
                     assertEquals(it, test.result)
                 }

@@ -5,12 +5,11 @@ class MaximizeTheConfusionOfAnExam {
         fun maxConsecutiveAnswers(
             answerKey: String,
             k: Int,
-        ): Int {
-            return maxOf(
+        ): Int =
+            maxOf(
                 longestChars(answerKey, 'T', k),
                 longestChars(answerKey, 'F', k),
             )
-        }
 
         private fun longestChars(
             answerKey: String,

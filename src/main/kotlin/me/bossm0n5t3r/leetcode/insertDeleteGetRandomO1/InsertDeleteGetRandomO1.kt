@@ -5,15 +5,14 @@ class InsertDeleteGetRandomO1 {
         private val map = mutableMapOf<Int, Int>()
         private val values = mutableListOf<Int>()
 
-        fun insert(`val`: Int): Boolean {
-            return if (map.containsKey(`val`)) {
+        fun insert(`val`: Int): Boolean =
+            if (map.containsKey(`val`)) {
                 false
             } else {
                 values.add(`val`)
                 map[`val`] = values.lastIndex
                 true
             }
-        }
 
         fun remove(`val`: Int): Boolean {
             if (!map.containsKey(`val`)) return false

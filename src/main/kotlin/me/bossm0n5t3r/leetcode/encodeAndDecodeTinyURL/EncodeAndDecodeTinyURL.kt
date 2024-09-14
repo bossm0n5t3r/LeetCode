@@ -27,9 +27,7 @@ class EncodeAndDecodeTinyURL {
         }
 
         // Decodes a shortened URL to its original URL.
-        fun decode(shortUrl: String): String {
-            return shortUrlToLongUrl[shortUrl.replace(baseHost, "")]!!
-        }
+        fun decode(shortUrl: String): String = shortUrlToLongUrl[shortUrl.replace(baseHost, "")]!!
 
         fun cleanUp() {
             shortUrlToLongUrl.clear()

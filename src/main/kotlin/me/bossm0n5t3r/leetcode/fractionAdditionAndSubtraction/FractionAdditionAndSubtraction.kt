@@ -6,14 +6,13 @@ class FractionAdditionAndSubtraction {
             private fun gcd(
                 x: Long,
                 y: Long,
-            ): Long {
-                return when {
+            ): Long =
+                when {
                     x < 0L -> gcd(-x, y)
                     y < 0L -> gcd(x, -y)
                     y > 0L -> gcd(y, x % y)
                     else -> x
                 }
-            }
 
             private fun Fraction.makeIrreducible(): Fraction {
                 if (this.numerator == 0L) return Fraction(0, 1)
@@ -26,8 +25,8 @@ class FractionAdditionAndSubtraction {
             val numerator: Long,
             val denominator: Long,
         ) {
-            operator fun plus(other: Fraction): Fraction {
-                return when {
+            operator fun plus(other: Fraction): Fraction =
+                when {
                     this.denominator == other.denominator -> Fraction(this.numerator + other.numerator, this.denominator)
                     else ->
                         Fraction(
@@ -35,11 +34,8 @@ class FractionAdditionAndSubtraction {
                             this.denominator * other.denominator,
                         )
                 }.makeIrreducible()
-            }
 
-            override fun toString(): String {
-                return "$numerator/$denominator"
-            }
+            override fun toString(): String = "$numerator/$denominator"
         }
 
         operator fun Fraction.unaryMinus() = Fraction(-numerator, denominator)

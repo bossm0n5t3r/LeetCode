@@ -5,8 +5,8 @@ class CustomSortString {
         fun customSortString(
             order: String,
             s: String,
-        ): String {
-            return s
+        ): String =
+            s
                 .toList()
                 .sortedBy {
                     val index = order.indexOf(it)
@@ -15,8 +15,6 @@ class CustomSortString {
                     } else {
                         index
                     }
-                }
-                .joinToString("")
-        }
+                }.joinToString("")
     }
 }

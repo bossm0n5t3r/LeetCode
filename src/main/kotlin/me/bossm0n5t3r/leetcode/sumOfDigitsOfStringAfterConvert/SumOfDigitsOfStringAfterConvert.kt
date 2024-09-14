@@ -5,9 +5,7 @@ class SumOfDigitsOfStringAfterConvert {
         fun getLucky(
             s: String,
             k: Int,
-        ): Int {
-            return s.convert().transform(k).toInt()
-        }
+        ): Int = s.convert().transform(k).toInt()
 
         private fun String.convert(): String = this.map { (it - 'a') + 1 }.joinToString("")
 

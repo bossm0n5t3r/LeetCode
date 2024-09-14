@@ -3,18 +3,16 @@ package me.bossm0n5t3r.leetcode.utils
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
 
-class ListNode(var `val`: Int) {
+class ListNode(
+    var `val`: Int,
+) {
     var next: ListNode? = null
 }
 
 object ListNodeUtil {
-    fun generateArrayOfListNode(value: String): Array<ListNode?> {
-        return value.toArrayOfIntArray().map { generateListNode(*it) }.toTypedArray()
-    }
+    fun generateArrayOfListNode(value: String): Array<ListNode?> = value.toArrayOfIntArray().map { generateListNode(*it) }.toTypedArray()
 
-    fun generateListNode(string: String): ListNode? {
-        return generateListNode(*string.toIntArray())
-    }
+    fun generateListNode(string: String): ListNode? = generateListNode(*string.toIntArray())
 
     fun generateListNode(vararg values: Int): ListNode? {
         val head = values.toList()

@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class GreatestEnglishLetterInUpperAndLowerCaseTest {
     private val sut = GreatestEnglishLetterInUpperAndLowerCase.Solution()
 
-    private data class TestData(val s: String, val result: String)
+    private data class TestData(
+        val s: String,
+        val result: String,
+    )
 
     @Test
     fun test() {

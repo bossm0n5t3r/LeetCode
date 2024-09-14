@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class FindCenterOfStarGraphTest {
     private val sut = FindCenterOfStarGraph.Solution()
 
-    private data class TestData(val edges: Array<IntArray>, val result: Int) {
+    private data class TestData(
+        val edges: Array<IntArray>,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

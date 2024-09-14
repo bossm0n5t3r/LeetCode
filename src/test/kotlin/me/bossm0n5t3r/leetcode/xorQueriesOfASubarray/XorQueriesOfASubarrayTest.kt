@@ -7,7 +7,11 @@ import kotlin.test.assertTrue
 class XorQueriesOfASubarrayTest {
     private val sut = XorQueriesOfASubarray.Solution()
 
-    private data class TestData(val arr: IntArray, val queries: Array<IntArray>, val result: IntArray) {
+    private data class TestData(
+        val arr: IntArray,
+        val queries: Array<IntArray>,
+        val result: IntArray,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

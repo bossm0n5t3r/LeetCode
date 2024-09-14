@@ -6,7 +6,11 @@ import kotlin.test.assertEquals
 class PassThePillowTest {
     private val sut = PassThePillow.Solution()
 
-    private data class TestData(val n: Int, val time: Int, val result: Int)
+    private data class TestData(
+        val n: Int,
+        val time: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

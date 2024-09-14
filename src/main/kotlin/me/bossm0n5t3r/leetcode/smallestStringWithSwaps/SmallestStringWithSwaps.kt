@@ -28,14 +28,13 @@ class SmallestStringWithSwaps {
         private fun find(
             node: IntArray,
             x: Int,
-        ): Int {
-            return if (node[x] == x) {
+        ): Int =
+            if (node[x] == x) {
                 x
             } else {
                 node[x] = find(node, node[x])
                 node[x]
             }
-        }
 
         private fun union(
             node: IntArray,

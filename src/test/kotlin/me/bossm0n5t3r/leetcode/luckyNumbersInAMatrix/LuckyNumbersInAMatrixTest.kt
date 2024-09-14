@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class LuckyNumbersInAMatrixTest {
     private val sut = LuckyNumbersInAMatrix.Solution()
 
-    private data class TestData(val matrix: Array<IntArray>, val result: List<Int>) {
+    private data class TestData(
+        val matrix: Array<IntArray>,
+        val result: List<Int>,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

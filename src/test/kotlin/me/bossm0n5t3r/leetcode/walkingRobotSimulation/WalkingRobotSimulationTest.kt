@@ -7,7 +7,11 @@ import kotlin.test.assertEquals
 class WalkingRobotSimulationTest {
     private val sut = WalkingRobotSimulation.Solution()
 
-    private data class TestData(val commands: IntArray, val obstacles: Array<IntArray>, val result: Int) {
+    private data class TestData(
+        val commands: IntArray,
+        val obstacles: Array<IntArray>,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

@@ -8,7 +8,11 @@ import kotlin.test.assertEquals
 class NumberOfGoodLeafNodesPairsTest {
     private val sut = NumberOfGoodLeafNodesPairs.Solution()
 
-    private data class TestData(val root: TreeNode?, val distance: Int, val result: Int)
+    private data class TestData(
+        val root: TreeNode?,
+        val distance: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

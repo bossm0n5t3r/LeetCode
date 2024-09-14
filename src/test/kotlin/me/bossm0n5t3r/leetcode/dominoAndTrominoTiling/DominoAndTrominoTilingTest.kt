@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class DominoAndTrominoTilingTest {
     private val sut = DominoAndTrominoTiling.Solution()
 
-    private data class TestData(val n: Int, val result: Int)
+    private data class TestData(
+        val n: Int,
+        val result: Int,
+    )
 
     @Test
     fun test() {

@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class MinimumDeletionsToMakeStringBalancedTest {
     private val sut = MinimumDeletionsToMakeStringBalanced.Solution()
 
-    private data class TestData(val s: String, val result: Int)
+    private data class TestData(
+        val s: String,
+        val result: Int,
+    )
 
     @Test
     fun test() {

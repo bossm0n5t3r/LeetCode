@@ -64,8 +64,6 @@ class SumOfTwoIntegers {
         private fun addDummyBinaryString(
             binaryString: String,
             length: Int,
-        ): String {
-            return "0".repeat(length) + binaryString
-        }
+        ): String = "0".repeat(length) + binaryString
     }
 }

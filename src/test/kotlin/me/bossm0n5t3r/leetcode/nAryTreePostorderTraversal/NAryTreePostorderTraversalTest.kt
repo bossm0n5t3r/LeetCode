@@ -8,7 +8,10 @@ import kotlin.test.assertEquals
 class NAryTreePostorderTraversalTest {
     private val sut = NAryTreePostorderTraversal.Solution()
 
-    private data class TestData(val root: Node?, val result: List<Int>)
+    private data class TestData(
+        val root: Node?,
+        val result: List<Int>,
+    )
 
     @Test
     fun test() {

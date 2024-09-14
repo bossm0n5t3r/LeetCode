@@ -8,9 +8,7 @@ class LeafSimilarTrees {
         fun leafSimilar(
             root1: TreeNode?,
             root2: TreeNode?,
-        ): Boolean {
-            return getLeafValueSequence(root1) == getLeafValueSequence(root2)
-        }
+        ): Boolean = getLeafValueSequence(root1) == getLeafValueSequence(root2)
 
         private fun getLeafValueSequence(root: TreeNode?): List<Int> {
             if (root == null) return emptyList()

@@ -8,7 +8,10 @@ import kotlin.test.assertTrue
 class MergeKSortedListsTest {
     private val sut = MergeKSortedLists.Solution()
 
-    private data class TestData(val lists: Array<ListNode?>, val result: ListNode?) {
+    private data class TestData(
+        val lists: Array<ListNode?>,
+        val result: ListNode?,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

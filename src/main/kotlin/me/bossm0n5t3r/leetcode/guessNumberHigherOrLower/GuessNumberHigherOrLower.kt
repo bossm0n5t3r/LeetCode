@@ -15,13 +15,12 @@ class GuessNumberHigherOrLower {
             this.pickedNumber = pick
         }
 
-        fun guess(num: Int): Int {
-            return when {
+        fun guess(num: Int): Int =
+            when {
                 num > pickedNumber -> -1
                 num < pickedNumber -> 1
                 else -> 0
             }
-        }
     }
 
     class Solution : GuessGame() {

@@ -88,8 +88,8 @@ class ValidSudokuTest {
         }
     }
 
-    private fun getSudoku(rawData: String): Array<CharArray> {
-        return rawData
+    private fun getSudoku(rawData: String): Array<CharArray> =
+        rawData
             .lines()
             .map { row ->
                 row
@@ -99,5 +99,4 @@ class ValidSudokuTest {
                     .map { it[0] }
                     .toCharArray()
             }.toTypedArray()
-    }
 }

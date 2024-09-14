@@ -7,7 +7,10 @@ import kotlin.test.assertEquals
 class MaximumNumberOfFishInAGridTest {
     private val sut = MaximumNumberOfFishInAGrid.Solution()
 
-    private data class TestData(val grid: Array<IntArray>, val result: Int) {
+    private data class TestData(
+        val grid: Array<IntArray>,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false

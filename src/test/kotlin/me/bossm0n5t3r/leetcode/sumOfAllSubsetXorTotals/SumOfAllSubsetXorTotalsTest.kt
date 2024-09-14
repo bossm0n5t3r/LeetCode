@@ -6,7 +6,10 @@ import kotlin.test.assertEquals
 class SumOfAllSubsetXorTotalsTest {
     private val sut = SumOfAllSubsetXorTotals.Solution()
 
-    private data class TestData(val nums: IntArray, val result: Int) {
+    private data class TestData(
+        val nums: IntArray,
+        val result: Int,
+    ) {
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false
