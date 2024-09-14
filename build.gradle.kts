@@ -11,11 +11,14 @@ repositories {
 group = "me.bossm0n5t3r"
 version = "1.0-SNAPSHOT"
 
+private val junitVersion = "5.11.0"
+private val assertJVersion = "3.26.3"
+
 dependencies {
     testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.1")
-    testImplementation("org.assertj:assertj-core:3.24.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    testImplementation("org.assertj:assertj-core:$assertJVersion")
 }
 
 tasks.test {
