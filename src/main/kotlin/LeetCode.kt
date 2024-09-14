@@ -1,3 +1,4 @@
+import me.bossm0n5t3r.leetcode.LeetCodeHelper.toLowerCase
 import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.exists
@@ -14,8 +15,12 @@ class LeetCode {
 
     fun run() {
         readProblem()
-        createFiles()
-        createTest()
+        require(this::name.isInitialized)
+        require(this::url.isInitialized)
+        require(this::methodParametersAndResultAsString.isInitialized)
+        val filePath = this.name.toLowerCase()
+        createFiles(filePath)
+        createTest(filePath)
     }
 
     private fun readProblem() {
@@ -68,9 +73,8 @@ class LeetCode {
                 .joinToString(", ")
     }
 
-    private fun createFiles() {
-        val camelCaseProblemName = this.name.toCamelCase()
-        val newProblemPath = Paths.get(problemPath.toString(), camelCaseProblemName)
+    private fun createFiles(filePath: String) {
+        val newProblemPath = Paths.get(problemPath.toString(), filePath)
         try {
             if (newProblemPath.exists()) throw Exception("Directory already exists")
 
@@ -98,7 +102,7 @@ class LeetCode {
                     }
                 }
             File(newProblemPath.toString(), "$pascalCaseProblemName.kt").writeText(
-                "package me.bossm0n5t3r.leetcode.$camelCaseProblemName\n\n" +
+                "package me.bossm0n5t3r.leetcode.$filePath\n\n" +
                     "class $pascalCaseProblemName {\n" +
                     "${sampleCodeString}\n" +
                     "}\n",
@@ -108,9 +112,8 @@ class LeetCode {
         }
     }
 
-    private fun createTest() {
-        val camelCaseProblemName = this.name.toCamelCase()
-        val newTestPath = Paths.get(testPath.toString(), camelCaseProblemName)
+    private fun createTest(filePath: String) {
+        val newTestPath = Paths.get(testPath.toString(), filePath)
         try {
             if (newTestPath.exists()) throw Exception("Directory already exists")
 
@@ -123,7 +126,7 @@ class LeetCode {
 
             File(newTestPath.toString(), "$pascalCaseTestClassName.kt").writeText(
                 """
-                package me.bossm0n5t3r.leetcode.$camelCaseProblemName
+                package me.bossm0n5t3r.leetcode.$filePath
 
                 import org.junit.jupiter.api.Test
                 import kotlin.test.assertEquals
@@ -135,11 +138,11 @@ class LeetCode {
                     
                     @Test
                     fun test() {
-                        val tests = listOf(
+                        val testDataList = listOf(
                             TestData(),
                         )
                         
-                        tests.forEach { test ->
+                        for (testData in testDataList) {
                             assertEquals(
                                 
                             )
@@ -165,22 +168,6 @@ class LeetCode {
             .replace(")", " ")
             .replace(",", " ")
 
-    private fun String.toCamelCase(): String {
-        return this
-            .substringAfter(". ")
-            .replaceRomanNumeralsAndSpecialCharacters()
-            .trim()
-            .split(" ")
-            .mapIndexed { index, s ->
-                if (index == 0) {
-                    s.lowercase()
-                } else {
-                    s.lowercase().replaceFirstChar { it.uppercase() }
-                }
-            }
-            .joinToString("")
-    }
-
     private fun String.toPascalCase(): String {
         return this
             .substringAfter(". ")
@@ -188,6 +175,9 @@ class LeetCode {
             .trim()
             .split(" ")
             .joinToString("") { s ->
+                if (s.all { it.isUpperCase() }) {
+                    return@joinToString s
+                }
                 s.lowercase().replaceFirstChar { it.uppercase() }
             }
     }
