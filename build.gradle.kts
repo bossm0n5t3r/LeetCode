@@ -1,8 +1,6 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.9.22"
-    id("org.jlleitschuh.gradle.ktlint") version "12.0.3"
+    kotlin("jvm") version "2.0.20"
+    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 }
 
 repositories {
@@ -24,10 +22,12 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "21"
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(22)
+    }
 }
 
 ktlint {
-    version.set("1.0.0")
+    version.set("1.3.1")
 }
