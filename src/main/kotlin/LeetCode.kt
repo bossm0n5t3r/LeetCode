@@ -1,4 +1,5 @@
 import me.bossm0n5t3r.leetcode.LeetCodeHelper.toLowerCase
+import me.bossm0n5t3r.leetcode.LeetCodeHelper.toPascalCase
 import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.exists
@@ -154,31 +155,6 @@ class LeetCode {
         } catch (e: Exception) {
             println("Error: ${e.message}")
         }
-    }
-
-    private fun String.replaceRomanNumeralsAndSpecialCharacters() =
-        this
-            .replace("IV", "I V")
-            .replace("III", "I I I")
-            .replace("II", "I I")
-            .replace("-", " ")
-            .replace("'", " ")
-            .replace("(", " ")
-            .replace(")", " ")
-            .replace(",", " ")
-
-    private fun String.toPascalCase(): String {
-        return this
-            .substringAfter(". ")
-            .replaceRomanNumeralsAndSpecialCharacters()
-            .trim()
-            .split(" ")
-            .joinToString("") { s ->
-                if (s.all { it.isUpperCase() }) {
-                    return@joinToString s
-                }
-                s.lowercase().replaceFirstChar { it.uppercase() }
-            }
     }
 }
 

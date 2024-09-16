@@ -4,4 +4,29 @@ object LeetCodeHelper {
     private val regex = Regex("[^a-zA-Z0-9]")
 
     fun String.toLowerCase() = this.substringAfter(". ").replace(regex, "").lowercase()
+
+    private fun String.replaceRomanNumeralsAndSpecialCharacters() =
+        this
+            .replace("IV", "I V")
+            .replace("III", "I I I")
+            .replace("II", "I I")
+            .replace("-", " ")
+            .replace("'", " ")
+            .replace("(", " ")
+            .replace(")", " ")
+            .replace(",", " ")
+
+    fun String.toPascalCase(): String {
+        return this
+            .substringAfter(". ")
+            .replaceRomanNumeralsAndSpecialCharacters()
+            .trim()
+            .split(" ")
+            .joinToString("") { s ->
+                if (s.all { it.isUpperCase() }) {
+                    return@joinToString s
+                }
+                s.lowercase().replaceFirstChar { it.uppercase() }
+            }
+    }
 }
