@@ -10,11 +10,7 @@ object LeetCodeHelper {
             .replace("IV", "I V")
             .replace("III", "I I I")
             .replace("II", "I I")
-            .replace("-", " ")
-            .replace("'", " ")
-            .replace("(", " ")
-            .replace(")", " ")
-            .replace(",", " ")
+            .replace(regex, " ")
 
     fun String.toPascalCase(): String {
         return this
