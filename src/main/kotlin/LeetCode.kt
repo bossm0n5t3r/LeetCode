@@ -1,3 +1,4 @@
+import me.bossm0n5t3r.leetcode.LeetCodeHelper.makePrettyUrl
 import me.bossm0n5t3r.leetcode.LeetCodeHelper.toLowerCase
 import me.bossm0n5t3r.leetcode.LeetCodeHelper.toPascalCase
 import java.io.File
@@ -41,10 +42,7 @@ class LeetCode {
             print("Enter problem url: ")
             tmpUrl = readlnOrNull()
         }
-        url =
-            tmpUrl
-                .split("?")
-                .first()
+        url = tmpUrl.makePrettyUrl()
 
         println("Enter sample code: ")
         while (true) {
