@@ -25,4 +25,6 @@ object LeetCodeHelper {
                 s.lowercase().replaceFirstChar { it.uppercase() }
             }
     }
+
+    fun String.makePrettyUrl() = this.substringBefore("submissions").substringBefore("?")
 }
