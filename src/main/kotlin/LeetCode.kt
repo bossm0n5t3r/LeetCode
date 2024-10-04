@@ -142,7 +142,8 @@ class LeetCode {
                         
                         for (testData in testDataList) {
                             assertEquals(
-                                
+                                testData.result,
+                                sut
                             )
                         }
                     }
