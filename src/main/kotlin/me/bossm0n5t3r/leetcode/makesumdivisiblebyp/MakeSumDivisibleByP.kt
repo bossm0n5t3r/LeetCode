@@ -13,7 +13,7 @@ class MakeSumDivisibleByP {
             var result = n
             val last = mutableMapOf(0 to 0)
             for (i in 1..n) {
-                val need = (prefix[i] - (total % p) + p) % p
+                val need = (prefix[i] - total + p) % p
                 val lastIndexOfNeed = last[need]
                 if (lastIndexOfNeed != null) {
                     result = minOf(result, i - lastIndexOfNeed)
