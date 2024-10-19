@@ -2,21 +2,28 @@ package me.bossm0n5t3r.leetcode.findkthbitinnthbinarystring
 
 class FindKthBitInNthBinaryString {
     class Solution {
-        private val binaryStringList = generateBinaryString()
-
         fun findKthBit(
             n: Int,
             k: Int,
-        ): Char = binaryStringList[n][k]
+        ): Char {
+            var invertCount = 0
+            var len = (1 shl n) - 1
 
-        private fun generateBinaryString(): List<String> {
-            val result = mutableListOf("")
-            var tmp = "0"
-            repeat(20) {
-                result.add(" $tmp")
-                tmp = "${tmp}1${tmp.map { if (it == '0') '1' else '0' }.reversed().joinToString("")}"
+            var tmpK = k
+            while (tmpK > 1) {
+                if (tmpK == len / 2 + 1) {
+                    return if (invertCount % 2 == 0) '1' else '0'
+                }
+
+                if (tmpK > len / 2) {
+                    tmpK = len + 1 - tmpK
+                    invertCount++
+                }
+
+                len /= 2
             }
-            return result
+
+            return if (invertCount % 2 == 0) '0' else '1'
         }
     }
 }
