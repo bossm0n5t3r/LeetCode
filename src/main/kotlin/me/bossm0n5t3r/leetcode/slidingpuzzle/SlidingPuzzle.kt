@@ -69,7 +69,6 @@ class SlidingPuzzle {
         ): String =
             this
                 .toCharArray()
-                .copyOf()
                 .apply {
                     val tmp = this[cur]
                     this[cur] = this[next]
