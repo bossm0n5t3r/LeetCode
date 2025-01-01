@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
-    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.ktlint)
 }
 
 repositories {
@@ -11,14 +11,11 @@ repositories {
 group = "me.bossm0n5t3r"
 version = "1.0-SNAPSHOT"
 
-private val junitVersion = "5.11.0"
-private val assertJVersion = "3.26.3"
-
 dependencies {
-    testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
-    testImplementation("org.assertj:assertj-core:$assertJVersion")
+    testImplementation(libs.kotlin.test.junit5)
+    testImplementation(libs.junit.jupiter.api)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.assertj.core)
 }
 
 tasks.test {
@@ -32,5 +29,5 @@ java {
 }
 
 ktlint {
-    version.set("1.3.1")
+    version.set("1.5.0")
 }
