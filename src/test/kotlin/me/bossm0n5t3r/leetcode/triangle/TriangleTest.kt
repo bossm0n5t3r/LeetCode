@@ -1,10 +1,10 @@
 package me.bossm0n5t3r.leetcode.triangle
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class TriangleTest {
-    private val triangle = Triangle.Solution()
+    private val sut = Triangle.Solution()
 
     private data class TriangleTestData(
         val triangle: List<List<Int>>,
@@ -32,12 +32,9 @@ internal class TriangleTest {
                 ),
             )
         tests.forEach { test ->
-            triangle
-                .minimumTotal(test.triangle)
-                .also {
-                    println(it)
-                    assertEquals(it, test.result)
-                }
+            assertThat(test.result)
+                .isEqualTo(sut.minimumTotal(test.triangle))
+                .isEqualTo(sut.minimumTotalAt20250104(test.triangle))
         }
     }
 }
