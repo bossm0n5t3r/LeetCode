@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 class ProductOfArrayExceptSelfTest {
     private val productOfArrayExceptSelf = ProductOfArrayExceptSelf.Solution()
 
-    data class ProductOfArrayExceptSelfTestData(
+    private data class ProductOfArrayExceptSelfTestData(
         val nums: IntArray,
         val result: IntArray,
     ) {
@@ -35,8 +35,10 @@ class ProductOfArrayExceptSelfTest {
                 ProductOfArrayExceptSelfTestData(intArrayOf(-1, 1, 0, -3, 3), intArrayOf(0, 0, 9, 0, 0)),
             )
         tests.forEach { test ->
-            assertThat(productOfArrayExceptSelf.productExceptSelf(test.nums)).isEqualTo(test.result)
-            assertThat(productOfArrayExceptSelf.productExceptSelfAt20230707(test.nums)).isEqualTo(test.result)
+            assertThat(test.result)
+                .isEqualTo(productOfArrayExceptSelf.productExceptSelf(test.nums))
+                .isEqualTo(productOfArrayExceptSelf.productExceptSelfAt20230707(test.nums))
+                .isEqualTo(productOfArrayExceptSelf.productExceptSelfAt20250104(test.nums))
         }
     }
 }

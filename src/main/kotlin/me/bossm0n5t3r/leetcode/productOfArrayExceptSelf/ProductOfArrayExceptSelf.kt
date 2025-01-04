@@ -74,5 +74,31 @@ class ProductOfArrayExceptSelf {
                 result
             }
         }
+
+        fun productExceptSelfAt20250104(nums: IntArray): IntArray {
+            var zeroIndex = -1
+            var product = 1L
+            for (i in nums.indices) {
+                if (nums[i] == 0) {
+                    if (zeroIndex != -1) {
+                        return IntArray(nums.size)
+                    }
+                    zeroIndex = i
+                    continue
+                }
+                product *= nums[i]
+            }
+            return if (zeroIndex != -1) {
+                val result = IntArray(nums.size)
+                result[zeroIndex] = product.toInt()
+                result
+            } else {
+                val result = IntArray(nums.size) { product.toInt() }
+                for (i in nums.indices) {
+                    result[i] /= nums[i]
+                }
+                result
+            }
+        }
     }
 }
