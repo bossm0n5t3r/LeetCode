@@ -4,11 +4,9 @@ class StringMatchingInAnArray {
     class Solution {
         fun stringMatching(words: Array<String>): List<String> {
             return words
-                .sortedBy { it.length }
                 .filter {
                     for (word in words) {
-                        if (word.length < it.length) continue
-                        if (word != it && word.contains(it)) {
+                        if (it != word && it in word) {
                             return@filter true
                         }
                     }
