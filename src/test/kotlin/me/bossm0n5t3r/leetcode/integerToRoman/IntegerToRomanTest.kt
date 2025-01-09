@@ -23,8 +23,8 @@ internal class IntegerToRomanTest {
                 IntegerToRomanTestData(3999, "MMMCMXCIX"),
             )
         tests.forEach { test ->
-            println(integerToRoman.intToRoman(test.num))
-            assertEquals(integerToRoman.intToRoman(test.num), test.result)
+            assertEquals(test.result, integerToRoman.intToRoman(test.num))
+            assertEquals(test.result, integerToRoman.intToRomanAt20250109(test.num))
         }
     }
 }

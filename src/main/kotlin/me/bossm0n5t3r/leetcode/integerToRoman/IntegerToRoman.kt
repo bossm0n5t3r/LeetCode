@@ -54,5 +54,41 @@ class IntegerToRoman {
             }
             return result.filterNotNull().reversed().joinToString("")
         }
+
+        fun intToRomanAt20250109(num: Int): String {
+            val valueToSymbol =
+                mapOf(
+                    1 to "I",
+                    4 to "IV",
+                    5 to "V",
+                    9 to "IX",
+                    10 to "X",
+                    20 to "XX",
+                    30 to "XXX",
+                    40 to "XL",
+                    50 to "L",
+                    90 to "XC",
+                    100 to "C",
+                    200 to "CC",
+                    300 to "CCC",
+                    400 to "CD",
+                    500 to "D",
+                    900 to "CM",
+                    1000 to "M",
+                    2000 to "MM",
+                    3000 to "MMM",
+                )
+            val reversedValues = valueToSymbol.keys.reversed()
+            var number = num
+            val result = StringBuilder()
+
+            while (number > 0) {
+                val target = reversedValues.first { number >= it }
+                result.append(valueToSymbol[target])
+                number -= target
+            }
+
+            return result.toString()
+        }
     }
 }
