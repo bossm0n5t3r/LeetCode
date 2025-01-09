@@ -153,5 +153,49 @@ class LongestCommonPrefix {
                 return prefix.joinToString("")
             }
         }
+
+        fun longestCommonPrefixAt20250109(strs: Array<String>): String {
+            val trie = TrieAt20250109()
+            for (str in strs) {
+                trie.insert(str)
+            }
+            return trie.getLongestCommonPrefix()
+        }
+
+        internal class TrieAt20250109 {
+            companion object {
+                private const val ALPHABET_SIZE = 26
+
+                private class TrieNode {
+                    val children = arrayOfNulls<TrieNode?>(ALPHABET_SIZE)
+                    var isEndOfWord = false
+                }
+            }
+
+            private val root = TrieNode()
+
+            fun insert(word: String) {
+                var walk: TrieNode? = root
+                for (c in word) {
+                    val index = c - 'a'
+                    if (walk?.children?.get(index) == null) {
+                        walk?.children?.set(index, TrieNode())
+                    }
+                    walk = walk?.children?.get(index)
+                }
+                walk?.isEndOfWord = true
+            }
+
+            fun getLongestCommonPrefix(): String {
+                var walk: TrieNode? = root
+                val result = StringBuilder()
+                while (walk?.isEndOfWord == false && walk.children.count { it != null } == 1) {
+                    val index = walk.children.indexOfFirst { it != null }
+                    result.append('a' + index)
+                    walk = walk.children[index]
+                }
+                return result.toString()
+            }
+        }
     }
 }

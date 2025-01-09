@@ -39,11 +39,12 @@ class LongestCommonPrefixTest {
                 LongestCommonPrefixTestData(arrayOf("abab", "aba", ""), ""),
             )
         tests.forEach { test ->
-            assertEquals(longestCommonPrefix.longestCommonPrefixFirst(test.strs), test.result)
-            assertEquals(longestCommonPrefix.longestCommonPrefixSecond(test.strs), test.result)
-            assertEquals(longestCommonPrefix.longestCommonPrefixThird(test.strs), test.result)
-            assertEquals(longestCommonPrefix.longestCommonPrefixFourth(test.strs), test.result)
-            assertEquals(longestCommonPrefix.longestCommonPrefixTrie(test.strs), test.result)
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixFirst(test.strs))
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixSecond(test.strs))
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixThird(test.strs))
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixFourth(test.strs))
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixTrie(test.strs))
+            assertEquals(test.result, longestCommonPrefix.longestCommonPrefixAt20250109(test.strs))
         }
     }
 }
