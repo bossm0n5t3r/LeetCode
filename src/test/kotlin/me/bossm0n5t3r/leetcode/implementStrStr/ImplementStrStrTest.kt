@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class ImplementStrStrTest {
-    private val implementStrStr = ImplementStrStr.Solution()
+    private val sut = ImplementStrStr.Solution()
 
-    data class ImplementStrStrTestData(
+    private data class ImplementStrStrTestData(
         val haystack: String,
         val needle: String,
         val result: Int,
@@ -23,7 +23,8 @@ class ImplementStrStrTest {
                 ImplementStrStrTestData("abc", "c", 2),
             )
         tests.forEach { test ->
-            assertEquals(implementStrStr.strStr(test.haystack, test.needle), test.result)
+            assertEquals(test.result, sut.strStr(test.haystack, test.needle))
+            assertEquals(test.result, sut.strStrAt20250111(test.haystack, test.needle))
         }
     }
 }
