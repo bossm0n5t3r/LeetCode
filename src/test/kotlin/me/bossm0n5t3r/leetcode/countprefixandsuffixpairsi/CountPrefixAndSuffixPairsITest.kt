@@ -35,8 +35,8 @@ class CountPrefixAndSuffixPairsITest {
         val testDataList =
             listOf(
                 TestData("[\"a\",\"aba\",\"ababa\",\"aa\"]".toArrayOfString(), 4),
-                TestData("[\"a\",\"aba\",\"ababa\",\"aa\"]".toArrayOfString(), 2),
-                TestData("[\"a\",\"aba\",\"ababa\",\"aa\"]".toArrayOfString(), 0),
+                TestData("[\"pa\",\"papa\",\"ma\",\"mama\"]".toArrayOfString(), 2),
+                TestData("[\"abab\",\"ab\"]".toArrayOfString(), 0),
             )
 
         for (testData in testDataList) {
