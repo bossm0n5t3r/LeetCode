@@ -22,8 +22,8 @@ internal class ZigzagConversionTest {
                 ZigzagConversionTestData("AB", 1, "AB"),
             )
         tests.forEach { test ->
-            println(zigzagConversion.convert(test.s, test.numRows))
-            assertEquals(zigzagConversion.convert(test.s, test.numRows), test.result)
+            assertEquals(test.result, zigzagConversion.convert(test.s, test.numRows))
+            assertEquals(test.result, zigzagConversion.convertAt20250110(test.s, test.numRows))
         }
     }
 }
