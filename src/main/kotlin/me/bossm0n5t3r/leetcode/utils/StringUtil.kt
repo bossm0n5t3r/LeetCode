@@ -8,6 +8,9 @@ object StringUtil {
                 .dropLast(2)
                 .split("],[")
                 .map {
+                    if (it.isBlank()) {
+                        return@map intArrayOf()
+                    }
                     it
                         .split(",")
                         .map { c -> c.toInt() }
