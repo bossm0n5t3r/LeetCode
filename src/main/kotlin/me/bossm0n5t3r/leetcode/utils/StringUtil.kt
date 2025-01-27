@@ -6,8 +6,9 @@ object StringUtil {
             this
                 .drop(2)
                 .dropLast(2)
-                .split("],[")
-                .map {
+                .takeIf { it.isNotBlank() }
+                ?.split("],[")
+                ?.map {
                     if (it.isBlank()) {
                         return@map intArrayOf()
                     }
@@ -15,7 +16,8 @@ object StringUtil {
                         .split(",")
                         .map { c -> c.toInt() }
                         .toIntArray()
-                }.toTypedArray()
+                }?.toTypedArray()
+                ?: emptyArray()
         }.getOrElse { emptyArray() }
 
     fun String.toIntArray(): IntArray =

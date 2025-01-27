@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test
 class StringUtilTest {
     @Test
     fun toArrayOfIntArrayTest() {
+        assertThat("[]".toArrayOfIntArray()).isEqualTo(emptyArray<IntArray>())
+
         assertThat(
             "[[3,2,1],[1,7,6],[2,7,7]]".toArrayOfIntArray(),
         ).isEqualTo(
