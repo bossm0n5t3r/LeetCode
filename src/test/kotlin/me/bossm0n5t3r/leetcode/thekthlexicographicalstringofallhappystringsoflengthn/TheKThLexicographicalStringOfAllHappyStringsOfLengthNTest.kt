@@ -16,7 +16,7 @@ class TheKThLexicographicalStringOfAllHappyStringsOfLengthNTest {
     fun test() {
         val testDataList =
             listOf(
-                TestData(1, 3, "C"),
+                TestData(1, 3, "c"),
                 TestData(1, 4, ""),
                 TestData(3, 9, "cab"),
             )
