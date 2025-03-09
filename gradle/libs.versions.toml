@@ -1,8 +1,9 @@
 [versions]
-kotlin = "2.1.0"
-ktlint = "12.1.2"
-junit = "5.11.4"
-assertJ = "3.27.0"
+kotlin = "2.1.10"
+ktlint-gradle = "12.2.0"
+junit = "5.12.0"
+assertJ = "3.27.3"
+ktlint-version="1.5.0"
 
 [libraries]
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
@@ -12,4 +13,4 @@ assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertJ" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }

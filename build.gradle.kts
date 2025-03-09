@@ -29,5 +29,8 @@ java {
 }
 
 ktlint {
-    version.set("1.5.0")
+    version.set(
+        libs.versions.ktlint.version
+            .get(),
+    )
 }
