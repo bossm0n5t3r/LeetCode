@@ -14,7 +14,7 @@ class BinaryTreeRightSideView {
             val result = mutableListOf<Int>()
             while (queue.isNotEmpty()) {
                 val size = queue.size
-                result.add(queue.last.`val`)
+                result.add(queue.last().`val`)
                 repeat(size) {
                     val cur = queue.poll()
                     val curLeft = cur.left
