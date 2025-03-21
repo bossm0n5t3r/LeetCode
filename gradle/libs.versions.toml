@@ -4,6 +4,8 @@ ktlint-gradle = "12.2.0"
 junit = "5.12.0"
 assertJ = "3.27.3"
 ktlint-version="1.5.0"
+fuel-version="3.0.0-alpha04"
+kotlinx-serialization-version="1.8.0"
 
 [libraries]
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
@@ -11,6 +13,11 @@ junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.re
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertJ" }
 
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-version" }
+fuel = { module = "com.github.kittinunf.fuel:fuel", version.ref = "fuel-version" }
+fuel-kotlinx-serialization = { module = "com.github.kittinunf.fuel:fuel-kotlinx-serialization", version.ref = "fuel-version" }
+
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
