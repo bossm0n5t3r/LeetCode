@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.ktlint)
 }
 
@@ -16,6 +17,10 @@ dependencies {
     testImplementation(libs.junit.jupiter.api)
     testRuntimeOnly(libs.junit.jupiter.engine)
     testImplementation(libs.assertj.core)
+
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.fuel)
+    implementation(libs.fuel.kotlinx.serialization)
 }
 
 tasks.test {
