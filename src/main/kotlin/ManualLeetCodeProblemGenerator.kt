@@ -5,7 +5,7 @@ import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.exists
 
-class LeetCode {
+object ManualLeetCodeProblemGenerator {
     private val projectDirAbsolutePath = Paths.get("").toAbsolutePath().toString()
     private val problemPath = Paths.get(projectDirAbsolutePath, "src/main/kotlin/me/bossm0n5t3r/leetcode")
     private val testPath = Paths.get(projectDirAbsolutePath, "src/test/kotlin/me/bossm0n5t3r/leetcode")
@@ -155,8 +155,4 @@ class LeetCode {
             println("Error: ${e.message}")
         }
     }
-}
-
-fun main() {
-    LeetCode().run()
 }
