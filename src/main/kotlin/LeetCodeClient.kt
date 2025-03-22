@@ -1,36 +1,24 @@
-import fuel.Fuel
-import fuel.post
-import kotlinx.io.readString
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.request.post
+import io.ktor.client.request.setBody
+import io.ktor.client.request.url
+import io.ktor.client.statement.bodyAsText
+import io.ktor.http.ContentType
+import io.ktor.http.contentType
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 object LeetCodeClient {
+    private val client = HttpClient(CIO) { install(ContentNegotiation) { json() } }
     private const val DOMAIN = "https://leetcode.com"
     private const val GRAPHQL_URL = "$DOMAIN/graphql"
     private const val LANG_KOTLIN = "Kotlin"
 
-    private const val QUERY = """
-        query GetDailyLeetCodeProblem {
-            activeDailyCodingChallengeQuestion {
-                link
-                question {
-                    questionFrontendId
-                    title
-                    content
-                    difficulty
-                    exampleTestcases
-                    codeSnippets {
-                        lang
-                        langSlug
-                        code
-                    }
-                    sampleTestCase
-                    metaData
-                }
-            }
-        }
-    """
-    private val TRIM_INDENTED_QUERY = QUERY.trimIndent()
+    @Suppress("ktlint:standard:max-line-length")
+    private const val QUERY = "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } } }"
 
     @Serializable
     data class DailyLeetCodeProblem(
@@ -107,13 +95,12 @@ object LeetCodeClient {
 
     suspend fun getDailyLeetCodeProblem(): DailyLeetCodeProblem {
         val response =
-            Fuel
-                .post(
-                    url = GRAPHQL_URL,
-                    headers = mapOf("Content-Type" to "application/json"),
-                    body = Json.encodeToString(mapOf("query" to TRIM_INDENTED_QUERY)),
-                ).source
-                .readString()
+            client
+                .post {
+                    url(GRAPHQL_URL)
+                    contentType(ContentType.Application.Json)
+                    setBody(mapOf("query" to QUERY))
+                }.bodyAsText()
         return Json.decodeFromString(DailyLeetCodeProblem.serializer(), response)
     }
 }
