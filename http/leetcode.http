@@ -1,8 +1,8 @@
-### Get Daily Problem
+### Get Daily Problem (GraphQL)
 
 GRAPHQL https://leetcode.com/graphql
 
-query getDailyProblem {
+query GetDailyLeetCodeProblem {
     activeDailyCodingChallengeQuestion {
         date
         link
@@ -69,4 +69,13 @@ query getDailyProblem {
             note
         }
     }
+}
+
+### Get Daily Problem (POST)
+
+POST https://leetcode.com/graphql
+Content-Type: application/json
+
+{
+  "query": "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } }}"
 }
