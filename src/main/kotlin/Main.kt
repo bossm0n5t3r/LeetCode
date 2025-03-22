@@ -1,3 +1,3 @@
 fun main() {
-    ManualLeetCodeProblemGenerator.run()
+    DailyLeetCodeProblemGenerator.run()
 }
