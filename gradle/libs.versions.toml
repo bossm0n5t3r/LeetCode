@@ -4,8 +4,8 @@ ktlint-gradle = "12.2.0"
 junit = "5.12.0"
 assertJ = "3.27.3"
 ktlint-version="1.5.0"
-fuel-version="3.0.0-alpha04"
 kotlinx-serialization-version="1.8.0"
+ktor-version="3.1.1"
 
 [libraries]
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
@@ -14,8 +14,10 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertJ" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-version" }
-fuel = { module = "com.github.kittinunf.fuel:fuel", version.ref = "fuel-version" }
-fuel-kotlinx-serialization = { module = "com.github.kittinunf.fuel:fuel-kotlinx-serialization", version.ref = "fuel-version" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-version" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor-version" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor-version" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor-version" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
