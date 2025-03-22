@@ -77,5 +77,5 @@ POST https://leetcode.com/graphql
 Content-Type: application/json
 
 {
-  "query": "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } }}"
+  "query": "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } } }"
 }
