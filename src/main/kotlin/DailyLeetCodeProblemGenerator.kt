@@ -16,13 +16,19 @@ object DailyLeetCodeProblemGenerator {
         val sampleCodes: List<String>,
         val methodParametersAndResultAsString: String,
         val exampleTestcases: String,
+        val filePath: String,
     )
 
     fun run() {
-        val problem = readProblem()
-        val filePath = problem.name.toLowerCase()
-        createFiles(problem, filePath)
-        createTest(problem, filePath)
+        with(readProblem()) {
+            println()
+            println("Problem: $name")
+            println("URL: $url")
+            println()
+            createFiles(this)
+            createTest(this)
+            println("Done!")
+        }
     }
 
     private fun readProblem(): Problem {
@@ -33,17 +39,20 @@ object DailyLeetCodeProblemGenerator {
             sampleCodes = problem.sampleCodes,
             methodParametersAndResultAsString = problem.methodParametersAndResultAsString,
             exampleTestcases = problem.exampleTestcases,
+            filePath = problem.name.toLowerCase(),
         )
     }
 
-    private fun createFiles(
-        problem: Problem,
-        filePath: String,
-    ) {
-        val (name, url, sampleCodes, _, _) = problem
+    private fun createFiles(problem: Problem) {
+        val (name, url, sampleCodes, _, _, filePath) = problem
         val newProblemPath = Paths.get(problemPath.toString(), filePath)
         try {
-            if (newProblemPath.exists()) throw Exception("Directory already exists")
+            if (newProblemPath.exists()) {
+                println("Problem already exists!")
+                newProblemPath.toFile().deleteRecursively()
+                println("Previous problem deleted!")
+                println()
+            }
 
             newProblemPath.toFile().mkdirs()
             println("Created directory: ${newProblemPath.toAbsolutePath()}\n")
@@ -79,14 +88,16 @@ object DailyLeetCodeProblemGenerator {
         }
     }
 
-    private fun createTest(
-        problem: Problem,
-        filePath: String,
-    ) {
-        val (name, _, _, methodParametersAndResultAsString, exampleTestcases) = problem
+    private fun createTest(problem: Problem) {
+        val (name, _, _, methodParametersAndResultAsString, exampleTestcases, filePath) = problem
         val newTestPath = Paths.get(testPath.toString(), filePath)
         try {
-            if (newTestPath.exists()) throw Exception("Directory already exists")
+            if (newTestPath.exists()) {
+                println("Test already exists!")
+                newTestPath.toFile().deleteRecursively()
+                println("Previous test deleted!")
+                println()
+            }
 
             newTestPath.toFile().mkdirs()
             println("Created test directory: ${newTestPath.toAbsolutePath()}\n")
