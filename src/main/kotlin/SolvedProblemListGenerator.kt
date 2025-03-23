@@ -30,7 +30,7 @@ object SolvedProblemListGenerator {
             readLines().find { it.contains("https://leetcode.com/problems/") }
                 ?: error("Not found URL in $this")
         val url = urlLine.substringAfter("- [").substringBefore("](")
-        return SolvedProblem(number, title, url, this.name)
+        return SolvedProblem(number, title, url, this.parentFile.name)
     }
 
     private fun List<SolvedProblem>.toREADME(): String {
