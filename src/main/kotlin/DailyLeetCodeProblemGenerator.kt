@@ -31,8 +31,32 @@ object DailyLeetCodeProblemGenerator {
         }
     }
 
+    fun run(titleSlug: String) {
+        with(readProblem(titleSlug)) {
+            println()
+            println("Problem: $name")
+            println("URL: $url")
+            println()
+            createFiles(this)
+            createTest(this)
+            println("Done!")
+        }
+    }
+
     private fun readProblem(): Problem {
         val problem = runBlocking { LeetCodeClient.getDailyLeetCodeProblem() }
+        return Problem(
+            name = problem.name,
+            url = problem.url,
+            sampleCodes = problem.sampleCodes,
+            methodParametersAndResultAsString = problem.methodParametersAndResultAsString,
+            exampleTestcases = problem.exampleTestcases,
+            filePath = problem.name.toLowerCase(),
+        )
+    }
+
+    private fun readProblem(titleSlug: String): Problem {
+        val problem = runBlocking { LeetCodeClient.getLeetCodeProblemByTitleSlug(titleSlug) }
         return Problem(
             name = problem.name,
             url = problem.url,
