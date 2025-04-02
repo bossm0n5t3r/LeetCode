@@ -1,6 +1,8 @@
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.assertDoesNotThrow
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class LeetCodeClientTest {
     @Test
@@ -11,4 +13,40 @@ class LeetCodeClientTest {
             Json.decodeFromString(LeetCodeClient.DailyLeetCodeProblem.serializer(), responseString)
         }.also { println(it) }
     }
+
+    @Test
+    fun serializationTest() {
+        val result =
+            Json.encodeToString(
+                mapOf(
+                    "query" to "dummy query",
+                    "variables" to Json.encodeToString(mapOf("titleSlug" to "dummy-title-slug")),
+                ),
+            )
+        assertEquals(
+            "{\"query\":\"dummy query\",\"variables\":\"{\\\"titleSlug\\\":\\\"dummy-title-slug\\\"}\"}",
+            result,
+        )
+    }
+
+    @Test
+    fun getDailyLeetCodeProblemTest() =
+        runBlocking {
+            val response =
+                assertDoesNotThrow {
+                    LeetCodeClient.getDailyLeetCodeProblem()
+                }
+            println(response)
+        }
+
+    @Test
+    fun getLeetCodeProblemByTitleSlugTest() =
+        runBlocking {
+            val titleSlug = "two-sum"
+            val response =
+                assertDoesNotThrow {
+                    LeetCodeClient.getLeetCodeProblemByTitleSlug(titleSlug)
+                }
+            println(response)
+        }
 }
