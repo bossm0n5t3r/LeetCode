@@ -10,97 +10,142 @@ import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
+import me.bossm0n5t3r.leetcode.LeetCodeProblem
 
 object LeetCodeClient {
     private val client = HttpClient(CIO) { install(ContentNegotiation) { json() } }
     private const val DOMAIN = "https://leetcode.com"
     private const val GRAPHQL_URL = "$DOMAIN/graphql"
+    private const val PROBLEM_URL = "$DOMAIN/problems"
     private const val LANG_KOTLIN = "Kotlin"
 
     @Suppress("ktlint:standard:max-line-length")
-    private const val QUERY = "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } } }"
+    private const val GET_DAILY_LEET_CODE_PROBLEM_QUERY =
+        "query GetDailyLeetCodeProblem { activeDailyCodingChallengeQuestion { link question { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } } }"
+
+    @Suppress("ktlint:standard:max-line-length")
+    private const val GET_LEET_CODE_PROBLEM_BY_TITLE_SLUG_QUERY =
+        "query GetLeetCodeProblemByTitleSlug(\$titleSlug: String!) { question(titleSlug: \$titleSlug) { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } }"
+
+    @Serializable
+    data class GraphQLResponse<T>(
+        val data: T,
+    )
+
+    @Serializable
+    data class QuestionWrapper(
+        val question: DailyLeetCodeProblem.ActiveDailyCodingChallengeQuestion.Question,
+    )
 
     @Serializable
     data class DailyLeetCodeProblem(
-        val data: Data,
+        val activeDailyCodingChallengeQuestion: ActiveDailyCodingChallengeQuestion,
     ) {
         @Serializable
-        data class Data(
-            val activeDailyCodingChallengeQuestion: ActiveDailyCodingChallengeQuestion,
+        data class ActiveDailyCodingChallengeQuestion(
+            val link: String,
+            val question: Question,
         ) {
             @Serializable
-            data class ActiveDailyCodingChallengeQuestion(
-                val link: String,
-                val question: Question,
+            data class Question(
+                val questionFrontendId: String,
+                val title: String,
+                val content: String,
+                val difficulty: String,
+                val exampleTestcases: String,
+                val codeSnippets: List<CodeSnippet>,
+                val sampleTestCase: String,
+                val metaData: String,
             ) {
                 @Serializable
-                data class Question(
-                    val questionFrontendId: String,
-                    val title: String,
-                    val content: String,
-                    val difficulty: String,
-                    val exampleTestcases: String,
-                    val codeSnippets: List<CodeSnippet>,
-                    val sampleTestCase: String,
-                    val metaData: String,
-                ) {
-                    @Serializable
-                    data class CodeSnippet(
-                        val lang: String,
-                        val langSlug: String,
-                        val code: String,
-                    )
-                }
+                data class CodeSnippet(
+                    val lang: String,
+                    val langSlug: String,
+                    val code: String,
+                )
             }
-        }
-
-        val name: String by lazy {
-            "${data.activeDailyCodingChallengeQuestion.question.questionFrontendId}. ${data.activeDailyCodingChallengeQuestion.question.title}"
-        }
-
-        val url: String by lazy {
-            "$DOMAIN${data.activeDailyCodingChallengeQuestion.link}"
-        }
-
-        val sampleCodes: List<String> by lazy {
-            data.activeDailyCodingChallengeQuestion.question.codeSnippets
-                .find { it.lang == LANG_KOTLIN }
-                ?.code
-                ?.split("\n")
-                ?: throw Exception("No Kotlin code snippet found")
-        }
-
-        val methodParametersAndResultAsString: String by lazy {
-            sampleCodes[1]
-                .substringAfter('(')
-                .substringBefore('{')
-                .split(", ", "): ")
-                .let {
-                    val lastIndex = it.lastIndex
-                    it.mapIndexed { index, s ->
-                        if (index != lastIndex) {
-                            "val ${s.trim()}"
-                        } else {
-                            "val result: ${s.trim()}"
-                        }
-                    }
-                }.joinToString(", ")
-        }
-
-        val exampleTestcases: String by lazy {
-            data.activeDailyCodingChallengeQuestion.question.exampleTestcases
-                .replace("\n", " / ")
         }
     }
 
-    suspend fun getDailyLeetCodeProblem(): DailyLeetCodeProblem {
+    private fun List<DailyLeetCodeProblem.ActiveDailyCodingChallengeQuestion.Question.CodeSnippet>.toSampleCodes(): List<String> =
+        this
+            .find { it.lang == LANG_KOTLIN }
+            ?.code
+            ?.split("\n")
+            ?: throw Exception("No Kotlin code snippet found")
+
+    private fun String.toMethodParametersAndResultAsString(): String =
+        this
+            .substringAfter('(')
+            .substringBefore('{')
+            .split(", ", "): ")
+            .let {
+                val lastIndex = it.lastIndex
+                it.mapIndexed { index, s ->
+                    if (index != lastIndex) {
+                        "val ${s.trim()}"
+                    } else {
+                        "val result: ${s.trim()}"
+                    }
+                }
+            }.joinToString(", ")
+
+    private fun DailyLeetCodeProblem.toLeetCodeProblem(): LeetCodeProblem {
+        val sampleCodes: List<String> =
+            this.activeDailyCodingChallengeQuestion.question.codeSnippets
+                .toSampleCodes()
+        return LeetCodeProblem(
+            name =
+                "${this.activeDailyCodingChallengeQuestion.question.questionFrontendId}. " +
+                    this.activeDailyCodingChallengeQuestion.question.title,
+            url = "$DOMAIN${this.activeDailyCodingChallengeQuestion.link}",
+            sampleCodes = sampleCodes,
+            methodParametersAndResultAsString = sampleCodes[1].toMethodParametersAndResultAsString(),
+            exampleTestcases =
+                this.activeDailyCodingChallengeQuestion.question.exampleTestcases
+                    .replace("\n", " / "),
+        )
+    }
+
+    private fun DailyLeetCodeProblem.ActiveDailyCodingChallengeQuestion.Question.toLeetCodeProblem(titleSlug: String): LeetCodeProblem {
+        val sampleCodes: List<String> = this.codeSnippets.toSampleCodes()
+        return LeetCodeProblem(
+            name = "${this.questionFrontendId}. $title",
+            url = "$PROBLEM_URL/$titleSlug/",
+            sampleCodes = sampleCodes,
+            methodParametersAndResultAsString = sampleCodes[1].toMethodParametersAndResultAsString(),
+            exampleTestcases = this.exampleTestcases.replace("\n", " / "),
+        )
+    }
+
+    suspend fun getDailyLeetCodeProblem(): LeetCodeProblem {
         val response =
             client
                 .post {
                     url(GRAPHQL_URL)
                     contentType(ContentType.Application.Json)
-                    setBody(mapOf("query" to QUERY))
+                    setBody(mapOf("query" to GET_DAILY_LEET_CODE_PROBLEM_QUERY))
                 }.bodyAsText()
-        return Json.decodeFromString(DailyLeetCodeProblem.serializer(), response)
+        return Json.decodeFromString<GraphQLResponse<DailyLeetCodeProblem>>(response).data.toLeetCodeProblem()
+    }
+
+    suspend fun getLeetCodeProblemByTitleSlug(titleSlug: String): LeetCodeProblem {
+        val response =
+            client
+                .post {
+                    url(GRAPHQL_URL)
+                    contentType(ContentType.Application.Json)
+                    setBody(
+                        mapOf(
+                            "query" to GET_LEET_CODE_PROBLEM_BY_TITLE_SLUG_QUERY,
+                            "variables" to Json.encodeToString(mapOf("titleSlug" to titleSlug)),
+                        ),
+                    )
+                }.bodyAsText()
+        return Json
+            .decodeFromString<GraphQLResponse<QuestionWrapper>>(response)
+            .data
+            .question
+            .toLeetCodeProblem(titleSlug)
     }
 }
