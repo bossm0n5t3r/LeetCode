@@ -164,3 +164,16 @@ Content-Type: application/json
     "titleSlug": "maximum-number-of-points-from-grid-queries"
   }
 }
+
+### Get Contest Problems (GraphQL)
+
+POST https://leetcode.com/graphql
+Content-Type: application/json
+
+{
+  "query": "query contestQuestionList($contestSlug: String!) { contestQuestionList(contestSlug: $contestSlug) { isAc credit title titleSlug titleCn questionId }} ",
+  "variables": {
+    "contestSlug": "weekly-contest-444"
+  },
+  "operationName": "contestQuestionList"
+}
