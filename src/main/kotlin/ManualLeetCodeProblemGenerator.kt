@@ -1,6 +1,6 @@
-import me.bossm0n5t3r.leetcode.LeetCodeHelper.makePrettyUrl
-import me.bossm0n5t3r.leetcode.LeetCodeHelper.toLowerCase
-import me.bossm0n5t3r.leetcode.LeetCodeHelper.toPascalCase
+import LeetCodeHelper.makePrettyUrl
+import LeetCodeHelper.toLowerCase
+import LeetCodeHelper.toPascalCase
 import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.exists

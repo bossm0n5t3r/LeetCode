@@ -10,7 +10,6 @@ import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import me.bossm0n5t3r.leetcode.LeetCodeProblem
 
 object LeetCodeClient {
     private val client = HttpClient(CIO) { install(ContentNegotiation) { json() } }
