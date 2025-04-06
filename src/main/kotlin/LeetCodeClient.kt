@@ -26,6 +26,10 @@ object LeetCodeClient {
     private const val GET_LEET_CODE_PROBLEM_BY_TITLE_SLUG_QUERY =
         "query GetLeetCodeProblemByTitleSlug(\$titleSlug: String!) { question(titleSlug: \$titleSlug) { questionFrontendId title content difficulty exampleTestcases codeSnippets { lang langSlug code } sampleTestCase metaData } }"
 
+    @Suppress("ktlint:standard:max-line-length")
+    private const val GET_LEET_CODE_CONTEST_PROBLEMS_BY_CONTEST_SLUG_QUERY =
+        "query contestQuestionList(\$contestSlug: String!) { contestQuestionList(contestSlug: \$contestSlug) { isAc credit title titleSlug titleCn questionId }} "
+
     @Serializable
     data class GraphQLResponse<T>(
         val data: T,
@@ -64,6 +68,21 @@ object LeetCodeClient {
                 )
             }
         }
+    }
+
+    @Serializable
+    private data class ContestQuestionList(
+        val contestQuestionList: List<ContestQuestion>,
+    ) {
+        @Serializable
+        data class ContestQuestion(
+            val isAc: Boolean,
+            val credit: Int,
+            val title: String,
+            val titleSlug: String,
+            val titleCn: String? = null,
+            val questionId: String,
+        )
     }
 
     private fun List<DailyLeetCodeProblem.ActiveDailyCodingChallengeQuestion.Question.CodeSnippet>.toSampleCodes(): List<String> =
@@ -146,5 +165,25 @@ object LeetCodeClient {
             .data
             .question
             .toLeetCodeProblem(titleSlug)
+    }
+
+    suspend fun getLeetCodeContestProblemTitleSlugsByContestSlug(contestSlug: String): List<String> {
+        val response =
+            client
+                .post {
+                    url(GRAPHQL_URL)
+                    contentType(ContentType.Application.Json)
+                    setBody(
+                        mapOf(
+                            "query" to GET_LEET_CODE_CONTEST_PROBLEMS_BY_CONTEST_SLUG_QUERY,
+                            "variables" to Json.encodeToString(mapOf("contestSlug" to contestSlug)),
+                        ),
+                    )
+                }.bodyAsText()
+        return Json
+            .decodeFromString<GraphQLResponse<ContestQuestionList>>(response)
+            .data
+            .contestQuestionList
+            .map { it.titleSlug }
     }
 }
