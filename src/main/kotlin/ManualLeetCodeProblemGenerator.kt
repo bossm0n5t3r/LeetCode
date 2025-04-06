@@ -6,10 +6,6 @@ import java.nio.file.Paths
 import kotlin.io.path.exists
 
 object ManualLeetCodeProblemGenerator {
-    private val projectDirAbsolutePath = Paths.get("").toAbsolutePath().toString()
-    private val problemPath = Paths.get(projectDirAbsolutePath, "src/main/kotlin/me/bossm0n5t3r/leetcode")
-    private val testPath = Paths.get(projectDirAbsolutePath, "src/test/kotlin/me/bossm0n5t3r/leetcode")
-
     private lateinit var name: String
     private lateinit var url: String
     private val sampleCode = mutableListOf<String>()

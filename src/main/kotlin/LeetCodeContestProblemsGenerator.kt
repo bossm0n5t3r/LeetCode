@@ -6,19 +6,6 @@ import java.nio.file.Paths
 import kotlin.io.path.exists
 
 object LeetCodeContestProblemsGenerator {
-    private val projectDirAbsolutePath = Paths.get("").toAbsolutePath().toString()
-    private val problemPath = Paths.get(projectDirAbsolutePath, "src/main/kotlin/me/bossm0n5t3r/leetcode")
-    private val testPath = Paths.get(projectDirAbsolutePath, "src/test/kotlin/me/bossm0n5t3r/leetcode")
-
-    private data class Problem(
-        val name: String,
-        val url: String,
-        val sampleCodes: List<String>,
-        val methodParametersAndResultAsString: String,
-        val exampleTestcases: String,
-        val filePath: String,
-    )
-
     fun run(contestSlug: String) {
         readProblemTitleSlugs(contestSlug).forEach { titleSlug ->
             with(readProblem(titleSlug)) {
