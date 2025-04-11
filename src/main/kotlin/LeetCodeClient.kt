@@ -114,9 +114,9 @@ object LeetCodeClient {
                 .toSampleCodes()
         return LeetCodeProblem(
             name =
-                "${this.activeDailyCodingChallengeQuestion.question.questionFrontendId}. " +
-                    this.activeDailyCodingChallengeQuestion.question.title,
-            url = "$DOMAIN${this.activeDailyCodingChallengeQuestion.link}",
+                "${this.activeDailyCodingChallengeQuestion.question.questionFrontendId.trim()}. " +
+                    this.activeDailyCodingChallengeQuestion.question.title.trim(),
+            url = "$DOMAIN${this.activeDailyCodingChallengeQuestion.link.trim()}",
             sampleCodes = sampleCodes,
             methodParametersAndResultAsString = sampleCodes[1].toMethodParametersAndResultAsString(),
             exampleTestcases =
