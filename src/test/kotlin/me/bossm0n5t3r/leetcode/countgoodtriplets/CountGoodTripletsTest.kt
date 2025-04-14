@@ -41,8 +41,6 @@ class CountGoodTripletsTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // [3,0,1,1,9,7] / 7 / 2 / 3 / [1,1,2,2,3] / 0 / 0 / 1
         val testDataList =
             listOf(
                 TestData("[3,0,1,1,9,7]".toIntArray(), 7, 2, 3, 4),
