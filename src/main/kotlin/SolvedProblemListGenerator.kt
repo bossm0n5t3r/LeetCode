@@ -7,6 +7,7 @@ object SolvedProblemListGenerator {
             .sortedBy { it.number }
             .toREADME()
             .writeToREADME()
+        println("Succeeded SolvedProblemListGenerator.generate()")
     }
 
     private fun readAllREADMEFiles(): List<File> =
