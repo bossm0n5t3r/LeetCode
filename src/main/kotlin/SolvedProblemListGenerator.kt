@@ -36,17 +36,38 @@ object SolvedProblemListGenerator {
 
     private fun List<SolvedProblem>.toREADME(): String {
         val readme = StringBuilder()
+        val maxWidths =
+            fold(listOf(0, 0, 0)) { acc, problem ->
+                val widths = problem.toWidths()
+                acc.zip(widths).map { maxOf(it.first, it.second) }
+            }
         readme.append("# LeetCode\n\n")
         readme.append("- LeetCode solutions in `Kotlin`\n\n")
         readme.append("## Solved Problems\n\n")
-        readme.append("| # | Title | Solution |\n")
-        readme.append("|---|-------|----------|\n")
-        forEach { readme.append(it.toMarkdownRow()).append("\n") }
+        readme.append(maxWidths.toTableHeader()).append("\n")
+        readme.append(maxWidths.toTableSeparator()).append("\n")
+        forEach { readme.append(it.toMarkdownRow(maxWidths)).append("\n") }
         return readme.toString()
     }
 
-    private fun SolvedProblem.toMarkdownRow(): String =
-        "| $number | [$title]($url) | [Solution](src/main/kotlin/me/bossm0n5t3r/leetcode/$fileName) |"
+    private fun List<Int>.toTableHeader(): String =
+        "| ${"#".padEnd(this[0])} | ${"Title".padEnd(this[1])} | ${"Solution".padEnd(this[2])} |"
+
+    private fun List<Int>.toTableSeparator(): String = "|-${"-".repeat(this[0])}-|-${"-".repeat(this[1])}-|-${"-".repeat(this[2])}-|"
+
+    private fun SolvedProblem.toWidths(): List<Int> =
+        listOf(
+            number.toString().length,
+            "[$title]($url)".length,
+            "[Solution](src/main/kotlin/me/bossm0n5t3r/leetcode/$fileName)".length,
+        )
+
+    private fun SolvedProblem.toMarkdownRow(maxWidths: List<Int>): String {
+        val index = number.toString().padEnd(maxWidths[0])
+        val problemName = "[$title]($url)".padEnd(maxWidths[1])
+        val location = "[Solution](src/main/kotlin/me/bossm0n5t3r/leetcode/$fileName)".padEnd(maxWidths[2])
+        return "| $index | $problemName | $location |"
+    }
 
     private fun String.writeToREADME() {
         File("README.md").writeText(this)
