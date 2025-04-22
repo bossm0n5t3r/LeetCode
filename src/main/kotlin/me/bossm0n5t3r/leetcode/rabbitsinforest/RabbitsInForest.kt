@@ -4,13 +4,16 @@ class RabbitsInForest {
     class Solution {
         fun numRabbits(answers: IntArray): Int {
             var rabbits = 0
-            val answerToCount = answers.toList().groupingBy { it }.eachCount()
-            for ((answer, count) in answerToCount) {
-                rabbits += if (count % (answer + 1) == 0) {
-                    (count / (answer + 1))
-                } else {
-                    (count / (answer + 1)) + 1
-                } * (answer + 1)
+            var maxAnswer = 0
+            val answerCount = IntArray(1001)
+            for (answer in answers) {
+                answerCount[answer]++
+                if (maxAnswer < answer) {
+                    maxAnswer = answer
+                }
+            }
+            for (answer in 0..maxAnswer) {
+                rabbits += (answerCount[answer] + answer) / (answer + 1) * (answer + 1)
             }
             return rabbits
         }
