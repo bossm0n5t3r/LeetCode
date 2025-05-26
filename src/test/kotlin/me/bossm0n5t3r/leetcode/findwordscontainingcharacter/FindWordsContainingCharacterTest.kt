@@ -35,8 +35,6 @@ class FindWordsContainingCharacterTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // ["leet","code"] / "e" / ["abc","bcd","aaaa","cbc"] / "a" / ["abc","bcd","aaaa","cbc"] / "z"
         val testDataList =
             listOf(
                 TestData("[\"leet\",\"code\"]".toArrayOfString(), 'e', listOf(0, 1)),
