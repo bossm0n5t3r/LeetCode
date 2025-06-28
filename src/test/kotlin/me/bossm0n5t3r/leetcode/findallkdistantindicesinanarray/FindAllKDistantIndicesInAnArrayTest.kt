@@ -38,8 +38,6 @@ class FindAllKDistantIndicesInAnArrayTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // [3,4,9,1,3,9,5] / 9 / 1 / [2,2,2,2,2] / 2 / 2
         val testDataList =
             listOf(
                 TestData("[3,4,9,1,3,9,5]".toIntArray(), 9, 1, listOf(1, 2, 3, 4, 5, 6)),
