@@ -37,8 +37,6 @@ class DivideAStringIntoGroupsOfSizeKTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // "abcdefghi" / 3 / "x" / "abcdefghij" / 3 / "x"
         val testDataList =
             listOf(
                 TestData("abcdefghi", 3, 'x', arrayOf("abc", "def", "ghi")),
