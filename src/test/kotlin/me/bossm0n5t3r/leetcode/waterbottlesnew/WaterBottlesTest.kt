@@ -1,7 +1,7 @@
-package me.bossm0n5t3r.leetcode.waterBottles
+package me.bossm0n5t3r.leetcode.waterbottlesnew
 
-import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import org.junit.jupiter.api.Test
 
 class WaterBottlesTest {
     private val sut = WaterBottles.Solution()
@@ -14,16 +14,16 @@ class WaterBottlesTest {
 
     @Test
     fun test() {
-        val tests =
+        val testDataList =
             listOf(
                 TestData(9, 3, 13),
                 TestData(15, 4, 19),
             )
 
-        tests.forEach { test ->
+        for (testData in testDataList) {
             assertEquals(
-                test.result,
-                sut.numWaterBottles(test.numBottles, test.numExchange),
+                testData.result,
+                sut.numWaterBottles(testData.numBottles, testData.numExchange),
             )
         }
     }
