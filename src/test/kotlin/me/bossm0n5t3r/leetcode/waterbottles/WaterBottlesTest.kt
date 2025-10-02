@@ -1,4 +1,4 @@
-package me.bossm0n5t3r.leetcode.waterbottlesnew
+package me.bossm0n5t3r.leetcode.waterbottles
 
 import kotlin.test.assertEquals
 import org.junit.jupiter.api.Test
