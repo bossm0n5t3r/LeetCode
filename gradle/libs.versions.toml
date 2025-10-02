@@ -1,12 +1,12 @@
 [versions]
 jdk-version = "21"
-kotlin = "2.2.0"
+kotlin = "2.2.20"
 ktlint-gradle = "13.0.0"
-junit = "5.13.4"
-assertJ = "3.27.3"
-ktlint-version="1.6.0"
+junit = "6.0.0"
+assertJ = "3.27.6"
+ktlint-version="1.7.1"
 kotlinx-serialization="1.9.0"
-ktor="3.2.2"
+ktor="3.3.0"
 
 [libraries]
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
