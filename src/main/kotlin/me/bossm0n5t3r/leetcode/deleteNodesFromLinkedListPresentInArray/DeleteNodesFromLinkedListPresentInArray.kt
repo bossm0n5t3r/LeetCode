@@ -9,26 +9,19 @@ class DeleteNodesFromLinkedListPresentInArray {
             head: ListNode?,
         ): ListNode? {
             val numberSet = nums.toSet()
-            return head?.toList()?.filterNot { numberSet.contains(it) }?.toListNode()
-        }
-
-        private fun ListNode.toList(): List<Int> {
-            val result = mutableListOf<Int>()
-            var tmp = this as ListNode?
-            while (tmp != null) {
-                result.add(tmp.`val`)
-                tmp = tmp.next
+            var head = head
+            while (head != null && numberSet.contains(head.`val`)) {
+                head = head.next
             }
-            return result
-        }
-
-        private fun List<Int>.toListNode(): ListNode? {
-            if (this.isEmpty()) return null
-            val result = ListNode(this.first())
-            var tmp = result as ListNode?
-            for (i in 1 until this.size) {
-                tmp?.next = ListNode(this[i])
-                tmp = tmp?.next
+            if (head == null) return null
+            var current = head
+            val result = current
+            while (current?.next != null) {
+                if (numberSet.contains(current.next?.`val`)) {
+                    current.next = current.next?.next
+                } else {
+                    current = current.next
+                }
             }
             return result
         }
