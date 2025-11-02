@@ -8,7 +8,7 @@ class CountUnguardedCellsInTheGrid {
             guards: Array<IntArray>,
             walls: Array<IntArray>,
         ): Int {
-            // wall : 1, guard : 2, guarded : 3, not guarded : 0
+            // wall: 1, guard: 2, guarded: 3, not guarded: 0
             val grid = Array(m) { IntArray(n) }
             var result = m * n
             for ((wallR, wallC) in walls) {
