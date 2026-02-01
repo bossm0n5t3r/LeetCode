@@ -13,9 +13,9 @@ group = "me.bossm0n5t3r"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.junit.jupiter.api)
     testRuntimeOnly(libs.junit.jupiter.engine)
+    testRuntimeOnly(libs.junit.platform.launcher)
     testImplementation(libs.assertj.core)
 
     implementation(libs.kotlinx.serialization.json)
