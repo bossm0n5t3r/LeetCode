@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.divideastringintogroupsofsizek
 
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class DivideAStringIntoGroupsOfSizeKTest {
     private val sut = DivideAStringIntoGroupsOfSizeK.Solution()

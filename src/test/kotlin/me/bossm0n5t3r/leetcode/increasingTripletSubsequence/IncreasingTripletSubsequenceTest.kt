@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.increasingTripletSubsequence
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class IncreasingTripletSubsequenceTest {
     private val sut = IncreasingTripletSubsequence.Solution()

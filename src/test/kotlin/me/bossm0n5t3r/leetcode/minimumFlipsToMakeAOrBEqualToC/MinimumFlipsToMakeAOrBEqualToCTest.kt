@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.minimumFlipsToMakeAOrBEqualToC
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumFlipsToMakeAOrBEqualToCTest {
     private val sut = MinimumFlipsToMakeAOrBEqualToC.Solution()

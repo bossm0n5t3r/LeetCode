@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.runningSumOf1dArray
 
+import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertContentEquals
 
 internal class RunningSumOf1dArrayTest {
     private val runningSumOf1dArray = RunningSumOf1dArray.Solution()
@@ -51,7 +51,7 @@ internal class RunningSumOf1dArrayTest {
                 .runningSum(test.nums)
                 .also {
                     println(it.toList())
-                    assertContentEquals(it, test.result)
+                    assertArrayEquals(it, test.result)
                 }
         }
     }

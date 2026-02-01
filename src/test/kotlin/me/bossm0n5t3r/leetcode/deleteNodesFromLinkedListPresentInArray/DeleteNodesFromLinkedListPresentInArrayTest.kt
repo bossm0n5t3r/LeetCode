@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.deleteNodesFromLinkedListPresentInArray
 
 import me.bossm0n5t3r.leetcode.utils.ListNode
 import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class DeleteNodesFromLinkedListPresentInArrayTest {
     private val sut = DeleteNodesFromLinkedListPresentInArray.Solution()
@@ -38,9 +38,21 @@ class DeleteNodesFromLinkedListPresentInArrayTest {
     fun test() {
         val tests =
             listOf(
-                TestData(intArrayOf(1, 2, 3), ListNodeUtil.generateListNode(1, 2, 3, 4, 5), ListNodeUtil.generateListNode(4, 5)),
-                TestData(intArrayOf(1), ListNodeUtil.generateListNode(1, 2, 1, 2, 1, 2), ListNodeUtil.generateListNode(2, 2, 2)),
-                TestData(intArrayOf(5), ListNodeUtil.generateListNode(1, 2, 3, 4), ListNodeUtil.generateListNode(1, 2, 3, 4)),
+                TestData(
+                    intArrayOf(1, 2, 3),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4, 5),
+                    ListNodeUtil.generateListNode(4, 5),
+                ),
+                TestData(
+                    intArrayOf(1),
+                    ListNodeUtil.generateListNode(1, 2, 1, 2, 1, 2),
+                    ListNodeUtil.generateListNode(2, 2, 2),
+                ),
+                TestData(
+                    intArrayOf(5),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4),
+                    ListNodeUtil.generateListNode(1, 2, 3, 4),
+                ),
             )
 
         tests.forEach { test ->

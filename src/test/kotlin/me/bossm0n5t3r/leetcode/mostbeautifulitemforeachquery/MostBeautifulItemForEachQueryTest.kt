@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.mostbeautifulitemforeachquery
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class MostBeautifulItemForEachQueryTest {
     private val sut = MostBeautifulItemForEachQuery.Solution()
@@ -38,7 +38,11 @@ class MostBeautifulItemForEachQueryTest {
     fun test() {
         val testDataList =
             listOf(
-                TestData("[[1,2],[3,2],[2,4],[5,6],[3,5]]".toArrayOfIntArray(), "[1,2,3,4,5,6]".toIntArray(), "[2,4,5,5,6,6]".toIntArray()),
+                TestData(
+                    "[[1,2],[3,2],[2,4],[5,6],[3,5]]".toArrayOfIntArray(),
+                    "[1,2,3,4,5,6]".toIntArray(),
+                    "[2,4,5,5,6,6]".toIntArray(),
+                ),
                 TestData("[[1,2],[1,2],[1,3],[1,4]]".toArrayOfIntArray(), "[1]".toIntArray(), "[4]".toIntArray()),
                 TestData("[[10,1000]]".toArrayOfIntArray(), "[5]".toIntArray(), "[0]".toIntArray()),
             )

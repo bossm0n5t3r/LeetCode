@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.convert1dArrayInto2dArray
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class Convert1dArrayInto2dArrayTest {
     private val sut = Convert1dArrayInto2dArray.Solution()

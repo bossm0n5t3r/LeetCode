@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.relativeRanks
 
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class RelativeRanksTest {
     private val sut = RelativeRanks.Solution()

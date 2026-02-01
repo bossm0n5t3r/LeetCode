@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.largestcombinationwithbitwiseandgreaterthanzero
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class LargestCombinationWithBitwiseANDGreaterThanZeroTest {
     private val sut = LargestCombinationWithBitwiseANDGreaterThanZero.Solution()

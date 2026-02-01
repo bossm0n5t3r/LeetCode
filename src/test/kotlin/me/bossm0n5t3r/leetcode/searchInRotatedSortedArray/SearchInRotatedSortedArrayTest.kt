@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.searchInRotatedSortedArray
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class SearchInRotatedSortedArrayTest {
     private val sut = SearchInRotatedSortedArray.Solution()

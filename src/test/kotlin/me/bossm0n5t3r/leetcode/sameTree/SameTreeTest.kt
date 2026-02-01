@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.sameTree
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class SameTreeTest {
     private val sut = SameTree.Solution()

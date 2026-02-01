@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.uniqueNumberOfOccurrences
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class UniqueNumberOfOccurrencesTest {
     private val sut = UniqueNumberOfOccurrences.Solution()

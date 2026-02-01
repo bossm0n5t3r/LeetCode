@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.numberOfIslands
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfCharArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class NumberOfIslandsTest {
     private val sut = NumberOfIslands.Solution()

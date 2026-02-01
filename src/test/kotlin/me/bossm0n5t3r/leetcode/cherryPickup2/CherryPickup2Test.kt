@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.cherryPickup2
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class CherryPickup2Test {
     private val sut = CherryPickup2.Solution()
@@ -35,7 +35,10 @@ class CherryPickup2Test {
         val tests =
             listOf(
                 TestData("[[3,1,1],[2,5,1],[1,5,5],[2,1,1]]".toArrayOfIntArray(), 24),
-                TestData("[[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]".toArrayOfIntArray(), 28),
+                TestData(
+                    "[[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]".toArrayOfIntArray(),
+                    28,
+                ),
             )
 
         tests.forEach { test ->

@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.movepiecestoobtainastring
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MovePiecesToObtainAStringTest {
     private val sut = MovePiecesToObtainAString.Solution()

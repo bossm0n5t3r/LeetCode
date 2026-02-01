@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.sumOfAllSubsetXorTotals
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class SumOfAllSubsetXorTotalsTest {
     private val sut = SumOfAllSubsetXorTotals.Solution()

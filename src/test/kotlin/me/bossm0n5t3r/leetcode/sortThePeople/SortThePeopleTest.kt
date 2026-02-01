@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.sortThePeople
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfString
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class SortThePeopleTest {
     private val sut = SortThePeople.Solution()

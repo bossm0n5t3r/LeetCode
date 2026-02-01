@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.removeDuplicatesFromSortedArrayII
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class RemoveDuplicatesFromSortedArrayIITest {
     private val sut = RemoveDuplicatesFromSortedArrayII.Solution()

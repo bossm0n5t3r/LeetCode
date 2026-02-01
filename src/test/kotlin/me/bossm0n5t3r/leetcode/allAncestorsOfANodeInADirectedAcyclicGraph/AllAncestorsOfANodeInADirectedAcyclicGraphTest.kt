@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.allAncestorsOfANodeInADirectedAcyclicGraph
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toListOfIntList
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class AllAncestorsOfANodeInADirectedAcyclicGraphTest {
     private val sut = AllAncestorsOfANodeInADirectedAcyclicGraph.Solution()

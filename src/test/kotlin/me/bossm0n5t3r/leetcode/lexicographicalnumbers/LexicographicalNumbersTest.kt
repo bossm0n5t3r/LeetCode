@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.lexicographicalnumbers
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class LexicographicalNumbersTest {
     private val sut = LexicographicalNumbers.Solution()

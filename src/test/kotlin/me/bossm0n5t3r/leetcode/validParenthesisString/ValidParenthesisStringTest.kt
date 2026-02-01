@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.validParenthesisString
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class ValidParenthesisStringTest {
     private val sut = ValidParenthesisString.Solution()
@@ -18,10 +18,19 @@ class ValidParenthesisStringTest {
                 TestData("()", true),
                 TestData("(*)", true),
                 TestData("(*))", true),
-                TestData("((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()", true),
-                TestData("(((((*(()((((*((**(((()()*)()()()*((((**)())*)*)))))))(())(()))())((*()()(((()((()*(())*(()**)()(())", false),
+                TestData(
+                    "((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()",
+                    true,
+                ),
+                TestData(
+                    "(((((*(()((((*((**(((()()*)()()()*((((**)())*)*)))))))(())(()))())((*()()(((()((()*(())*(()**)()(())",
+                    false,
+                ),
                 TestData("()(()((())))()((*)*)()()(()()((()())))*()*()((()()", false),
-                TestData("()*()**()(())(()()(())*)()((()**))()()()(((*(((*)))(**))**))()(()()(()))()((())(*()())())()(*", true),
+                TestData(
+                    "()*()**()(())(()()(())*)()((()**))()()()(((*(((*)))(**))**))()(()()(()))()((())(*()())())()(*",
+                    true,
+                ),
             )
 
         tests.forEach { test ->

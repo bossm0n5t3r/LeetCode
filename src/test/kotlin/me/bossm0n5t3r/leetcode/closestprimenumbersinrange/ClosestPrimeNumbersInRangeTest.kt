@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.closestprimenumbersinrange
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class ClosestPrimeNumbersInRangeTest {
     private val sut = ClosestPrimeNumbersInRange.Solution()
@@ -44,9 +44,7 @@ class ClosestPrimeNumbersInRangeTest {
         for (testData in testDataList) {
             val expected = testData.result
             val actual = sut.closestPrimes(testData.left, testData.right)
-            assertTrue("expected: ${expected.toList()}, actual: ${actual.toList()}") {
-                expected.contentEquals(actual)
-            }
+            assertTrue(expected.contentEquals(actual), "expected: ${expected.toList()}, actual: ${actual.toList()}")
         }
     }
 }

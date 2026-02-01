@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.binaryTreeRightSideView
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class BinaryTreeRightSideViewTest {
     private val sut = BinaryTreeRightSideView.Solution()

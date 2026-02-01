@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.findMissingObservations
 
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class FindMissingObservationsTest {
     private val sut = FindMissingObservations.Solution()

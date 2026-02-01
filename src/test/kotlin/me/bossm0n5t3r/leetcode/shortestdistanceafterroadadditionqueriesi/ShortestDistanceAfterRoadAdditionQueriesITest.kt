@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.shortestdistanceafterroadadditionqueriesi
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertContentEquals
 
 class ShortestDistanceAfterRoadAdditionQueriesITest {
     private val sut = ShortestDistanceAfterRoadAdditionQueriesI.Solution()
@@ -43,7 +43,7 @@ class ShortestDistanceAfterRoadAdditionQueriesITest {
             )
 
         for (testData in testDataList) {
-            assertContentEquals(testData.result, sut.shortestDistanceAfterQueries(testData.n, testData.queries))
+            assertArrayEquals(testData.result, sut.shortestDistanceAfterQueries(testData.n, testData.queries))
         }
     }
 }

@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.pathSum3
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class PathSum3Test {
     private val sut = PathSum3.Solution()
@@ -24,7 +24,24 @@ class PathSum3Test {
                     result = 3,
                 ),
                 TestData(
-                    root = TreeNodeUtil.generateTreeNodeOrNull(listOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1)),
+                    root =
+                        TreeNodeUtil.generateTreeNodeOrNull(
+                            listOf(
+                                5,
+                                4,
+                                8,
+                                11,
+                                null,
+                                13,
+                                4,
+                                7,
+                                2,
+                                null,
+                                null,
+                                5,
+                                1,
+                            ),
+                        ),
                     targetSum = 22,
                     result = 3,
                 ),

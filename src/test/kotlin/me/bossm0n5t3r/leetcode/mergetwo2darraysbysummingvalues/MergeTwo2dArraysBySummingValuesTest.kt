@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.mergetwo2darraysbysummingvalues
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class MergeTwo2dArraysBySummingValuesTest {
     private val sut = MergeTwo2dArraysBySummingValues.Solution()

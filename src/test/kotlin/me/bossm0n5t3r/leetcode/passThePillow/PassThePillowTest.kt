@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.passThePillow
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class PassThePillowTest {
     private val sut = PassThePillow.Solution()

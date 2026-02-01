@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.longestIncreasingPathInAMatrix
 
 import me.bossm0n5t3r.leetcode.utils.MatrixUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class LongestIncreasingPathInAMatrixTest {
     private val longestIncreasingPathInAMatrix = LongestIncreasingPathInAMatrix.Solution()

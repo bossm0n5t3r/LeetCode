@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.finduniquebinarystring
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfString
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class FindUniqueBinaryStringTest {
     private val sut = FindUniqueBinaryString.Solution()

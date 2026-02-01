@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.minimumFallingPathSumTwo
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumFallingPathSumTwoTest {
     private val sut = MinimumFallingPathSumTwo.Solution()

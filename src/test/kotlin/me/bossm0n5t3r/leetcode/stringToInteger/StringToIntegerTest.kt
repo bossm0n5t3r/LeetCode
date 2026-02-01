@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.stringToInteger
 
 import me.bossm0n5t3r.leetcode.stringToInteger.StringToInteger.Solution.Companion.step3
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class StringToIntegerTest {
     private val stringToInteger = StringToInteger.Solution()

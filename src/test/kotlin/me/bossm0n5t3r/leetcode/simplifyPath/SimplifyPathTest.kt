@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.simplifyPath
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class SimplifyPathTest {
     private val sut = SimplifyPath.Solution()

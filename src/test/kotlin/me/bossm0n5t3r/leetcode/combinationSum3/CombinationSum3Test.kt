@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.combinationSum3
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toListOfIntList
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class CombinationSum3Test {
     private val sut = CombinationSum3.Solution()

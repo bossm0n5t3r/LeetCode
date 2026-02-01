@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.cleardigits
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class ClearDigitsTest {
     private val sut = ClearDigits.Solution()

@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.maximizeTheConfusionOfAnExam
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MaximizeTheConfusionOfAnExamTest {
     private val sut = MaximizeTheConfusionOfAnExam.Solution()

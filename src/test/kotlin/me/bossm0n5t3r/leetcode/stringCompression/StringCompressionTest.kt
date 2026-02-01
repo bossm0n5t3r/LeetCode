@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.stringCompression
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class StringCompressionTest {
     private val sut = StringCompression.Solution()

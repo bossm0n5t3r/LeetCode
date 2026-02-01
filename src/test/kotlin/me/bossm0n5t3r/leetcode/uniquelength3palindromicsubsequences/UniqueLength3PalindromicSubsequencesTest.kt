@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.uniquelength3palindromicsubsequences
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class UniqueLength3PalindromicSubsequencesTest {
     private val sut = UniqueLength3PalindromicSubsequences.Solution()

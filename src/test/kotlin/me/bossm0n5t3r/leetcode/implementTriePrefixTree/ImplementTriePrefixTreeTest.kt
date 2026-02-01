@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.implementTriePrefixTree
 
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertFalse
-import kotlin.test.assertTrue
 
 class ImplementTriePrefixTreeTest {
     private val trie = ImplementTriePrefixTree.Trie()

@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.balanceABinarySearchTree
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class BalanceABinarySearchTreeTest {
     private val sut = BalanceABinarySearchTree.Solution()
@@ -21,7 +21,10 @@ class BalanceABinarySearchTreeTest {
                     TreeNodeUtil.generateTreeNodeOrNull(listOf(1, null, 2, null, 3, null, 4)),
                     TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3, null, null, null, 4)),
                 ),
-                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)), TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3))),
+                TestData(
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(2, 1, 3)),
+                ),
             )
 
         tests.forEach { test ->

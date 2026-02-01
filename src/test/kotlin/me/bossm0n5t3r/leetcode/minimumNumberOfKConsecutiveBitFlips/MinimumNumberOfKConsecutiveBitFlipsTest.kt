@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.minimumNumberOfKConsecutiveBitFlips
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumNumberOfKConsecutiveBitFlipsTest {
     private val sut = MinimumNumberOfKConsecutiveBitFlips.Solution()

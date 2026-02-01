@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.findTheDuplicateNumber
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class FindTheDuplicateNumberTest {
     private val findTheDuplicateNumber = FindTheDuplicateNumber.Solution()

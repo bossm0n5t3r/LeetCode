@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.sumOfDigitsOfStringAfterConvert
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class SumOfDigitsOfStringAfterConvertTest {
     private val sut = SumOfDigitsOfStringAfterConvert.Solution()

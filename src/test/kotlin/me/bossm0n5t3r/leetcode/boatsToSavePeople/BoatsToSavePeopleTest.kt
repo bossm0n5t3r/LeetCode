@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.boatsToSavePeople
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class BoatsToSavePeopleTest {
     private val sut = BoatsToSavePeople.Solution()

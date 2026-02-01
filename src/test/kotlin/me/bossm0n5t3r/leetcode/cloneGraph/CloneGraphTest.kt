@@ -4,8 +4,8 @@ import me.bossm0n5t3r.leetcode.utils.Node
 import me.bossm0n5t3r.leetcode.utils.NodeUtil
 import me.bossm0n5t3r.leetcode.utils.NodeUtil.toList
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toListOfIntList
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class CloneGraphTest {
     private val sut = CloneGraph.Solution()

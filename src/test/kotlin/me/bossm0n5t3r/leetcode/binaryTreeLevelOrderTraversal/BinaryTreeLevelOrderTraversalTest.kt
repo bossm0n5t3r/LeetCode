@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.binaryTreeLevelOrderTraversal
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class BinaryTreeLevelOrderTraversalTest {
     private val binaryTreeLevelOrderTraversal = BinaryTreeLevelOrderTraversal.Solution()

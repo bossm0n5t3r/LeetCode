@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.bestTimeToBuyAndSellStock2
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class BestTimeToBuyAndSellStock2Test {
     private val bestTimeToBuyAndSellStock2 = BestTimeToBuyAndSellStock2.Solution()

@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.minStack
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinStackTest {
     private lateinit var minStack: MinStack
@@ -98,15 +98,19 @@ class MinStackTest {
                     "MinStack" -> {
                         minStack = MinStack()
                     }
+
                     "push" -> {
                         minStack.push(inputData[index].first())
                     }
+
                     "pop" -> {
                         minStack.pop()
                     }
+
                     "top" -> {
                         assertEquals(minStack.top(), outputData[index])
                     }
+
                     "getMin" -> {
                         assertEquals(minStack.getMin(), outputData[index])
                     }

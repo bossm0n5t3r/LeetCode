@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.palindromeLinkedList
 
 import me.bossm0n5t3r.leetcode.utils.ListNode
 import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class PalindromeLinkedListTest {
     private val palindromeLinkedList = PalindromeLinkedList.Solution()

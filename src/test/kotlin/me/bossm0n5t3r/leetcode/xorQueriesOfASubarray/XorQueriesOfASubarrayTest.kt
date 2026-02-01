@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.xorQueriesOfASubarray
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class XorQueriesOfASubarrayTest {
     private val sut = XorQueriesOfASubarray.Solution()
@@ -37,8 +37,16 @@ class XorQueriesOfASubarrayTest {
     fun test() {
         val tests =
             listOf(
-                TestData(intArrayOf(1, 3, 4, 8), "[[0,1],[1,2],[0,3],[3,3]]".toArrayOfIntArray(), intArrayOf(2, 7, 14, 8)),
-                TestData(intArrayOf(4, 8, 2, 10), "[[2,3],[1,3],[0,0],[0,3]]".toArrayOfIntArray(), intArrayOf(8, 0, 4, 4)),
+                TestData(
+                    intArrayOf(1, 3, 4, 8),
+                    "[[0,1],[1,2],[0,3],[3,3]]".toArrayOfIntArray(),
+                    intArrayOf(2, 7, 14, 8),
+                ),
+                TestData(
+                    intArrayOf(4, 8, 2, 10),
+                    "[[2,3],[1,3],[0,0],[0,3]]".toArrayOfIntArray(),
+                    intArrayOf(8, 0, 4, 4),
+                ),
             )
 
         tests.forEach { test ->

@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.deepestLeavesSum
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class DeepestLeavesSumTest {
     private val deepestLeavesSum = DeepestLeavesSum.Solution()
@@ -22,7 +22,25 @@ internal class DeepestLeavesSumTest {
                     15,
                 ),
                 DeepestLeavesSumTestData(
-                    TreeNodeUtil.generateTreeNodeOrNull(listOf(6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5)),
+                    TreeNodeUtil.generateTreeNodeOrNull(
+                        listOf(
+                            6,
+                            7,
+                            8,
+                            2,
+                            7,
+                            1,
+                            3,
+                            9,
+                            null,
+                            1,
+                            4,
+                            null,
+                            null,
+                            null,
+                            5,
+                        ),
+                    ),
                     19,
                 ),
             )

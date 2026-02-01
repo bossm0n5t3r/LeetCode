@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.maxConsecutiveOnes3
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MaxConsecutiveOnes3Test {
     private val sut = MaxConsecutiveOnes3.Solution()

@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.flipequivalentbinarytrees
 
 import me.bossm0n5t3r.leetcode.utils.TreeNode
 import me.bossm0n5t3r.leetcode.utils.TreeNodeUtil
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class FlipEquivalentBinaryTreesTest {
     private val sut = FlipEquivalentBinaryTrees.Solution()
@@ -23,8 +23,16 @@ class FlipEquivalentBinaryTreesTest {
                     TreeNodeUtil.generateTreeNodeOrNull(listOf(1, 3, 2, null, 6, 4, 5, null, null, null, null, 8, 7)),
                     true,
                 ),
-                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf()), TreeNodeUtil.generateTreeNodeOrNull(listOf()), true),
-                TestData(TreeNodeUtil.generateTreeNodeOrNull(listOf()), TreeNodeUtil.generateTreeNodeOrNull(listOf(1)), false),
+                TestData(
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    true,
+                ),
+                TestData(
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf()),
+                    TreeNodeUtil.generateTreeNodeOrNull(listOf(1)),
+                    false,
+                ),
             )
 
         for (testData in testDataList) {

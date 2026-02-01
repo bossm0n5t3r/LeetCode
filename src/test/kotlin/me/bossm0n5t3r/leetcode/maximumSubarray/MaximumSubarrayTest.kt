@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.maximumSubarray
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MaximumSubarrayTest {
     private val maximumSubarray = MaximumSubarray.Solution()

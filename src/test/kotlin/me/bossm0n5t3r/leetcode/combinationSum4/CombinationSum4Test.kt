@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.combinationSum4
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class CombinationSum4Test {
     private val sut = CombinationSum4.Solution()

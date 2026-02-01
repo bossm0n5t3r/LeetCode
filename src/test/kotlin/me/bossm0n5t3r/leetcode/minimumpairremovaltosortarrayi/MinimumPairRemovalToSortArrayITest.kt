@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.minimumpairremovaltosortarrayi
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumPairRemovalToSortArrayITest {
     private val sut = MinimumPairRemovalToSortArrayI.Solution()

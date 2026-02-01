@@ -123,7 +123,7 @@ object ManualLeetCodeProblemGenerator {
                 package me.bossm0n5t3r.leetcode.$filePath
 
                 import org.junit.jupiter.api.Test
-                import kotlin.test.assertEquals
+                import org.junit.jupiter.api.Assertions.assertEquals
 
                 class $pascalCaseTestClassName {
                     private val sut = $pascalCaseTestName.Solution()

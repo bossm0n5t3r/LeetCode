@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.palindromicSubstrings
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 internal class PalindromicSubstringsTest {
     private val palindromicSubstrings = PalindromicSubstrings.Solution()

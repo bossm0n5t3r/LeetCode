@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.utils
 
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class ListNodeUtilTest {
     @Test
@@ -27,12 +27,12 @@ class ListNodeUtilTest {
         var cur: ListNode? = ListNodeUtil.connectListNode(listNodeData)
         for (i in expectListNodeVal.indices) {
             assertTrue(cur != null)
-            assertEquals(cur.`val`, expectListNodeVal[i])
+            assertEquals(cur?.`val`, expectListNodeVal[i])
             if (i == expectListNodeVal.size - 1) {
-                assertTrue(cur.next == null)
+                assertTrue(cur?.next == null)
                 break
             } else {
-                cur = cur.next
+                cur = cur?.next
             }
         }
     }

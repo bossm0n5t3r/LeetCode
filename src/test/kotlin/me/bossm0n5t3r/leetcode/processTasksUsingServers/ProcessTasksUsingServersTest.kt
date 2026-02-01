@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.processTasksUsingServers
 
+import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertContentEquals
 
 internal class ProcessTasksUsingServersTest {
     private val processTasksUsingServers = ProcessTasksUsingServers.Solution()
@@ -538,7 +538,7 @@ internal class ProcessTasksUsingServersTest {
                 .assignTasks(test.servers, test.tasks)
                 .also {
                     println(it.toList())
-                    assertContentEquals(it, test.result)
+                    assertArrayEquals(it, test.result)
                 }
         }
     }

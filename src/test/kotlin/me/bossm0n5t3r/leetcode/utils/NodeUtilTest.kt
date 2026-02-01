@@ -1,9 +1,9 @@
 package me.bossm0n5t3r.leetcode.utils
 
 import me.bossm0n5t3r.leetcode.utils.NodeUtil.toList
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
-import kotlin.test.assertEquals
 
 class NodeUtilTest {
     @Test

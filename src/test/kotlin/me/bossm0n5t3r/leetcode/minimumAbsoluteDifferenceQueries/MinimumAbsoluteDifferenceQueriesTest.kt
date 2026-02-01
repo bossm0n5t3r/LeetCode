@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.minimumAbsoluteDifferenceQueries
 
+import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertContentEquals
 
 internal class MinimumAbsoluteDifferenceQueriesTest {
     private val sut = MinimumAbsoluteDifferenceQueries.Solution()
@@ -73,7 +73,7 @@ internal class MinimumAbsoluteDifferenceQueriesTest {
                 .minDifference(test.nums, test.queries)
                 .also {
                     println(it.toList())
-                    assertContentEquals(it, test.result)
+                    assertArrayEquals(it, test.result)
                 }
         }
     }

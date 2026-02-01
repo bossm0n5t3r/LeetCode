@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.divisibleandnondivisiblesumsdifference
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class DivisibleAndNonDivisibleSumsDifferenceTest {
     private val sut = DivisibleAndNonDivisibleSumsDifference.Solution()

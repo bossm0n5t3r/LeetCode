@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.minimumLengthOfStringAfterDeletingSimilarEnds
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumLengthOfStringAfterDeletingSimilarEndsTest {
     private val sut = MinimumLengthOfStringAfterDeletingSimilarEnds.Solution()

@@ -3,8 +3,8 @@ package me.bossm0n5t3r.leetcode.spiralMatrixIV
 import me.bossm0n5t3r.leetcode.utils.ListNode
 import me.bossm0n5t3r.leetcode.utils.ListNodeUtil
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class SpiralMatrixIVTest {
     private val sut = SpiralMatrixIV.Solution()

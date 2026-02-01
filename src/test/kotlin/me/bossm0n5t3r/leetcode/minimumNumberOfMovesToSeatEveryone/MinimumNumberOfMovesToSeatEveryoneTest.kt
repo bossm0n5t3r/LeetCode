@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.minimumNumberOfMovesToSeatEveryone
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MinimumNumberOfMovesToSeatEveryoneTest {
     private val sut = MinimumNumberOfMovesToSeatEveryone.Solution()

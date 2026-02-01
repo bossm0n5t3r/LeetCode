@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.relativeSortArray
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class RelativeSortArrayTest {
     private val sut = RelativeSortArray.Solution()
@@ -37,8 +37,16 @@ class RelativeSortArrayTest {
     fun test() {
         val tests =
             listOf(
-                TestData("[2,3,1,3,2,4,6,7,9,2,19]".toIntArray(), "[2,1,4,3,9,6]".toIntArray(), "[2,2,2,1,4,3,3,9,6,7,19]".toIntArray()),
-                TestData("[28,6,22,8,44,17]".toIntArray(), "[22,28,8,6]".toIntArray(), "[22,28,8,6,17,44]".toIntArray()),
+                TestData(
+                    "[2,3,1,3,2,4,6,7,9,2,19]".toIntArray(),
+                    "[2,1,4,3,9,6]".toIntArray(),
+                    "[2,2,2,1,4,3,3,9,6,7,19]".toIntArray(),
+                ),
+                TestData(
+                    "[28,6,22,8,44,17]".toIntArray(),
+                    "[22,28,8,6]".toIntArray(),
+                    "[22,28,8,6,17,44]".toIntArray(),
+                ),
             )
 
         tests.forEach { test ->

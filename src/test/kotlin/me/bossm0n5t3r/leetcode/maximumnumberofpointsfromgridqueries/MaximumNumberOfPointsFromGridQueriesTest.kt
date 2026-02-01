@@ -2,8 +2,8 @@ package me.bossm0n5t3r.leetcode.maximumnumberofpointsfromgridqueries
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class MaximumNumberOfPointsFromGridQueriesTest {
     private val sut = MaximumNumberOfPointsFromGridQueries.Solution()
@@ -38,7 +38,11 @@ class MaximumNumberOfPointsFromGridQueriesTest {
     fun test() {
         val testDataList =
             listOf(
-                TestData("[[1,2,3],[2,5,7],[3,5,1]]".toArrayOfIntArray(), "[5,6,2]".toIntArray(), "[5,8,1]".toIntArray()),
+                TestData(
+                    "[[1,2,3],[2,5,7],[3,5,1]]".toArrayOfIntArray(),
+                    "[5,6,2]".toIntArray(),
+                    "[5,8,1]".toIntArray(),
+                ),
                 TestData("[[5,2,1],[1,1,2]]".toArrayOfIntArray(), "[3]".toIntArray(), "[0]".toIntArray()),
             )
 

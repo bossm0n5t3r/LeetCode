@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.wordsubsets
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfString
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class WordSubsetsTest {
     private val sut = WordSubsets.Solution()

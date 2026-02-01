@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.kThSmallestPrimeFraction
 
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class KThSmallestPrimeFractionTest {
     private val sut = KThSmallestPrimeFraction.Solution()

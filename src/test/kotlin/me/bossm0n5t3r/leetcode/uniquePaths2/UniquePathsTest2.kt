@@ -1,7 +1,7 @@
 package me.bossm0n5t3r.leetcode.uniquePaths2
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class UniquePathsTest2 {
     private val uniquePaths2 = UniquePaths2.Solution()

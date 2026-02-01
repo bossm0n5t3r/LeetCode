@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.largestLocalValuesInAMatrix
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toArrayOfIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class LargestLocalValuesInAMatrixTest {
     private val sut = LargestLocalValuesInAMatrix.Solution()
@@ -34,7 +34,10 @@ class LargestLocalValuesInAMatrixTest {
     fun test() {
         val tests =
             listOf(
-                TestData("[[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]]".toArrayOfIntArray(), "[[9,9],[8,6]]".toArrayOfIntArray()),
+                TestData(
+                    "[[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]]".toArrayOfIntArray(),
+                    "[[9,9],[8,6]]".toArrayOfIntArray(),
+                ),
                 TestData(
                     "[[1,1,1,1,1],[1,1,1,1,1],[1,1,2,1,1],[1,1,1,1,1],[1,1,1,1,1]]".toArrayOfIntArray(),
                     "[[2,2,2],[2,2,2],[2,2,2]]".toArrayOfIntArray(),

@@ -1,8 +1,8 @@
 package me.bossm0n5t3r.leetcode.maximumxorforeachquery
 
 import me.bossm0n5t3r.leetcode.utils.StringUtil.toIntArray
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import kotlin.test.assertTrue
 
 class MaximumXORForEachQueryTest {
     private val sut = MaximumXORForEachQuery.Solution()
