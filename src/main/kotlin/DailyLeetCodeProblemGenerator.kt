@@ -6,7 +6,14 @@ import java.nio.file.Paths
 import kotlin.io.path.exists
 
 object DailyLeetCodeProblemGenerator {
-    fun run() {
+    fun generateProblem(titleSlug: String = "") =
+        if (titleSlug.isBlank()) {
+            run()
+        } else {
+            run(titleSlug)
+        }
+
+    private fun run() {
         with(readProblem()) {
             println()
             println("Problem: $name")
@@ -18,7 +25,7 @@ object DailyLeetCodeProblemGenerator {
         }
     }
 
-    fun run(titleSlug: String) {
+    private fun run(titleSlug: String) {
         with(readProblem(titleSlug)) {
             println()
             println("Problem: $name")
