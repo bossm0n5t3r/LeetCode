@@ -13,8 +13,6 @@ class FindTheKThCharacterInStringGameITest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // 5 / 10
         val testDataList =
             listOf(
                 TestData(5, 'b'),

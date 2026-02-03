@@ -32,8 +32,6 @@ class DivideAnArrayIntoSubarraysWithMinimumCostITest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // [1,2,3,12] / [5,4,3] / [10,3,1,1]
         val testDataList =
             listOf(
                 TestData("[1,2,3,12]".toIntArray(), 6),

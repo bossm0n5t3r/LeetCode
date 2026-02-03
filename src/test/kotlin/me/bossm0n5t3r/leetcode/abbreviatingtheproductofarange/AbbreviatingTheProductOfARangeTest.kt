@@ -14,8 +14,6 @@ class AbbreviatingTheProductOfARangeTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // 1 / 4 / 2 / 11 / 371 / 375
         val testDataList =
             listOf(
                 TestData(1, 4, "24e0"),
