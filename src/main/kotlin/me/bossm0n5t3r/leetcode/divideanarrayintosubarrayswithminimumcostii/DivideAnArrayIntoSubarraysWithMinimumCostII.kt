@@ -4,16 +4,64 @@ import java.util.TreeMap
 
 class DivideAnArrayIntoSubarraysWithMinimumCostII {
     class Solution {
-        class Container(
+        private class SlidingWindowKSmallest(
             private val k: Int,
         ) {
-            private var st1Size = 0
-            private var st2Size = 0
-            private val st1 = TreeMap<Int, Int>()
-            private val st2 = TreeMap<Int, Int>()
-            var sum = 0L
+            var currentSum = 0L
+            private var lowerSize = 0
+            private var upperSize = 0
+            private val lowerSet = TreeMap<Int, Int>()
+            private val upperSet = TreeMap<Int, Int>()
 
-            private fun removeOne(
+            fun add(x: Int) {
+                if (upperSet.isNotEmpty() && x >= upperSet.firstKey()) {
+                    addToMap(upperSet, x)
+                    upperSize++
+                } else {
+                    addToMap(lowerSet, x)
+                    lowerSize++
+                    currentSum += x
+                }
+                rebalance()
+            }
+
+            fun remove(x: Int) {
+                if (x in lowerSet) {
+                    removeFromMap(lowerSet, x)
+                    lowerSize--
+                    currentSum -= x
+                } else if (x in upperSet) {
+                    removeFromMap(upperSet, x)
+                    upperSize--
+                }
+                rebalance()
+            }
+
+            private fun rebalance() {
+                while (lowerSize < k && upperSet.isNotEmpty()) {
+                    val smallestInUpper = upperSet.firstKey()
+                    moveElement(upperSet, lowerSet, smallestInUpper)
+                    lowerSize++
+                    upperSize--
+                    currentSum += smallestInUpper
+                }
+                while (lowerSize > k) {
+                    val largestInLower = lowerSet.lastKey()
+                    moveElement(lowerSet, upperSet, largestInLower)
+                    lowerSize--
+                    upperSize++
+                    currentSum -= largestInLower
+                }
+            }
+
+            private fun addToMap(
+                map: TreeMap<Int, Int>,
+                key: Int,
+            ) {
+                map[key] = map.getOrDefault(key, 0) + 1
+            }
+
+            private fun removeFromMap(
                 map: TreeMap<Int, Int>,
                 key: Int,
             ) {
@@ -21,54 +69,13 @@ class DivideAnArrayIntoSubarraysWithMinimumCostII {
                 if (count == 1) map.remove(key) else map[key] = count - 1
             }
 
-            private fun addOne(
-                map: TreeMap<Int, Int>,
+            private fun moveElement(
+                from: TreeMap<Int, Int>,
+                to: TreeMap<Int, Int>,
                 key: Int,
             ) {
-                map[key] = map.getOrDefault(key, 0) + 1
-            }
-
-            private fun adjust() {
-                while (st1Size < k && st2.isNotEmpty()) {
-                    val x = st2.firstKey()
-                    addOne(st1, x)
-                    st1Size++
-                    sum += x
-                    removeOne(st2, x)
-                    st2Size--
-                }
-                while (st1Size > k) {
-                    val x = st1.lastKey()
-                    addOne(st2, x)
-                    st2Size++
-                    removeOne(st1, x)
-                    st1Size--
-                    sum -= x
-                }
-            }
-
-            fun add(x: Int) {
-                if (st2.isNotEmpty() && x >= st2.firstKey()) {
-                    addOne(st2, x)
-                    st2Size++
-                } else {
-                    addOne(st1, x)
-                    st1Size++
-                    sum += x
-                }
-                adjust()
-            }
-
-            fun erase(x: Int) {
-                if (x in st1) {
-                    removeOne(st1, x)
-                    st1Size--
-                    sum -= x
-                } else if (x in st2) {
-                    removeOne(st2, x)
-                    st2Size--
-                }
-                adjust()
+                removeFromMap(from, key)
+                addToMap(to, key)
             }
         }
 
@@ -78,21 +85,22 @@ class DivideAnArrayIntoSubarraysWithMinimumCostII {
             dist: Int,
         ): Long {
             val n = nums.size
-            val container = Container(k - 2)
+            val window = SlidingWindowKSmallest(k - 2)
+
             for (i in 1 until k - 1) {
-                container.add(nums[i])
+                window.add(nums[i])
             }
 
-            var result = container.sum + nums[k - 1]
+            var minCost = window.currentSum + nums[k - 1]
             for (i in k until n) {
-                val j = i - dist - 1
-                if (j > 0) {
-                    container.erase(nums[j])
+                val outOfRangeIdx = i - dist - 1
+                if (outOfRangeIdx > 0) {
+                    window.remove(nums[outOfRangeIdx])
                 }
-                container.add(nums[i - 1])
-                result = minOf(result, container.sum + nums[i])
+                window.add(nums[i - 1])
+                minCost = minOf(minCost, window.currentSum + nums[i])
             }
-            return result + nums[0]
+            return minCost + nums[0]
         }
     }
 }
