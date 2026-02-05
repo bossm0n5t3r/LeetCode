@@ -38,6 +38,7 @@ class TransformedArrayTest {
             listOf(
                 TestData("[3,-2,1,1]".toIntArray(), "[1,1,1,3]".toIntArray()),
                 TestData("[-1,4,-1]".toIntArray(), "[-1,-1,4]".toIntArray()),
+                TestData("[-10,-10]".toIntArray(), "[-10,-10]".toIntArray()),
             )
 
         for (testData in testDataList) {
