@@ -32,8 +32,6 @@ class TransformedArrayTest {
 
     @Test
     fun test() {
-        // Example Testcases
-        // [3,-2,1,1] / [-1,4,-1]
         val testDataList =
             listOf(
                 TestData("[3,-2,1,1]".toIntArray(), "[1,1,1,3]".toIntArray()),
