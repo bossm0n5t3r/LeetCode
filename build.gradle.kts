@@ -31,7 +31,7 @@ tasks.test {
 
 kotlin {
     jvmToolchain(
-        libs.versions.jdk.version
+        libs.versions.jdk
             .get()
             .toInt(),
     )
@@ -39,7 +39,7 @@ kotlin {
 
 ktlint {
     version.set(
-        libs.versions.ktlint.version
+        libs.versions.pinterest.ktlint
             .get(),
     )
 }
